@@ -523,6 +523,7 @@ h2.number {
 
 h3 {
 	font-size: 26px;
+	color:#fff;
 }
 
 h3#reply-title,
@@ -1494,7 +1495,7 @@ body.leftmenu .mobile-main-nav #side-sub-menu {
 	background: none;
 }
 
-.nav > li, {
+.nav > li {
 	display: inline-block;
 }
 
