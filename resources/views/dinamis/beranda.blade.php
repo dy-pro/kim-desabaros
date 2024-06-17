@@ -1,6 +1,12 @@
 @extends('layouts.master')
 
 @section('content')
+  <!-- Begin template wrapper -->
+  <div id="wrapper" class="hasbg transparent">
+
+
+
+<!-- Begin content -->
 <div id="page-content-wrapper" class="">
     <div class="inner">
         <!-- Begin main content -->
@@ -17,21 +23,20 @@
                             </div>
                             <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-f2f2b04 elementor-column elementor-col-33 elementor-top-column" data-id="f2f2b04" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
+                                    <div class="elementor-element elementor-element-f2f2b04 elementor-column elementor-col-50 elementor-top-column" data-id="f2f2b04" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
                                         <div class="elementor-column-wrap elementor-element-populated">
                                             <div class="elementor-widget-wrap">
                                                 <div class="elementor-element elementor-element-cea62ff elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-id="cea62ff" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
                                                     <div class="elementor-widget-container">
-                                                        <h1 class="elementor-heading-title elementor-size-default">We Take Care<br>
-                                                        of the Future</h1>
+                                                        <h3 style="color: white">Kelompok Informasi Masyarakat</h3>
+                                                        <h1 class="elementor-heading-title elementor-size-default">Desa Baros</h1>
                                                     </div>
                                                 </div>
                                                 <div class="elementor-element elementor-element-692d229 elementor-widget elementor-widget-text-editor" data-id="692d229" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="text-editor.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-text-editor elementor-clearfix">
                                                             <div class="lqd-lines split-unit lqd-unit-animation-done">
-                                                                Never ever think of giving up. Winners never quit and quitters never win. Take all negative words out of your mental dictionary
-                                                            </div>
+                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem laborum nihil incidunt, corrupti facere sint maxime voluptatibus quisquam quaerat inventore! Voluptatum reprehenderit ex delectus aliquam accusamus voluptas repellendus nobis dolor?</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -58,20 +63,20 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="horizontal-gallery-wrapper" data-autoplay="0" data-loop="0" data-navigation="0" data-pagination="0" data-parallax="1" data-fullscreen="0">
                                                             <div class="horizontal-gallery-cell" style="margin-right:40px">
-                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="upload/young-businesswoman-smiling-at-office-LGQRJY2-1024x680.jpg" alt="" style="height:370px;">
+                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="{{ asset('avante/upload/young-businesswoman-smiling-at-office-LGQRJY2-1024x680.jpg')}}" alt="" style="height:370px;">
+                                                            </div>
+                                                            {{-- <div class="horizontal-gallery-cell" style="margin-right:40px">
+                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="{{ asset('avante/upload/business-people-and-coworkers-outside-46ZMVDY-1024x683.jpg')}}" alt="" style="height:370px;">
                                                             </div>
                                                             <div class="horizontal-gallery-cell" style="margin-right:40px">
-                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="upload/business-people-and-coworkers-outside-46ZMVDY-1024x683.jpg" alt="" style="height:370px;">
-                                                            </div>
-                                                            <div class="horizontal-gallery-cell" style="margin-right:40px">
-                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="upload/view-at-young-business-people-talking-and-smiling-EPN7L28-1024x613.jpg" alt="" style="height:370px;">
+                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="{{ asset('upload/view-at-young-business-people-talking-and-smiling-EPN7L28-1024x613.jpg')}}" alt="" style="height:370px;">
                                                             </div>
                                                             <div class="horizontal-gallery-cell" style="margin-right:40px">
                                                                 <img class="horizontal-gallery-cell-img" data-flickity-lazyload="upload/rawpixel-783345-unsplash-1024x683.jpg" alt="" style="height:370px;">
                                                             </div>
                                                             <div class="horizontal-gallery-cell" style="margin-right:40px">
                                                                 <img class="horizontal-gallery-cell-img" data-flickity-lazyload="upload/people-corporate-teamwork-brainstorming-working-PYNQJCK-1024x1024.jpg" alt="" style="height:370px;">
-                                                            </div>
+                                                            </div> --}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -679,4 +684,7 @@
         <!-- End main content -->
     </div>
 </div>
+{{-- End Content --}}
+</div>
+{{-- End template wrapper --}}
 @endsection
