@@ -1,690 +1,636 @@
 @extends('layouts.master')
 
 @section('content')
-  <!-- Begin template wrapper -->
-  <div id="wrapper" class="hasbg transparent">
-
-
-
-<!-- Begin content -->
-<div id="page-content-wrapper" class="">
-    <div class="inner">
-        <!-- Begin main content -->
-        <div class="inner-wrapper">
-            <div class="sidebar-content fullwidth">
-                <div data-elementor-type="wp-page" data-elementor-id="5228" class="elementor elementor-5228" data-elementor-settings="[]">
-                    <div class="elementor-inner">
-                        <div class="elementor-section-wrap">
-                            <section class="elementor-element elementor-element-1dd45c7 elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="1dd45c7" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_bottom&quot;:&quot;tilt&quot;}">
-                            <div class="elementor-shape elementor-shape-bottom" data-negative="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
-                                <path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
-                                </svg>
-                            </div>
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-f2f2b04 elementor-column elementor-col-50 elementor-top-column" data-id="f2f2b04" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-cea62ff elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-id="cea62ff" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h3 style="color: white">Kelompok Informasi Masyarakat</h3>
-                                                        <h1 class="elementor-heading-title elementor-size-default">Desa Baros</h1>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-692d229 elementor-widget elementor-widget-text-editor" data-id="692d229" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-text-editor elementor-clearfix">
-                                                            <div class="lqd-lines split-unit lqd-unit-animation-done">
-                                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem laborum nihil incidunt, corrupti facere sint maxime voluptatibus quisquam quaerat inventore! Voluptatum reprehenderit ex delectus aliquam accusamus voluptas repellendus nobis dolor?</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-1bf3c09 elementor-view-stacked elementor-widget__width-auto elementor-shape-circle elementor-widget elementor-widget-icon" data-id="1bf3c09" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="icon.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-icon-wrapper">
-                                                            <a class="elementor-icon" href="#">
-                                                            <i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-25f2d8d elementor-widget__width-auto elementor-widget elementor-widget-heading" data-id="25f2d8d" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <span class="elementor-heading-title elementor-size-default"><a href="#">learn more about us</a></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-d35f8b5 elementor-column elementor-col-66 elementor-top-column" data-id="d35f8b5" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-a0e49a8 elementor-widget elementor-widget-avante-gallery-horizontal" data-id="a0e49a8" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="avante-gallery-horizontal.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="horizontal-gallery-wrapper" data-autoplay="0" data-loop="0" data-navigation="0" data-pagination="0" data-parallax="1" data-fullscreen="0">
-                                                            <div class="horizontal-gallery-cell" style="margin-right:40px">
-                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="{{ asset('avante/upload/young-businesswoman-smiling-at-office-LGQRJY2-1024x680.jpg')}}" alt="" style="height:370px;">
-                                                            </div>
-                                                            {{-- <div class="horizontal-gallery-cell" style="margin-right:40px">
-                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="{{ asset('avante/upload/business-people-and-coworkers-outside-46ZMVDY-1024x683.jpg')}}" alt="" style="height:370px;">
-                                                            </div>
-                                                            <div class="horizontal-gallery-cell" style="margin-right:40px">
-                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="{{ asset('upload/view-at-young-business-people-talking-and-smiling-EPN7L28-1024x613.jpg')}}" alt="" style="height:370px;">
-                                                            </div>
-                                                            <div class="horizontal-gallery-cell" style="margin-right:40px">
-                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="upload/rawpixel-783345-unsplash-1024x683.jpg" alt="" style="height:370px;">
-                                                            </div>
-                                                            <div class="horizontal-gallery-cell" style="margin-right:40px">
-                                                                <img class="horizontal-gallery-cell-img" data-flickity-lazyload="upload/people-corporate-teamwork-brainstorming-working-PYNQJCK-1024x1024.jpg" alt="" style="height:370px;">
-                                                            </div> --}}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                            <section class="elementor-element elementor-element-1920fab elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1920fab" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-f34615c elementor-column elementor-col-100 elementor-top-column" data-id="f34615c" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <section class="elementor-element elementor-element-26984b0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="26984b0" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-element elementor-element-5e1db92 elementor-column elementor-col-33 elementor-inner-column" data-id="5e1db92" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-a2d2035 elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-id="a2d2035" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">A view of the <br>
-                                                                            design universe</h2>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-6ee3581 elementor-widget elementor-widget-spacer" data-id="6ee3581" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="spacer.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-spacer">
-                                                                                <div class="elementor-spacer-inner">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-0aeb392 elementor-widget__width-auto elementor-widget elementor-widget-counter" data-id="0aeb392" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="counter.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-counter">
-                                                                                <div class="elementor-counter-number-wrapper">
-                                                                                    <span class="elementor-counter-number-prefix"></span>
-                                                                                    <span class="elementor-counter-number" data-duration="1000" data-to-value="2500" data-from-value="0" data-delimiter=",">0</span>
-                                                                                    <span class="elementor-counter-number-suffix">+</span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-6a4e2c1 elementor-widget__width-auto elementor-widget elementor-widget-heading" data-id="6a4e2c1" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-heading-title elementor-size-default">
-                                                                                Customers
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-4af6c6f elementor-widget__width-inherit elementor-widget elementor-widget-divider" data-id="4af6c6f" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:500,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="divider.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-divider">
-                                                                                <span class="elementor-divider-separator">
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-c3afb63 elementor-widget elementor-widget-text-editor" data-id="c3afb63" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="text-editor.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-text-editor elementor-clearfix">
-                                                                                <div class="lqd-lines split-unit lqd-unit-animation-done">
-                                                                                    Cras chinwag brown bread Eaton cracking goal so I said a load of old tosh baking cakes, geeza arse it’s your round grub sloshed burke, my good sir chancer he legged it he lost his bottle pear shaped bugger all mate
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-2bad745 elementor-column elementor-col-33 elementor-inner-column" data-id="2bad745" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:500,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.8,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.8,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-a6bfe35 elementor-widget elementor-widget-image" data-id="a6bfe35" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:600,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.7,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.7,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-image">
-                                                                                <img width="184" height="116" src="upload/home7_icon1.png" class="attachment-large size-large" alt="">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-2ab2114 elementor-widget elementor-widget-heading" data-id="2ab2114" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">National top 50 consulting firms</h2>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-2d1c694 elementor-widget-divider--separator-type-pattern elementor-widget elementor-widget-divider" data-id="2d1c694" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="divider.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-divider" style="--divider-pattern-url: url(" data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' preserveaspectratio='none' overflow='visible' height='100%' viewbox='0 0 24 24' stroke='%23ffc70a' stroke-width='1' fill='none' stroke-linecap='square' stroke-miterlimit='10' %3e%3cpolyline points='0,18 12,6 24,18 ' /%3e%3c/svg%3e");">
-                                                                                <span class="elementor-divider-separator">
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-84921f0 elementor-widget elementor-widget-text-editor" data-id="84921f0" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="text-editor.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-text-editor elementor-clearfix">
-                                                                                <div class="lqd-lines split-unit lqd-unit-animation-done">
-                                                                                    <p class="p1">
-                                                                                        Consistently ranked among the top consulting firms across the nation.
-                                                                                    </p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-85baf05 elementor-column elementor-col-33 elementor-inner-column" data-id="85baf05" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:500,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.8,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.8,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-869d7d0 elementor-widget elementor-widget-image" data-id="869d7d0" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:500,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.7,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.7,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-image">
-                                                                                <img width="152" height="158" src="upload/home7_icon2.png" class="attachment-large size-large" alt="">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-02275a0 elementor-widget elementor-widget-heading" data-id="02275a0" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">99.9% client satisfaction</h2>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-974cde2 elementor-widget-divider--separator-type-pattern elementor-widget elementor-widget-divider" data-id="974cde2" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="divider.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-divider" style="--divider-pattern-url: url(" data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' preserveaspectratio='none' overflow='visible' height='100%' viewbox='0 0 24 24' stroke='%23ffc70a' stroke-width='1' fill='none' stroke-linecap='square' stroke-miterlimit='10' %3e%3cpolyline points='0,18 12,6 24,18 ' /%3e%3c/svg%3e");">
-                                                                                <span class="elementor-divider-separator">
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-5ec0d59 elementor-widget elementor-widget-text-editor" data-id="5ec0d59" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="text-editor.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-text-editor elementor-clearfix">
-                                                                                <div class="lqd-lines split-unit lqd-unit-animation-done">
-                                                                                    <p class="p1">
-                                                                                        Dedicated to providing personal attention to all our clients.
-                                                                                    </p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </section>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                            <section class="elementor-element elementor-element-6b46760 elementor-section-stretched elementor-section-height-min-height elementor-section-items-top elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="6b46760" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-c01a38c elementor-column elementor-col-50 elementor-top-column" data-id="c01a38c" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <section class="elementor-element elementor-element-72a37db elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="72a37db" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-element elementor-element-78d91d9 elementor-column elementor-col-50 elementor-inner-column" data-id="78d91d9" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-74c160f elementor-absolute animation mobile_static elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-image" data-id="74c160f" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;true&quot;,&quot;avante_ext_scrollme_disable&quot;:&quot;tablet&quot;,&quot;avante_ext_scrollme_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-100,&quot;sizes&quot;:[]},&quot;_position&quot;:&quot;absolute&quot;,&quot;avante_ext_scrollme_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_smoothness&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scalez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-image">
-                                                                                <img width="683" height="1024" src="upload/smiling-mature-man-outdoors-with-mobile-phone-PB28ME5-683x1024.jpg" class="attachment-large size-large" alt="" >
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="elementor-element elementor-element-83d54d1 elementor-absolute animation mobile_static elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-image" data-id="83d54d1" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;true&quot;,&quot;avante_ext_scrollme_disable&quot;:&quot;tablet&quot;,&quot;avante_ext_scrollme_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;_position&quot;:&quot;absolute&quot;,&quot;avante_ext_scrollme_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-20,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_smoothness&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scalez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-image">
-                                                                                <img width="1024" height="1024" src="upload/businesswoman-writing-waiting-flight-concept-PA72YZ6-1024x1024.jpg" class="attachment-large size-large" alt="">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-cb801e7 elementor-column elementor-col-50 elementor-inner-column" data-id="cb801e7" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-e686555 elementor-absolute animation mobile_static elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-image" data-id="e686555" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;true&quot;,&quot;avante_ext_scrollme_smoothness&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:60,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:60,&quot;sizes&quot;:[]},&quot;_position&quot;:&quot;absolute&quot;,&quot;avante_ext_scrollme_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-40,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_disable&quot;:&quot;mobile&quot;,&quot;avante_ext_scrollme_scalez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div class="elementor-image">
-                                                                                <img width="1024" height="1024" src="upload/business-people-discussion-happiness-coffee-PM2SKXD-1024x1024.jpg" class="attachment-large size-large" alt="" >
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </section>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-7ec7daa elementor-column elementor-col-50 elementor-top-column" data-id="7ec7daa" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-f34e6cd elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image" data-id="f34e6cd" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-image">
-                                                            <img width="747" height="704" src="upload/hom3_morph_bg2.png" class="attachment-full size-full" alt="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-cb92aa3 elementor-widget__width-inherit elementor-widget elementor-widget-heading" data-id="cb92aa3" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">We are optimists who love to work together</h2>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-d44ba28 elementor-widget elementor-widget-text-editor" data-id="d44ba28" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="text-editor.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-text-editor elementor-clearfix">
-                                                            <div class="lqd-lines split-unit lqd-unit-animation-done">
-                                                                Geeza arse it’s your round grub sloshed burke, my good sir chancer he legged it he lost his bottle pear shaped bugger all mate
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-45c09c5 elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="45c09c5" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="button.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-button-wrapper">
-                                                            <a href="#" class="elementor-button-link elementor-button elementor-size-md" role="button">
-                                                            <span class="elementor-button-content-wrapper">
-                                                            <span class="elementor-button-icon elementor-align-icon-right">
-                                                            <i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i></span>
-                                                            <span class="elementor-button-text">Get In Touch</span>
-                                                            </span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                            <section class="elementor-element elementor-element-31c171e elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="31c171e" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_top&quot;:&quot;tilt&quot;,&quot;shape_divider_bottom&quot;:&quot;tilt&quot;}">
-                            <div class="elementor-shape elementor-shape-top" data-negative="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
-                                <path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
-                                </svg>
-                            </div>
-                            <div class="elementor-shape elementor-shape-bottom" data-negative="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 100" preserveaspectratio="none">
-                                <path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
-                                </svg>
-                            </div>
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-cce3e30 elementor-column elementor-col-100 elementor-top-column" data-id="cce3e30" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <section class="elementor-element elementor-element-96f1a08 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="96f1a08" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-element elementor-element-86875dd elementor-column elementor-col-33 elementor-inner-column" data-id="86875dd" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-8f269d8 elementor-widget__width-inherit elementor-widget elementor-widget-heading" data-id="8f269d8" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">The design <br>
-                                                                            industry today</h2>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-9408970 elementor-column elementor-col-33 elementor-inner-column" data-id="9408970" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-4881079 elementor-widget elementor-widget-heading" data-id="4881079" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <span class="elementor-heading-title elementor-size-default">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-489c88e elementor-column elementor-col-33 elementor-inner-column" data-id="489c88e" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-02c8015 elementor-widget elementor-widget-heading" data-id="02c8015" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <span class="elementor-heading-title elementor-size-default">Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </section>
-                                                <section class="elementor-element elementor-element-8819b5b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="8819b5b" data-element_type="section">
-                                                <div class="elementor-container elementor-column-gap-default">
-                                                    <div class="elementor-row">
-                                                        <div class="elementor-element elementor-element-1c6a8b7 elementor-column elementor-col-100 elementor-inner-column" data-id="1c6a8b7" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                                <div class="elementor-widget-wrap">
-                                                                    <div class="elementor-element elementor-element-cbff344 elementor-widget elementor-widget-avante-slider-synchronized-carousel" data-id="cbff344" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:500,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.7,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.7,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="avante-slider-synchronized-carousel.default">
-                                                                        <div class="elementor-widget-container">
-                                                                            <div id="tg_synchronized_carousel_slider_cbff344" data-pagination="synchronized-carousel-pagination_cbff344" class="synchronized-carousel-slider-wrapper sliders-container" data-countslide="3" data-slidetitles="[&quot;Technology enabled fitness company&quot;,&quot;Wearable hardware company&quot;,&quot;Great food &amp; beverage company&quot;]" data-slideimages="[&quot;upload/multiracial-business-people-working-outdoor-in-P39WU43.jpg&quot;,&quot;upload/photo-of-business-man-wearing-eyeglasses-sitting-PB3SK4U.jpg&quot;,&quot;upload/business-people-working-in-office-UG93BVM.jpg&quot;]" data-slidebuttontitles="[&quot;View Project&quot;,&quot;View Project&quot;,&quot;View Project&quot;]" data-slidebuttonurls="[&quot;single-portfolio.html&quot;,&quot;single-portfolio-3.html&quot;,&quot;single-portfolio-4.html&quot;]">
-                                                                                <ul id="synchronized-carousel-pagination_cbff344" class="synchronized-carousel-pagination">
-                                                                                    <li class="pagination-item"><a class="pagination-button"></a></li>
-                                                                                    <li class="pagination-item"><a class="pagination-button"></a></li>
-                                                                                    <li class="pagination-item"><a class="pagination-button"></a></li>
-                                                                                </ul>
-                                                                            </div>
-                                                                            <br class="clear">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                </section>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                            <section class="elementor-element elementor-element-12fbd6c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="12fbd6c" data-element_type="section">
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-c5bc2cd elementor-column elementor-col-50 elementor-inner-column" data-id="c5bc2cd" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-d6a993f elementor-widget__width-inherit elementor-widget elementor-widget-heading" data-id="d6a993f" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">How design<br>
-                                                        teams level up</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-aa23062 elementor-column elementor-col-50 elementor-inner-column" data-id="aa23062" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-d2e2f6d elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="d2e2f6d" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_duration&quot;:400,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="icon.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-icon-wrapper">
-                                                            <div class="elementor-icon">
-                                                                <i aria-hidden="true" class="fas fa-star"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-31670a9 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="31670a9" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_duration&quot;:400,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="icon.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-icon-wrapper">
-                                                            <div class="elementor-icon">
-                                                                <i aria-hidden="true" class="fas fa-star"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-9a6332f elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="9a6332f" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_duration&quot;:400,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="icon.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-icon-wrapper">
-                                                            <div class="elementor-icon">
-                                                                <i aria-hidden="true" class="fas fa-star"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-436003d elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="436003d" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_duration&quot;:450,&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="icon.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-icon-wrapper">
-                                                            <div class="elementor-icon">
-                                                                <i aria-hidden="true" class="fas fa-star"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-c41fa03 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="c41fa03" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_duration&quot;:400,&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="icon.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-icon-wrapper">
-                                                            <div class="elementor-icon">
-                                                                <i aria-hidden="true" class="fas fa-star"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-f856def elementor-widget elementor-widget-heading" data-id="f856def" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <span class="elementor-heading-title elementor-size-default">“They treated me like family. If I could I would give them 100 Stars!”</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                            <section class="elementor-element elementor-element-e404263 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e404263" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-5c61f78 elementor-column elementor-col-100 elementor-top-column" data-id="5c61f78" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-4951ec0 elementor-widget elementor-widget-avante-testimonial-card" data-id="4951ec0" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="avante-testimonial-card.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="testimonials-card-wrapper" data-pagination="0" data-beginning-slide="second">
-                                                            <div class="slider">
-                                                                <ul>
-                                                                    <li>
-                                                                    <div class="testimonial-info">
-                                                                        <div class="testimonial-info-title">
-                                                                            <h3>One of the easiest online accounting systems we&#039;ve tried</h3>
-                                                                            <div class="author">
-                                                                                Jenny Doe
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="testimonial-info-img">
-                                                                            <img src="upload/mature-businesswoman-wearing-glasses-YT5CU8Q-150x150.jpg" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="testimonial-info-desc">
-                                                                         Duis consectetur feugiat auctor. Morbi nec enim luctus, feugiat arcu id, ultricies ante. Duis vel massa eleifend, porta est non, feugiat metus.
-                                                                    </div>
-                                                                    </li>
-                                                                    <li>
-                                                                    <div class="testimonial-info">
-                                                                        <div class="testimonial-info-title">
-                                                                            <h3>Cost Accounting is enemy number one of productivity</h3>
-                                                                            <div class="author">
-                                                                                Jenny Doe
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="testimonial-info-img">
-                                                                            <img src="upload/smiling-mature-man-outdoors-with-mobile-phone-PB28ME5-150x150.jpg" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="testimonial-info-desc">
-                                                                         Duis consectetur feugiat auctor. Morbi nec enim luctus, feugiat arcu id, ultricies ante. Duis vel massa eleifend, porta est non, feugiat metus.
-                                                                    </div>
-                                                                    </li>
-                                                                    <li>
-                                                                    <div class="testimonial-info">
-                                                                        <div class="testimonial-info-title">
-                                                                            <h3>If you want an accounting of your worth, count your friends</h3>
-                                                                            <div class="author">
-                                                                                Jenny Doe
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="testimonial-info-img">
-                                                                            <img src="upload/businesswoman-writing-waiting-flight-concept-PA72YZ6-150x150.jpg" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="testimonial-info-desc">
-                                                                         Duis consectetur feugiat auctor. Morbi nec enim luctus, feugiat arcu id, ultricies ante. Duis vel massa eleifend, porta est non, feugiat metus.
-                                                                    </div>
-                                                                    </li>
-                                                                    <li>
-                                                                    <div class="testimonial-info">
-                                                                        <div class="testimonial-info-title">
-                                                                            <h3>Life is like accounting, everything must be balanced</h3>
-                                                                            <div class="author">
-                                                                                Jenny Doe
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="testimonial-info-img">
-                                                                            <img src="upload/attractive-business-woman-working-at-his-laptop-P6AMUS6-150x150.jpg" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="testimonial-info-desc">
-                                                                         Duis consectetur feugiat auctor. Morbi nec enim luctus, feugiat arcu id, ultricies ante. Duis vel massa eleifend, porta est non, feugiat metus.
-                                                                    </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                            <section class="elementor-element elementor-element-c771cab elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c771cab" data-element_type="section">
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-54ad6e3 elementor-column elementor-col-100 elementor-top-column" data-id="54ad6e3" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-c5f600f elementor-widget__width-inherit elementor-widget elementor-widget-heading" data-id="c5f600f" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">Our Recents<br>
-                                                         Cases for clients</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                            <section class="elementor-element elementor-element-26a59a5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="26a59a5" data-element_type="section">
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-00e275c elementor-column elementor-col-66 elementor-top-column" data-id="00e275c" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-8ee58a4 animation elementor-widget elementor-widget-image" data-id="8ee58a4" data-element_type="widget" data-settings="{&quot;avante_ext_is_parallax_mouse&quot;:&quot;true&quot;,&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse_depth&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.2,&quot;sizes&quot;:[]},&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-image">
-                                                            <img width="1024" height="683" src="upload/portrait-of-smiling-senior-businesswoman-in-KEHVBZY-1024x683.jpg" class="attachment-large size-large" alt="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-8e79734 animation elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image" data-id="8e79734" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;true&quot;,&quot;avante_ext_scrollme_disable&quot;:&quot;tablet&quot;,&quot;avante_ext_scrollme_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-100,&quot;sizes&quot;:[]},&quot;_position&quot;:&quot;absolute&quot;,&quot;avante_ext_scrollme_smoothness&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scalez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-image">
-                                                            <img width="1024" height="1024" src="upload/business-corporate-colleagues-co-workers-job-PXJLUYE-1024x1024.jpg" class="attachment-large size-large" alt="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-0eef505 elementor-column elementor-col-33 elementor-top-column" data-id="0eef505" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-999cce8 elementor-widget__width-inherit elementor-widget elementor-widget-heading" data-id="999cce8" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default"><a href="#">Fitbit Wearable</a></h2>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-7a93e69 elementor-widget elementor-widget-heading" data-id="7a93e69" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <span class="elementor-heading-title elementor-size-default">branding / content & production /<br>
-                                                         digital / graphic design</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                            <section class="elementor-element elementor-element-e10299d elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e10299d" data-element_type="section">
-                            <div class="elementor-container elementor-column-gap-default">
-                                <div class="elementor-row">
-                                    <div class="elementor-element elementor-element-2e99558 elementor-column elementor-col-50 elementor-top-column" data-id="2e99558" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-deb155d elementor-widget__width-inherit elementor-widget elementor-widget-heading" data-id="deb155d" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default"><a href="../single-portfolio-4/index.htm">Goodreads Inc</a></h2>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-d3e6104 elementor-widget elementor-widget-heading" data-id="d3e6104" data-element_type="widget" data-settings="{&quot;avante_ext_is_smoove&quot;:&quot;true&quot;,&quot;avante_ext_smoove_disable&quot;:&quot;769&quot;,&quot;avante_ext_smoove_duration&quot;:1000,&quot;avante_ext_smoove_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:40,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-90,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-140,&quot;sizes&quot;:[]},&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_smoove_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewx&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_skewy&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_smoove_perspective&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1000,&quot;sizes&quot;:[]},&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <span class="elementor-heading-title elementor-size-default">branding / content & production /<br>
-                                                         digital / graphic design</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-260a525 elementor-column elementor-col-50 elementor-top-column" data-id="260a525" data-element_type="column" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}">
-                                        <div class="elementor-column-wrap elementor-element-populated">
-                                            <div class="elementor-widget-wrap">
-                                                <div class="elementor-element elementor-element-c54b706 animation elementor-widget elementor-widget-image" data-id="c54b706" data-element_type="widget" data-settings="{&quot;avante_ext_is_parallax_mouse&quot;:&quot;true&quot;,&quot;avante_ext_is_scrollme&quot;:&quot;false&quot;,&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse_depth&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.2,&quot;sizes&quot;:[]},&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-image">
-                                                            <img width="1024" height="683" src="upload/photo-of-business-man-wearing-eyeglasses-sitting-PB3SK4U-1024x683.jpg" class="attachment-large size-large" alt="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-element elementor-element-19d48df animation elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image" data-id="19d48df" data-element_type="widget" data-settings="{&quot;avante_ext_is_scrollme&quot;:&quot;true&quot;,&quot;avante_ext_scrollme_disable&quot;:&quot;tablet&quot;,&quot;avante_ext_scrollme_translatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-100,&quot;sizes&quot;:[]},&quot;_position&quot;:&quot;absolute&quot;,&quot;avante_ext_scrollme_smoothness&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scalex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scaley&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_scalez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatey&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_rotatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatex&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_scrollme_translatez&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;avante_ext_is_smoove&quot;:&quot;false&quot;,&quot;avante_ext_is_parallax_mouse&quot;:&quot;false&quot;,&quot;avante_ext_is_infinite&quot;:&quot;false&quot;}" data-widget_type="image.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="elementor-image">
-                                                            <img width="1024" height="1024" src="upload/people-corporate-teamwork-brainstorming-working-PYNQJCK-1024x1024.jpg" class="attachment-large size-large" alt="" >
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-                <div class="comment_disable_clearer">
+  <!-- HOME SLIDER -->
+  <div class="swiper-mt">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background.jpeg') }}');">
+            <div class="container slider-caption">
+                <div class="slider-text">
+                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
+                    <h1 class="display-2">Desa Baros</h1>
+                    <a href="#" class="read-more white-btn">Lihat Selengkapnya</a>
                 </div>
             </div>
         </div>
-        <!-- End main content -->
+        <!-- /slider-img -->
+        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background4.jpeg') }}');">
+            <div class="container slider-caption">
+                <div class="slider-text">
+                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
+                    <h1 class="display-2">Desa Baros</h1>
+                    <a href="#" class="read-more white-btn">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <!-- /slider-img -->
+        <div class="swiper-slide slider-img" style="background-image: url('{{ asset('frontend/images/background5.jpeg') }}');">
+            <div class="container slider-caption">
+                <div class="slider-text">
+                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
+                    <h1 class="display-2">Desa Baros</h1>
+                    <a href="#" class="read-more white-btn-v2">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <!-- /slider-img -->
     </div>
+    <!-- /swiper-wrapper -->
+    <div class="swiper-mt-button-prev" tabindex="0" role="button" aria-label="Previous slide">
+        <svg version="1.1" class="arrow-slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
+            <path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
+                c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
+            <path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
+                S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
+        </svg>
+    </div>
+    <!-- /swiper-mt-button-prev -->
+    <div class="swiper-mt-button-next" tabindex="0" role="button" aria-label="Next slide">
+        <svg version="1.1" class="arrow-slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
+            <path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
+                c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
+            <path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
+                S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
+        </svg>
+    </div>
+    <!-- /swiper-mt-button-next -->
 </div>
-{{-- End Content --}}
-</div>
-{{-- End template wrapper --}}
+	<!-- /HOME SLIDER -->
+	<!-- WRAP CONTENT -->
+	<div id="wrap-content" class="page-content custom-page-template">
+		<!-- SECTION 1 -->
+		<div id="home-section-1-1" class="section-holder home-section-1-1"
+			style="background-image: url(images/home/home2.png);" alt="Prewedding">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 margin-bm20">
+						<!-- <div class="el-smalltitle">Our Story</div> -->
+						<h3 class="display-4 margin-b30">Kegiatan Desa</h3>
+						<div class="margin-b50">
+							<p style="text-align: justify;">Selamat datang di halaman kegiatan Desa Baros, Kabupaten Bandung! Di sini, kami menampilkan berbagai kegiatan yang mencerminkan semangat kebersamaan dan gotong royong masyarakat Desa Baros. Mulai dari acara budaya, kegiatan sosial, hingga program pembangunan desa, semua terlibat aktif untuk memajukan kesejahteraan dan kualitas hidup warga desa</p>
+
+
+
+							<!-- /row -->
+						</div>
+						
+					</div>
+                    <div class="col-lg-4 margin-bm20">
+						<!-- <div class="el-smalltitle">Our Story</div> -->
+                            <div class="price-box price-box-middle black-text">
+                            <div class=""
+                            <div class="margin-b30"></div>
+                            <ul class="price-features">
+                                
+                            </ul>
+                            <a class="read-more btn100" href="pricing-plans.html">Choose</a>
+                        </div>
+						
+					</div>
+                    <div class="col-lg-4 margin-bm20">
+						<!-- <div class="el-smalltitle">Our Story</div> -->
+						<div class="price-box">
+                            <h3 class="margin-b10 black-text"></h3>
+                            <div class="margin-b30"></div>
+                            <ul class="price-features">
+                               
+                            </ul>
+                            <a class="read-more btn100" href="pricing-plans.html">Choose</a>
+                        </div>
+						
+					</div>
+					<!-- /col-lg-6 -->
+
+					<!-- /col-lg-6 -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+	</div>
+	<!-- /SECTION 1 -->
+	<!-- /SECTION 2 -->
+	<div id="home-section-1-2" class="section-holder home-section-1-2" style="background-color: rgba(35, 35, 35, 0.8)">
+		<div class="container mt-4 my-4">
+			<div class="row">
+				<div class="col-lg-12">
+
+				</div>
+				<!-- /col-lg-12 -->
+			</div>
+
+			<!-- /row -->
+			<div class="portfolio-masonry-container">
+				<div class="portfolio-masonry portfolio-layout-masonry">
+					<div class="item-portfolio item-5cols wedding text-center">
+						<div class="post"><img src="
+						images//why/1.png" class="img-fluid" alt=" "></div>
+						<div class="item-text-holder">
+							<h2 class="article-title" style="text-align: center; font-size: calc(0.9rem + 1vw)">Timeless
+								works of art</h2>
+							<ul class="portfolio-categ">
+								<li>We capture each moment with care and precision, transforming them into cherished
+									works of art that will be treasured for years to come.</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /item-portfolio -->
+					<div class="item-portfolio item-5cols wedding  text-center">
+						<div class="post"><img src="images//why/2.png" class="img-fluid" alt=" "></div>
+						<div class="item-text-holder">
+							<h2 class="article-title" style="text-align: center; font-size: calc(0.9rem + 1vw)">
+								Customizable pricing</h2>
+							<ul class="portfolio-categ">
+								<li>We strive to offer a personalized and affordable experience to all our clients.</li>
+							</ul>
+						</div>
+
+					</div>
+					<!-- /item-portfolio -->
+					<div class="item-portfolio item-5cols wedding text-center">
+						<div class="post"><img src="images//why/3.png" class="img-fluid" alt=" "></div>
+						<div class="item-text-holder">
+							<h2 class="article-title" style="text-align: center; 	font-size: calc(0.9rem + 1vw)">Online
+								proofing</h2>
+							<ul class="portfolio-categ">
+								<li>Access photos easily, quickly, and save time and effort. Get the experience you want
+									and need</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /item-portfolio -->
+					<div class="item-portfolio item-5cols wedding text-center">
+						<div class="post"><img src="images//why/4.png" class="img-fluid" alt=" "></div>
+						<div class="item-text-holder">
+							<h2 class="article-title" style="text-align: center; 	font-size: calc(0.9rem + 1vw)">Free
+								consultation</h2>
+							<ul class="portfolio-categ">
+								<li>Free consultation to help clients choose the right service
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /item-portfolio -->
+					<div class="item-portfolio item-5cols wedding text-center">
+						<div class="post"><img src="images//why/5.png" class="img-fluid" alt=" "></div>
+						<div class="item-text-holder">
+							<h2 class="article-title" style="text-align: center; 	font-size: calc(0.8rem + 1vw)">Premium
+								print & photo album</h2>
+							<ul class="portfolio-categ">
+								<li>This service provides premium quality photo prints and albums with high-quality
+									paper, binding materials, and attractive designs. </li>
+							</ul>
+						</div>
+					</div>
+					<!-- /item-portfolio -->
+
+				</div>
+				<!-- /portfolio-masonry -->
+			</div>
+			<!-- /portfolio-masonry-container -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION 2 -->
+	<!-- /SECTION 3 -->
+	<div id="home-section-1-3" class="section-holder home-section-1-3"
+		style="background-image: url(images/pages/portfolio.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center margin-b30">
+					<p style="font-size: 1rem;">SIGNATURE WORK</p>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2 class="display-3 margin-b50">PORTFOLIO</h2>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="portfolio-slider gallery-slider-holder">
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/1.png" class="img-fluid" alt=" "
+										width="750" height="750"> </a></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/2.png" class="img-fluid" alt=" "
+										width="750" height="750"> </a></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/3.png" class="img-fluid" alt=" "
+										width="750" height="750"> </a></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/4.png" class="img-fluid" alt=" "
+										width="750" height="750"> </a></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/5.png" class="img-fluid" alt=" "
+										width="750" height="750"></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/6.png" class="img-fluid" alt=" "
+										width="750" height="750"></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/7.png" class="img-fluid" alt=" "
+										width="750" height="750"></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/8.png" class="img-fluid" alt=" "
+										width="750" height="750"></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/9.png" class="img-fluid" alt=" "
+										width="750" height="750"></div>
+							</div>
+							<!-- /item-slider -->
+							<div class="swiper-slide item-slider">
+								<div class="post-image item-grid-image"><img loading="lazy"
+										src="images/portfolio/featured-images/10.png" class="img-fluid" alt=" "
+										width="750" height="750"></div>
+							</div>
+							<!-- /item-slider -->
+						</div>
+						<!-- /swiper-wrapper -->
+						<div class="swiper-mt-button-prev portfolio-slider-btn-prev">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55"
+								style="enable-background:new 0 0 55 55;" xml:space="preserve">
+								<path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
+										c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
+								<path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
+										S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
+							</svg>
+						</div>
+						<div class="swiper-mt-button-next portfolio-slider-btn-next">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55"
+								style="enable-background:new 0 0 55 55;" xml:space="preserve">
+								<path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
+										c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
+								<path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
+										S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
+							</svg>
+						</div>
+					</div>
+					<!-- /portfolio-slider -->
+				</div>
+				<!-- /col-lg-12 -->
+			</div>
+			<!-- /row -->
+			<div class="row">
+				<div class="col-md-12 text-center margin-b50">
+				</div>
+
+			</div>
+			<!-- /row kosong -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION 3 -->
+	<!-- SECTION 4 -->
+	<div id="home-section-1-4" class="section-holder home-section-1-4"
+		style="background-image: url(images/offer/bng.png);">
+		<div class="margin-wrapper">
+			<div class="container">
+				<div class="col-md-12 text-center">
+					<h2 class="offer margin-b30">Our Offerings</h2>
+				</div>
+				<!-- /row -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="portfolio-masonry-container">
+							<div class="portfolio-masonry portfolio-layout-masonry">
+								<!-- /item-portfolio -->
+								<div class="item-portfolio item-3cols wedding">
+									<div class="post-image item-grid-image icon-svg icon-svg-border">
+										<img src="images/offer/engagement.png" class="img-fluid">
+									</div>
+									<!-- /icon-svg -->
+									<h5 class="white margin-b10">Engagement</h5>
+									<!-- <p style="text-align: justify;">The aim of engagement shoots is to produce creative
+										and
+										artistic
+										photographs of the couple that showcase their happiness, intimacy and love for
+										one
+										another
+									</p> -->
+								</div>
+								<!-- /item-portfolio -->
+								<div class="item-portfolio item-3cols wedding">
+									<div class="post-image item-grid-image icon-svg icon-svg-border">
+										<img src="images/offer/sangjit.png" class="img-fluid">
+									</div>
+									<!-- /icon-svg -->
+									<h5 class="white margin-b10">Sangjit</h5>
+									<!-- <p style="text-align: justify;">The aim of sangjit shoots is to produce creative and
+										artistic
+										photographs of the couple that showcase their happiness, intimacy and love for
+										one
+										another
+									</p> -->
+								</div>
+								<!-- /item-portfolio -->
+								<div class="item-portfolio item-3cols wedding">
+									<div class="post-image item-grid-image icon-svg icon-svg-border">
+										<img src="images/offer/prewed.png" class="img-fluid">
+									</div>
+									<!-- /icon-svg -->
+									<h5 class="white margin-b10">Prewedding</h5>
+									<!-- <p style="text-align: justify;">Prewedding is a popular and essential photography
+										service for
+										couples who want to create beautiful memories before their wedding day</p> -->
+								</div>
+								<!-- /item-portfolio -->
+								<div class="item-portfolio item-3cols wedding">
+									<div class="post-image item-grid-image icon-svg icon-svg-border">
+										<img src="images/offer/inter.png" class="img-fluid">
+									</div>
+									<!-- /icon-svg -->
+									<h5 class="white margin-b10">International Wedding</h5>
+									<!-- <p style="text-align: justify;">This service is usually carried out by
+											photographers and
+											videographers who are experts in taking pictures and recording videos from
+											weddings
+											with
+											good quality</p> -->
+								</div>
+								<!-- /item-portfolio -->
+								<div class="item-portfolio item-3cols wedding">
+									<div class="post-image item-grid-image icon-svg icon-svg-border">
+										<img src="images/offer/cerem.png" class="img-fluid">
+									</div>
+									<!-- /icon-svg -->
+									<h5 class="white margin-b10">Traditional ceremony</h5>
+									<!-- <p style="text-align: justify;">Traditional Ceremony services are very important for
+										people who
+										wish to commemorate important moments in their lives, whether in a particular
+										cultural or
+										religious context.</p> -->
+								</div>
+								<!-- /item-portfolio -->
+								<div class="item-portfolio item-3cols wedding">
+									<div class="post-image item-grid-image icon-svg icon-svg-border">
+										<img src="images/offer/tradi.png" class="img-fluid">
+									</div>
+									<!-- /icon-svg -->
+									<h5 class="white margin-b10">Traditional Wedding</h5>
+									<!-- <p style="text-align: justify;">This service is usually carried out by
+											photographers
+											and videographers
+											who are experts in taking pictures and recording videos from weddings with
+											good
+											quality</p> -->
+								</div>
+
+
+
+
+								<!-- /portfolio-masonry -->
+							</div>
+							<!-- /portfolio-masonry-container -->
+						</div>
+						<!-- /col-lg-12 -->
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+
+		</div>
+	</div>
+	<!-- /SECTION 4 -->
+	<!-- /WRAP CONTENT -->
+
+
+	<!-- SECTION 5 -->
+	<div id="home-section-1-5" class="section-holder home-section-1-5 parallax"
+		style="background-image:url(images/pages/img-about.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="margin-percentr40">
+						<div class="testimonial-white">
+							<div class="testimonial-quote">
+								<svg version="1.1" class="icon-quote2" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+									style="enable-background:new 0 0 512 512;" xml:space="preserve">
+									<g>
+										<g>
+											<path d="M84.2,437.2c-7.2,0-14.2-3.2-18.9-9.1c-6.7-8.4-6.9-20.3-0.7-29c16.6-22.9,28-49.4,33.1-77C72,316.2,48.6,302.3,31,282.2
+														c-20-22.8-31-52-31-82.3c0-69,56.1-125.1,125.1-125.1s125.1,56.1,125.1,125.1c0,103.2-61.6,195.6-156.8,235.4
+														C90.4,436.6,87.3,437.2,84.2,437.2z M125.1,94.1c-58.4,0-105.9,47.5-105.9,105.9c0,52.4,39.1,97.4,90.9,104.8l9.5,1.3l-1.3,9.5
+														c-4.7,34-17.8,66.8-38.1,94.8c-1.3,1.8-1.2,4.1,0.1,5.8c1.3,1.7,3.6,2.3,5.6,1.5c88.1-36.8,145-122.2,145-217.7
+														C231,141.5,183.5,94.1,125.1,94.1z M346,437.2c-7.2,0-14.2-3.2-18.9-9.1c-6.7-8.4-6.9-20.3-0.7-29c16.6-22.9,27.9-49.4,33.1-77
+														c-25.8-5.8-49.2-19.7-66.8-39.8c-20-22.8-31-52-31-82.3c0-69,56.1-125.1,125.1-125.1S512,130.9,512,199.9
+														c0,103.2-61.6,195.6-156.8,235.4C352.2,436.6,349.1,437.2,346,437.2z M386.9,94.1c-58.4,0-105.9,47.5-105.9,105.9
+														c0,52.4,39.1,97.4,90.9,104.8l9.5,1.3l-1.3,9.5c-4.7,34-17.8,66.8-38.1,94.8c-1.3,1.8-1.2,4.1,0.1,5.8c1.3,1.7,3.6,2.3,5.6,1.5
+														c88.1-36.8,145-122.2,145-217.7C492.8,141.5,445.3,94.1,386.9,94.1z"></path>
+										</g>
+									</g>
+								</svg>
+							</div>
+							<!-- /testimonial-quote -->
+							<div class="testimonial-slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide testimonial-info">
+										<h4 class="testimonial-desc">Puas banget sama hasil-hasilnya huhu. Awalnya aku
+											sama paksu bingung mau pilih vendor photography mana, tapi kenapa akhirnya
+											aku pilih Nesnumoto karena tone sama angle pengambilan foto2nya menurutku
+											bagus-bagus, jadi akhirnya aku pilih nesnumoto. Dan hasilnya sesuai
+											ekspektasi, dari mulai kulitas poto, albumnya, admin, photographernyanya
+											semua friendly.</h4>
+										<div class="testimonial-client">Nadila Alifa</div>
+										<div class="testimonial-company">Bride</div>
+									</div>
+									<!-- /testimonial-info -->
+									<div class="swiper-slide testimonial-info">
+										<h4 class="testimonial-desc">Thank you nesnumoto sudah berkenan jadi photography
+											di hari besar kami, team nesnu sudah berkenan membantu kami, bahagia sekali
+											kami,
+											nesnumoto luar biasa dan gaperlu di ragukan lagi masyaAllah, keren sekali..
+											semoga segala kebaikan team nesnumoto dibalas oleh Allah SWT, sehat, panjang
+											umur
+											dan selalu diiringi oleh kebahagiaan
+										</h4>
+										<div class="testimonial-client">Savirra Satriadi</div>
+										<div class="testimonial-company">Bride</div>
+									</div>
+									<!-- /testimonial-info -->
+									<div class="swiper-slide testimonial-info">
+										<h4 class="testimonial-desc">Terimakasih nesnumoto luar biasa sigap, cepat dan
+											rapih.
+											terimakasih untuk team yang bertugas di hari-H kemarin dll yang tidak bisa
+											kami sebutkan satu-satu yang selalu membantu kami.
+										</h4>
+										<div class="testimonial-client">Nabila Ayu</div>
+										<div class="testimonial-company">Bride</div>
+									</div>
+									<!-- /testimonial-info -->
+									<div class="swiper-slide testimonial-info">
+										<h4 class="testimonial-desc">Terimakasih untuk bantuannya dari awal, hasilnya
+											memuaskan bangettt, timnya juga support semua
+											baik-baik jadi happy banget.. salam juga dari suami dan keluarga untuk tim
+											yang sudah membantu kita dari awal ya kak
+										</h4>
+										<div class="testimonial-client">Icha</div>
+										<div class="testimonial-company">Bride</div>
+									</div>
+									<!-- /testimonial-info -->
+								</div>
+								<!-- /swiper-wrapper-->
+								<div class="swiper-pagination"></div>
+							</div>
+							<!-- /testimonial-slider -->
+						</div>
+						<!-- /testimonial-white -->
+					</div>
+					<!-- /margin-percentr40 -->
+				</div>
+				<!-- /col-md-12 -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION 5 -->
+
+	<!-- SECTION 6 -->
+	<div id="pricing-1" class="section-holder pricing-1">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="padding-lr200 alignc">
+						<div class="el-smalltitle">Book Now</div>
+						<h2 class="display-4 margin-b30">Grab our Exclusive Deals! </h2>
+					</div>
+				</div>
+				<!-- /col-lg-12 -->
+			</div>
+			<!-- /row -->
+			<div class="row margin-t50">
+				<div class="col-md-4 mobile-margin-b30">
+					<div class="price-box">
+						<h3 class="margin-b10">Prewedding Only</h3>
+						<div class="margin-b30">PHOTO - VIDEO</div>
+						<ul class="price-features">
+							<li>1 Day Photosession</li>
+							<li>1 Photographer</li>
+							<li>1 Videographer</li>
+							<li>2 Outfit in 2 location</li>
+							<li>2 Photoprint 20RP + Frame</li>
+							<li>5 Photoprint 4R + Frame</li>
+							<li>Video edit 1-2 minute</li>
+							<li>All Raw Shoot - Google Drive</li>
+						</ul>
+						<a class="read-more btn100" href="pricing-plans.html">Choose</a>
+					</div>
+					<!-- /price-box -->
+				</div>
+				<!-- /col-md-4 -->
+				<div class="col-md-4 mobile-margin-b30">
+					<div class="price-box price-box-middle black-text">
+						<h3 class="margin-b10 black-text">Wedding Only</h3>
+						<div class="margin-b30">PHOTO - VIDEO - ALBUM</div>
+						<ul class="price-features black-text">
+							<li>1 Day Photosession &lpar;8 Hours&rpar;</li>
+							<li>2 Photographer</li>
+							<li>2 Videographer</li>
+							<li>1 Crew</li>
+							<li>1 Wedding Album 20X30 cm + Box</li>
+							<li>1 Photoprint 16RP + Frame</li>
+							<li>Video Edit 10 - 15 Menit</li>
+							<li>All Raw Shoot + Flash Disk</li>
+						</ul>
+						<a class="readmore2 btn100 black-btn" href="pricing-plans.html">Choose</a>
+					</div>
+					<!-- /price-box -->
+				</div>
+				<!-- /col-md-4 -->
+				<div class="col-md-4">
+					<div class="price-box">
+						<h3 class="margin-b10">Full Package</h3>
+						<div class="margin-b30">PREWEDDING - TRDT CEREMONY - WEDDING</div>
+						<ul class="price-features">
+							<li><b>PREWEDDING</b></li>
+							<li>1 Day Photosession</li>
+							<li>1 Photographer</li>
+							<li>2 Outfit in 2 location</li>
+							<li>2 Photoprint 20RP + Frame</li>
+							<li>5 Photoprint 4R + Frame</li>
+							<li>All Raw Shoot - Google Drive</li>
+							<li>__________________________</li>
+							<li><b>TRDT. CEREMONY</b></li>
+							<li>1 Day Photosession &lpar;4 Hours&rpar;</li>
+							<li>1 Photographer</li>
+							<li>1 Videographer</li>
+							<li>50 Photos Edit Soft File</li>
+							<li>Video Edit 1 - 2 Menit</li>
+							<li>All Raw Shoot - Google Drive</li>
+							<li>__________________________</li>
+							<li><b>WEDDING</b></li>
+							<li>1 Day Photosession &lpar;8 Hours&rpar;</li>
+							<li>2 Photographer</li>
+							<li>2 Videographer</li>
+							<li>1 Crew</li>
+							<li>1 Wedding Album 20X30 cm + Box</li>
+							<li>1 Photoprint + Frame 16RP</li>
+							<li>Video Edit 10 - 15 Menit</li>
+							<li>All Raw Shoot - Flash Disk</li>
+						</ul>
+						<a class="read-more btn100" href="pricing-plans.html">Choose</a>
+					</div>
+					<!-- /price-box -->
+
+				</div>
+				<!-- /col-md-4 -->
+			</div>
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION 6 -->
+	<!-- SECTION 7 -->
+	<div id="home-section-1-7" class="section-holder home-section-1-7 section-nomargin parallax"
+		style="background-image:url(images/home/foot.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="padding-lr200 alignc">
+						<div class="el-smalltitle white pcolor-white">Contact</div>
+						<h2 class="display-4 margin-b30">Looking for a photographer & videographer?</h2>
+						<a href="contact.html" class="read-more margin-t30">Get in Touch</a>
+					</div>
+				</div>
+				<!-- /col-lg-12 -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION 7 -->
+
+	<!-- /WRAP CONTENT -->
 @endsection

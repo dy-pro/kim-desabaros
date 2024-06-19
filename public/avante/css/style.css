@@ -1178,7 +1178,7 @@ body.leftmenu .mobile-menu-wrapper .menu-client-wrapper {
 	right: -10px;
 	font-size: 10px;
 	border-radius: 50px;
-	background: #3d64ff;
+	background: #15297a;
 	color: #fff;
 	z-index: 2;
 	width: 16px;
@@ -2193,7 +2193,7 @@ body.leftmenu #footer-wrapper {
 	-o-transition: color 300ms, background-color 300ms, opacity 300ms;
 	-webkit-transition: color 300ms, background-color 300ms, opacity 300ms;
 	z-index: 9;
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.9);
 	color: #fff;
 	display: block;
 }
@@ -9594,7 +9594,7 @@ body.single-product div.product.type-product {
 
 #loftloader-wrapper.pl-imgloading #loader span {
     background-size: cover;
-    background-image: url(../upload/loading_logo.png);
+    background-image: url(KIMasset/images/Logo.png);
 }
 #loftloader-wrapper .loader-section.section-fade {
     -webkit-transition: none !important;

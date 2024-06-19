@@ -1,83 +1,72 @@
-<div id="elementor-header" class="main-menu-wrapper">
-    <div data-elementor-type="wp-post" data-elementor-id="3141" class="elementor elementor-3141" data-elementor-settings="[]">
-        <div class="elementor-inner">
-            <div class="elementor-section-wrap">
-
-                <section class="elementor-element elementor-element-4398f8f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"  data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                <div class="elementor-container elementor-column-gap-no">
-                    <div class="elementor-row">
-                        <div class="elementor-element elementor-element-f49fd9c elementor-column elementor-col-50 elementor-top-column"  data-element_type="column" >
-                            <div class="elementor-column-wrap elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-419171e elementor-widget elementor-widget-image" >
-                                        <div class="elementor-widget-container">
-                                            {{-- Logo --}}
-                                            <div class="elementor-image">
-                                                <a data-elementor-open-lightbox="" href="index.html">
-                                                <img width="228" height="54" src="{{ asset('KIMasset/logo.png')}}" class="attachment-full size-full" alt=""></a>
-                                            </div>
-                                            {{-- /Logo --}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elementor-element elementor-element-60aa1ba elementor-column elementor-col-50 elementor-top-column"  data-element_type="column" >
-                            <div class="elementor-column-wrap elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-bdc46b3 elementor-widget__width-auto elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-avante-navigation-menu"  data-element_type="widget"  data-widget_type="avante-navigation-menu.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="themegoods-navigation-wrapper menu_style1">
-                                                <div class="menu-main-menu-container">
-                                                    <ul id="nav_menu40" class="nav">
-                                                        <li class='menu-item menu-item-has-children current-menu-item'><a href="beranda">Beranda</a>
-                                                        </li>
-
-                                                    <li class=' menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children'><a href="#">Tentang Desa</a>
-                                                    </li>
-                                                        <li class='menu-item menu-item-has-children arrow'><a href="#">Informasi</a>
-                                                            <ul class="sub-menu">
-                                                                <li class=' menu-item'><a href="">Kegiatan</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class='menu-item menu-item-has-children'><a href="#">Produk Desa</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="elementor-element elementor-element-2f86783 elementor-shape-circle elementor-widget__width-auto elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-social-icons"  data-element_type="widget"  data-widget_type="social-icons.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-social-icons-wrapper">
-                                                <a href="#" class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-10f63aa" target="_blank">
-                                                <span class="elementor-screen-only">Twitter</span>
-                                                <i class="fab fa-twitter"></i></a>
-                                                <a href="#" class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-a9fc5ce" target="_blank">
-                                                <span class="elementor-screen-only">Linkedin</span>
-                                                <i class="fab fa-linkedin"></i></a>
-                                                <a href="#" class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-fbe6ab2" target="_blank">
-                                                <span class="elementor-screen-only">Instagram</span>
-                                                <i class="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-fbb8940 elementor_mobile_nav elementor-widget__width-auto elementor-hidden-desktop elementor-view-default elementor-widget elementor-widget-icon"  data-element_type="widget"  data-widget_type="icon.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-icon-wrapper">
-                                                <a class="elementor-icon" href="javascript:;">
-                                                <i aria-hidden="true" class="fas fa-ellipsis-v"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<header class="main-header header-1">
+    <div class="container">
+        <div class="header-container6">
+            <div class="logo-container d-flex justify-content-between align-items-center">
+                <div class="logo logo-5 logo-white"><a href="/"><img class="img-fluid"
+                            src="{{ asset('frontend/images/Logo.png')}}" alt="Logo Desa Baros"></a></div>
+                <div class="logo logo-5 logo-dark"><a href="/"><img class="img-fluid"
+                            src="{{ asset('frontend/images/Logo.png')}}" alt="Logo Desa Baros"></a></div>
+                <!-- mobile menu button -->
+                <div class="nav-button-holder nav-button-holder-5">
+                    <button type="button" class="nav-button">
+                        <svg version="1.1" id="btn-menu-open" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16"
+                            style="enable-background:new 0 0 16 16;" xml:space="preserve">
+                            <g>
+                                <path
+                                    d="M2,4L2,4C0.9,4,0,3.1,0,2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C4,3.1,3.1,4,2,4z">
+                                </path>
+                                <path
+                                    d="M8,4L8,4C6.9,4,6,3.1,6,2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C10,3.1,9.1,4,8,4z">
+                                </path>
+                                <path
+                                    d="M14,4L14,4c-1.1,0-2-0.9-2-2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C16,3.1,15.1,4,14,4z">
+                                </path>
+                                <path
+                                    d="M2,10L2,10c-1.1,0-2-0.9-2-2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C4,9.1,3.1,10,2,10z">
+                                </path>
+                                <path
+                                    d="M8,10L8,10c-1.1,0-2-0.9-2-2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C10,9.1,9.1,10,8,10z">
+                                </path>
+                                <path
+                                    d="M14,10L14,10c-1.1,0-2-0.9-2-2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C16,9.1,15.1,10,14,10z">
+                                </path>
+                                <path
+                                    d="M2,16L2,16c-1.1,0-2-0.9-2-2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C4,15.1,3.1,16,2,16z">
+                                </path>
+                                <path
+                                    d="M8,16L8,16c-1.1,0-2-0.9-2-2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C10,15.1,9.1,16,8,16z">
+                                </path>
+                                <path
+                                    d="M14,16L14,16c-1.1,0-2-0.9-2-2v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C16,15.1,15.1,16,14,16z">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
                 </div>
-                </section>
+                <!-- /mobile menu button -->
+                <nav class="nav-holder-5">
+                    <ul class="menu-nav">
+                        <li class="menu-item menu-item-has-children current-menu-item">
+                            <a href="/">Beranda
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="tentang-desa">Tentang Desa</a>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#">Informasi</a>
+                            <ul class="sub-menu">
+                                <li class="sub-item"><a href="kegiatan">Kegiatan</a></li>
+                                <li class="sub-item"><a href="Lembaga-komunitas">Lembaga/Komunitas</a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="produk-desa">Produk Desa</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
-</div>
+</header>
