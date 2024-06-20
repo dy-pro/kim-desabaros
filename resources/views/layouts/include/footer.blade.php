@@ -1,15 +1,14 @@
 <!-- FOOTER -->
 <footer>
     <div class="container mt-4">
-        <div class="footer-widgets" style="padding-top: 120px;">
+        <div class="footer-widgets">
             <div class="row">
                 <div class="col-lg-5 col-sm-5">
                     <div class="foo-block">
                         <div class="widget_text widget widget-footer">
                             <h5 class="widgettitle">Desa Baros</h5>
                             <div class="textwidget">
-                                <p style="text-align: justify;">lorem ipsum
-                                </p>
+                                <p style="text-align: justify;">Baros adalah sebuah desa di Kecamatan Arjasari, Kabupaten Bandung, Provinsi Jawa Barat, Indonesia.</p>
                             </div>
                         </div>
                     </div>
@@ -45,7 +44,7 @@
                         <div class="widget_text widget widget-footer">
                             <h5 class="widgettitle">Contact Us</h5>
                             <ul class="footer-contact">
-                                <li><i class="fas fa-map-marker-alt"></i><span>Desa Baros, Kecamatan Arjasari, Kabupaten Bandung, Provinsi Jawa Barat, Indonesia. 
+                                <li><span>Desa Baros, Kecamatan Arjasari, Kabupaten Bandung, Provinsi Jawa Barat, Indonesia. 
                                     </span></li>
                             </ul>
                         </div>
