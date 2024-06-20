@@ -741,15 +741,16 @@ a,
 }
 
 .menu-nav li a {
-	color: #ffffff;
+	color: #11387c;
 	padding: 10px 0;
 	display: block;
 }
 
+/* garis bawah list menu */
 .menu-nav li a:after{
 	content: "";
     position: absolute;
-    background: #ffffff;
+    background: #020427;
     top: 100%;
     margin-top: -11px;
     left: 0%;
@@ -772,7 +773,7 @@ a,
 .menu-nav > li:hover > a,
 .menu-nav > li.current-menu-item > a {
 	background: none;
-	color: #ffffff;
+	color: #11387c;
 }
 
 .menu-nav > li:hover > a:after{
@@ -1316,6 +1317,9 @@ margin-bottom: 0;
 	color: white;
 }
 
+
+/* navbar baru */
+
 /** Header 3 **/
 
 .logo-3{
@@ -1418,7 +1422,6 @@ transition: all .3s cubic-bezier(.30,1,.35,1) 0s;
 
 .slider-img:before {
 	content: '';
-	background: rgba(38, 58, 52, 0.5);
 	top: 0;
 	position: absolute;
 	left: 0;
@@ -1443,12 +1446,11 @@ transition: all .3s cubic-bezier(.30,1,.35,1) 0s;
 .slider-text{
 	width: 80%;
 	font-size: 15px;
-	text-align: center;
-	margin: 0 auto;
+	text-align: left;
 }
 
 .slider-text .display-2 {
-	color: #ffffff;
+	color: #021e5a;
 	margin-bottom: 10px;
 	font-weight: 800;
 }
@@ -1767,8 +1769,9 @@ margin-bottom: 0;}
 .post-subtitle{
     font-size: 15px;
 	font-weight: 600;
-	color: #fff;
+	color: #091e93;
     margin-top: 10px;
+	margin-bottom: 10px;
     display: block;
 }
 
@@ -2007,6 +2010,7 @@ font-size: 15px;}
 	padding: 50px;
 	background-color: #e9f0fb;
 	border-radius: 5px;
+	margin-top: 40px;
 }
 
 .price-box-middle{
@@ -3808,7 +3812,7 @@ button, input, optgroup, select, textarea {
 	font-size: 15px;
 	font-weight: 700;
 	color: #000;
-	background: #fff;
+	background: #a9bee9;
 	padding: 10px 25px;
 	display: inline-block;
 	border: none;

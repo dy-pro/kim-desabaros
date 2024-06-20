@@ -4,7 +4,7 @@
 <!-- TOP HEADER IMAGE -->
 <div class="swiper-mt">
     <div class="swiper-wrapper">
-        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background.jpeg') }}');">
+        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background.png') }}');">
             <div class="container slider-caption">
                 <div class="slider-text">
                     <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <!-- /slider-img -->
+        {{-- <!-- /slider-img -->
         <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background4.jpeg') }}');">
             <div class="container slider-caption">
                 <div class="slider-text">
@@ -33,27 +33,9 @@
                 </div>
             </div>
         </div>
-        <!-- /slider-img -->
+        <!-- /slider-img --> --}}
     </div>
     <!-- /swiper-wrapper -->
-    <div class="swiper-mt-button-prev" tabindex="0" role="button" aria-label="Previous slide">
-        <svg version="1.1" class="arrow-slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
-            <path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
-                c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
-            <path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
-                S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
-        </svg>
-    </div>
-    <!-- /swiper-mt-button-prev -->
-    <div class="swiper-mt-button-next" tabindex="0" role="button" aria-label="Next slide">
-        <svg version="1.1" class="arrow-slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
-            <path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
-                c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
-            <path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
-                S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
-        </svg>
-    </div>
-    <!-- /swiper-mt-button-next -->
 </div>
 <!-- /TOP HEADER IMAGE -->
 		<!-- WRAP CONTENT -->
@@ -83,7 +65,14 @@
 			<!-- /SECTION 1 -->
 			<!-- SECTION 2 -->
 			<div id="aboutus-2-2" class="section-holder aboutus-2-2">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="display-3 margin-b50">Penghargaan Desa</h2>
+                    </div>
+    
+                </div>
 				<div class="container section-info radius10 padding-50">
+                    
 					<div class="row">
 						<div class="col-6 col-lg-3 tablet-margin-b30 alignc">
                             <h2 id="awards-adwi" class="display-2 margin-b15 count-up" data-end-val="8">0</h2>
