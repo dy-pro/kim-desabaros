@@ -16,25 +16,25 @@
         <div class="col-lg-7">
             <!-- MOBILE MENU -->
             <ul class="menu-mobile">
-                <li class="menu-item menu-item-has-children {{ Route::currentRouteName() == 'beranda' ? 'current-menu-item' : '' }}">
-                    <a href="{{ route('beranda') }}">Beranda</a>
+                <li class="menu-item">
+                    <a href="/">Beranda</a>
                 </li>
-                <li class="menu-item menu-item-has-children {{ Route::currentRouteName() == 'tentang_desa' ? 'current-menu-item' : '' }}">
-                    <a href="{{ route('tentang_desa') }}">Tentang Desa</a>
+                <li class="menu-item">
+                    <a href="/tentang_desa">Tentang Desa</a>
                 </li>
-                <li class="menu-item menu-item-has-children {{ in_array(Route::currentRouteName(), ['kegiatan', 'lembaga_komunitas']) ? 'current-menu-item' : '' }}">
+                <li class="menu-item menu-item-has-children">
                     <a href="#">Informasi</a>
                     <ul class="sub-menu">
-                        <li class="menu-item menu-item-has-children menu-item-parent-2level {{ Route::currentRouteName() == 'kegiatan' ? 'current-menu-item' : '' }}">
-                            <a href="{{ route('kegiatan') }}">Kegiatan</a>
+                        <li class="menu-item">
+                            <a href="/kegiatan">Kegiatan</a>
                         </li>
-                        <li class="menu-item menu-item-has-children menu-item-parent-2level {{ Route::currentRouteName() == 'lembaga_komunitas' ? 'current-menu-item' : '' }}">
-                            <a href="{{ route('lembaga_komunitas') }}">Lembaga/Kelompok</a>
+                        <li class="menu-item">
+                            <a href="/lembaga_komunitas">Lembaga/Komunitas</a>
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item menu-item-has-children {{ Route::currentRouteName() == 'produk_desa' ? 'current-menu-item' : '' }}">
-                    <a href="{{ route('produk_desa') }}">Produk Desa</a>
+                <li class="menu-item">
+                    <a href="/produk_desa">Produk Desa</a>
                 </li>
             </ul>
             <!-- /MOBILE MENU -->
