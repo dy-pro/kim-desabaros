@@ -50,6 +50,7 @@
 	</div>
 	<!-- JS -->
 	<script src="{{ asset('https://smtpjs.com/v3/smtp.js')}}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/countUp.js"></script>
 	<script src="{{ asset('frontend/js/script.js')}}"></script>
 	<script src="{{ asset('frontend/js/jquery.js')}}"></script>
 	<script src="{{ asset('frontend/js/jquery-migrate.min.js')}}"></script>

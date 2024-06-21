@@ -19,6 +19,6 @@ class DinamisController extends Controller
         return view('dinamis.lembaga_komunitas');
     }
     public function produk_desa(){
-        return view('dinamis.produk_desa');
+        return view('dinamis.product');
     }
 }
