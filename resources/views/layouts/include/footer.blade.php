@@ -20,7 +20,7 @@
                             <h5 class="widgettitle">Quick Links</h5>
                             <ul class="footer-contact">
                                 <li><a href="kegiatan">Kegiatan</a></li>
-                                <li><a href="lembaga-komunitas">Lembaga/Komunitas</a></li>
+                                <li><a href="lembaga_komunitas">Lembaga/Komunitas</a></li>
                                 <li><a href="Katalog">Katalog</a>
                                 </li>
                             </ul>
