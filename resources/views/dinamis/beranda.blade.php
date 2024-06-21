@@ -4,57 +4,24 @@
   <!-- HOME SLIDER -->
   <div class="swiper-mt">
     <div class="swiper-wrapper">
-        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background.png') }}');">
+        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/backgroundp.png') }}');">
             <div class="container slider-caption">
-                <div class="slider-text">
-                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
-                    <h1 class="display-2">Desa Baros</h1>
-                    <a href="#" class="read-more">Lihat Selengkapnya</a>
+                <div class="row">
+                    <div class="col-2 col-lg-6">
+                         <div class="slider-text">
+                          <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
+                          <h1 class="display-2">Desa Baros</h1>
+                           <a href="#" class="read-more">Lihat Selengkapnya</a>
+                         </div>
+                     </div>
+                    <div class="col-2 col-lg-6">
+                         <img src="{{ asset('frontend/images/a.png')}}"  class="responsive-img" width="500"/>
+                    </div>
                 </div>
-            </div>
+              </div>
         </div>
-        {{-- <!-- /slider-img -->
-        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background4.jpeg') }}');">
-            <div class="container slider-caption">
-                <div class="slider-text">
-                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
-                    <h1 class="display-2">Desa Baros</h1>
-                    <a href="#" class="read-more">Lihat Selengkapnya</a>
-                </div>
-            </div>
-        </div>
-        <!-- /slider-img -->
-        <div class="swiper-slide slider-img" style="background-image: url('{{ asset('frontend/images/background5.jpeg') }}');">
-            <div class="container slider-caption">
-                <div class="slider-text">
-                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
-                    <h1 class="display-2">Desa Baros</h1>
-                    <a href="#" class="read-more">Lihat Selengkapnya</a>
-                </div>
-            </div>
-        </div>
-        <!-- /slider-img --> --}}
     </div>
-    <!-- /swiper-wrapper -->
-    {{-- <div class="swiper-mt-button-prev" tabindex="0" role="button" aria-label="Previous slide">
-        <svg version="1.1" class="arrow-slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
-            <path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
-                c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
-            <path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
-                S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
-        </svg>
-    </div>
-    <!-- /swiper-mt-button-prev -->
-    <div class="swiper-mt-button-next" tabindex="0" role="button" aria-label="Next slide">
-        <svg version="1.1" class="arrow-slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
-            <path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
-                c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
-            <path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
-                S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
-        </svg>
-    </div> --}}
-    <!-- /swiper-mt-button-next -->
-</div>
+  </div>
 	<!-- /HOME SLIDER -->
 	<!-- WRAP CONTENT -->
 	<div id="wrap-content" class="page-content custom-page-template">
@@ -75,9 +42,9 @@
 				<div class="row">
                     <div class="col-lg-4 margin-bm20">
                         <!-- <div class="el-smalltitle">Our Story</div> -->
-                        <div class="price-box price-box-middle black-text">
+                        <div class="price-box">
                             <img class="poster" src="{{ asset('frontend/images/poster.png')}}"/>
-                            <div class="margin-bm50 poster-text">
+                            <div class="margin-b30 poster-text">
                                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                             <a class="read-more btn100" href="/kegiatan">Lihat Selengkapnya</a>
@@ -101,7 +68,7 @@
                             <div class="margin-b30">
                                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
-                            <a class="read-more btn100" href="pricing-plans.html">Choose</a>
+                            <a class="read-more btn100" href="pricing-plans.html">Lihat Selengkapnya</a>
                         </div>
 						
 					</div>
@@ -117,110 +84,146 @@
 	<!-- /SECTION 1 -->
 
 	<!-- /SECTION 3 -->
-	<div id="home-section-1-3" class="section-holder home-section-1-3">
-		{{-- style="background-image: url(images/pages/portfolio.png);"> --}}
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<h2 class="display-3 margin-b50">Potensi Desa</h2>
-				</div>
-
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="portfolio-slider gallery-slider-holder">
-						<div class="swiper-wrapper">
-
-							<div class="swiper-slide item-slider">
-                                <div class="col-md-12 text-center custom-margin">
-                                    <p class="custom-font-size">UMKM Desa Baros</p>
-                                </div>
-                                <div class="post-image item-grid-image">
-                                        <img loading="lazy" src="{{ asset('frontend/images/produk/1.png') }}" class="img-fluid" alt="UMKM Desa Baros" width="750" height="750">
-                                    </a>
-                                </div>
-                            </div>
-							<!-- /item-slider -->
-							<div class="swiper-slide item-slider">
-                                <div class="col-md-12 text-center custom-margin">
-                                    <p class="custom-font-size">UMKM Desa Baros</p>
-                                </div>
-                                <div class="post-image item-grid-image">
-                                        <img loading="lazy" src="{{ asset('frontend/images/produk/7.png') }}" class="img-fluid" alt="UMKM Desa Baros" width="750" height="750">
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- /item-slider -->
-							<div class="swiper-slide item-slider">
-                                <div class="col-md-12 text-center custom-margin">
-                                    <p class="custom-font-size">UMKM Desa Baros</p>
-                                </div>
-                                <div class="post-image item-grid-image">
-                                        <img loading="lazy" src="{{ asset('frontend/images/produk/2.png') }}" class="img-fluid" alt="UMKM Desa Baros" width="750" height="750">
-                                    </a>
-                                </div>
-                            </div>
-							<!-- /item-slider -->
-							<div class="swiper-slide item-slider">
-                                <div class="col-md-12 text-center custom-margin">
-                                    <p class="custom-font-size">Desa Wisata</p>
-                                </div>
-                                <div class="post-image item-grid-image">
-                                        <img loading="lazy" src="{{ asset('frontend/images/produk/10.png') }}" class="img-fluid" alt="UMKM Desa Baros" width="750" height="750">
-                                    </a>
-                                </div>
-                            </div>
-							<!-- /item-slider -->
-							<div class="swiper-slide item-slider">
-                                <div class="col-md-12 text-center custom-margin">
-                                    <p class="custom-font-size">Desa Wisata</p>
-                                </div>
-                                <div class="post-image item-grid-image">
-                                        <img loading="lazy" src="{{ asset('frontend/images/produk/8.png') }}" class="img-fluid" alt="UMKM Desa Baros" width="750" height="750">
-                                    </a>
-                                </div>
-                            </div>
-							<!-- /item-slider -->
-							<div class="swiper-slide item-slider">
-                                <div class="col-md-12 text-center custom-margin">
-                                    <p class="custom-font-size">Desa Wisata</p>
-                                </div>
-                                <div class="post-image item-grid-image">
-                                        <img loading="lazy" src="{{ asset('frontend/images/produk/9.png') }}" class="img-fluid" alt="UMKM Desa Baros" width="750" height="750">
-                                    </a>
-                                </div>
-                            </div>
-						</div>
-						<!-- /swiper-wrapper -->
-						<div class="swiper-mt-button-prev portfolio-slider-btn-prev">
-							<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55"
-								style="enable-background:new 0 0 55 55;" xml:space="preserve">
-								<path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
-										c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
-								<path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
-										S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
-							</svg>
-						</div>
-						<div class="swiper-mt-button-next portfolio-slider-btn-next">
-							<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55"
-								style="enable-background:new 0 0 55 55;" xml:space="preserve">
-								<path d="M33.2,28.3l-8.8,8.8c-0.4,0.4-1.1,0.4-1.5,0l-1-1c-0.4-0.4-0.4-1.1,0-1.5l7-7l-7-7c-0.4-0.4-0.4-1.1,0-1.5l1-1
-										c0.4-0.4,1.1-0.4,1.5,0l8.8,8.8C33.6,27.2,33.6,27.8,33.2,28.3z"></path>
-								<path d="M27.5,55C12.3,55,0,42.7,0,27.5S12.3,0,27.5,0S55,12.3,55,27.5S42.7,55,27.5,55z M27.5,5C15.1,5,5,15.1,5,27.5
-										S15.1,50,27.5,50S50,39.9,50,27.5S39.9,5,27.5,5z"></path>
-							</svg>
-						</div>
-					</div>
-					<!-- /portfolio-slider -->
-				</div>
-				<!-- /col-lg-12 -->
-			</div>
-			<!-- /row -->
-			<!-- /row kosong -->
-		</div>
-		<!-- /container -->
-	</div>
+    <div id="home-section-1-3" class="section-holder home-section-1-3">
+        {{-- style="background-image: url(images/pages/portfolio.png);"> --}}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="display-3 margin-b50">Potensi Desa</h2>
+                </div>
+            </div>
+            {{-- isi potensi --}}
+            <div class="row potensi-row">
+                <div class="col-md-6 col-lg-4 mb-4 d-flex">
+                    <div class="icon-box-2">
+                        <!-- /icon-svg -->
+                        <h5>Sumber Daya Alam</h5>
+                      
+                    </div>
+                    <!-- /icon-box-2 -->
+                </div>
+                <!-- /col-md-6 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="icon-box-2">
+                        <!-- /icon-svg -->
+                        <h5>Sumber Daya Manusia</h5>
+                        
+                    </div>
+                    <!-- /icon-box-2 -->
+                </div>
+                <!-- /col-md-6 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="icon-box-2">
+                        <!-- /icon-svg -->
+                        <h5>Sumber Daya Pembangunan</h5>
+                        
+                    </div>
+                    <!-- /icon-box-2 -->
+                </div>
+                <!-- /col-md-6 -->
+                <div class="col-md-6 col-lg-4 mb-4 d-flex">
+                    <div class="icon-box-2">
+                        <!-- /icon-svg -->
+                        <h5>Sumber Daya Sosial</h5>
+                       
+                    </div>
+                    <!-- /icon-box-2 -->
+                </div>
+                <!-- /col-md-6 -->
+                <div class="col-md-6 col-lg-4 mb-4 d-flex">
+                    <div class="icon-box-2">
+                        <!-- /icon-svg -->
+                        <h5>Sumber Daya Budaya</h5>
+                        
+                    </div>
+                    <!-- /icon-box-2 -->
+                </div>
+                <!-- /col-md-6 -->
+                <div class="col-md-6 col-lg-4 mb-4 ">
+                    <div class="icon-box-2">
+                        <!-- /icon-svg -->
+                        <h5>Kelembagaan</h5>
+                        
+                    </div>
+                    <!-- /icon-box-2 -->
+                </div>
+                <!-- /col-md-6 -->
+            </div>
+            {{-- /row --}}
+        </div>
+        <!-- /container -->
+    </div>
+    
 	<!-- /SECTION 3 -->
+
+    {{-- SECTION 4 --}}
+    <div id="wrap-content" class="page-content custom-page-template">
+		<!-- SECTION 1 -->
+		<div id="home-section-1-1" class="section-holder home-section">
+			{{-- style="background-image: url('{{ asset('frontend/images/background2.png') }}');"> --}}
+			<div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="display-3 margin-b50">Produk Desa</h2>
+                    </div>
+                </div>
+				<div class="row">
+                    <div class="col-lg-4 margin-bm20">
+                        <!-- <div class="el-smalltitle">Our Story</div> -->
+                        <div class="price-box black-text">
+                            <img class="poster" src="{{ asset('frontend/images/produk/1.png')}}" class="img-fluid" alt="Ranginang" width="750" height="750"/>
+                            <div class="margin-b30 margin-t30">
+                                <p><strong> Ranginang</strong></p>
+                            </div>
+                            <div class="margin-b30 margin-t30">
+                                <p>Rp. 50.000</p>
+                            </div>
+                            <a class="read-more btn100" href="/kegiatan">Beli Sekarang</a>
+                        </div>
+                    </div>
+                    {{-- produk 2 --}}
+                    <div class="col-lg-4 margin-bm20">
+                        <!-- <div class="el-smalltitle">Our Story</div> -->
+                        <div class="price-box price-box-middle black-text">
+                            <img class="poster" src="{{ asset('frontend/images/produk/1.png')}}" class="img-fluid" alt="Ranginang" width="750" height="750"/>
+                            <div class="margin-b30 margin-t30">
+                                <p><strong> Ranginang</strong></p>
+                            </div>
+                            <div class="margin-b30 margin-t30">
+                                <p>Rp. 50.000</p>
+                            </div>
+                            <a class="read-more btn100" href="/kegiatan">Beli Sekarang</a>
+                        </div>
+                    </div>
+                    {{-- produk 3 --}}
+                    <div class="col-lg-4 margin-bm20">
+                        <!-- <div class="el-smalltitle">Our Story</div> -->
+                        <div class="price-box black-text">
+                            <img class="poster" src="{{ asset('frontend/images/produk/1.png')}}" class="img-fluid" alt="Ranginang" width="750" height="750"/>
+                            <div class="margin-b30 margin-t30">
+                                <p><strong> Ranginang</strong></p>
+                            </div>
+                            <div class="margin-b30 margin-t30">
+                                <p>Rp. 50.000</p>
+                            </div>
+                            <a class="read-more btn100" href="/kegiatan">Beli Sekarang</a>
+                        </div>
+                    </div>
+					<!-- /col-lg-6 -->
+                    
+					<!-- /col-lg-6 -->
+				</div>
+				<!-- /row -->
+                <div class="row">
+                    <div class="col-md-12 text-center margin-t50">
+                        <a class="read-more" href="/produk_desa">Lihat Selengkapnya</a>
+                    </div>
+                </div>
+
+			</div>
+            
+			<!-- /container -->
+		</div>
+	</div>
+    
 @endsection
