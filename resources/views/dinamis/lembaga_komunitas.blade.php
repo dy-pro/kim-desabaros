@@ -232,9 +232,9 @@
                         </div>
                         <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols lifestyle lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-3.png' }}" class="img-fluid" alt=" " width="750" height="750"> <a class="cursor-eye" href="gallery-grid-5-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-3.png' }}" class="img-fluid" alt=" " width="750" height="750"> <a class="cursor-eye" href="detail_lembaga"> </a></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-5-cols.html">Badan Permusyawaratan Desa (BPD)</a></h2>
+                                <h2 class="article-title display-6"><a href="detail_lembaga">Badan Permusyawaratan Desa (BPD)</a></h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Lembaga</a></li>
                                 </ul>
