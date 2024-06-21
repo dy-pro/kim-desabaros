@@ -1,47 +1,89 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="en">
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Karlina Fithrian">
+    <link rel="icon" href="{{url('frontend/images/home/pavicon.png')}}" />
+    <link rel="shortcut icon" href="{{url('frontend/images/home/pavicon.png')}}"/>
+    <title>Login</title>
+    <!--Google font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{url('AdminLTE/plugins/fontawesome-free/css/all.min.css')}}">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="{{url('AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+        <!-- Bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="{{url('AdminLTE/dist/css/bootstrap.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url('AdminLTE/dist/css/fontawesome.css')}}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{url('AdminLTE/dist/css/adminlte.min.css')}}">
+</head>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+<body>
+    <!-- 01 Preloader -->
+    <!-- <div class="loader-wrapper" id="loader-wrapper">
+        <div class="loader"></div>
+    </div> -->
+    <!-- Preloader end -->
+    <!-- 02 Main page -->
+    <section class="page-section login-page">
+        <div class="full-width-screen">
+            <div class="container-fluid p-0">
+                <div class="particles-bg" id="particles-js">
+                    <div class="content-detail">
+                        <!-- Login form -->
+                        <form class="login-form"  action="/postlogin" method="post">
+                            {{ csrf_field() }}
+                            
+                            <div class="imgcontainer">
+                                <img src="{{url('frontend/images/logo-black.png')}}" alt="Avatar" class="avatar">
+                            </div>
+                            <div class="input-control">
+                                <input type="text" name="nama" placeholder="Enter Username" autofocus required value="{{ old ('nama')}}">
+                                <span class="password-field-show @error('nama') is-invalid @enderror">
+                                    @error('nama')
+                                    <div class="in-invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                    @enderror
+                                    <input type="password" placeholder="Enter Password" name="password"
+                                        class="password-field @error('password') is-invalid @enderror" required>
+                                    <span data-toggle=".password-field"
+                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                        @error('password')
+                                        <div class="in-invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                        @enderror
+                                </span>
+                                <label class="label-container">Remember me
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <span class="psw"><a href="#" class="forgot-btn" onclick="alert('Mohon hubungi admin')">Forgot password?</a></span>                                <div class="login-btns">
+                                    <button type="submit">Login</button>
+                                </div>
+                                <div class="login-with-btns">
+                                    <span class="already-acc">Not a member? <a href="/register"
+                                            class="signup-btn">Sign up</a></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+    <!-- latest jquery-->
+    <script src="{{url('AdminLTE/dist/js/jquery-3.5.1.min.js')}}"></script>
+    <!-- theme particles script -->
+    <script src="{{url('AdminLTE/dist/js/particles.min.js')}}"></script>
+    <script src="{{url('AdminLTE/dist/js/app.js')}}"></script>
+    <!-- Theme js-->
+    <script src="{{url('AdminLTE/dist/js/script.js')}}"></script>
+</body>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</html>

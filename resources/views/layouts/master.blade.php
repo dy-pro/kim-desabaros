@@ -24,6 +24,8 @@
 		media='all' />
 	<!-- Main CSS File -->
 	<link rel='stylesheet' id='Kim- style-css' href="{{ asset('frontend/style.css')}}" type='text/css' media='all' />
+    {{-- <link rel='stylesheet' id='Kim- style-css' href="{{ asset('frontend/css/order.css')}}" type='text/css' media='all' /> --}}
+
 	<!-- favicons -->
 	<link rel="icon" href="{{ asset('frontend/images/Logo.png')}}" sizes="32x32" />
 	<link rel="icon" href="{{ asset('frontend/images/Logo.png')}}" sizes="192x192" />
@@ -62,8 +64,10 @@
 	<script src="{{ asset('frontend/js/simple-lightbox.js')}}"></script>
     {{-- Main JS --}}
 	<script src="{{ asset('frontend/js/init.js')}}"></script>
-    <script>
+    @yield('script')
+
         
+    
 
 </body>
 
