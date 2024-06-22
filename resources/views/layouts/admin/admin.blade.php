@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="{{ asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css')}}">
+  {{-- <style>
+    
+    </style> --}}
 </head>
 
 
@@ -21,16 +24,24 @@
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
-    <ul class="navbar-nav">
+    <ul class="navbar-nav" style="display: flex; align-items:center; justify-content:space-between; width:100%; padding-right:20px">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
+      <li class="nav-item">
+        {{-- <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link active"> --}}
+          {{-- <button class="btn btn-outline-primary" id="logout-form" action="{{ route('logout') }}" method="POST">Tambah Produk</a> --}}
+
+        <a href="{{ route('logout') }}"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-outline-primary">Logout</a>
+            
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+                <button class="btn btn-outline-primary" id="logout-form" action="{{ route('logout') }}" method="POST">Logout</button>
+
+            </form>
+           
+    </li>
     </ul>
 
     <!-- Right navbar links -->
