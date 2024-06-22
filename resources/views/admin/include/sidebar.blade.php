@@ -45,6 +45,20 @@
                         </p>
                     </a>
                 </li>
+                
+                <li class="nav-item mt-3">
+                    <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link active">
+                        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        <p>
+                            Logout
+                        </p>
+                    </a>
+                </li>
+
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <a href="#" class="#">

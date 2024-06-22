@@ -1,43 +1,44 @@
 @extends('admin.master')
 @section('content')
-    <div class="wrapper">
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Dashboard Admin</h1>
-                        </div><!-- /.col -->
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard v3</li>
-                            </ol>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.container-fluid -->
-            </div>
-            <!-- /.content-header -->
-
-            <!-- Main content -->
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header border-0">
-                                    <h2>Tambah Produk</h2>
-                                    <form action="{{ route('product.store') }}" method="POST"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <input type="text" name="name" placeholder="Nama Produk" required>
-                                        <input type="file" name="image" placeholder="" required>
-                                        <input type="number" name="stock" placeholder="stock" required>
-                                        <input type="number" name="price" placeholder="Harga" required>
-                                        <input type="number" name="code" placeholder="code" required>
-                                        <div>
+<div class="wrapper">
+    @csrf
+</form>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Dashboard Admin</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard v3</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+        
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header border-0">
+                                <h2>Tambah Produk</h2>
+                                <form action="{{ route('product.store') }}" method="POST"
+                                enctype="multipart/form-data">
+                                @csrf
+                                <input type="text" name="name" placeholder="Nama Produk" required>
+                                <input type="file" name="image" placeholder="" required>
+                                <input type="number" name="stock" placeholder="stock" required>
+                                <input type="number" name="price" placeholder="Harga" required>
+                                <input type="number" name="code" placeholder="code" required>
+                                <div>
                                             <textarea name="description" placeholder="Deskripsi" rows="4" required></textarea>
                                             <select name="category[]" class="form-control" id="category" required>
                                                 <option value="Elektronik" selected="selected">Elektronik</option>

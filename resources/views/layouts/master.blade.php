@@ -50,6 +50,12 @@
 			<i class="fa fa-chevron-up"></i>
 		</a>
 	</div>
+	{{-- <a style="color: red" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+</form> --}}
+	
 	<!-- JS -->
 	<script src="{{ asset('https://smtpjs.com/v3/smtp.js')}}"></script>
 	<script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/countUp.js"></script>
