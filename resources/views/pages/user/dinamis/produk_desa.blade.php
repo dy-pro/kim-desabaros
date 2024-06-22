@@ -1,25 +1,24 @@
-@extends('layouts.master')
+@extends('layouts.user.master')
 
 @section('content')
 <!-- HOME SLIDER -->
 <div class="swiper-mt">
     <div class="swiper-wrapper">
         <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background_produk.png') }}');">
-            <div class="container slider-caption-1">
-                
-                         <div class="slider-text-1">
+            <div class="container slider-caption">
+                <div class="row align-items-md-center">
+                    <div class="col col-lg-12 d-flex justify-content-center align-items-center">
+                         <div class="slider-text d-flex flex-column justify-content-center ">
                           <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
                           <h1 class="display-2">Desa Baros</h1>
-                           <a href="#" class="read-more">Lihat Selengkapnya</a>
+                           <a href="#" class="read-more-v2">Lihat Selengkapnya</a>
                          </div>
-                    {{-- <div class="col-2 col-lg-6">
-                         <img src="{{ asset('frontend/images/a.png')}}"  class="responsive-img" width="500"/>
-                    </div> --}}
-             
+                     </div>
+                </div>
+              </div>
         </div>
     </div>
   </div>
-</div>
 	<!-- /HOME SLIDER -->
 
  {{-- KATALOG --}}

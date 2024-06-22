@@ -1,27 +1,27 @@
-@extends('layouts.master')
+@extends('layouts.user.master')
 
 @section('content')
   <!-- HOME SLIDER -->
-  <div class="swiper-mt">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/backgroundp.png') }}');">
-            <div class="container slider-caption">
-                <div class="row">
-                    <div class="col-2 col-lg-6">
-                         <div class="slider-text">
-                          <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
-                          <h1 class="display-2">Desa Baros</h1>
-                           <a href="#" class="read-more">Lihat Selengkapnya</a>
-                         </div>
-                     </div>
-                    <div class="col-2 col-lg-6">
-                         <img src="{{ asset('frontend/images/a.png')}}"  class="responsive-img" width="500"/>
-                    </div>
-                </div>
-              </div>
-        </div>
-    </div>
-  </div>
+  <div id="home-section-7-1" class="section-holder home-section-7-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 alignc">
+				<div class="padding-lr200">
+					<img class="img-fluid width30 margin-b50" src="{{ asset('frontend/images/logo_desa.png')}}" alt=" " />
+					<h2 class="display-4 margin-bm30">Selamat datang di website resmi Desa Baros</h2>
+					<p>Desa Baros termasuk wilayah Kecamatan Arjasari Kabupaten Bandung dengan luas wilayah 419,7 Ha. dengan ketinggian dataran rerata 600 – 1100 m di atas permukaan laut.</p>
+                    <br>
+                    <a href="/tentang_desa" class="read-more">Lihat Selengkapnya</a>
+				</div>
+				<!-- /padding-lr200 -->	
+			</div>
+			<!-- /col-lg-12 -->	
+		</div>
+		<!-- /row -->	
+	</div>
+	<!-- /container -->	
+</div>
+
 	<!-- /HOME SLIDER -->
 	<!-- WRAP CONTENT -->
 	<div id="wrap-content" class="page-content custom-page-template">
@@ -95,7 +95,7 @@
             {{-- isi potensi --}}
             <div class="row potensi-row">
                 <div class="col-md-6 col-lg-4 mb-4 d-flex">
-                    <div class="icon-box-2">
+                    <div class="icon-box-2 d-flex">
                         <!-- /icon-svg -->
                         <h5>Sumber Daya Alam</h5>
                       
@@ -104,7 +104,7 @@
                 </div>
                 <!-- /col-md-6 -->
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="icon-box-2">
+                    <div class="icon-box-2  d-flex">
                         <!-- /icon-svg -->
                         <h5>Sumber Daya Manusia</h5>
                         
@@ -113,7 +113,7 @@
                 </div>
                 <!-- /col-md-6 -->
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="icon-box-2">
+                    <div class="icon-box-2  d-flex">
                         <!-- /icon-svg -->
                         <h5>Sumber Daya Pembangunan</h5>
                         
@@ -122,7 +122,7 @@
                 </div>
                 <!-- /col-md-6 -->
                 <div class="col-md-6 col-lg-4 mb-4 d-flex">
-                    <div class="icon-box-2">
+                    <div class="icon-box-2  d-flex">
                         <!-- /icon-svg -->
                         <h5>Sumber Daya Sosial</h5>
                        
@@ -131,7 +131,7 @@
                 </div>
                 <!-- /col-md-6 -->
                 <div class="col-md-6 col-lg-4 mb-4 d-flex">
-                    <div class="icon-box-2">
+                    <div class="icon-box-2  d-flex">
                         <!-- /icon-svg -->
                         <h5>Sumber Daya Budaya</h5>
                         
@@ -142,8 +142,7 @@
                 <div class="col-md-6 col-lg-4 mb-4 ">
                     <div class="icon-box-2">
                         <!-- /icon-svg -->
-                        <h5>Kelembagaan</h5>
-                        
+                        <h5>Kelembagaan</h5>        
                     </div>
                     <!-- /icon-box-2 -->
                 </div>
@@ -206,7 +205,7 @@
                             <div class="margin-b30 margin-t30">
                                 <p>Rp. 50.000</p>
                             </div>
-                            <a class="read-more btn100" href="/kegiatan">Beli Sekarang</a>
+                            <a class="read-more" href="/kegiatan">Beli Sekarang</a>
                         </div>
                     </div>
 					<!-- /col-lg-6 -->

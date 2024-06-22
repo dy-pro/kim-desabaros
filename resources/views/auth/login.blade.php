@@ -39,7 +39,7 @@
                             {{ csrf_field() }}
                             
                             <div class="imgcontainer">
-                                <img src="{{url('frontend/images/logo-black.png')}}" alt="Avatar" class="avatar">
+                                <img src="{{url('frontend/images/Logo.png')}}" alt="Avatar" class="avatar">
                             </div>
                             <div class="input-control">
                                 <input type="text" name="nama" placeholder="Enter Username" autofocus required value="{{ old ('nama')}}">

@@ -1,7 +1,4 @@
-
-<x-admin-layout>
-    <x-slot:title>Katalog</x-slot:title>
-    <x-slot:content>
+{{-- 
         <div class="container">
             <div class="row row-cols-3">
         <div class="card" style="width: 18rem;">
@@ -36,8 +33,4 @@
 
             </div>
             </div>
-
-
-    </x-slot:content>
-            
-</x-admin-layout>
+ --}}

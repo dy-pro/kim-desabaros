@@ -3,15 +3,18 @@
 use App\Http\Controllers\DinamisController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/admin', function (){
-        return view('admin.master');
-});
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/manajemen_produk', [DashboardController::class, 'manajemen_produk'])->name('produk');
+Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk');
+
 
 Route::resource('product', ProductController::class);
 
