@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in (v2)</title>
+    <title>Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -17,58 +17,12 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css')}}">
 </head>
 
-<body>
-    <!-- 01 Preloader -->
-    <!-- <div class="loader-wrapper" id="loader-wrapper">
-        <div class="loader"></div>
-    </div> -->
-    <!-- Preloader end -->
-    <!-- 02 Main page -->
-    <section class="page-section login-page">
-        <div class="full-width-screen">
-            <div class="container-fluid p-0">
-                <div class="particles-bg" id="particles-js">
-                    <div class="content-detail">
-                        <!-- Login form -->
-                        <form class="login-form"  action="/postlogin" method="post">
-                            {{ csrf_field() }}
-                            
-                            <div class="imgcontainer">
-                                <img src="{{url('frontend/images/Logo.png')}}" alt="Avatar" class="avatar">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" name="nama" placeholder="Enter Username" autofocus required value="{{ old ('nama')}}">
-                                <span class="password-field-show @error('nama') is-invalid @enderror">
-                                    @error('nama')
-                                    <div class="in-invalid-feedback">
-                                        {{$message}}
-                                    </div>
-                                    @enderror
-                                    <input type="password" placeholder="Enter Password" name="password"
-                                        class="password-field @error('password') is-invalid @enderror" required>
-                                    <span data-toggle=".password-field"
-                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                                        @error('password')
-                                        <div class="in-invalid-feedback">
-                                            {{$message}}
-                                        </div>
-                                        @enderror
-                                </span>
-                                <label class="label-container">Remember me
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <span class="psw"><a href="#" class="forgot-btn" onclick="alert('Mohon hubungi admin')">Forgot password?</a></span>                                <div class="login-btns">
-                                    <button type="submit">Login</button>
-                                </div>
-                                <div class="login-with-btns">
-                                    <span class="already-acc">Not a member? <a href="/register"
-                                            class="signup-btn">Sign up</a></span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <a href="" class="h1"><b>Admin</b></a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg"></p>

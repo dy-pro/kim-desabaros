@@ -37,13 +37,13 @@
 <body class="home">
 	<div class="menu-mask">
 	<!-- HEADER -->
-@include('layouts.include.navbar')
+@include('layouts.user.include.navbar')
 	<!-- /HEADER -->
     {{-- Content --}}
 	@yield('content')
 	{{-- /Content --}}
     {{-- Footer --}}
-    @include('layouts.include.footer')
+    @include('layouts.user.include.footer')
     {{-- /Footer --}}
 	<div class="scrollup">
 		<a class="scrolltop" href="#">
