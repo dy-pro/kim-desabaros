@@ -6,6 +6,9 @@ use App\Http\Controllers\DinamisController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+
+use Illuminate\Support\Facades\Auth;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // Route::get('/', function () {
@@ -19,6 +22,10 @@ Route::get('/admin', function (){
 Route::get('/login', function(){
         return view('auth.login');
 });
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::get('/manajemen_produk', [DashboardController::class, 'manajemen_produk'])->name('produk');
+Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk');
+
 
 // Auth::routes();
 
