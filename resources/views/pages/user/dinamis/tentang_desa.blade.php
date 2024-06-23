@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.user.master')
 
 @section('content')
  <!-- HOME SLIDER -->
@@ -6,16 +6,16 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/backgroundp.png') }}');">
             <div class="container slider-caption">
-                <div class="row">
-                    <div class="col-2 col-lg-6">
-                         <div class="slider-text">
+                <div class="row align-items-md-center">
+                    <div class="col col-lg-6 d-flex justify-content-center align-items-center">
+                         <div class="slider-text d-flex flex-column justify-content-center ">
                           <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
                           <h1 class="display-2">Desa Baros</h1>
-                           <a href="#" class="read-more">Lihat Selengkapnya</a>
+                           {{-- <a href="#" class="read-more">Lihat Selengkapnya</a> --}}
                          </div>
                      </div>
-                    <div class="col-2 col-lg-6">
-                         <img src="{{ asset('frontend/images/a.png')}}"  class="responsive-img" width="500"/>
+                    <div class="col-2 col-lg-6 responsive-img">
+                         <img src="{{ asset('frontend/images/a.png')}}"  class="" width="500"/>
                     </div>
                 </div>
               </div>
@@ -142,11 +142,10 @@
 			<!-- SECTION 4 -->
 			<div id="aboutus-2-4" class="section-holder aboutus-2-4">
 				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-6">
-							<div class="display-4 margin-b30">Sejarah Desa</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h2 class="display-5 margin-b50">Sejarah Desa</h2>
 						</div>
-						<!-- /col-lg-6 -->
 					</div>
 					<!-- /row -->
 					<div class="row margin-b50less margin-t30">

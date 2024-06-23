@@ -1452,7 +1452,6 @@ transition: all .3s cubic-bezier(.30,1,.35,1) 0s;
 	width: 80%;
 	font-size: 15px;
 	text-align: left;
-	transform: translateY(60%);
 
 }
 
@@ -4104,8 +4103,13 @@ button, input, optgroup, select, textarea {
 .read-more-v2{
 	font-size: 15px;
 	font-weight: 700;
-	color: #000000;
+	color: #000;
+	background: #a9bee9;
+	padding: 10px 25px;
 	display: inline-block;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .read-more-v2:after{
@@ -4113,14 +4117,63 @@ button, input, optgroup, select, textarea {
 }
 
 .read-more-v2:hover{
-	color: #ffffff;
+	color: #f3f3f3;
+	background-color: #21759b;
 }
 
-.read-more-v2:hover:after{
-	background-color: #fdfdfd;
+.read-more-v2:hover,
+.el-btn.white-btn .elementor-button.elementor-size-md:hover,
+.el-btn.white-btn .elementor-button.elementor-size-sm:hover{
+	color: #000000;
+	background: #ffffff;
+	box-shadow: 0 5px 20px rgba(255,255,255,0.3);
+}
+
+/* read more navbar */
+
+.read-more-v3{
+font-size: 15px;
+	font-weight: 700;
+	color: #ffffff;
+	background: #47698d;
+	padding: 10px 25px;
+	display: inline-block;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.read-more-v3{
+	position: relative;
+	
+}
+
+.read-more-v3:after,
+.read-more-v3:after,
+.el-btn .elementor-button .elementor-button-text:after{
+	content: '';
+    position: relative;
+    width: 9px;
+    background-color: #ffffff;
+    height: 14px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: -2px;
+    -webkit-mask-image: url(images/arrow-1.svg);
+  mask-image: url(images/arrow-1.svg);
+}
+
+.white-btn:after,
+.el-btn.white-btn .elementor-button .elementor-button-text:after{
+	background-color: #000000;
+}
+
+.read-more-v3:hover:after,
+.el-btn .elementor-button:hover .elementor-button-text:after{
 	-webkit-animation: hoverarrow cubic-bezier(0,.77,.78,.84) .5s;
 	animation: hoverarrow cubic-bezier(0,.77,.78,.84) .5s;
 }
+
 
 .white-btn-v2{
 	color: #ffffff;
@@ -4958,7 +5011,15 @@ body.hidden-scroll {
 }
 
 @media (min-width: 1024px) {
-	
+	.read-more{
+		width: 50%;
+	}
+	.read-more-v2{
+		width: 30%;
+		text-align: center;
+		align-content: center;
+	}
+
 }
 
 @media (min-width: 1200px) {
@@ -5676,8 +5737,13 @@ body.hidden-scroll {
 		width: 80%;
 		font-size: 15px;
 		text-align: center;
-		transform: translateY(30%);
 	
 	}
 
+	
+.read-more,
+.read-more-v2{
+	width: 100%;
+}
+	
 }
