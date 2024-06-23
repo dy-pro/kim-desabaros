@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Community;
 
-class CommunityControlle extends Controller
+class CommunityController extends Controller
 {
     public function createCommunity()
     {
@@ -22,8 +22,8 @@ class CommunityControlle extends Controller
         return response()->json($community, 201); // contoh response JSON dengan status code 201
     }
 
-
-
-
+    public function show() {
+        return view('dinamis.detail_lembaga');
+    }
 
 }

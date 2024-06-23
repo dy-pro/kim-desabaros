@@ -3,11 +3,11 @@
 @section('content')
 <!-- TOP HEADER IMAGE -->
 <div class="top-single-bkg topsinglepage">
-    <div class="topsingleimg"> <img src="images/pages/contact-page.jpg" alt="" width="1920" height="1080"></div>
+    <div class="topsingleimg"> <img src="{{ asset('frontend/images/komunitas/bpd-arjasari.jpeg') }}" alt="" width="1920" height="1080"></div>
     <div class="inner-desc">
         <div class="container">
-            <h1 class="display-2 single-post-title">About Us 2</h1>
-            <span class="post-subtitle"> Tilia Photo Studio</span>
+            <h1 class="display-2 single-post-title">Lembaga Perwakilan Desa</h1>
+            <span class="post-subtitle">Lembaga Desa</span>
         </div>
     </div>
 </div>
@@ -20,14 +20,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 order2">
                     <div class="el-smalltitle">Our Mission</div>
-                    <h2 class="display-4 margin-b30">Create Timeless Images</h2>
-                    <p>Veri ubique cu eam, vero dicta ridens ei quo, ex putent menandri accommodare sed. Suscipit lobortis prodesset ut eam. Sale dicta dolore pri et, an aliquam albucius volutpat est.</p>
+                    <h2 class="display-4 margin-b30">Badan Permusyawaratan Desa</h2>
+                    <p>Berdasarkan Undang-undang No.6 Tahun 2014 tentang Desa, Badan Permusyawaratan Desa (BPD), adalah lembaga yang melaksanakan fungsi pemerintahan yang anggotanya merupakan wakil dari penduduk desa berdasarkan keterwakilan wilayah dan ditetapkan secara demokratis, demikian yang disebut dalam Pasal 1 angka 4 UU Desa.</p>
                     <p>Ad graeci theophrastus, libris timeam sapientem. Pellentes faucibus sollicitudin ante,at porta felisrutrum eget. Sed ut nisl urna,e get convallis purus pretium facilisis. Interdum et malesuada varius mauris eu commodo.</p>
                 </div>
                 <!-- /col-lg-6 -->
                 <div class="col-lg-6 order1 margin-bm50">
                     <div class="margin-l50">
-                        <img class="img-fluid radius10" src="images/portfolio/gal-grid/gal-grid-14.jpg" alt=" " />
+                        <img class="img-fluid radius10" src="{{ asset('frontend/images/background3.jpeg') }}" alt=" " />
                     </div>
                 </div>
                 <!-- /col-lg-6 -->
@@ -38,7 +38,7 @@
     </div>
     <!-- /SECTION 1 -->
     <!-- SECTION 2 -->
-    <div id="aboutus-2-2" class="section-holder aboutus-2-2">
+    {{-- <div id="aboutus-2-2" class="section-holder aboutus-2-2">
         <div class="container section-info radius10 padding-50">
             <div class="row">
                 <div class="col-6 col-lg-3 tablet-margin-b30 alignc">
@@ -65,7 +65,7 @@
             <!-- /row -->
         </div>
         <!-- /container -->
-    </div>
+    </div> --}}
     <!-- /SECTION 2 -->
     <!-- SECTION 3 -->
     <div id="aboutus-2-3" class="section-holder aboutus-2-3">
@@ -74,7 +74,33 @@
                 <div class="col-lg-12">
                     <div class="padding-lr200 alignc">
                         <div class="el-smalltitle">Our Services</div>
-                        <h2 class="display-4 margin-b50">We're highly proficient at</h2>
+                        <h2 class="display-4 margin-b50">Fungsi & Tujuan</h2>
+                    </div>
+                </div>
+                <!-- /col-lg-12 -->
+            </div>
+            <!-- /row -->
+            <div class="row align-items-center">
+                <div class="col-lg-12 order2">
+                    <p>Membahas dan Menyepakati Rancangan Peraturan Desa bersama kepala Desa</p>
+                    <p>Menampung dan Menyalurkan Aspirasi Masarakat Desa</p>
+                    <p>Melakukan pengawasan kinerja Kepala Desa
+                    </p>  
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION 3 -->
+    <!-- SECTION 3 -->
+    <div id="aboutus-2-3" class="section-holder aboutus-2-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="padding-lr200 alignc">
+                        <div class="el-smalltitle">Our Services</div>
+                        <h2 class="display-4 margin-b50">Program Kerja</h2>
                     </div>
                 </div>
                 <!-- /col-lg-12 -->
