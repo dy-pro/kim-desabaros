@@ -9,7 +9,12 @@ class ProductController extends Controller
 {
 
 
-    public function destroy(){
+    public function destroy(Request $request, $id){
+        $product=Product::find($id);
+
+        $product->delete();
+
+        return redirect();
         
     }
 
@@ -65,6 +70,7 @@ class ProductController extends Controller
 
     return redirect()->route('product.index')->with('success', 'Data Berhasil Disimpan!');
 }
+
 
     }
     

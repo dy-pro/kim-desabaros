@@ -7,7 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
-
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -18,6 +18,8 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/admin', function (){
         return view('admin.include.content');
 })->middleware(AuthAdmin::class)->name("admin.index");
+
+Route::resource('user',UserController::class);
 
 Route::get('/login', function(){
         return view('auth.login');
