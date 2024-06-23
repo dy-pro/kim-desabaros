@@ -1,121 +1,67 @@
-@extends('layouts.master')
+@extends('layouts.user.master')
 
 @section('content')
-<!-- TOP HEADER IMAGE -->
-<div class="swiper-mt">
+ <!-- HOME SLIDER -->
+ <div class="swiper-mt">
     <div class="swiper-wrapper">
-        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background.png') }}');">
+        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/backgroundp.png') }}');">
             <div class="container slider-caption">
-                <div class="slider-text">
-                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
-                    <h1 class="display-2">Desa Baros</h1>
-                    <a href="#" class="read-more">Lihat Selengkapnya</a>
+                <div class="row align-items-md-center">
+                    <div class="col col-lg-6 d-flex justify-content-center align-items-center">
+                         <div class="slider-text d-flex flex-column justify-content-center ">
+                          <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
+                          <h1 class="display-2">Desa Baros</h1>
+                           {{-- <a href="#" class="read-more">Lihat Selengkapnya</a> --}}
+                         </div>
+                     </div>
+                    <div class="col-2 col-lg-6 responsive-img">
+                         <img src="{{ asset('frontend/images/a.png')}}"  class="" width="500"/>
+                    </div>
                 </div>
-            </div>
+              </div>
         </div>
-        {{-- <!-- /slider-img -->
-        <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/background4.jpeg') }}');">
-            <div class="container slider-caption">
-                <div class="slider-text">
-                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
-                    <h1 class="display-2">Desa Baros</h1>
-                    <a href="#" class="read-more">Lihat Selengkapnya</a>
-                </div>
-            </div>
-        </div>
-        <!-- /slider-img -->
-        <div class="swiper-slide slider-img" style="background-image: url('{{ asset('frontend/images/background5.jpeg') }}');">
-            <div class="container slider-caption">
-                <div class="slider-text">
-                    <span class="post-subtitle">Kelompok Informasi Masyarakat</span> 
-                    <h1 class="display-2">Desa Baros</h1>
-                    <a href="#" class="read-more">Lihat Selengkapnya</a>
-                </div>
-            </div>
-        </div>
-        <!-- /slider-img --> --}}
     </div>
-    <!-- /swiper-wrapper -->
-</div>
+  </div>
+	<!-- /HOME SLIDER -->
 <!-- /TOP HEADER IMAGE -->
 		<!-- WRAP CONTENT -->
 		<div id="wrap-content" class="page-content page-holder custom-page-template page-full fullscreen-page clearfix">
-			<!-- SECTION 1 -->
-			<div id="aboutus-2-1" class="section-holder aboutus-2-1">
-				<div class="container">
-					{{-- <div class="row align-items-center">
-						<div class="col-lg-6 order2">
-							<div class="el-smalltitle">Our Mission</div>
-							<h2 class="display-4 margin-b30">Create Timeless Images</h2>
-							<p>Veri ubique cu eam, vero dicta ridens ei quo, ex putent menandri accommodare sed. Suscipit lobortis prodesset ut eam. Sale dicta dolore pri et, an aliquam albucius volutpat est.</p>
-							<p>Ad graeci theophrastus, libris timeam sapientem. Pellentes faucibus sollicitudin ante,at porta felisrutrum eget. Sed ut nisl urna,e get convallis purus pretium facilisis. Interdum et malesuada varius mauris eu commodo.</p>
-						</div>
-						<!-- /col-lg-6 -->
-						<div class="col-lg-6 order1 margin-bm50">
-							<div class="margin-l50">
-								<img class="img-fluid radius10" src="images/portfolio/gal-grid/gal-grid-14.jpg" alt=" " />
-							</div>
-						</div>
-						<!-- /col-lg-6 -->
-					</div> --}}
-					<!-- /row -->
-				</div>
-				<!-- /container -->
-			</div>
-			<!-- /SECTION 1 -->
-			<!-- SECTION 2 -->
-			<div id="aboutus-2-2" class="section-holder aboutus-2-2">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="display-3 margin-b50">Penghargaan Desa</h2>
-                    </div>
-    
-                </div>
-				<div class="container section-info radius10 padding-50">
-                    
-					<div class="row">
-						<div class="col-6 col-lg-3 tablet-margin-b30 alignc">
-                            <h2 id="awards-adwi" class="display-2 margin-b15 count-up" data-end-val="8">0</h2>
-                            <div class="margin-b15">ADWI</div>
-                        </div>
-                        <!-- /col-lg-6 -->
-                        <div class="col-6 col-lg-3 tablet-margin-b30 alignc">
-                            <h2 id="awards-count" class="display-2 margin-b15 count-up" data-end-val="5">0</h2>
-                            <div class="margin-b15">Penghargaan</div>
-                        </div>
-                        <!-- /col-lg-6 -->
-                        <div class="col-6 col-lg-3 alignc">
-                            <h2 id="places-count" class="display-2 margin-b15 count-up" data-end-val="63">0</h2>
-                            <div class="margin-b15">Penghargaan</div>
-                        </div>
-                        <!-- /col-lg-6 -->
-                        <div class="col-6 col-lg-3 alignc">
-                            <h2 id="years-count" class="display-2 margin-b15 count-up" data-end-val="7">0</h2>
-                            <div class="margin-b15">Penghargaan</div>
-                        </div>
-                        
-						<!-- /col-lg-6 -->
-					</div>
-					<!-- /row -->
-				</div>
-				<!-- /container -->
-			</div>
-			<!-- /SECTION 2 -->
 			<!-- SECTION 3 -->
 			<div id="aboutus-2-3" class="section-holder aboutus-2-3">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="padding-lr200 alignc">
-								<div class="el-smalltitle">Our Services</div>
-								<h2 class="display-4 margin-b50">We're highly proficient at</h2>
-							</div>
-						</div>
-						<!-- /col-lg-12 -->
-					</div>
 					<!-- /row -->
 					<div class="row">
-						<div class="col-md-6 col-lg-4">
+                        <div class="col-12 col-lg-6 d-flex">
+							<div class="icon-box-3 flex-fill">
+								
+								<!-- /icon-svg -->
+								<h5>Visi</h5>
+                                <div class="visi">
+								<p>A S E P<br>
+                                ( Agamis, Sejahtera, Edukatif, Prestasi )</p>
+                                </div>
+							</div>
+							<!-- /icon-box-2 -->
+						</div>
+						<!-- /col-md-6 -->
+						<div class="col-12 col-lg-6 d-flex">
+							<div class="icon-box-3 flex-fill">
+								
+								<!-- /icon-svg -->
+								<h5>Misi</h5>
+								<ul style="text-align: justify">
+                                    <li>Membangun dan memperkuat pemahaman dan pengamalan nilai-nilai agama</li>
+                                      <li>  Tata kelola pemerintahan yang baik, besih dan profesional serta berorientasi pada pelayanan publik yang optimal</li>
+                                      <li>  Peningkatan pembangunan infrastruktur perdesaan yang berbasis partisifatif</li>
+                                       <li> Penataan kehidupan masyarakat yang aman, tertib, taat hukum, dan harmonis</li>
+                                       <li> Memperkuat ketahaan sosial dan budaya masyarakat berdasarkan nilai luhur budaya lokal</li>
+                                    <li>    Peningkatan sumberdaya manusia melalui kegiatan pendidikan formal dan non formal</li>
+                                      <li>  Mendorong Pengembangan keterampillan melalui pelatihan yang mengarah pada kewirusahaan dan industri kreatif.</li>
+                                </ul>
+							</div>
+							<!-- /icon-box-2 -->
+						</div>
+						{{-- <div class="col-md-6 col-lg-4">
 							<div class="icon-box-2">
 								<div class="icon-svg margin-b10">
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 74 74" style="enable-background:new 0 0 512  512" xml:space="preserve" class="icon-1"><g><g xmlns="http://www.w3.org/2000/svg"><path d="m69.41 10.06c0-3.81-3.19-6.91-7.11-6.91h-50.12c-3.92 0-7.11 3.1-7.11 6.91v4.89c0 .45.15.86.4 1.2l10.5 19.84-9.51 19.72c-.47.38-.77.97-.77 1.62v3.89.02c0 3.81 3.13 6.91 6.98 6.91h49.16c3.85 0 6.98-3.1 6.98-6.91v-.02-3.89c0-.71-.35-1.33-.87-1.71l-9.42-19.63 10.56-19.92c.21-.32.34-.71.34-1.12zm-63.34 0c0-3.26 2.74-5.91 6.11-5.91h50.12c3.37 0 6.11 2.65 6.11 5.91v1.06h-62.34zm23.45 26.54c-3.19 2.22-5.33 5.77-5.73 9.74h-2.91c-.28 0-.5.22-.5.5v3.01c0 .28.22.5.5.5h32.69c.28 0 .5-.22.5-.5v-3.01c0-.28-.22-.5-.5-.5h-2.91c-.4-3.98-2.54-7.52-5.73-9.74h12.77l8.94 18.63h-58.85l9-18.63zm23.56 10.75v2.01h-31.7v-2.01zm-24.79-1c.67-4.36 4.48-7.71 8.94-7.71s8.28 3.35 8.95 7.71zm29.3-10.75h-14.34c-.6-.3-1.23-.56-1.88-.77v-1.29c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.66c0 .22.15.42.36.48 4.86 1.41 8.38 5.66 8.93 10.66h-2.48c-.68-4.92-4.96-8.71-9.96-8.71s-9.27 3.79-9.95 8.71h-2.47c.54-5 4.06-9.25 8.93-10.66.21-.06.36-.26.36-.48v-1.66c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1.29c-.65.21-1.28.47-1.88.77h-14.31l-9.85-18.6h60.4zm4.24 31.55h-49.17c-3.13 0-5.7-2.39-5.96-5.43h61.08c-.24 3.04-2.82 5.43-5.95 5.43zm5.98-6.43h-61.13v-3.39c0-.6.48-1.1 1.06-1.1h59c.59 0 1.06.49 1.06 1.1v3.39zm.6-45.77c0 .58-.49 1.06-1.09 1.06h-60.15c-.61 0-1.1-.48-1.1-1.06v-2.83h62.34z"></path><path d="m42.35 22.47c-.09-.14-.25-.22-.41-.22h-9.44c-.17 0-.32.08-.41.22l-2.37 3.48c-.01.01-.22.35.02.6l7.08 8.73c.31.33.68.12.78 0l7.09-8.73c.01-.01.24-.2.03-.6zm-1.33.79-1.43 2.09-1.43-2.09zm-2.38 2.48h-2.85l1.43-2.09zm-2.37-2.48-1.41 2.07-1.41-2.07zm-3.77.38 1.43 2.09h-2.85zm-1.32 3.1h3.28l1.9 6.56zm6.03 6.32-1.72-6.33h3.44zm1.01.13 1.75-6.45h3.28zm2.31-7.45 1.41-2.07 1.41 2.07z"></path></g></g></svg>
@@ -137,9 +83,9 @@
 								<p>Est sale definitiones id. Ut quo quem harum munere, eu labore voluptatum mei.</p>
 							</div>
 							<!-- /icon-box-2 -->
-						</div>
+						</div> --}}
 						<!-- /col-md-6 -->
-						<div class="col-md-6 col-lg-4">
+						{{-- <div class="col-md-6 col-lg-4">
 							<div class="icon-box-2">
 								<div class="icon-svg margin-b10">
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 74 74" style="enable-background:new 0 0 512 512" xml:space="preserve" class="icon-3"><g><g xmlns="http://www.w3.org/2000/svg"><path d="m51.93 13.38.78-.78c.74-.8.39-1.75-.02-2.18-.6-.59-1.58-.59-2.18 0l-.76.76c-9.18-8.18-22.76-9.01-32.89-1.78-.4.29-.59.79-.5 1.27.09.47.44.83.9.94.97.23 1.89.74 2.64 1.5 1.27 1.27 1.86 3 1.53 4.52-.09.42.03.85.33 1.15v.01c.01.01.03.02.05.03.29.26.69.38 1.1.29 1.52-.33 3.25.26 4.52 1.53s1.86 3 1.54 4.52c-.09.42.03.85.33 1.15.09.09.19.16.3.21h.01c.25.13.54.17.83.11.88-.19 1.84-.06 2.74.33l-4.97 4.97c-.09.09-.15.22-.15.35v2.92h-.07c-.41 0-.75.23-.95.55l-2.19-2.19.74-.73s0 0 .01-.01c.52-.54.52-1.37 0-1.91l-4.06-4.06c-.51-.51-1.4-.51-1.91 0l-3.02 3.02c-.8.81-1.24 1.87-1.24 2.98s.44 2.17 1.24 2.98c.83.82 1.91 1.23 2.99 1.23.89 0 1.77-.29 2.51-.85l4.73 4.79v1.1c0 .63.51 1.13 1.13 1.13h.07v8.22h-3.51c-1.05 0-1.9.85-1.9 1.9 0 1.04.85 1.89 1.9 1.89h.17l-6.27 13.57c-.07.16-.06.34.03.48s.25.23.42.23h4.36c.2 0 .37-.11.45-.29l4.35-9.4v9.19c0 .28.22.5.5.5h3.96c.28 0 .5-.22.5-.5v-9.19l4.35 9.4c.08.18.26.29.45.29h4.36c.17 0 .33-.09.42-.23s.1-.32.03-.48l-6.27-13.57h.17c1.05 0 1.9-.85 1.9-1.89 0-1.05-.85-1.9-1.9-1.9h-3.51v-8.22h.07c.63 0 1.13-.51 1.13-1.13v-5.74c0-.63-.51-1.13-1.13-1.13h-.07v-1.07l3.41-3.41c.17.66.2 1.33.06 1.96-.06.29-.02.57.1.82 0 .01.01.02.01.03.06.11.12.21.21.29.3.3.72.42 1.15.33 1.52-.33 3.25.26 4.52 1.53s1.86 3 1.54 4.52c-.08.39.02.78.27 1.07.02.02.03.05.05.07h.01c.3.3.72.42 1.15.33 1.52-.33 3.25.26 4.52 1.53.76.76 1.28 1.67 1.5 2.64.11.46.47.8.94.9.08.02.17.02.25.02.4 0 .79-.19 1.02-.52 7.25-10.11 6.42-23.69-1.78-32.89zm-14.37 18.71c.07-1.62-.61-3.33-1.91-4.62-1.29-1.29-3-1.97-4.62-1.9 10.6-10.13 17.9-13.87 19.15-12.63 1.24 1.26-2.5 8.56-12.62 19.15zm13.65-20.95c.21-.21.56-.21.77-.01 0 0 .36.4.01.78l-.73.73c-.13-.13-.24-.27-.37-.4s-.27-.24-.41-.37zm-30.61 1.28c-.89-.88-1.96-1.49-3.12-1.76-.1-.02-.13-.1-.15-.16-.02-.08 0-.2.1-.26 8.56-6.12 19.68-6.24 28.25-.85-6.51-1.65-15.53 1.31-23.23 8.13.25-1.76-.43-3.68-1.85-5.1zm7.52 7.53c-1.33-1.33-3.1-2.02-4.77-1.9 8.9-7.75 19.48-10.28 25.44-6.22-3.98.68-11.8 6.61-18.84 13.39.33-1.8-.36-3.8-1.83-5.27zm-10.83 15.2c-.61-.62-.95-1.43-.95-2.28s.34-1.66.94-2.28l3.02-3.02c.07-.07.15-.1.25-.1.09 0 .18.04.25.1l4.05 4.06c.14.15.14.36 0 .51l-3.02 3.01c-1.24 1.25-3.28 1.25-4.54 0zm5.54.43 1.29-1.29 2.72 2.72v2.58zm.1 32.94h-3.26l6.14-13.28h3.26zm9.08 0h-2.96v-10.86l1.12-2.42h.72l1.12 2.42zm9.37 0h-3.26l-6.14-13.28h3.26zm-3.97-15.17c0 .49-.4.89-.9.89h-11.97c-.5 0-.9-.4-.9-.89s.4-.9.9-.9h11.98c.49 0 .89.41.89.9zm-5.4-1.9h-2.96v-8.22h2.96zm1.2-15.09v5.74c0 .07-.06.13-.13.13h-5.1c-.07 0-.13-.06-.13-.13v-5.74c0-.07.06-.13.13-.13h5.1c.07-.01.13.05.13.13zm-1.06-2.77c-.05.05-.14.13-.15.35v1.28h-2.96v-2.71l5.03-5.03c.3.21.6.44.86.7.46.46.83.98 1.1 1.52zm11.03 1.41c-1.46-1.46-3.46-2.15-5.27-1.82 6.78-7.05 12.7-14.87 13.39-18.85 4.06 5.95 1.53 16.53-6.22 25.44.12-1.66-.57-3.44-1.9-4.77zm9.73 10.69c-.07.1-.18.12-.27.1-.06-.01-.14-.05-.16-.14-.27-1.15-.88-2.23-1.77-3.12-1.23-1.23-2.83-1.91-4.38-1.91-.24 0-.47.02-.71.06 6.81-7.71 9.78-16.73 8.12-23.24 5.4 8.58 5.28 19.7-.83 28.25z" class=""></path><path d="m22.4 33.17c.2-.2.2-.51 0-.71l-2.56-2.56c-.2-.2-.51-.2-.71 0s-.2.51 0 .71l2.56 2.56c.1.1.23.15.35.15s.26-.05.36-.15z" class=""></path><path d="m18.34 31.41c-.2-.2-.51-.2-.71 0s-.2.51 0 .71l2.56 2.56c.1.1.23.15.35.15s.26-.05.35-.15c.2-.2.2-.51 0-.71z" class=""></path></g></g></svg>
@@ -185,7 +131,7 @@
 								<p>Est sale definitiones id. Ut quo quem harum munere, eu labore voluptatum mei.</p>
 							</div>
 							<!-- /icon-box-2 -->
-						</div>
+						</div> --}}
 						<!-- /col-md-6 -->
 					</div>
 					<!-- /row -->
@@ -196,119 +142,84 @@
 			<!-- SECTION 4 -->
 			<div id="aboutus-2-4" class="section-holder aboutus-2-4">
 				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-6">
-							<div class="el-smalltitle">Our Crew</div>
-							<h2 class="display-4 margin-b50">Meet the Team</h2>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h2 class="display-5 margin-b50">Sejarah Desa</h2>
 						</div>
-						<!-- /col-lg-6 -->
 					</div>
 					<!-- /row -->
-					<div class="row margin-b50less">
-						<div class="col-md-6 col-lg-4 margin-b50">
-							<div class="mt-img-scale margin-b15">
-								<a href="#"><img class="img-fluid radius10" src="images/team/team-1.jpg" alt=" " /></a>
-							</div>
-							<h5 class="margin-b10"> April Ryan</h5>
-							<div class="team-position">Photographer</div>
-							<ul class="social-media social-team">
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-						<!-- /col-lg-4 -->
-						<div class="col-md-6 col-lg-4 margin-b50">
-							<div class="mt-img-scale margin-b15">
-								<a href="#"><img class="img-fluid radius10" src="images/team/team-2.jpg" alt=" " /></a>
-							</div>
-							<h5 class="margin-b10">Robin Smith</h5>
-							<div class="team-position">Photographer</div>
-							<ul class="social-media social-team">
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-						<!-- /col-lg-4 -->
-						<div class="col-md-6 col-lg-4 margin-b50">
-							<div class="mt-img-scale margin-b15">
-								<a href="#"><img class="img-fluid radius10" src="images/team/team-3.jpg" alt=" " /></a>
-							</div>
-							<h5 class="margin-b10">Olivia Nelson</h5>
-							<div class="team-position">Videographer</div>
-							<ul class="social-media social-team">
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-						<!-- /col-lg-4 -->
-						<div class="col-md-6  col-lg-4 margin-b50">
-							<div class="mt-img-scale margin-b15">
-								<a href="#"><img class="img-fluid radius10" src="images/team/team-4.jpg" alt=" " /></a>
-							</div>
-							<h5 class="margin-b10">Jeremy Welch</h5>
-							<div class="team-position">Retoucher</div>
-							<ul class="social-media social-team">
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-						<!-- /col-lg-3 -->
-						<div class="col-md-6 col-lg-4 margin-b50">
-							<div class="mt-img-scale margin-b15">
-								<a href="#"><img class="img-fluid radius10" src="images/team/team-3.jpg" alt=" " /></a>
-							</div>
-							<h5 class="margin-b10">Olivia Nelson</h5>
-							<div class="team-position">Videographer</div>
-							<ul class="social-media social-team">
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-						<!-- /col-lg-4 -->
-						<div class="col-md-6 col-lg-4 margin-b50">
-							<div class="mt-img-scale margin-b15">
-								<a href="#"><img class="img-fluid radius10" src="images/team/team-1.jpg" alt=" " /></a>
-							</div>
-							<h5 class="margin-b10"> April Ryan</h5>
-							<div class="team-position">Photographer</div>
-							<ul class="social-media social-team">
-								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-						<!-- /col-lg-4 -->
+					<div class="row margin-b50less margin-t30">
+                        <p class="el-smalltitle">Nama Desa Baros diberikan oleh para tokoh Masyarakat terdahulu yang diambil dari kata BAROS, yaitu nama sebuah Pohon yang tumbuh besar di wilayah kami pada masa itu.<br><br>
+                            Pohon Baros diyakini sebagai pohon yang kokoh dan dapat tumbuh besar sehingga dapat memberikan rasa nyaman bagi siapapun yang berteduh dibawahnya. Dan menurut sepengetahuan kami, salah seorang Tokoh Masyarakat Desa Baros menyimpan (mengabadikan) tunggul/pangkal pohon tersebut sebagai kenangan.<br><br>
+                            Dari uraian tersebut, seluruh masyarakat Desa Baros diharapkan sesuai dengan makna/arti dari dasar tersebut, diharapkan bisa menjadi Masyarakat yang kokoh dalam persatuan dan kesatuan serta terus bahu membahu untuk dapat menciptakan lingkungan yang aman, nyaman, tentram dan mempunyai arti untuk yang lainnya.<br><br>
+                        </p>
+
 					</div>
 					<!-- /row -->
 				</div>
 				<!-- /container -->
 			</div>
 			<!-- /SECTION 4 -->
-			<!-- SECTION 5 -->
-			{{-- <div id="aboutus-2-5" class="section-holder aboutus-2-5">
-				<div class="container">
+
+            {{-- PENGHARGAAN --}}
+            <div id="aboutus-2-4" class="section-holder aboutus-2-4">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="display-5 margin-b50">Penghargaan Desa</h2>
+                    </div>
+    
+                </div>
+				<div class="container section-info radius10 ">
+                    
 					<div class="row">
-						<div class="col-lg-12">
-							<div class="padding-lr200 alignc">
-								<div class="el-smalltitle">Contact</div>
-								<h2 class="display-4 margin-b30">Looking for a photograher / videographer?</h2>
-								<p>Te vis veniam detracto, tollit alterum graecis his ut. At pro essent aliquip qualisque, vis splendide posidonium ex. Nec et error quodsi deleniti.</p>
-								<a href="contact.html" class="read-more margin-t30">Get in Touch</a>
-							</div>
-						</div>
-						<!-- /col-lg-12 -->
+						<div class="col-2 col-lg-6 tablet-margin-b30 alignc">
+                            <h2 id="count-awards" class="display-2 margin-b15 count-up" data-end-val="5">0</h2>
+                            <div class="margin-b15">Kampung keluarga berkualitas</div>
+                        </div>
+                        <!-- /col-lg-6 -->
+                        <div class="col-2 col-lg-5 tablet-margin-b30 alignc">
+                            <h2 id="awards-count" class="display-2 margin-b15 count-up" data-end-val="5">0</h2>
+                            <div class="margin-b15">Desa Wisata Terbaik</div>
+                        </div>
 					</div>
 					<!-- /row -->
 				</div>
 				<!-- /container -->
-			</div> --}}
-			<!-- /SECTION 5 -->		
-		</div>
+			</div>
+            {{-- /PENGHARGAAN --}}
+            {{-- MAPS --}}
+            <div id="wrap-content" class="page-content custom-page-template">
+                <!-- SECTION 1 -->
+                <div id="contact-2-1" class="section-holder margin-t30 contact-2-1">
+                    <div class="gmaps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31675.512553566004!2d107.60461032422715!3d-7.074985508249035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68eadefa7e0f5f%3A0x81f09de670545dfe!2sBaros%2C%20Kec.%20Arjasari%2C%20Kabupaten%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1718938441602!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            {{-- /MAPS --}}
+        </div>
+
 		<!-- /WRAP CONTENT -->
 
+@endsection
+
+@section('script')
+<script>
+    function startCounter(maxCount, elementId) {
+        let counter = 0;
+        const interval = 20; // 0.25 seconds in milliseconds
+        const counterElement = document.getElementById(elementId);
+
+        const intervalId = setInterval(() => {
+            counterElement.textContent = counter;
+            counter++;
+            if (counter > maxCount) {
+                clearInterval(intervalId);
+            }
+        }, interval);
+    }
+
+    startCounter(5,"count-awards"),
+    startCounter(75,"awards-count")
+    </script>
 @endsection

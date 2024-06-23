@@ -24,6 +24,8 @@
 		media='all' />
 	<!-- Main CSS File -->
 	<link rel='stylesheet' id='Kim- style-css' href="{{ asset('frontend/style.css')}}" type='text/css' media='all' />
+    {{-- <link rel='stylesheet' id='Kim- style-css' href="{{ asset('frontend/css/order.css')}}" type='text/css' media='all' /> --}}
+
 	<!-- favicons -->
 	<link rel="icon" href="{{ asset('frontend/images/Logo.png')}}" sizes="32x32" />
 	<link rel="icon" href="{{ asset('frontend/images/Logo.png')}}" sizes="192x192" />
@@ -35,19 +37,25 @@
 <body class="home">
 	<div class="menu-mask">
 	<!-- HEADER -->
-@include('layouts.include.navbar')
+@include('layouts.user.include.navbar')
 	<!-- /HEADER -->
     {{-- Content --}}
 	@yield('content')
 	{{-- /Content --}}
     {{-- Footer --}}
-    @include('layouts.include.footer')
+    @include('layouts.user.include.footer')
     {{-- /Footer --}}
 	<div class="scrollup">
 		<a class="scrolltop" href="#">
 			<i class="fa fa-chevron-up"></i>
 		</a>
 	</div>
+	{{-- <a style="color: red" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+</form> --}}
+	
 	<!-- JS -->
 	<script src="{{ asset('https://smtpjs.com/v3/smtp.js')}}"></script>
 	<script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/countUp.js"></script>
@@ -62,8 +70,10 @@
 	<script src="{{ asset('frontend/js/simple-lightbox.js')}}"></script>
     {{-- Main JS --}}
 	<script src="{{ asset('frontend/js/init.js')}}"></script>
-    <script>
+    @yield('script')
+
         
+    
 
 </body>
 

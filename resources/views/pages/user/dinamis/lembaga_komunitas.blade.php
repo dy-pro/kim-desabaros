@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.user.master')
 
 @section('content')
 {{-- <header class="main-header header-5">
