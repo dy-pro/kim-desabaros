@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.user.master')
 
 @section('content')
 <!-- TOP HEADER IMAGE -->
@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order2">
-                    <div class="el-smalltitle">Our Mission</div>
+                    <div class="el-smalltitle">Selayang Pandang</div>
                     <h2 class="display-4 margin-b30">Badan Permusyawaratan Desa</h2>
                     <p>Berdasarkan Undang-undang No.6 Tahun 2014 tentang Desa, Badan Permusyawaratan Desa (BPD), adalah lembaga yang melaksanakan fungsi pemerintahan yang anggotanya merupakan wakil dari penduduk desa berdasarkan keterwakilan wilayah dan ditetapkan secara demokratis, demikian yang disebut dalam Pasal 1 angka 4 UU Desa.</p>
                     <p>Ad graeci theophrastus, libris timeam sapientem. Pellentes faucibus sollicitudin ante,at porta felisrutrum eget. Sed ut nisl urna,e get convallis purus pretium facilisis. Interdum et malesuada varius mauris eu commodo.</p>
@@ -190,8 +190,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="el-smalltitle">Our Crew</div>
-                    <h2 class="display-4 margin-b50">Meet the Team</h2>
+                    <div class="el-smalltitle">Our Team</div>
+                    <h2 class="display-4 margin-b50">Struktur Organisasi</h2>
                 </div>
                 <!-- /col-lg-6 -->
             </div>
@@ -202,7 +202,7 @@
                         <a href="#"><img class="img-fluid radius10" src="images/team/team-1.jpg" alt=" " /></a>
                     </div>
                     <h5 class="margin-b10"> April Ryan</h5>
-                    <div class="team-position">Photographer</div>
+                    <div class="team-position">Ketua</div>
                     <ul class="social-media social-team">
                         <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -215,7 +215,7 @@
                         <a href="#"><img class="img-fluid radius10" src="images/team/team-2.jpg" alt=" " /></a>
                     </div>
                     <h5 class="margin-b10">Robin Smith</h5>
-                    <div class="team-position">Photographer</div>
+                    <div class="team-position">Wakil Ketua</div>
                     <ul class="social-media social-team">
                         <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -228,7 +228,7 @@
                         <a href="#"><img class="img-fluid radius10" src="images/team/team-3.jpg" alt=" " /></a>
                     </div>
                     <h5 class="margin-b10">Olivia Nelson</h5>
-                    <div class="team-position">Videographer</div>
+                    <div class="team-position">Sekretaris</div>
                     <ul class="social-media social-team">
                         <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -241,7 +241,7 @@
                         <a href="#"><img class="img-fluid radius10" src="images/team/team-4.jpg" alt=" " /></a>
                     </div>
                     <h5 class="margin-b10">Jeremy Welch</h5>
-                    <div class="team-position">Retoucher</div>
+                    <div class="team-position">Bendahara</div>
                     <ul class="social-media social-team">
                         <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -254,7 +254,7 @@
                         <a href="#"><img class="img-fluid radius10" src="images/team/team-3.jpg" alt=" " /></a>
                     </div>
                     <h5 class="margin-b10">Olivia Nelson</h5>
-                    <div class="team-position">Videographer</div>
+                    <div class="team-position">Bidang Informasi</div>
                     <ul class="social-media social-team">
                         <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>

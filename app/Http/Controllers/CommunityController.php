@@ -23,7 +23,7 @@ class CommunityController extends Controller
     }
 
     public function show() {
-        return view('dinamis.detail_lembaga');
+        return view('pages.user.dinamis.detail_lembaga');
     }
 
 }
