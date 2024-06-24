@@ -1,5 +1,5 @@
  <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-primary">
+ <aside class="main-sidebar sidebar-light-primary">
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
@@ -8,7 +8,7 @@
           <img src="{{ asset('frontend/images/Logo.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Dashboard KIM Baros</a>
+          <a href="/dashboard" class="d-block">Dashboard KIM Baros</a>
         </div>
       </div>
 
