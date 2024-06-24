@@ -1,5 +1,5 @@
  <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-primary">
+ <aside class="main-sidebar sidebar-light-primary">
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
@@ -8,7 +8,7 @@
           <img src="{{ asset('frontend/images/Logo.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Dashboard KIM Baros</a>
+          <a href="/dashboard" class="d-block">Dashboard KIM Baros</a>
         </div>
       </div>
 
@@ -39,25 +39,25 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/manajemen_pengguna" class="nav-link {{ Request::is('manajemen_pengguna') ? 'active' : '' }}">
+                <a href="/user_management" class="nav-link {{ str_contains(Request::url(),'user_management') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-edit"></i>
                     <p>Pengguna</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/manajemen_kategori" class="nav-link {{ Request::is('manajemen_kategori') ? 'active' : '' }}">
+                <a href="/category_management" class="nav-link {{ str_contains(Request::url(), 'category_management') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-copy"></i>
                     <p>Kategori</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/manajemen_produk" class="nav-link {{ str_contains(Request::url(), 'manajemen_produk') ? 'active' : '' }}">
+                <a href="/product_management" class="nav-link {{ str_contains(Request::url(), 'product_management') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-table"></i>
                     <p>Produk</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/manajemen_kegiatan" class="nav-link {{ Request::is('manajemen_kegiatan') ? 'active' : '' }}">
+                <a href="/activity_management" class="nav-link {{str_contains(Request::url(), 'activity_management') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-calendar-alt"></i>
                     <p>Kegiatan</p>
                 </a>
