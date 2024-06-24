@@ -9,19 +9,18 @@
                             <!-- /.card -->
 
                             <div class="card">
-                                <div class="card-header border-0">
+                                <div class="card-header">
                                     <h3 class="card-title">Daftar Kegiatan</h3>
                                     <div class="card-tools">
                                         <a href="/activity_management/createActivity"><button class="btn btn-outline-primary">Tambah Kegiatan</a>
                                     </div>
                                 </div>
 
-
-                                <div class="card-body table-responsive p-0">
+                                <div class="card-body table-responsive">
                                     <table id="example2" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Id</th>
+                                                <th>Id Lembaga</th>
                                                 <th>Gambar Poster</th>
                                                 <th>Deskripsi</th>
                                                 <th>Tanggal Mulai</th>

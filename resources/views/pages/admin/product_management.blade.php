@@ -4,21 +4,20 @@
 <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-12">
                             
                             <!-- /.card -->
 
                             <div class="card">
-                                <div class="card-header border-0">
+                                <div class="card-header">
                                     <h3 class="card-title">Daftar Produk</h3>
                                     <div class="card-tools">
                                         <a href="/product_management/createProduct"><button class="btn btn-outline-primary">Tambah Produk</a>
                                     </div>
                                 </div>
 
-
-                                <div class="card-body table-responsive p-0">
-                                    <table id="example2" class="table table-bordered table-striped">
+                                <div class="card-body table-responsive">
+                                    <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Id Pengguna</th>

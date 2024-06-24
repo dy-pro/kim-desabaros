@@ -20,9 +20,9 @@
                                 <div class="card-body table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
-                                            <tr>
-                                                <th>Nama</th>
+                                            <tr>                                   
                                                 <th>Id Pengguna</th>
+                                                <th>Nama</th>
                                                 <th>Alamat</th>
                                                 <th>No Handphone</th>
                                                 <th>Role</th>
@@ -31,12 +31,12 @@
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td>1</td>
                                                 <td>
                                                     <img src="{{ asset('AdminLTE/dist/img/default-150x150.png')}}"
                                                         alt="Product 1" class="img-circle img-size-32 mr-2">
-                                                    
+                                                    Margaret
                                                 </td>
-                                                <td>1</td>
                                                 <td>Kota Bandung, Jawa Barat</td>
                                                 <td>
                                                    0816342836
