@@ -22,8 +22,21 @@ class CommunityController extends Controller
         return response()->json($community, 201); // contoh response JSON dengan status code 201
     }
 
+    public function index() {
+        // Mengambil data pengguna tabel Community
+        $communities= Community::all();
+
+        return view('pages.admin.community_management', [
+            'communities' => $communities
+        ]);
+    }
+
     public function show() {
         return view('pages.user.dinamis.detail_lembaga');
+    }
+
+    public function store() {
+
     }
 
 }

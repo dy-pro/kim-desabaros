@@ -29,6 +29,9 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashb
 Route::get('/manajemen_produk', [DashboardController::class, 'manajemen_produk'])->name('produk');
 Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk');
 
+Route::get('/community_management', [DashboardController::class, 'community_management'])->name('community');
+Route::get('/community_management/create', [DashboardController::class, 'create_community'])->name('create_community');
+
 
 // Auth::routes();
 

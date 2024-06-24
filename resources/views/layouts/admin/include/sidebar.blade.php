@@ -57,6 +57,12 @@
                 </a>
             </li>
             <li class="nav-item">
+              <a href="/community_management" class="nav-link {{ str_contains(Request::url(), 'community_management') ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>Komunitas</p>
+              </a>
+            </li>
+            <li class="nav-item">
                 <a href="/manajemen_kegiatan" class="nav-link {{ Request::is('manajemen_kegiatan') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-calendar-alt"></i>
                     <p>Kegiatan</p>
