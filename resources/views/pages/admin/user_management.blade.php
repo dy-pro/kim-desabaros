@@ -20,8 +20,7 @@
                                 <div class="card-body table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
-                                            <tr>
-                                                
+                                            <tr>                                   
                                                 <th>Id Pengguna</th>
                                                 <th>Nama</th>
                                                 <th>Alamat</th>
@@ -38,7 +37,6 @@
                                                         alt="Product 1" class="img-circle img-size-32 mr-2">
                                                     Margaret
                                                 </td>
-                                                
                                                 <td>Kota Bandung, Jawa Barat</td>
                                                 <td>
                                                    0816342836
