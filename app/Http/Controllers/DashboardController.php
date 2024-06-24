@@ -8,13 +8,31 @@ use App\Http\Controllers\CommunityController;
 class DashboardController extends Controller
 {
     public function dashboard(){
-        return view('layouts.admin.admin');
+        return view('pages.admin.dashboard');
     }
-    public function manajemen_produk(){
-        return view('pages.admin.manajemen_produk');
+    public function product_management(){
+        return view('pages.admin.product_management');
     }
-    public function tambah_produk(){
-        return view('pages.admin.produk.tambah_produk');
+    public function createProduct(){
+        return view('pages.admin.produk.createProduct');
+    }
+    public function user_management(){
+        return view('pages.admin.user_management');
+    }
+    public function createUser(){
+        return view('pages.admin.createUser');
+    }
+    public function category_management(){
+        return view('pages.admin.category_management');
+    }
+    public function createCategory(){
+        return view('pages.admin.createCategory');
+    }
+    public function activity_management(){
+        return view('pages.admin.activity_management');
+    }
+    public function createActivity(){
+        return view('pages.admin.createActivity');
     }
     public function community_management(Request $request){
         //

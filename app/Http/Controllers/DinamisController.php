@@ -6,19 +6,19 @@ use Illuminate\Http\Request;
 
 class DinamisController extends Controller
 {
-    public function beranda(){
-        return view('pages.user.dinamis.beranda');
+    public function home(){
+        return view('pages.user.dinamis.home');
     }
-    public function tentang_desa(){
-        return view('pages.user.dinamis.tentang_desa');
+    public function about(){
+        return view('pages.user.dinamis.about');
     }
-    public function kegiatan(){
-        return view('pages.user.dinamis.kegiatan');
+    public function activity(){
+        return view('pages.user.dinamis.activity');
     }
-    public function lembaga_komunitas(){
-        return view('pages.user.dinamis.lembaga_komunitas');
+    public function community(){
+        return view('pages.user.dinamis.community');
     }
-    public function produk_desa(){
-        return view('pages.user.dinamis.produk_desa');
+    public function product(){
+        return view('pages.user.dinamis.product');
     }
 }

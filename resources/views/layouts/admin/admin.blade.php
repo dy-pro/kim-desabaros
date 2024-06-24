@@ -192,7 +192,7 @@
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+  <aside class="control-sidebar">
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
@@ -203,6 +203,13 @@
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
+<!-- Include Moment.js -->
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
+<!-- Include Tempus Dominus JS -->
+<script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.39.0/build/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Include your custom scripts -->
+@yield('scripts')
 
 <!-- jQuery -->
 <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js')}}"></script>
