@@ -22,7 +22,7 @@
                                         <thead>
                                             <tr>
                                                 
-                                                <th>Nomor Pengguna</th>
+                                                <th>No</th>
                                                 <th>Nama</th>
                                                 <th>Alamat</th>
                                                 <th>No Handphone</th>
