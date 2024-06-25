@@ -39,19 +39,32 @@ Route::get('/user_management', [DashboardController::class, 'user_management'])-
 Route::get('/user_management/createUser', [DashboardController::class, 'createUser'])->name('tambah_pengguna');
 Route::get('/category_management', [DashboardController::class, 'category_management'])->name('kategori');
 Route::get('/category_management/createCategory', [DashboardController::class, 'createCategory'])->name('tambah_kategori');
-Route::get('/activity_management', [DashboardController::class, 'activity_management'])->name('kegiatan');
-Route::get('/activity_management/createActivity', [DashboardController::class, 'createActivity'])->name('tambah_kegiatan');
 
 
 
 
 Route::controller(DashboardController::class)->group(function(){
         Route::get('/community_management', 'community_management')->name('community.index');
+        
         Route::get('/community_management/createCommunity','createCommunity')->name('community.create');
+        
         Route::post('/community_management/storeCommunity', 'storeCommunity')->name('community.store');
+        
         Route::get('/community_management/{communityId}/editCommunity', 'editCommunity')->name('community.edit');
+        
         Route::post('/community_management/{communityId}/updateCommunity', 'updateCommunity')->name('community.update');
+        
         Route::delete('/community_management/{communityId}/deleteCommunity', 'deleteCommunity')->name('community.delete');
+});
+
+Route::controller(DashboardController::class)->group(function(){
+        Route::get('activity_management', 'activity_management')->name('activity.index');
+
+        Route::get('/activity_management/createActivity','createActivity')->name('activity.create');
+
+        Route::post('/community_management/storeActivity', 'storeActivity')->name('activity.store');
+
+        Route::get('/community_management/{activityId}/editActivity', 'editActivity')->name('activity.edit');
 });
 
 

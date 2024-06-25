@@ -28,19 +28,14 @@ class DashboardController extends Controller
     public function createCategory(){
         return view('pages.admin.createCategory');
     }
-    public function activity_management(){
-        return view('pages.admin.activity_management');
-    }
-    public function createActivity(){
-        return view('pages.admin.createActivity');
-    }
+
+    //Komunitas
     public function community_management(Request $request){
         $communityController = new CommunityController();
 
         return $communityController->index($request);
     }
-    public function createCommunity(Request $request){
-        // return view('pages.admin.community.create');
+    public function createCommunity(Request $request){;
         $communityController = new CommunityController();
 
         return $communityController->create($request);
@@ -66,4 +61,21 @@ class DashboardController extends Controller
         return $communityController->destroy($communityId);
     }
 
+    //Kegiatan
+    public function activity_management(Request $request){
+        $activityController = new ActivityController();
+
+        return $activityController->index($request);
+    }
+
+    public function createActivity(Request $request){
+        $activityController = new ActivityController();
+
+        return $activityController->create($request);
+    }
+
+    public function storeActivity(Request $request){
+        $activityController = new ActivityController();
+        return $activityController->store($request);
+    }
 }
