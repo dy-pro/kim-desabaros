@@ -12,7 +12,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Daftar Kegiatan</h3>
                                     <div class="card-tools">
-                                        <a href="/activity_management/createActivity"><button class="btn btn-outline-primary">Tambah Kegiatan</a>
+                                        <a href="/activity_management/createActivity"><button class="btn btn-outline-primary">Tambah Kegiatan</button></a>
                                     </div>
                                 </div>
 
@@ -21,7 +21,7 @@
                                     <table id="example2" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Id Lembaga</th>
+                                                <th>No</th>
                                                 <th>Gambar Poster</th>
                                                 <th>Deskripsi</th>
                                                 <th>Tanggal Mulai</th>
