@@ -12,7 +12,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Daftar Pengguna</h3>
                                     <div class="card-tools">
-                                        <a href="/user_management/createUser"><button class="btn btn-outline-primary">Tambah Pengguna</a>
+                                        <a href="/user_management/createUser"><button class="btn btn-outline-primary">Tambah Pengguna</button>
                                     </div>
                                 </div>
 
@@ -20,8 +20,8 @@
                                 <div class="card-body table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
-                                            <tr>                                   
-                                                <th>Id Pengguna</th>
+                                            <tr>                                         
+                                                <th>No</th>
                                                 <th>Nama</th>
                                                 <th>Alamat</th>
                                                 <th>No Handphone</th>
