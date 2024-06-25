@@ -25,12 +25,9 @@ Route::resource('user',UserController::class);
 Route::get('/login', function(){
         return view('auth.login');
 });
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-Route::get('/manajemen_produk', [DashboardController::class, 'manajemen_produk'])->name('produk');
-Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk');
 
-Route::get('/community_management', [DashboardController::class, 'community_management'])->name('community');
-Route::get('/community_management/create', [DashboardController::class, 'create_community'])->name('create_community');
+// Route::get('/community_management', [DashboardController::class, 'community_management'])->name('community');
+// Route::get('/community_management/create', [DashboardController::class, 'create_community'])->name('create_community');
 
 
 // Auth::routes();
@@ -44,8 +41,18 @@ Route::get('/category_management', [DashboardController::class, 'category_manage
 Route::get('/category_management/createCategory', [DashboardController::class, 'createCategory'])->name('tambah_kategori');
 Route::get('/activity_management', [DashboardController::class, 'activity_management'])->name('kegiatan');
 Route::get('/activity_management/createActivity', [DashboardController::class, 'createActivity'])->name('tambah_kegiatan');
-Route::get('/community_management', [DashboardController::class, 'community_management'])->name('kegiatan');
-Route::get('/community_management/createCommunity', [DashboardController::class, 'createCommunity'])->name('tambah_kegiatan');
+
+
+
+
+Route::controller(DashboardController::class)->group(function(){
+        Route::get('/community_management', 'community_management')->name('community.index');
+        Route::get('/community_management/createCommunity','createCommunity')->name('community.create');
+        Route::post('/community_management/storeCommunity', 'storeCommunity')->name('community.store');
+        Route::get('/community_management/{communityId}/editCommunity', 'editCommunity')->name('community.edit');
+        Route::post('/community_management/{communityId}/updateCommunity', 'updateCommunity')->name('community.update');
+        Route::delete('/community_management/{communityId}/deleteCommunity', 'deleteCommunity')->name('community.delete');
+});
 
 
 

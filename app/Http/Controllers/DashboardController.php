@@ -35,13 +35,35 @@ class DashboardController extends Controller
         return view('pages.admin.createActivity');
     }
     public function community_management(Request $request){
-        //
         $communityController = new CommunityController();
 
         return $communityController->index($request);
     }
-    public function create_community(){
-        return view('pages.admin.community.create');
+    public function createCommunity(Request $request){
+        // return view('pages.admin.community.create');
+        $communityController = new CommunityController();
+
+        return $communityController->create($request);
+    }
+    public function storeCommunity(Request $request){
+        $communityController = new CommunityController();
+        return $communityController->store($request);
+    }
+
+    public function editCommunity($communityId) {
+        $communityController = new CommunityController();
+        return $communityController->edit($communityId);
+    }
+    
+    public function updateCommunity(Request $request, $communityId) {
+        $communityController = new CommunityController();
+        return $communityController->update($request, $communityId);
+    }
+
+    public function deleteCommunity($communityId) {
+        $communityController = new CommunityController();
+    
+        return $communityController->destroy($communityId);
     }
 
 }
