@@ -11,20 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-    
-        
-            Schema::table('users', function (Blueprint $table) {
-                $table->string('role')->change();
-            });
-        
-            
-                Schema::table('products', function (Blueprint $table) {
-                    $table->integer('id_user');
-                });
-
-                
-
-        
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('category');
+        });
     }
 
     /**

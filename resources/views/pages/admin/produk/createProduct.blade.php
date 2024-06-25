@@ -13,33 +13,43 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form>
+                <form action="{{ route('produk.store')  }}" method="POST" enctype="multipart/form-data">
+                  @csrf
+                  
+                  <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
                   <div class="card-body">
                     <div class="form-group">
                       <label for="name">Nama Produk</label>
-                      <input name="product_name" class="form-control" id="name" placeholder="Nama Produk">
+                      <input  type= "text" name="name" class="form-control"  placeholder="Nama Produk">
                     </div>
                     <div class="form-group">
                       <label for="stock">Stok</label>
-                      <input type="number"  class="form-control" placeholder="Stok Produk">
+                      <input type="number" name="stock" class="form-control" placeholder="Stok Produk">
                     </div>
+                    
                     <div class="form-group">
                         <label for="price">Harga Produk</label>
-                        <input type="number" class="form-control" placeholder="Harga">
+                        <input type="number" name="price" class="form-control" placeholder="Harga">
                     </div>
                     <div class="form-group">
                         <label for="description">Keterangan</label>
-                        <input type="textarea" class="form-control" placeholder="Keterangan Produk">
+                        <input type="text" name="description" class="form-control" placeholder="Keterangan Produk">
                     </div>
                     <div class="form-group">
-                        <label>Kategori</label>
-                        <select class="custom-select">
+                        <label for="category">Kategori</label>
+                        <select name="category" class="custom-select">
                           <option disabled selected>Pilih Kategori</option>
                           <option>Makanan</option>
                           <option>Minuman</option>
                           <option>Kerajinan</option>
                         </select>
                       </div>
+
+                    <div class="form-group">
+                      <label>Keterangan</label>
+                      <input type="file" name="image" class="form-control" placeholder="Keterangan Produk">
+                  </div>
+
                     
                     {{-- <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">

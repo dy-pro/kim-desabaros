@@ -14,13 +14,45 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return redirect();
+        return redirect()->route('produk.index');
         
     }
 
 
+    public function edit($id){
+        $product=Product::find($id);
+        return view('pages.admin.produk.editProduct', ['product'=>$product]);
+    }
+
+
     public function  create(){
-        return view('product.createProduct');
+        return view('produk.createProduct');
+    }
+
+    public function update(Request $request, $id){
+        $payload = $request->all();
+
+        $product=Product::find($id);
+
+        if($request->hasFile('image')){
+        $image = $request->file('image');
+        $imageName=$image->hashName();
+        // dd($imageName->extension());
+        $image->move('products/', $imageName);
+        $product->image =$imageName;
+    }
+        $product->name=$request->name;
+        $product->price=$request->price;
+        $product->description =$request->description;
+        $product->stock = $request->stock;
+        $product->code = 0;
+        $product->id_user = $request->id_user;
+        
+        // dd($product);
+
+        $product->save();
+
+        return redirect()->route('produk.index')->with('success', 'Data Berhasil Disimpan!');
     }
 
     public function store(Request $request)
@@ -45,14 +77,17 @@ class ProductController extends Controller
         if($request->hasFile('image')){
         $image = $request->file('image');
         $imageName=$image->hashName();
-        $image->move('products/'. $imageName);
+        // dd($imageName->extension());
+        $image->move('products/', $imageName);
+        $product->image =$imageName;
     }
         $product->name=$request->name;
         $product->price=$request->price;
         $product->description =$request->description;
         $product->stock = $request->stock;
-        $product->image =$imageName;
-        $product->code = $request->code;
+        $product->category = $request->category;
+        $product->code = 0;
+        $product->id_user = $request->id_user;
         
         // dd($product);
 
@@ -68,7 +103,11 @@ class ProductController extends Controller
         //     'code' => rand(10000000, 99999999)
         // ]);
 
-    return redirect()->route('product.index')->with('success', 'Data Berhasil Disimpan!');
+
+
+
+
+    return redirect()->route('produk.index')->with('success', 'Data Berhasil Disimpan!');
 }
 
 

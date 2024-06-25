@@ -24,27 +24,32 @@ Route::resource('user',UserController::class);
 Route::get('/login', function(){
         return view('auth.login');
 });
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-Route::get('/manajemen_produk', [DashboardController::class, 'manajemen_produk'])->name('produk');
-Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk');
 
+Route::middleware(AuthAdmin::class)->group(function(){
+        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+        Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk.create');
+        Route::get('/product_management/{id}/delete', [ProductController::class, 'destroy'])->name('produk.delete');
+        Route::get('/product_management/{id}/edit', [ProductController::class, 'edit'])->name('produk.edit');
+        Route::get('/manajemen_produk', [DashboardController::class, 'product_management'])->name('produk.index');
+        Route::post('/product_management', [ProductController::class, 'store'])->name('produk.store');
+        Route::put('/product_management/{id}', [ProductController::class, 'update'])->name('produk.update');
+        
+        Route::get('/user_management', [DashboardController::class, 'user_management'])->name('pengguna');
+        Route::get('/user_management/createUser', [DashboardController::class, 'createUser'])->name('tambah_pengguna');
+        Route::get('/product_management/createProduct', [DashboardController::class, 'createProduct'])->name('tambah_produk');
+        Route::get('/category_management', [DashboardController::class, 'category_management'])->name('kategori');
+        Route::get('/category_management/createCategory', [DashboardController::class, 'createCategory'])->name('tambah_kategori');
+        Route::get('/activity_management', [DashboardController::class, 'activity_management'])->name('kegiatan');
+        Route::get('/activity_management/createActivity', [DashboardController::class, 'createActivity'])->name('tambah_kegiatan');
+        Route::get('/community_management', [DashboardController::class, 'community_management'])->name('kegiatan');
+        Route::get('/community_management/createCommunity', [DashboardController::class, 'createCommunity'])->name('tambah_kegiatan');
+        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+        Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
+});
 
 // Auth::routes();
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
-Route::get('/product_management/createProduct', [DashboardController::class, 'createProduct'])->name('tambah_produk');
-Route::get('/user_management', [DashboardController::class, 'user_management'])->name('pengguna');
-Route::get('/user_management/createUser', [DashboardController::class, 'createUser'])->name('tambah_pengguna');
-Route::get('/category_management', [DashboardController::class, 'category_management'])->name('kategori');
-Route::get('/category_management/createCategory', [DashboardController::class, 'createCategory'])->name('tambah_kategori');
-Route::get('/activity_management', [DashboardController::class, 'activity_management'])->name('kegiatan');
-Route::get('/activity_management/createActivity', [DashboardController::class, 'createActivity'])->name('tambah_kegiatan');
-Route::get('/community_management', [DashboardController::class, 'community_management'])->name('kegiatan');
-Route::get('/community_management/createCommunity', [DashboardController::class, 'createCommunity'])->name('tambah_kegiatan');
-
-
-
+// Landing page route
 Route::get('/', [DinamisController::class, 'home'])->name('beranda');
 Route::get('/about', [DinamisController::class, 'about'])->name('tentang_desa');
 Route::get('/activity', [DinamisController::class, 'activity'])->name('kegiatan');
