@@ -12,7 +12,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Daftar Produk</h3>
                                     <div class="card-tools">
-                                        <a href="/product_management/createProduct"><button class="btn btn-outline-primary">Tambah Produk</a>
+                                        <a href="/product_management/createProduct"><button class="btn btn-outline-primary">Tambah Produk</button></a>
                                     </div>
                                 </div>
 
@@ -20,7 +20,7 @@
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Id Pengguna</th>
+                                                <th>No</th>
                                                 <th>Gambar Produk</th>
                                                 <th>Harga</th>
                                                 <th>Nama Produk</th>

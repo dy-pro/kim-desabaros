@@ -49,8 +49,7 @@ Route::get('/', [DinamisController::class, 'home'])->name('beranda');
 Route::get('/about', [DinamisController::class, 'about'])->name('tentang_desa');
 Route::get('/activity', [DinamisController::class, 'activity'])->name('kegiatan');
 Route::get('/community', [DinamisController::class, 'community'])->name('lembaga_komunitas');
-Route::get('/catalogue', [DinamisController::class, 'catalogue'])->name('produk_desa');
-
+Route::get('/product', [DinamisController::class, 'product'])->name('produk_desa');
 // Route::resource('product', ProductController::class);
 
 require __DIR__.'/auth.php';

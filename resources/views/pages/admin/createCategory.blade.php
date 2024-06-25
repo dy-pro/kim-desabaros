@@ -14,10 +14,10 @@
                 <!-- form start -->
                 <form>
                   <div class="card-body">
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="category">Id Kategori</label>
                         <input type="text" name="id_category" class="form-control" id="name" placeholder="Id Kategori">
-                      </div>
+                      </div> --}}
                     <div class="form-group">
                       <label for="category">Nama Kategori</label>
                       <input type="text" name="category" class="form-control" id="name" placeholder="Nama Kategori">
