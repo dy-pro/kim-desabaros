@@ -20,6 +20,7 @@
                                 <div class="card-body table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
+
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama Kategori</th>
@@ -27,23 +28,32 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($categories as $category)
+                                                
+                                            
                                             <tr>
-                                               
-                                                <td>1</td>
+                                                
+                                                <td>{{ $loop->iteration++ }}</td>
                                                 <td>
-                                                  Makanan
+                                                    {{ $category->title }}
                                                 </td>
+                                                
                                                 <td>
-                                                    <a href="#" class="text-primary mr-2">
+                                                    <div class="d-flex align-items-center">
+                                                    <a href="{{route('category.edit', $category->id) }}" class="text-primary mr-2">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a href="#" class="text-danger">
+                                                    <form action="{{route ('category.destroy', $category->id)}}" method="POST">
+                                                        @csrf
+                                                        @method('delete')
+                                                    <button type="submit" class="btn text-danger border-0">
                                                         <i class="fas fa-trash"></i>
-                                                    </a>
+                                                    </button>
+                                                    </form>
+                                                    </div>
                                                 </td>
                                             </tr>
-                                         
-                                           
+                                            @endforeach 
                                         </tbody>
                                     </table>
                                 </div>
