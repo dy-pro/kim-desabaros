@@ -12,7 +12,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Daftar Kategori</h3>
                                     <div class="card-tools">
-                                        <a href="/category_management/createCategory"><button class="btn btn-outline-primary">Tambah Kategori</a>
+                                        <a href="/category_management/createCategory"><button class="btn btn-outline-primary">Tambah Kategori</button></a>
                                     </div>
                                 </div>
 
@@ -22,7 +22,7 @@
                                         <thead>
 
                                             <tr>
-                                                <th>Id Kategori</th>
+                                                <th>No</th>
                                                 <th>Nama Kategori</th>
                                                 <th>Aksi</th>
                                             </tr>

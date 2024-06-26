@@ -12,7 +12,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Daftar Pengguna</h3>
                                     <div class="card-tools">
-                                        <a href="/user_management/createUser"><button class="btn btn-outline-primary">Tambah Pengguna</a>
+                                        <a href="/user_management/createUser"><button class="btn btn-outline-primary">Tambah Pengguna</button>
                                     </div>
                                 </div>
 
@@ -21,7 +21,6 @@
                                     <table id="example1" class="table table-bordered table-striped dataTable dataTable">
                                         <thead>
                                             <tr>
-                                                
                                                 <th>No</th>
                                                 <th>Nama</th>
                                                 <th>Alamat</th>

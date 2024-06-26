@@ -64,7 +64,7 @@
 </div>
 <!-- /MOBILE MENU HOLDER -->
 <!-- HEADER -->
-<header class="main-header header-1">
+<header class="main-header">
 <div class="container">
     <div class="header-container">
         <div class="logo logo-1 logo-white">
@@ -77,7 +77,7 @@
                 <img class="img-fluid" src="{{ asset('frontend/images/Logo.png') }}" alt="Desa Baros" width="139" height="90">
             </a>
         </div>
-        <nav class="nav-holder nav-holder-1">
+        <nav class="nav-holder nav-holder-3">
             <ul class="menu-nav">
                 <li class="menu-item menu-item-has-children {{ Route::currentRouteName() == 'beranda' ? 'current-menu-item' : '' }}">
                     <a href="{{ route('beranda') }}">Beranda</a>
@@ -88,10 +88,10 @@
                 <li class="menu-item menu-item-has-children {{ in_array(Route::currentRouteName(), ['kegiatan', 'lembaga_komunitas']) ? 'current-menu-item' : '' }}">
                     <a href="#">Informasi</a>
                     <ul class="sub-menu">
-                        <li class="menu-item menu-item-parent-2level {{ Route::currentRouteName() == 'kegiatan' ? 'current-menu-item' : '' }}">
+                        <li class="menu-item menu-item-parent{{ Route::currentRouteName() == 'kegiatan' ? 'current-menu-item' : '' }}">
                             <a href="{{ route('kegiatan') }}">Kegiatan</a>
                         </li>
-                        <li class="menu-item menu-item-parent-2level {{ Route::currentRouteName() == 'lembaga_komunitas' ? 'current-menu-item' : '' }}">
+                        <li class="menu-item menu-item-has-children {{ Route::currentRouteName() == 'lembaga_komunitas' ? 'current-menu-item' : '' }}">
                             <a href="{{ route('lembaga_komunitas') }}">Lembaga/Kelompok</a>
                         </li>
                     </ul>
@@ -101,11 +101,13 @@
                 </li>
             </ul>
         </nav>
+
         @if (Auth::check())
             
         
         <div class="btn-header btn-header-1"> <a href="/dashboard" class="read-more-v3">Halaman Admin</a></div>
         @endif
+
         <div class="nav-button-holder">
             <button type="button" class="nav-button">
                 <svg version="1.1" id="btn-menu-open" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">

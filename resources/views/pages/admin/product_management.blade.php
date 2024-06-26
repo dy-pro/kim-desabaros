@@ -12,7 +12,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Daftar Produk</h3>
                                     <div class="card-tools">
-                                        <a href="/product_management/createProduct"><button class="btn btn-outline-primary">Tambah Produk</a>
+                                        <a href="/product_management/createProduct"><button class="btn btn-outline-primary">Tambah Produk</button></a>
                                     </div>
                                 </div>
 
