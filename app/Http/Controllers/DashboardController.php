@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\CommunityController;
+use App\Models\Activity;
 
 class DashboardController extends Controller
 {
@@ -77,5 +78,16 @@ class DashboardController extends Controller
     public function storeActivity(Request $request){
         $activityController = new ActivityController();
         return $activityController->store($request);
+    }
+
+    public function editActivity($activityId){
+        $activityController = new ActivityController();
+
+        return $activityController->edit($activityId);
+    }
+
+    public function updateActivity(Request $request, $activityId) {
+        $activityController = new ActivityController();
+        return $activityController->update($request, $activityId);
     }
 }

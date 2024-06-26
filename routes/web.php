@@ -62,9 +62,11 @@ Route::controller(DashboardController::class)->group(function(){
 
         Route::get('/activity_management/createActivity','createActivity')->name('activity.create');
 
-        Route::post('/community_management/storeActivity', 'storeActivity')->name('activity.store');
+        Route::post('/activity_management/storeActivity', 'storeActivity')->name('activity.store');
 
-        Route::get('/community_management/{activityId}/editActivity', 'editActivity')->name('activity.edit');
+        Route::get('/activity_management/{activityId}/editActivity', 'editActivity')->name('activity.edit');
+
+        Route::post('/activity_management/{activityId}/updateActivity', 'updateActivity')->name('activity.update');
 });
 
 

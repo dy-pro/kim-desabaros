@@ -65,15 +65,21 @@ class ActivityController extends Controller
      */
     public function show(string $id)
     {
-        //
+         
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($activityId)
     {
-        //
+        // Ambil data komunitas berdasarkan ID
+        $activity = Activity::findOrFail($activityId);
+
+        // Tampilkan form edit dengan data komunitas yang sudah ada
+        return view('pages.admin.activity.edit', [
+            'activity' => $activity
+        ]);
     }
 
     /**

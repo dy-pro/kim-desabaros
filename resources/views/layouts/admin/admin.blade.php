@@ -11,8 +11,11 @@
   <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- IonIcons -->
   <link rel="stylesheet" href="{{ asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
+  <!-- Tempus Dominus Bootstrap 4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.39.0/build/css/tempusdominus-bootstrap-4.min.css" />
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css')}}">
+  
   {{-- <style>
     
     </style> --}}
