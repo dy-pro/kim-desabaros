@@ -12,7 +12,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Daftar Pengguna</h3>
                                     <div class="card-tools">
-                                        <a href="/user_management/createUser"><button class="btn btn-outline-primary">Tambah Pengguna</button>
+                                        <a class="btn btn-outline-primary" href="/user_management/createUser">Tambah Pengguna</a>
                                     </div>
                                 </div>
 
@@ -31,12 +31,12 @@
                                         </thead>
                                         <tbody>
                                             @foreach ( $users as $user)
-
+                                            {{-- @dd($user) --}}
                                             <tr>
                                                 <td>{{ $loop->iteration++ }}</td>
                                                 <td>
                                                     <img src="{{ asset('users/'.$user->image)}}"
-                                                    alt="Product 1" class="img-circle img-size-32 mr-2">
+                                                    alt="Product 1" class="img-size-32 mr-2">
                                                     {{ $user->name }}
                                                 </td>
                                                 

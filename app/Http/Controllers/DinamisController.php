@@ -15,6 +15,9 @@ class DinamisController extends Controller
     public function activity(){
         return view('pages.user.dinamis.activity');
     }
+    public function detail_activity(){
+        return view('pages.user.dinamis.detail_activity');
+    }
     public function community(){
         return view('pages.user.dinamis.community');
     }
