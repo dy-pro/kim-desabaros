@@ -16,7 +16,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="card-body table-responsive">
                                     <table id="example2" class="table table-bordered table-striped">
                                         <thead>
@@ -34,7 +33,7 @@
                                                 <td>1</td>
                                                 <td>
                                                     <img src="{{ asset('AdminLTE/dist/img/default-150x150.png')}}"
-                                                        alt="Product 1" class="img-circle img-size-32 mr-2">
+                                                        alt="Product 1" class="img-size-32 mr-2">
                                                 </td>
                                                 <td>Kegiatan ini deselenggarakan oleh</td>
                                                 <td>10 November</td>

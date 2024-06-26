@@ -101,7 +101,12 @@
                 </li>
             </ul>
         </nav>
-        <div class="btn-header btn-header-1"> <a href="/login" class="read-more-v3">Halaman Admin</a></div>
+
+        @if (Auth::check())
+            
+        
+        <div class="btn-header btn-header-1"> <a href="/dashboard" class="read-more-v3">Halaman Admin</a></div>
+        @endif
 
         <div class="nav-button-holder">
             <button type="button" class="nav-button">

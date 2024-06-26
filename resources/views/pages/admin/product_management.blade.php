@@ -16,38 +16,55 @@
                                     </div>
                                 </div>
 
-
                                 <div class="card-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
+                                    <table id="example1" class="table table-bordered table-striped dataTable">
                                         <thead>
                                             <tr>
-                                                <th>No</th>
+                                                <th>Nomor Pengguna</th>
                                                 <th>Gambar Produk</th>
                                                 <th>Harga</th>
                                                 <th>Nama Produk</th>
+                                                <th>Kategori</th>
+                                                <th>Deskripsi</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ( $products as $product)
+                                            
                                             <tr>
-                                                <td>1</td>
+                                                <td>{{ $loop->iteration++ }}</td>
                                                 <td>
-                                                    <img src="{{ asset('AdminLTE/dist/img/default-150x150.png')}}"
+                                                    <img src="{{ asset('products/'.$product->image)}}"
                                                         alt="Product 1" class="img-circle img-size-32 mr-2">
                                                 </td>
                                                 <td>Rp. 100000</td>
-                                                <td>Ranginang</td>
+                                                <td>{{ $product->name }}</td>
+                                                <td>{{ $product->title}}</td>
+                                                
+                                                <td>{{ $product->description }}</td>
                                                 <td>
-                                                    <a href="#" class="text-primary mr-2">
+                                                    <div class="d-flex align-items-center">
+                                                    <a href="{{route('produk.edit', $product->id)}}" class="text-primary mr-2">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a href="#" class="text-danger">
+                                                    
+                                                    <form action="{{route ('produk.delete', $product->id)}}" method="POST">
+                                                        @csrf
+                                                        @method('delete')
+                                                    <button type="submit" class="btn text-danger border-0">
                                                         <i class="fas fa-trash"></i>
-                                                    </a>
+                                                    </button>
+                                                    </form>
+                                                    </div>
                                                 </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
+                                    
+
+
                                 </div>
                             </div>
                             <!-- /.card -->
@@ -58,22 +75,23 @@
                 </div>
                 <!-- /.col-md-6 -->
             </div>
-
             <script>
-                $(function () {
-                  $("#example1").DataTable({
-                    "responsive": true, "lengthChange": false, "autoWidth": false,
-                    "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-                  }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-                  $('#example2').DataTable({
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": true,
-                    "info": true,
-                    "autoWidth": false,
-                    "responsive": true,
-                  });
+                
+                $(document).ready(function () {
+                //   $("#example1").DataTable({
+                    
+                //     "responsive": true, "lengthChange": false, "autoWidth": false,
+                //     "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                //   }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                //   $('#example2').DataTable({
+                //     "paging": true,
+                //     "lengthChange": false,
+                //     "searching": false,
+                //     "ordering": true,
+                //     "info": true,
+                //     "autoWidth": false,
+                //     "responsive": true,
+                //   });
                 });
-              </script>
+            </script>
 @endsection

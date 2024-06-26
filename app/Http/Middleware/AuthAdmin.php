@@ -22,4 +22,27 @@ class AuthAdmin
         }
         return $next($request);
     }
+
+    public function postlogin(Request $request)
+    {
+        $credentials = $request->only('nama', 'password');
+    
+        if (Auth::attempt(['name' => $credentials['nama'], 'password' => $credentials['password']])) {
+            return redirect('/beranda');
+        }
+    
+        $errors = [];
+    
+        // Check if the username is correct
+        $user = \App\Models\User::where('name', $credentials['nama'])->first();
+        if (!$user) {
+            $errors['nama'] = 'Username not found';
+        } else {
+            $errors['password'] = 'Incorrect password';
+        }
+    
+        return redirect('/login')
+            ->withInput()  // Keep the input values
+            ->withErrors($errors);
+    }
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- TOP HEADER IMAGE -->
-<div class="swiper-mr">
+<div class="swiper-mt">
     <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/footer.png') }}');">
         <div class="container slider-caption">
             <div class="row align-items-md-center">
@@ -42,9 +42,9 @@
                        
                          <!-- /item-portfolio -->
                          <div class="item-portfolio item-3cols komunitas">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-1.png' }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-2-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-1.png' }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-2-cols.html">Kelompok Ternak</a></h2>
+                                <h2 class="article-title display-6">Kelompok Ternak</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Komunitas</a></li>
                                 </ul>
@@ -52,9 +52,9 @@
                         </div>
                         <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-1.png') }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-2-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-1.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-2-cols.html">Karang Taruna</a></h2>
+                                <h2 class="article-title display-6">Karang Taruna</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Lembaga</a></li>
                                 </ul>
@@ -62,9 +62,9 @@
                         </div>
                         <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols komunitas">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/kelompok-tani.jpg') }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-4-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/kelompok-tani.jpg') }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-4-cols.html">Kelompok Tani</a></h2>
+                                <h2 class="article-title display-6">>Kelompok Tani</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Komunitas</a></li>
                                 </ul>
@@ -72,9 +72,9 @@
                         </div>
                         <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-3.png') }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-4-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-3.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-4-cols.html">Dewan Kesejahteraan Masjid (DKM)</a></h2>
+                                <h2 class="article-title display-6">Dewan Kesejahteraan Masjid (DKM)</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Lembaga</a></li>
                                 </ul>
@@ -82,9 +82,9 @@
                         </div>
                                                 <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-2.png') }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-3-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-2.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-3-cols.html">Perlindungan Masyarakat (LINMAS)</a></h2>
+                                <h2 class="article-title display-6">>Perlindungan Masyarakat (LINMAS)</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Lembaga</a></li>
                                 </ul>
@@ -92,9 +92,9 @@
                         </div>
                         <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-5.png') }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-3-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-5.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-3-cols.html">Majelis Ulama Indonesia (MUI)</a></h2>
+                                <h2 class="article-title display-6">Majelis Ulama Indonesia (MUI)</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Lembaga</a></li>
                                 </ul>
@@ -102,9 +102,9 @@
                         </div>
                         <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols lifestyle lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-3.png' }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-5-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-3.png' }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-5-cols.html">Badan Permusyawaratan Desa (BPD)</a></h2>
+                                <h2 class="article-title display-6">Badan Permusyawaratan Desa (BPD)</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Lembaga</a></li>
                                 </ul>
@@ -112,9 +112,9 @@
                         </div>
                         <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols lifestyle lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-2.png' }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-3-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-2.png' }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-3-cols.html">Lembaga Pemberdayaan Masyarakat (LPMD)</a></h2>
+                                <h2 class="article-title display-6">Lembaga Pemberdayaan Masyarakat (LPMD)</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Lembaga</a></li>
                                 </ul>
@@ -124,9 +124,9 @@
                        
                         <!-- /item-portfolio -->
                         <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-5.png') }}" class="img-fluid" alt=" " width="750" height="750"> <a href="gallery-grid-4-cols.html"> </a></div>
+                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-5.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
                             <div class="item-text-holder">
-                                <h2 class="article-title display-6"><a href="gallery-grid-4-cols.html">Pemberdayaan Kesejahteraan Keluarga (PKK)</a></h2>
+                                <h2 class="article-title display-6">Pemberdayaan Kesejahteraan Keluarga (PKK)</h2>
                                 <ul class="portfolio-categ">
                                     <li><a href="#">Lembaga</a></li>
                                 </ul>

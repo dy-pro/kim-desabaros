@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="{{ asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css')}}">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+  <link href="https://cdn.datatables.net/v/dt/dt-2.0.8/datatables.min.css" rel="stylesheet">
   {{-- <style>
     
     </style> --}}
@@ -201,7 +203,6 @@
   @include('layouts.admin.include.footer')
 </div>
 <!-- ./wrapper -->
-
 <!-- REQUIRED SCRIPTS -->
 <!-- Include Moment.js -->
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
@@ -223,5 +224,12 @@
 <!-- AdminLTE for demo purposes -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('AdminLTE/dist/js/pages/dashboard3.js')}}"></script>
+
+<script src="https://cdn.datatables.net/v/dt/dt-2.0.8/datatables.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.dataTable').dataTable();
+  })
+</script>
 </body>
 </html>

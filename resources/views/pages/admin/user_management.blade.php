@@ -12,16 +12,15 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Daftar Pengguna</h3>
                                     <div class="card-tools">
-                                        <a href="/user_management/createUser"><button class="btn btn-outline-primary">Tambah Pengguna</button>
+                                        <a class="btn btn-outline-primary" href="/user_management/createUser">Tambah Pengguna</a>
                                     </div>
                                 </div>
 
 
                                 <div class="card-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
+                                    <table id="example1" class="table table-bordered table-striped dataTable dataTable">
                                         <thead>
                                             <tr>
-                                                
                                                 <th>No</th>
                                                 <th>Nama</th>
                                                 <th>Alamat</th>
@@ -31,34 +30,47 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ( $users as $user)
+                                            {{-- @dd($user) --}}
                                             <tr>
-                                                <td>1</td>
+                                                <td>{{ $loop->iteration++ }}</td>
                                                 <td>
-                                                    <img src="{{ asset('AdminLTE/dist/img/default-150x150.png')}}"
-                                                        alt="Product 1" class="img-circle img-size-32 mr-2">
-                                                    Margaret
+                                                    <img src="{{ asset('users/'.$user->image)}}"
+                                                    alt="Product 1" class="img-size-32 mr-2">
+                                                    {{ $user->name }}
                                                 </td>
                                                 
-                                                <td>Kota Bandung, Jawa Barat</td>
+                                                
+                                                
                                                 <td>
-                                                   0816342836
+                                                    {{ $user->address }}
                                                 </td>
                                                 <td>
-                                                    Penjual
+                                                    {{ $user->whatsapp }}
+                                                </td>
+
+                                                <td>
+                                                    {{ $user->role }}
                                                 </td>
                                                 <td>
-                                                    <a href="#" class="text-primary mr-2">
+                                                    <div class="d-flex align-items-center">
+                                                    <a href="{{route('user.edit', $user->id)}}" class="text-primary mr-2">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a href="#" class="text-danger">
+                                                    <form action="{{route ('user.destroy', $user->id)}}" method="POST">
+                                                        @csrf
+                                                        @method('delete')
+                                                    <button type="submit" class="btn text-danger border-0">
                                                         <i class="fas fa-trash"></i>
-                                                    </a>
+                                                    </button>
+                                                    </form>
+                                                    </div>
                                                 </td>
                                             </tr>
-                                         
-                                           
+                                        @endforeach   
                                         </tbody>
                                     </table>
+
                                 </div>
                             </div>
                             <!-- /.card -->
@@ -69,4 +81,10 @@
                 </div>
                 <!-- /.col-md-6 -->
             </div>
+            <script>
+                $(document).ready(function () {
+
+
+                });
+                </script>
 @endsection

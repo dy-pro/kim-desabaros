@@ -11,10 +11,9 @@
                           <h1 class="display-3">Desa Baros</h1>
                           <span class="post-subtitle" style="text-align: justify">Selamat datang di website resmi Desa Baros, Kabupaten Bandung.
                             kami menampilkan berbagai kegiatan yang mencerminkan semangat kebersamaan dan gotong royong masyarakat Desa Baros. </span> 
-                          
                         </div>
                         <div class="margin-b30">
-                            <a href="/about" class="read-more-v3">Lihat Selengkapnya</a>
+                            <a class="read-more-v3" href="{{ url('about') }}">Lihat Selengkapnya</a>
                         </div>
                      </div>
                     <div class="col-2 col-lg-6 responsive-img">
@@ -131,7 +130,7 @@
     <div id="home-section-1-2" class="section-holder home-section-1-2 parallax" style="background-image:url('{{ asset('frontend/images/background10.png') }}');">
         <div class="container">
             <div class="row">
-                <h2 class="display-5 alignc" style="margin-bottom: 30px">Potensi Desa Baros</h2>
+                <h2 class="display-4 alignc" style="margin-bottom: 30px">Potensi Desa Baros</h2>
             </div>
             <div class="row">
                 <div class="col-md-12 col-lg-3 mobile-margin-t30">
@@ -146,8 +145,8 @@
                         </svg>
                     </div> --}}
                     <!-- /icon-svg -->
-                    <h5 class="white margin-b10"><b>Sumber Daya Manusia</b></h5>
-                    <p style="text-align: justify">Potensi sumber daya manusia meliputi jumlah penduduk yang banyak dan jumlah tenaga kerja yang banyak harus didukung dengan keterampilan dan keahlian.</p>
+                    <h5 class="display-7 margin-b10"><b>Sumber Daya Manusia</b></h5>
+                    <p class="display-8" style="text-align: justify">Potensi sumber daya manusia meliputi jumlah penduduk yang banyak dan jumlah tenaga kerja yang banyak harus didukung dengan keterampilan dan keahlian.</p>
                 </div>
                 <!-- /col-md-6 -->
                 <div class="col-md-6 col-lg-3 mobile-margin-b30">
@@ -170,8 +169,8 @@
                         </svg>
                     </div> --}}
                     <!-- /icon-svg -->
-                    <h5 class="white margin-b10">Sumber Daya Alam</h5>
-                    <p style="text-align: justify">Salah satu Potensi sumber daya alam di desa Baros adalah di bidang Pertanian dan perkebunan dan Holtikultura.</p>
+                    <h5 class="display-7 margin-b10">Sumber Daya Alam</h5>
+                    <p class="display-8" style="text-align: justify">Salah satu Potensi sumber daya alam di desa Baros adalah di bidang Pertanian dan perkebunan dan Holtikultura.</p>
                 </div>
                 <!-- /col-md-6 -->
                 <div class="col-md-6 col-lg-3 mobile-margin-b30">
@@ -187,8 +186,8 @@
                         </svg>
                     </div> --}}
                     <!-- /icon-svg -->
-                    <h5 class="white margin-b10">Sumber Daya Sosial dan Budaya</h5>
-                    <p style="text-align: justify">Sumber daya social budaya di desa Baros adalah Sebagai modal dasar pembangunan serta kualitas sumberdaya manusia dan menjadi prioritas dalam rangka peningkatan produktivitas suatu wilayah.</p>
+                    <h5 class="display-7 margin-b10">Sumber Daya Sosial dan Budaya</h5>
+                    <p class="display-8" style="text-align: justify">Sumber daya social budaya di desa Baros adalah Sebagai modal dasar pembangunan serta kualitas sumberdaya manusia dan menjadi prioritas dalam rangka peningkatan produktivitas suatu wilayah.</p>
                 </div>
                 <!-- /col-md-6 -->
                 <div class="col-md-6 col-lg-3">
@@ -212,8 +211,8 @@
                         </svg>
                     </div> --}}
                     <!-- /icon-svg -->
-                    <h5 class="white margin-b10">Kelembagaan</h5>
-                    <p style="text-align: justify">Lembaga atau Institusi adalah wadah untuk mengemban tugas dan fungsi tertentu dalam rangka mencapai tujuan tertentu.</p>
+                    <h5 class="display-7 margin-b10">Kelembagaan</h5>
+                    <p class="display-8" style="text-align: justify">Lembaga atau Institusi adalah wadah untuk mengemban tugas dan fungsi tertentu dalam rangka mencapai tujuan tertentu.</p>
                 </div>
                 <!-- /col-md-6 -->
             </div>
@@ -313,6 +312,10 @@
 			</div>
 			<!-- /SECTION PRODUCT-->	
 
-           
+       <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('.swiper-mt').classList.remove('swiper-fade')
+        })
+       </script>    
     
 @endsection

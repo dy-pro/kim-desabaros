@@ -12,39 +12,47 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form>
+                <form action="{{ route('user.store')}}" method="POST" enctype="multipart/form-data">
+                  @csrf
+
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="name">Nama</label>
-                      <input name="name" class="form-control" id="name" placeholder="Nama Lengkap">
+                      <label for="name"><span class="text-danger">*</span>Nama</label>
+                      <input name="name"  type="text"  class="form-control" id="name" placeholder="Nama Lengkap" required>
+                    </div>
+
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input name="email"  type="email"  class="form-control" id="name" placeholder="Email" required>
+                      </div>
+
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input name="password" type="password"  class="form-control" id="exampleInputPassword1" placeholder="password">
                     </div>
                     <div class="form-group">
                       <label for="address">Alamat</label>
-                      <input name="address"  class="form-control" id="exampleInputPassword1" placeholder="Alamat Lengkap">
+                      <input name="address" type="text"  class="form-control" id="exampleInputPassword1" placeholder="Alamat Lengkap">
                     </div>
                     <div class="form-group">
-                        <label for="no_hp">No Handphone</label>
-                        <input name="no_hp" class="form-control" id="exampleInputPassword1" placeholder="Alamat Lengkap">
+                        <label for="whatsapp">No Handphone</label>
+                        <input name="whatsapp" type="number" class="form-control" id="exampleInputPassword1" placeholder="Nomor WhatsApp">
                     </div>
                     <div class="form-group">
-                        <label>Role</label>
-                        <select class="custom-select">
+                        <label for="role">Role</label>
+                        <select name="role" class="custom-select">
                           <option disabled selected>Pilih Role</option>
-                          <option>Admin</option>
-                          <option>Penjual</option>
+                          <option value="admin">Admin</option>
+                          <option value="penjual">Penjual</option>
                         </select>
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputFile">Masukan Foto Profil (Max 1MB, PNG dan JPG)</label>
-                        <div class="input-group">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" accept=".png, .jpg, .jpeg">
-                                <label class="custom-file-label" for="choosefile">Pilih Gambar</label>
-                            </div>
-                            <div class="input-group-append">
-                                <span class="input-group-text">Upload</span>
-                            </div>
-                        </div>
+                        <label for="image">Masukan Foto Profil (Max 1MB, PNG dan JPG)</label>
+                          
+                          <input type="file" name="image" class="form-control" placeholder="Keterangan Produk">
+                      </div>
+                        
                     </div>
                     
                     {{-- <div class="form-check">

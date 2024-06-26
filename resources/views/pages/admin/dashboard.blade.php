@@ -55,7 +55,7 @@
               </div>
             </div>
             <div class="card-body table-responsive p-0">
-              <table class="table table-striped table-valign-middle">
+              <table id="example1" class="table table-striped table-valign-middle dataTable">
                 <thead>
                 <tr>
                   <th>Product</th>

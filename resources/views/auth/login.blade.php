@@ -16,13 +16,14 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/login.css')}}">
 
 </head>
 
 <body class="hold-transition login-page">
     <div class="login-box">
         <!-- /.login-logo -->
-        <div class="card card-outline card-primary">
+        <div class="card card-outline card-primary w-200">
             <div class="card-header text-center">
                 <img class="img-fluid" src="{{ asset('frontend/images/Logo.png') }}" alt="Desa Baros" width="90" height="70">
             </div>
@@ -32,7 +33,7 @@
                 <form action="{{ route('login') }}" method="post">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
+                        <input type="email" class="form-control w-input" name="email" placeholder="Email" width="100">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -40,8 +41,8 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                        <div class="input-group-append">
+                        <input type="password" class="form-control" name="password" placeholder="Password" id="inputPassword">
+                        <div class="input-group-append" onclick="togglePassword()">
                             <div class="input-group-text">
                                 <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
@@ -84,6 +85,18 @@
     <!-- AdminLTE App -->
     <script src="{{ asset('AdminLTE/dist/js/adminlte.min.js') }}"></script>
     <script src="{{ asset('frontend/js/init.js')}}"></script>
+    <script>
+        function togglePassword(){
+            // console.log('test')
+            const inputPassword= document.getElementById('inputPassword')
+            if(inputPassword.type == 'password') {
+                inputPassword.type = 'text'
+            }
+            else{
+                inputPassword.type = 'password'
+            }
+        }
+        </script>
 </body>
 
 </html>
