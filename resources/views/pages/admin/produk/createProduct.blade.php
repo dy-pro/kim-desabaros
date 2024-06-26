@@ -37,11 +37,12 @@
                     </div>
                     <div class="form-group">
                         <label for="category">Kategori</label>
-                        <select name="category" class="custom-select">
+                        <select name="id_category" class="custom-select">
                           <option disabled selected>Pilih Kategori</option>
-                          <option>Makanan</option>
-                          <option>Minuman</option>
-                          <option>Kerajinan</option>
+                          @foreach ($categories as $category)
+                              
+                          <option value="{{ $category->id }}">{{ $category->title }}</option>
+                          @endforeach
                         </select>
                       </div>
 

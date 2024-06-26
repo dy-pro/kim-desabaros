@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,8 @@ class ProductController extends Controller
 
 
     public function  create(){
-        return view('produk.createProduct');
+        $category=Category::all();
+        return view('produk.createProduct', ['categories'=>$category]);
     }
 
     public function update(Request $request, $id){
@@ -47,6 +49,7 @@ class ProductController extends Controller
         $product->stock = $request->stock;
         $product->code = 0;
         $product->id_user = $request->id_user;
+        $product->id_category = $request->id_category;
         
         // dd($product);
 
@@ -85,7 +88,7 @@ class ProductController extends Controller
         $product->price=$request->price;
         $product->description =$request->description;
         $product->stock = $request->stock;
-        $product->category = $request->category;
+        $product->id_category = $request->id_category;
         $product->code = 0;
         $product->id_user = $request->id_user;
         

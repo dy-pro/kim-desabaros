@@ -40,17 +40,23 @@
                                                 </td>
                                                 <td>Rp. 100000</td>
                                                 <td>{{ $product->name }}</td>
-                                                
-                                                <td>{{ $product->category }}</td>
+                                                <td>{{ $product->title}}</td>
                                                 
                                                 <td>{{ $product->description }}</td>
                                                 <td>
+                                                    <div class="d-flex align-items-center">
                                                     <a href="{{route('produk.edit', $product->id)}}" class="text-primary mr-2">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a href="{{route('produk.delete', $product->id)}}" class="text-danger">
+                                                    
+                                                    <form action="{{route ('produk.delete', $product->id)}}" method="POST">
+                                                        @csrf
+                                                        @method('delete')
+                                                    <button type="submit" class="btn text-danger border-0">
                                                         <i class="fas fa-trash"></i>
-                                                    </a>
+                                                    </button>
+                                                    </form>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             @endforeach

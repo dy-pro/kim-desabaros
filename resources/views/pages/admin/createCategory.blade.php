@@ -12,15 +12,14 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form>
+                <form action="{{ route('category.store') }}" method="POST" enctype="multipart/form-data">
+                  @csrf
+
                   <div class="card-body">
-                    <div class="form-group">
-                        <label for="category">Id Kategori</label>
-                        <input type="text" name="id_category" class="form-control" id="name" placeholder="Id Kategori">
-                      </div>
+                      
                     <div class="form-group">
                       <label for="category">Nama Kategori</label>
-                      <input type="text" name="category" class="form-control" id="name" placeholder="Nama Kategori">
+                      <input type="text" name="title" class="form-control" id="name" placeholder="Nama Kategori" required>
                     </div>
                     </div>
                     

@@ -17,14 +17,14 @@
 
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="name">Nama</label>
-                      <input name="name"  type="text"  class="form-control" id="name" placeholder="Nama Lengkap">
+                      <label for="name"><span class="text-danger">*</span>Nama</label>
+                      <input name="name"  type="text"  class="form-control" id="name" placeholder="Nama Lengkap" required>
                     </div>
 
                     <div class="card-body">
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input name="email"  type="email"  class="form-control" id="name" placeholder="Email">
+                        <input name="email"  type="email"  class="form-control" id="name" placeholder="Email" required>
                       </div>
 
                     <div class="form-group">

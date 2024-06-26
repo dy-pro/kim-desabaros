@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\User;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -12,11 +13,12 @@ class DashboardController extends Controller
         return view('pages.admin.dashboard');
     }
     public function product_management(){
-        $products = Product::all();
+        $products = Product::query()->join('category', 'products.id_category', '=', 'category.id')->get();
         return view('pages.admin.product_management', ['products'=>$products]);
     }
     public function createProduct(){
-        return view('pages.admin.produk.createProduct');
+        $category= Category::all();
+        return view('pages.admin.produk.createProduct', ['categories'=>$category]);
     }
     public function user_management(){
         $user = User::all();
@@ -26,7 +28,8 @@ class DashboardController extends Controller
         return view('pages.admin.createUser');
     }
     public function category_management(){
-        return view('pages.admin.category_management');
+        $category = Category::all();
+        return view('pages.admin.category_management', ['categories'=>$category]);
     }
     public function createCategory(){
         return view('pages.admin.createCategory');

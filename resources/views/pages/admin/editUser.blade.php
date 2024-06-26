@@ -27,7 +27,7 @@
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input name="email" value="{{ $user->email }}" type="email" class="form-control" id="name"
-                                            placeholder="Email">
+                                            placeholder="Email" required>
                                     </div>
 
                                     <div class="form-group">

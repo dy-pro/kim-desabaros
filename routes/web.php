@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,6 +22,8 @@ Route::get('/admin', function (){
 
 Route::resource('user',UserController::class);
 
+Route::resource('category',CategoryController::class);
+
 Route::get('/login', function(){
         return view('auth.login');
 });
@@ -28,7 +31,7 @@ Route::get('/login', function(){
 Route::middleware(AuthAdmin::class)->group(function(){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk.create');
-        Route::get('/product_management/{id}/delete', [ProductController::class, 'destroy'])->name('produk.delete');
+        Route::delete('/product_management/{id}/delete', [ProductController::class, 'destroy'])->name('produk.delete');
         Route::get('/product_management/{id}/edit', [ProductController::class, 'edit'])->name('produk.edit');
         Route::get('/manajemen_produk', [DashboardController::class, 'product_management'])->name('produk.index');
         Route::post('/product_management', [ProductController::class, 'store'])->name('produk.store');

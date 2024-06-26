@@ -53,17 +53,19 @@
                                                 <td>
                                                     {{ $user->role }}
                                                 </td>
-                                                <td {{$user->name}}>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
                                                     <a href="{{route('user.edit', $user->id)}}" class="text-primary mr-2">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                     <form action="{{route ('user.destroy', $user->id)}}" method="POST">
                                                         @csrf
                                                         @method('delete')
-                                                    <button type="submit" class="text-danger">
+                                                    <button type="submit" class="btn text-danger border-0">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                     </form>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach   
