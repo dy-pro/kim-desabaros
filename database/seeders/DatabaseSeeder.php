@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             'address'=>'',
             'whatsapp'=>'',
             'role'=>'admin',
+            'image'=>'0iRAAz1KhHweiIZmS4AA0dnVlR3bBANJdrvCBytZ.jpg'
             
         ]);
     }

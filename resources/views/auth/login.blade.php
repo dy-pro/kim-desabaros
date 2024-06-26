@@ -15,14 +15,16 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/login.css')}}">
+
 </head>
 
 <body class="hold-transition login-page">
     <div class="login-box">
         <!-- /.login-logo -->
-        <div class="card card-outline card-primary">
+        <div class="card card-outline card-primary w-200">
             <div class="card-header text-center">
-                <a href="" class="h1"><b>Admin</b></a>
+                <h1 class="h1-login" ><b>Admin</b></h1>
             </div>
             <div class="card-body">
                 <p class="login-box-msg"></p>
@@ -30,7 +32,7 @@
                 <form action="{{ route('login') }}" method="post">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
+                        <input type="email" class="form-control w-input" name="email" placeholder="Email" width="100">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>

@@ -10,17 +10,28 @@ class UserController extends Controller
     public function index()
     {
         $user=User::all();
-        return ;
+        return view('pages.admin.user_management', ['users'=>$user]) ;
     }
 
     public function create(){
-        return;
+        return view('user.createUser');
+
     }
 
     public function store(Request $request){
+        $payload = $request->all();
+        
         $user=new User();
 
-        $payload = $request->all();
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+
+            $imageName=$image->hashName();
+
+            $image->move('users/', $imageName);
+
+            $user->image =$imageName;
+        } 
 
         $user->name=$request->name;
         $user->email=$request->email;
@@ -31,35 +42,54 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect();
+        return redirect()->route('user.index')->with ('success', 'Data Berhasil Disimpan!');
     }
 
-    public function edit(){
-        
+    public function show(){
+    
+    }
+
+    public function edit($id){
+        $user=User::find($id);
+        return view('pages.admin.editUser', ['user'=>$user]);
     }
 
     public function update(Request $request, $id){
-        $user=User::find($id);
         $payload = $request->all();
+        $user=User::find($id);
+
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+
+            $imageName=$image->hashName();
+
+            $image->move('users/', $imageName);
+
+            $user->image =$imageName;
+        } 
 
         $user->name=$request->name;
         $user->email=$request->email;
-        $user->password=$request->password;
+        if($request->password != null){
+            
+            $user->password=$request->password;
+        }
         $user->whatsapp=$request->whatsapp;
         $user->address=$request->address;
         $user->role=$request->role;
 
         $user->save();
 
-        return redirect();
+        return redirect()->route('user.index');
     }
 
     public function destroy(Request $request, $id){
+
         $user=User::find($id);
 
         $user->delete();
 
-        return redirect();
+        return redirect()->route('user.index');
 
     }
 }
