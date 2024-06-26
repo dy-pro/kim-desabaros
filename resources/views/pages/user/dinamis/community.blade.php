@@ -2,8 +2,8 @@
 
 @section('content')
 <!-- TOP HEADER IMAGE -->
-<div class="swiper-mt">
-    <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/bglembaga.png') }}');">
+<div class="swiper-mr">
+    <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/footer.png') }}');">
         <div class="container slider-caption">
             <div class="row align-items-md-center">
                

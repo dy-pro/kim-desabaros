@@ -8,9 +8,7 @@
                 <div class="col-lg-12 alignc">
                     <div class="">
                         {{-- <img class="img-fluid margin-b30" src="{{ asset('frontend/images/logo_desa.png')}}" alt="" style="max-width: 230px"/> --}}
-                        <h2 class="display-4 margin-bm30"><b>Selamat datang</b> di website resmi Desa Baros</h2>
-                        <p style="color: #2B5796">Desa Baros termasuk wilayah Kecamatan Arjasari Kabupaten Bandung dengan luas wilayah 419,7 Ha. dengan ketinggian dataran rerata 600 – 1100 m di atas permukaan laut.</p>
-                        <br>
+                        <h2 class="display-4 margin-bm30">Kegiatan Desa</h2>
                     </div>
                     <!-- /padding-lr200 -->	
                 </div>
@@ -40,7 +38,7 @@
                             <div class="meta-info">
                                 <div class="meta-date-all">11 Januari, 2024</div>
                             </div>
-                            <a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
+                            <a class="read-more-v3" href="/activity/detail_activity">Lihat Selengkapnya</a>
                         </div>
                     </article>
                 </div>
@@ -53,7 +51,7 @@
                             <div class="meta-info">
                                 <div class="meta-date-all">5 Februari, 2024</div>
                             </div>
-                            <a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
+                            <a class="read-more-v3" href="/activity/detail_activity">Lihat Selengkapnya</a>
                         </div>
                     </article>
                 </div>
@@ -66,7 +64,7 @@
                             <div class="meta-info">
                                 <div class="meta-date-all">18 Juli, 2024</div>
                             </div>
-                            <a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
+                            <a class="read-more-v3" href="/activity/detail_activity">Lihat Selengkapnya</a>
                         </div>
                     </article>
                 </div>
@@ -83,7 +81,7 @@
                             <div class="meta-info">
                                 <div class="meta-date-all">11 Januari, 2024</div>
                             </div>
-                            <a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
+                            <a class="read-more-v3" href="/activity/detail_activity">Lihat Selengkapnya</a>
                         </div>
                     </article>
                 </div>
@@ -96,7 +94,7 @@
                             <div class="meta-info">
                                 <div class="meta-date-all">5 Februari, 2024</div>
                             </div>
-                            <a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
+                            <a class="read-more-v3" href="/activity/detail_activity">Lihat Selengkapnya</a>
                         </div>
                     </article>
                 </div>
@@ -109,7 +107,7 @@
                             <div class="meta-info">
                                 <div class="meta-date-all">18 Juli, 2024</div>
                             </div>
-                            <a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
+                            <a class="read-more-v3" href="/activity/detail_activity">Lihat Selengkapnya</a>
                         </div>
                     </article>
                 </div>

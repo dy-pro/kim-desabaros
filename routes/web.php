@@ -48,6 +48,7 @@ Route::get('/community_management/createCommunity', [DashboardController::class,
 Route::get('/', [DinamisController::class, 'home'])->name('beranda');
 Route::get('/about', [DinamisController::class, 'about'])->name('tentang_desa');
 Route::get('/activity', [DinamisController::class, 'activity'])->name('kegiatan');
+Route::get('/activity/detail_activity', [DinamisController::class, 'detail_activity'])->name('detail_kegiatan');
 Route::get('/community', [DinamisController::class, 'community'])->name('lembaga_komunitas');
 Route::get('/product', [DinamisController::class, 'product'])->name('produk_desa');
 // Route::resource('product', ProductController::class);

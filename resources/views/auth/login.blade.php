@@ -11,10 +11,12 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="icon" href="{{url('frontend/images/Logo.png')}}" />
     <!-- icheck bootstrap -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css')}}">
+
 </head>
 
 <body class="hold-transition login-page">
@@ -22,7 +24,7 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="" class="h1"><b>Admin</b></a>
+                <img class="img-fluid" src="{{ asset('frontend/images/Logo.png') }}" alt="Desa Baros" width="90" height="70">
             </div>
             <div class="card-body">
                 <p class="login-box-msg"></p>
@@ -41,7 +43,7 @@
                         <input type="password" class="form-control" name="password" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                                <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                         </div>
                     </div>
@@ -81,6 +83,7 @@
     <script src="{{ asset('AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('AdminLTE/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/init.js')}}"></script>
 </body>
 
 </html>
