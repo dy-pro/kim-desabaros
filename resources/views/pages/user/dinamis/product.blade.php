@@ -29,12 +29,13 @@
                 <h2 class="display-4 margin-t50">Produk Desa</h2>
             </div>
         <div class="row">
+            
+            
             <div class="col-lg-12">
                 <ul class="portfolio-filter">
-                    <li><a class="view-more current" href="#" data-filter="*">Semua Produk</a></li>
-                    <li class="lifestyle"><a class="view-more" href="#" data-filter=".food">Makanan</a></li>
-                    <li class="portrait"><a class="view-more" href="#" data-filter=".drink">Minuman</a></li>
-                    <li class="wedding"><a class="view-more" href="#" data-filter=".art">Kerajinan</a></li>
+                    @foreach ($categories as $category )
+                    <li><a class="view-more current" href="#" data-filter="*">{{ $category->title}}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>
