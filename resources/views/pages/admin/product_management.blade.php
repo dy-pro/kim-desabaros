@@ -38,18 +38,18 @@
                                                     <img src="{{ asset('products/'.$product->image)}}"
                                                         alt="Product 1" class="img-size-32 mr-2">
                                                 </td>
-                                                <td>Rp. 100000</td>
-                                                <td>{{ $product->name }}</td>
+                                                <td>{{ $product->price}}</td>
+                                                <td>{{ $product->name}}</td>
                                                 <td>{{ $product->title}}</td>
-                                                
+                                                {{-- <td>{{ $product->category}}</td> --}}
                                                 <td>{{ $product->description }}</td>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                    <a href="{{route('produk.edit', $product->id)}}" class="text-primary mr-2">
+                                                    <a href="{{route('produk.edit', $product->id_product)}}" class="text-primary mr-2">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                     
-                                                    <form action="{{route ('produk.delete', $product->id)}}" method="POST">
+                                                    <form action="{{route ('produk.delete', $product->id_product)}}" method="POST">
                                                         @csrf
                                                         @method('delete')
                                                     <button type="submit" class="btn text-danger border-0">

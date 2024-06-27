@@ -13,7 +13,10 @@ class DashboardController extends Controller
         return view('pages.admin.dashboard');
     }
     public function product_management(){
-        $products = Product::query()->join('category', 'products.id_category', '=', 'category.id')->get();
+        $products = Product::query()
+        ->leftJoin('category', 'products.id_category', '=', 'category.id')
+        ->select('products.id as id_product', 'products.*','category.*')
+        ->get();
         return view('pages.admin.product_management', ['products'=>$products]);
     }
     public function createProduct(){
