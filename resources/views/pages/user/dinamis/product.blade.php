@@ -41,17 +41,24 @@
                 <div class="row">
                     <div class="col-lg-12">        
                         <div class="portfolio-grid-container portfolio-grid-container-v2 margin-b100">
-                            <div class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry">
-                                <div class="item-portfolio item-portfolio-v2 item-4cols food">
+                            {{-- <div class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry"> --}}
+
+                            <div class="wrap-image">
+                                @foreach ($products as $product )
+                                @php
+                                    $product->price = number_format($product->price, 0, ',', '.');
+
+                                @endphp
+                                <div class="w-100">
                                     <div class="card">
                                         <div class="card-header p-0">
                                             <a href="/product">
-                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/1.png')}}" alt="Ranginang" />
+                                                <img class="img-fluid w-100 radius10-top" style="height: 300px !important;" src="{{ asset('products/'.$product->image)}}" alt="{{ $product->name }}" />
                                             </a>
                                         </div>
                                         <div class="card-body text-center">
-                                            <h5 class="card-title margin-b10">Ranginang</h5>
-                                            <div class="card-text team-position">Rp. 10.000</div>
+                                            <h5 class="card-title margin-b10">{{ $product->name }}</h5>
+                                            <div class="card-text team-position">Rp {{ $product->price }}</div>
                                             <div class="d-flex justify-content-center align-items-center mt-3">
                                                 <input type="number" min="1" value="1" class="form-control quantity-input" />
                                                 <a href="#" class="btn btn-primary buy-button">Beli Sekarang</a>
@@ -59,60 +66,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                                 <!-- /item-portfolio -->
-                                <div class="item-portfolio item-portfolio-v2 item-4cols food">
-                                    <div class="card">
-                                        <div class="card-header p-0">
-                                            <a href="/product">
-                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/2.png')}}" alt="Ranginang" />
-                                            </a>
-                                        </div>
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title margin-b10">Ranginang</h5>
-                                            <div class="card-text team-position">Rp. 10.000</div>
-                                            <div class="d-flex justify-content-center align-items-center mt-3">
-                                                <input type="number" min="1" value="1" class="form-control quantity-input" />
-                                                <a href="#" class="btn btn-primary buy-button">Beli Sekarang</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /item-portfolio -->
-                                <div class="item-portfolio item-portfolio-v2 item-4cols food">
-                                    <div class="card">
-                                        <div class="card-header p-0">
-                                            <a href="/product">
-                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/3.png')}}" alt="Ranginang" />
-                                            </a>
-                                        </div>
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title margin-b10">Ranginang</h5>
-                                            <div class="card-text team-position">Rp. 10.000</div>
-                                            <div class="d-flex justify-content-center align-items-center mt-3">
-                                                <input type="number" min="1" value="1" class="form-control quantity-input" />
-                                                <a href="#" class="btn btn-primary buy-button">Beli Sekarang</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /item-portfolio -->
-                                <div class="item-portfolio item-portfolio-v2 item-4cols food">
-                                    <div class="card">
-                                        <div class="card-header p-0">
-                                            <a href="/product">
-                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/4.png')}}" alt="Ranginang" />
-                                            </a>
-                                        </div>
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title margin-b10">Egg Roll</h5>
-                                            <div class="card-text team-position">Rp. 10.000</div>
-                                            <div class="d-flex justify-content-center align-items-center mt-3">
-                                                <input type="number" min="1" value="1" class="form-control quantity-input" />
-                                                <a href="#" class="btn btn-primary buy-button">Beli Sekarang</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
         
                             </div>
                         </div>
@@ -205,7 +161,7 @@
                     <!-- /portfolio-grid -->
                 </div>
                 <!-- /portfolio-grid-container -->
-           
+        
 <!-- /SECTION PRODUCT-->	
 
  <!-- SECTION TESTIMONI -->
