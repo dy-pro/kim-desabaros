@@ -1,6 +1,7 @@
 @extends('layouts.user.master')
 
 @section('content')
+
 <!-- HOME SLIDER -->
 <div class="swiper-mt">
     <div class="swiper-wrapper">
@@ -42,41 +43,47 @@
                 <div class="row">
                     <div class="col-lg-12">        
                         <div class="portfolio-grid-container portfolio-grid-container-v2 margin-b100">
-                            {{-- <div class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry"> --}}
+                            <div class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry">
 
-                            <div class="wrap-image">
+
                                 @foreach ($products as $product )
-                                @php
-                                    $product->price = number_format($product->price, 0, ',', '.');
+                                    <!-- /item-portfolio -->
+                                    <div class="item-portfolio item-3cols {{strtolower($product->category_title)}}">
+                                        @php
+                                            $product->price = number_format($product->price, 0, ',', '.');
 
-                                @endphp
-                                <div class="w-100">
-                                    <div class="card">
-                                        <div class="card-header p-0">
-                                            <a href="/product">
-                                                <img class="img-fluid w-100 radius10-top" style="height: 300px !important;" src="{{ asset('products/'.$product->image)}}" alt="{{ $product->name }}" />
-                                            </a>
-                                        </div>
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title margin-b10">{{ $product->name }}</h5>
-                                            <div class="card-text team-position">Rp {{ $product->price }}</div>
-                                            <div class="d-flex justify-content-center align-items-center mt-3">
-                                                <input type="number" min="1" value="1" class="form-control quantity-input" />
-                                                <a href="#" class="btn btn-primary buy-button">Beli Sekarang</a>
+                                        @endphp
+                                        <div class="w-100">
+                                            <div class="card">
+                                                <div class="card-header p-0">
+                                                    <a href="/product">
+                                                        <img class="img-fluid w-100 radius10-top" src="{{ asset('products/'.$product->product_image)}}" alt="{{ $product->name }}" />
+                                                    </a>
+                                                </div>
+                                                <div class="card-body text-center">
+                                                    <h5 class="card-title margin-b10">{{ $product->product_name }}</h5>
+                                                    <div class="card-text team-position">Rp {{ $product->price }}</div>
+                                                    <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                                                        <input type="tel" class="form-control phone" hidden data-product-id="{{ $product->id}}" value="{{ $product->whatsapp}}" style="padding: .375rem .75rem"/>
+                                                        <input type="number" class="form-control quantity"  data-product-id="{{ $product->id}}" value="1" style="padding: .375rem .75rem"/>
+                                                        <a class="btn btn-primary whatsappButton" href="#" data-product-id="{{ $product->id}}" target="_blank">Beli</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 @endforeach
                                 <!-- /item-portfolio -->
-                                
+                                {{-- <button type="button" class="btn btn-primary whatsappButton">Beli Sekarang</button> --}}
+
         
+
                             </div>
                         </div>
                     </div>
                 </div>
         
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-lg-12">        
                         <div class="portfolio-grid-container portfolio-grid-container-v2 margin-b100">
                             <div class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry">
@@ -120,12 +127,12 @@
                                     <div class="card">
                                         <div class="card-header p-0">
                                             <a href="/product">
-                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/7.png')}}" alt="Ranginang" />
+                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/1.png')}}" />
                                             </a>
                                         </div>
                                         <div class="card-body text-center">
-                                            <h5 class="card-title margin-b10">Biji Kopi</h5>
-                                            <div class="card-text team-position">Rp. 10.000</div>
+                                            <h5 class="card-title margin-b10">Rangginang</h5>
+                                            <div class="card-text team-position">Rp. 10000</div>
                                             <div class="d-flex justify-content-center align-items-center mt-3">
                                                 <input type="number" min="1" value="1" class="form-control quantity-input" />
                                                 <a href="#" class="btn btn-primary buy-button">Beli Sekarang</a>
@@ -155,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                     </div>
                         <!-- /item-portfolio -->
                     </div>
@@ -232,4 +239,24 @@
 </div>
 <!-- /SECTION TESTIMONI -->	
 {{-- /KATALOG --}}
+@push('script')
+{{-- <script>
+    console.log('test')
+
+document.querySelectorAll('.whatsappButton').forEach(function(button) {
+    button.onclick = function(e) {
+        // e.preventDefault();
+        var productId = this.getAttribute('data-product-id');
+        var quantity = document.querySelector(`⁠ .quantity[data-product-id='${productId}'] ⁠`).value;
+
+        var message = ⁠ `Hello, I would like to order:\nQuantity: ${quantity}\n\nThank you!` ⁠;
+        var phoneNumber = '081957440893'; // Ganti dengan nomor WhatsApp tujuan
+
+        var whatsappURL = ⁠ `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}` ⁠;
+        this.href = whatsappURL;
+    };
+});
+
+</script> --}}
+@endpush
 @endsection

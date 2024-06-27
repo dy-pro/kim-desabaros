@@ -68,8 +68,28 @@
 	<script src="{{ asset('frontend/js/swiper.js')}}"></script>
 	<script src="{{ asset('frontend/js/isotope.js')}}"></script>
 	<script src="{{ asset('frontend/js/simple-lightbox.js')}}"></script>
+
+
     {{-- Main JS --}}
 	<script src="{{ asset('frontend/js/init.js')}}"></script>
+	<script>
+		// console.log('test')
+	
+	document.querySelectorAll('.whatsappButton').forEach(function(button) {
+		button.onclick = function(e) {
+			// e.preventDefault();
+			var productId = this.getAttribute('data-product-id');
+			var quantity = document.querySelector(`.quantity[data-product-id='${productId}'`).value;
+			var phone = document.querySelector(`.phone[data-product-id='${productId}'`).value;
+			var message = `Hallo, Saya ingin pesan:${name}\nJumlah: ${quantity}\n\n Terimakasih!`;
+			var phoneNumber = '628979282163'; // Ganti dengan nomor WhatsApp tujuan
+	
+			var whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+			this.href = whatsappURL;
+		};
+	});
+	
+	</script>
     @yield('script')
 
         
