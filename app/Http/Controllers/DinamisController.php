@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class DinamisController extends Controller
 {
@@ -21,7 +22,9 @@ class DinamisController extends Controller
     public function community(){
         return view('pages.user.dinamis.community');
     }
-    public function product(){
-        return view('pages.user.dinamis.product');
+    public function product()
+    {
+        $product = Product::all(); // Ambil semua produk dari database
+        return view('pages.user.dinamis.product', ['product' => $product]); // Teruskan produk ke view
     }
 }

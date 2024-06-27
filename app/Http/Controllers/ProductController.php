@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
 
-
     public function destroy(Request $request, $id){
         $product=Product::find($id);
 

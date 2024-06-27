@@ -17,7 +17,7 @@
                                 </div>
 
                                 <div class="card-body table-responsive">
-                                    <table id="example2" class="table table-bordered table-striped">
+                                    <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -60,7 +60,7 @@
                 <!-- /.col-md-6 -->
             </div>
 
-            <script>
+            {{-- <script>
                 $(function () {
                   $("#example1").DataTable({
                     "responsive": true, "lengthChange": false, "autoWidth": false,
@@ -76,5 +76,27 @@
                     "responsive": true,
                   });
                 });
-              </script>
+              </script> --}}
+              <style>
+                .dt-length label{
+                    margin-left: 10px;
+                }
+                </style>
+                <script>
+                    $(document).ready(function () {
+    
+    
+                    });
+                    </script>
+                    <script>
+                        $(document).ready(function() {
+                         $('#example1').DataTable({
+                             "language": {
+                                 "lengthMenu": "_MENU_ Filter",
+                                 search: 'Cari Kategori : '
+                     
+                             }
+                         });
+                     });
+                        </script> 
 @endsection

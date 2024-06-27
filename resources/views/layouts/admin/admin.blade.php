@@ -12,7 +12,7 @@
   <!-- IonIcons -->
   <link rel="stylesheet" href="{{ asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.css')}}">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
   <link href="https://cdn.datatables.net/v/dt/dt-2.0.8/datatables.min.css" rel="stylesheet">
   {{-- <style>

@@ -163,12 +163,12 @@
                                     <div class="card">
                                         <div class="card-header p-0">
                                             <a href="/product">
-                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/7.png')}}" alt="Ranginang" />
+                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/1.png')}}" />
                                             </a>
                                         </div>
                                         <div class="card-body text-center">
-                                            <h5 class="card-title margin-b10">Biji Kopi</h5>
-                                            <div class="card-text team-position">Rp. 10.000</div>
+                                            <h5 class="card-title margin-b10">Rangginang</h5>
+                                            <div class="card-text team-position">Rp. 10000</div>
                                             <div class="d-flex justify-content-center align-items-center mt-3">
                                                 <input type="number" min="1" value="1" class="form-control quantity-input" />
                                                 <a href="#" class="btn btn-primary buy-button">Beli Sekarang</a>
