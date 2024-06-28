@@ -15,7 +15,7 @@
                         <div class="margin-b30">
                             <a class="read-more-v3" href="{{ url('about') }}">Lihat Selengkapnya</a>
                         </div>
-                     </div>
+                    </div>
                     <div class="col-2 col-lg-6 responsive-img">
                          <img src="{{ asset('frontend/images/fotodesa.png')}}"  class="" width="500"/>
                     </div>

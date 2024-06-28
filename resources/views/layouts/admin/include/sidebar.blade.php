@@ -57,6 +57,12 @@
                   <p>Kegiatan</p>
               </a>
           </li>
+          <li class="nav-item">
+            <a href="/community_management" class="nav-link {{ str_contains(Request::url(), 'community_management') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Komunitas</p>
+            </a>
+          </li>
           @endif
             <li class="nav-item">
                 <a href="/product_management" class="nav-link {{ str_contains(Request::url(), 'product_management') ? 'active' : '' }}">
@@ -65,6 +71,8 @@
                 </a>
             </li>
             
+           
+           
         </ul>
     </nav>
     

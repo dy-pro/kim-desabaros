@@ -6,65 +6,71 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                
+
                 <!-- /.card -->
 
                 <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Daftar Kegiatan</h3>
+                    <div class="card-header border-0">
+                        <h3 class="card-title">Daftar Komunitas</h3>
                         <div class="card-tools">
-                            <a href="/activity_management/createActivity">
-                                <button class="btn btn-outline-primary">Tambah Kegiatan</button>
+                            <a href="/community_management/createCommunity">
+                                <button class="btn btn-outline-primary">Tambah
+                                Komunitas
+                                </button>    
                             </a>
                         </div>
                     </div>
 
                     <div class="card-body table-responsive">
-                        @if (!empty($activities))
+                        @if (!empty($communities))
                         <table id="example1" class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
-                                    <th>Nama Kegiatan</th>
-                                    <th>Gambar Poster</th>
-                                    <th>Deskripsi</th>
-                                    <th>Penyelenggara</th>
-                                    <th>Tanggal Mulai</th>
-                                    <th>Tanggal Selesai</th>
+                                    <th>Nama Komunitas</th>
+                                    <th>Alamat</th>
+                                    <th>Keterangan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                @foreach ( $activities as $activity )
+                                @foreach ( $communities as $community )
                                     <tr>
-                                        <td>{{ $activity->name }}</td>
                                         <td>
-                                            <img src="{{ $activity->image ? Storage::url($activity->image) : asset('AdminLTE/dist/img/default-150x150.png') }}" alt="Product 1" class="img-square img-size-64 mr-2">
+                                            <img src="{{ Storage::url($community->logo) }}" alt="Product 1"
+                                            class="img-circle img-size-32 mr-2">
+                                            {{ $community->name }}
                                         </td>
+
                                         <td>
-                                            {{ $activity->description }}
+                                            {{ $community->address }}
                                         </td>
+
                                         <td>
-                                            {{ $activity->community ? $activity->community->name : 'Tidak Ada' }}
+                                            {{ $community->description }}
                                         </td>
-                                        <td>
-                                            {{ $activity->datetime_start }}
-                                        </td>
-                                        <td>
-                                            {{ $activity->datetime_end }}
-                                        </td>
+
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="{{ route('activity.edit', ['activityId' => $activity->id]) }}" class="text-primary mr-2">
+                                                <a href="{{ route('community.edit', ['communityId' => $community->id]) }}" class="text-primary mr-2">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                 <!-- Button Delete menggunakan SweetAlert -->
-                                                <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $activity->id }}" >
+                                                {{-- <form action="{{ route('community.delete', ['communityId' => $community->id]) }}" method="POST" style="display:inline;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="text-muted" style="border: none; background: none; cursor: pointer;">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </form> --}}
+                                                
+                                                <!-- Button Delete menggunakan SweetAlert -->
+                                                <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $community->id }}" >
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </div>
+                                            
                                         </td>
-                                    </tr>
+                                    </tr>   
                                 @endforeach
                             </tbody>
                         </table>
@@ -79,16 +85,16 @@
             </div>
         </div>
     </div>
-</div>        
+</div>
 
 <style>
     .dt-length label{
         margin-left: 10px;
     }
     </style>
+
 <!-- SweetAlert CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-
 
 <!-- SweetAlert JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -98,8 +104,8 @@
         // Event listener untuk tombol delete
         document.querySelectorAll('.btn-delete').forEach(button => {
             button.addEventListener('click', function () {
-                // Dapatkan ID Aktivitas dari atribut data-id
-                const activityId = this.getAttribute('data-id');
+                // Dapatkan ID komunitas dari atribut data-id
+                const communityId = this.getAttribute('data-id');
 
                 // Tampilkan SweetAlert konfirmasi
                 Swal.fire({
@@ -115,7 +121,7 @@
                         // Jika pengguna mengkonfirmasi, kirim form delete secara dinamis
                         const form = document.createElement('form');
                         form.method = 'POST';
-                        form.action = `/activity_management/${activityId}/deleteActivity`;
+                        form.action = `/community_management/${communityId}/deleteCommunity`;
 
                         // Tambahkan token CSRF ke form
                         const csrfInput = document.createElement('input');
@@ -144,10 +150,11 @@
     $('#example1').DataTable({
         "language": {
             "lengthMenu": "_MENU_ Filter",
-            search: 'Cari Kegiatan : '
+            search: 'Cari Lembaga : '
 
         }
     });
 });
 </script>
+
 @endsection

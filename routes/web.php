@@ -51,15 +51,38 @@ Route::middleware(WithLogin::class)->group(function(){
         Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
 });
 
-// Auth::routes();
+Route::middleware('auth')->group(function(){
+
+        Route::prefix('community_management')->controller(DashboardController::class)->group(function() {
+                Route::get('/', 'community_management')->name('community.index');     
+                Route::get('/createCommunity','createCommunity')->name('community.create');
+                Route::post('/storeCommunity', 'storeCommunity')->name('community.store');
+                Route::get('/{communityId}/editCommunity', 'editCommunity')->name('community.edit');
+                Route::post('/{communityId}/updateCommunity', 'updateCommunity')->name('community.update');
+                Route::delete('/{communityId}/deleteCommunity', 'deleteCommunity')->name('community.delete');
+        });
+
+        Route::prefix('activity_management')->controller(DashboardController::class)->group(function() {
+                Route::get('/', 'activity_management')->name('activity.index');
+                Route::get('/createActivity','createActivity')->name('activity.create');
+                Route::post('/storeActivity', 'storeActivity')->name('activity.store');
+                Route::get('/{activityId}/editActivity', 'editActivity')->name('activity.edit');
+                Route::post('/{activityId}/updateActivity', 'updateActivity')->name('activity.update');
+                Route::delete('/{activityId}/deleteActivity', 'deleteActivity')->name('activity.delete');
+        });
+        
+});
+
 
 // Landing page route
-Route::get('/', [DinamisController::class, 'home'])->name('beranda');
-Route::get('/about', [DinamisController::class, 'about'])->name('tentang_desa');
-Route::get('/activity', [DinamisController::class, 'activity'])->name('kegiatan');
-Route::get('/activity/detail_activity', [DinamisController::class, 'detail_activity'])->name('detail_kegiatan');
-Route::get('/community', [DinamisController::class, 'community'])->name('lembaga_komunitas');
-Route::get('/product', [DinamisController::class, 'product'])->name('produk_desa');
-// Route::resource('product', ProductController::class);
+Route::controller(DinamisController::class)->group(function() {
+        Route::get('/',  'home')->name('beranda');
+        Route::get('/about', 'about')->name('tentang_desa');
+        Route::get('/activity', 'activity')->name('kegiatan');
+        Route::get('/activity/detail_activity', 'detail_activity')->name('detail_kegiatan');
+        Route::get('/community', 'community')->name('lembaga_komunitas');
+        Route::get('/product', 'product')->name('produk_desa');
+        // Route::resource('product', ProductController::class);
+});
 
 require __DIR__.'/auth.php';
