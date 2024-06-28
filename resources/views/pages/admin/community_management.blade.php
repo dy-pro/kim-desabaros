@@ -26,6 +26,7 @@
                         <table id="example1" class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Nama Komunitas</th>
                                     <th>Alamat</th>
                                     <th>Keterangan</th>
@@ -36,6 +37,7 @@
                             <tbody>
                                 @foreach ( $communities as $community )
                                     <tr>
+                                        <td>{{ $loop->iteration++ }}</td>
                                         <td>
                                             <img src="{{ Storage::url($community->logo) }}" alt="Product 1"
                                             class="img-circle img-size-32 mr-2">
