@@ -81,8 +81,14 @@
     </div>
 </div>        
 
+<style>
+    .dt-length label{
+        margin-left: 10px;
+    }
+    </style>
 <!-- SweetAlert CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
 
 <!-- SweetAlert JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -125,7 +131,6 @@
                         methodInput.value = 'DELETE';
                         form.appendChild(methodInput);
 
-<<<<<<< HEAD
                         // Tambahkan form ke body dan submit
                         document.body.appendChild(form);
                         form.submit();
@@ -134,46 +139,15 @@
             });
         });
     });
+
+    $(document).ready(function() {
+    $('#example1').DataTable({
+        "language": {
+            "lengthMenu": "_MENU_ Filter",
+            search: 'Cari Kegiatan : '
+
+        }
+    });
+});
 </script>
-=======
-            {{-- <script>
-                $(function () {
-                  $("#example1").DataTable({
-                    "responsive": true, "lengthChange": false, "autoWidth": false,
-                    "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-                  }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-                  $('#example2').DataTable({
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": true,
-                    "info": true,
-                    "autoWidth": false,
-                    "responsive": true,
-                  });
-                });
-              </script> --}}
-              <style>
-                .dt-length label{
-                    margin-left: 10px;
-                }
-                </style>
-                <script>
-                    $(document).ready(function () {
-    
-    
-                    });
-                    </script>
-                    <script>
-                        $(document).ready(function() {
-                         $('#example1').DataTable({
-                             "language": {
-                                 "lengthMenu": "_MENU_ Filter",
-                                 search: 'Cari Kategori : '
-                     
-                             }
-                         });
-                     });
-                        </script> 
->>>>>>> 0a7649d923940c171b36da8067f9343cfe0e73dd
 @endsection

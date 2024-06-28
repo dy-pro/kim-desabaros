@@ -23,7 +23,7 @@
 
                     <div class="card-body table-responsive">
                         @if (!empty($communities))
-                        <table class="table table-bordered table-striped dataTable">
+                        <table id="example1" class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
                                     <th>Nama Komunitas</th>
@@ -87,6 +87,12 @@
     </div>
 </div>
 
+<style>
+    .dt-length label{
+        margin-left: 10px;
+    }
+    </style>
+
 <!-- SweetAlert CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
@@ -139,6 +145,16 @@
             });
         });
     });
+
+    $(document).ready(function() {
+    $('#example1').DataTable({
+        "language": {
+            "lengthMenu": "_MENU_ Filter",
+            search: 'Cari Lembaga : '
+
+        }
+    });
+});
 </script>
 
 @endsection
