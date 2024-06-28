@@ -81,10 +81,26 @@
                 </div>
                 <!-- /.col-md-6 -->
             </div>
+            <style>
+                .dt-length label{
+                    margin-left: 10px;
+                }
+                </style>
             <script>
                 $(document).ready(function () {
 
 
                 });
                 </script>
+                <script>
+                    $(document).ready(function() {
+                     $('#example1').DataTable({
+                         "language": {
+                             "lengthMenu": "_MENU_ Filter",
+                             search: 'Cari Pengguna : '
+                 
+                         }
+                     });
+                 });
+                    </script> 
 @endsection
