@@ -87,7 +87,7 @@ class ActivityController extends Controller
      */
     public function show(string $id)
     {
-         
+        //
     }
 
     /**
