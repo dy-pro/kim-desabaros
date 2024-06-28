@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\WithLogin;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/admin', function (){
         return view('admin.include.content');
-})->middleware(AuthAdmin::class)->name("admin.index");
+})->middleware(WithLogin::class)->name("admin.index");
 
 Route::resource('user',UserController::class);
 
@@ -28,7 +29,7 @@ Route::get('/login', function(){
         return view('auth.login');
 });
 
-Route::middleware(AuthAdmin::class)->group(function(){
+Route::middleware(WithLogin::class)->group(function(){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk.create');
         Route::delete('/product_management/{id}/delete', [ProductController::class, 'destroy'])->name('produk.delete');

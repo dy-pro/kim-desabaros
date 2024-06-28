@@ -6,12 +6,19 @@ use App\Models\Category;
 use App\Models\User;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+
 use App\Http\Controllers\CommunityController;
 use App\Models\Activity;
 
 class DashboardController extends Controller
 {
     public function dashboard(){
+        // dd(Auth::user()->role);
+        if(Auth::user()==null || Auth::user()->role == 'penjual' ){
+            return redirect()->route('produk.index');
+        }
         return view('pages.admin.dashboard');
     }
     public function product_management(){
