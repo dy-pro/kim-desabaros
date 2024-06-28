@@ -29,6 +29,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
+                 @if(Auth::user()->role == 'admin')
             <li class="nav-item">
                 <a href="/dashboard" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -51,17 +52,19 @@
                 </a>
             </li>
             <li class="nav-item">
+              <a href="/activity_management" class="nav-link {{str_contains(Request::url(), 'activity_management') ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-calendar-alt"></i>
+                  <p>Kegiatan</p>
+              </a>
+          </li>
+          @endif
+            <li class="nav-item">
                 <a href="/product_management" class="nav-link {{ str_contains(Request::url(), 'product_management') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-table"></i>
                     <p>Produk</p>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="/activity_management" class="nav-link {{str_contains(Request::url(), 'activity_management') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-calendar-alt"></i>
-                    <p>Kegiatan</p>
-                </a>
-            </li>
+            
         </ul>
     </nav>
     
