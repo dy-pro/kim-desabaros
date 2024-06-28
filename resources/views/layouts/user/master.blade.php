@@ -89,6 +89,21 @@
 		};
 	});
 	
+	document.addEventListener('DOMContentLoaded', function() {
+            var elements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
+
+            function checkVisibility() {
+                elements.forEach(function(element) {
+                    if (element.getBoundingClientRect().top < window.innerHeight && element.getBoundingClientRect().bottom >= 0) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkVisibility);
+            window.addEventListener('resize', checkVisibility);
+            checkVisibility();
+        });
 	</script>
     @yield('script')
 
