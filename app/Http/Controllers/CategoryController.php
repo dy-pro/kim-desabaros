@@ -19,7 +19,7 @@ public function update (Request $request, $id){
 
   $category=Category::find($id);
 
-  $category->title->$request->title;
+  $category->title=$request->title;
 
   $category->save();
 

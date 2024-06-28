@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
 
-
     public function destroy(Request $request, $id){
         $product=Product::find($id);
 
@@ -21,7 +20,9 @@ class ProductController extends Controller
 
 
     public function edit($id){
+       
         $product=Product::find($id);
+        
         return view('pages.admin.produk.editProduct', ['product'=>$product]);
     }
 

@@ -2305,9 +2305,6 @@ padding-left: 15px;
 
 .portfolio-grid,
 .portfolio-masonry{
-	margin-left: -15px;
-	margin-right: -15px;
-	margin-bottom: -40px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -2329,6 +2326,10 @@ padding-left: 15px;
 
 .item-4cols{
 	width: 25%;
+}
+
+.gap-4ssss{
+	gap: 4rem;
 }
 
 .item-5cols{
@@ -2424,7 +2425,13 @@ transform-origin: left center;
 /* Portfolio Grid v2 */
 
 .portfolio-grid-v2{
-	margin-bottom: -30px;
+	/* margin-bottom: -30px; */
+}
+
+.wrap-image{
+	display: grid;
+	gap: 50px;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .item-portfolio-v2{

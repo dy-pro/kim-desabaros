@@ -80,59 +80,59 @@
 	
 	}); //end document ready
 
-    function countUp(target, duration) {
-        // Mendapatkan elemen di mana nilai akan ditampilkan
-        const display = document.getElementById('counter');
+    // function countUp(target, duration) {
+    //     // Mendapatkan elemen di mana nilai akan ditampilkan
+    //     const display = document.getElementById('counter');
     
-        // Hitung berapa kali per detik kita akan menambahkan nilai
-        const increment = target / duration;
+    //     // Hitung berapa kali per detik kita akan menambahkan nilai
+    //     const increment = target / duration;
     
-        // Inisialisasi nilai awal
-        let currentCount = 0;
+    //     // Inisialisasi nilai awal
+    //     let currentCount = 0;
     
-        // Buat interval untuk menambah nilai setiap 1 detik
-        const interval = setInterval(() => {
-            // Tambahkan nilai increment ke nilai saat ini
-            currentCount += increment;
+    //     // Buat interval untuk menambah nilai setiap 1 detik
+    //     const interval = setInterval(() => {
+    //         // Tambahkan nilai increment ke nilai saat ini
+    //         currentCount += increment;
     
-            // Periksa jika nilai saat ini melebihi target
-            if (currentCount >= target) {
-                // Atur nilai akhir dan hentikan interval
-                currentCount = target;
-                clearInterval(interval);
-            }
+    //         // Periksa jika nilai saat ini melebihi target
+    //         if (currentCount >= target) {
+    //             // Atur nilai akhir dan hentikan interval
+    //             currentCount = target;
+    //             clearInterval(interval);
+    //         }
     
-            // Tampilkan nilai yang dihitung pada elemen display
-            display.textContent = Math.floor(currentCount); // Tampilkan tanpa desimal
-        }, 1000); // Interval setiap 1 detik
-    }
+    //         // Tampilkan nilai yang dihitung pada elemen display
+    //         display.textContent = Math.floor(currentCount); // Tampilkan tanpa desimal
+    //     }, 1000); // Interval setiap 1 detik
+    // }
 // Count pernghargaan
-document.addEventListener('DOMContentLoaded', function() {
-    // Array konfigurasi untuk setiap elemen yang ingin dihitung
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Array konfigurasi untuk setiap elemen yang ingin dihitung
 
-    console.log("sss")
-    var countElements = [
-        { id: 'adwi-awards', endVal: 8 },
-        { id: 'awards-count', endVal: 5 },
-        { id: 'places-count', endVal: 63 },
-        { id: 'years-count', endVal: 7 }
-    ];
+//     console.log("sss")
+//     var countElements = [
+//         { id: 'adwi-awards', endVal: 8 },
+//         { id: 'awards-count', endVal: 5 },
+//         { id: 'places-count', endVal: 63 },
+//         { id: 'years-count', endVal: 7 }
+//     ];
 
-    // Fungsi untuk inisialisasi CountUp
-    function initCountUp(id, endVal) {
-        var countUp = countUp();
-        if (!countUp.error) {
-            countUp.start();
-        } else {
-            console.error(countUp.error);
-        }
-    }
+//     // Fungsi untuk inisialisasi CountUp
+//     function initCountUp(id, endVal) {
+//         var countUp = countUp();
+//         if (!countUp.error) {
+//             countUp.start();
+//         } else {
+//             console.error(countUp.error);
+//         }
+//     }
 
-    // Looping untuk inisialisasi CountUp untuk setiap elemen
-    countElements.forEach(function(element) {
-        initCountUp(element.id, element.endVal);
-    });
-});
+//     // Looping untuk inisialisasi CountUp untuk setiap elemen
+//     countElements.forEach(function(element) {
+//         initCountUp(element.id, element.endVal);
+//     });
+// });
 
 // navbar scroll
 

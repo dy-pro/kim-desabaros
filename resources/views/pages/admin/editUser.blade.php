@@ -23,7 +23,6 @@
                                         placeholder="Nama Lengkap">
                                 </div>
 
-                                <div class="card-body">
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input name="email" value="{{ $user->email }}" type="email" class="form-control" id="name"
