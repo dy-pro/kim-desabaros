@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="category">Kategori</label>
-                                    <select  name="category" class="custom-select">
+                                    <select  name="id_category" class="custom-select">
                                         <option disabled>Pilih Kategori</option>
                                         <option value="Makanan"{{ $product->category=='Makanan'?'selected':'' }}>Makanan</option>
                                         <option value="Minuman"{{ $product->category=='Minuman'?'selected':'' }} >Minuman</option>

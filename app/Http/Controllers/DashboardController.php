@@ -24,7 +24,7 @@ class DashboardController extends Controller
     public function product_management(){
         $products = Product::query()
         ->leftJoin('category', 'products.id_category', '=', 'category.id')
-        ->select('products.id as id_product', 'products.*','category.*')
+        ->select('products.*','category.title')
         ->get();
         return view('pages.admin.product_management', ['products'=>$products]);
     }
