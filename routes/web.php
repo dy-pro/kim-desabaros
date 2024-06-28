@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\CommunityController;
 use App\Http\Middleware\AuthAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DinamisController;
@@ -51,54 +50,38 @@ Route::middleware(AuthAdmin::class)->group(function(){
         Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
 });
 
-// Auth::routes();
+Route::middleware('auth')->group(function(){
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
-Route::get('/product_management/createProduct', [DashboardController::class, 'createProduct'])->name('tambah_produk');
-Route::get('/user_management', [DashboardController::class, 'user_management'])->name('pengguna');
-Route::get('/user_management/createUser', [DashboardController::class, 'createUser'])->name('tambah_pengguna');
-Route::get('/category_management', [DashboardController::class, 'category_management'])->name('kategori');
-Route::get('/category_management/createCategory', [DashboardController::class, 'createCategory'])->name('tambah_kategori');
+        Route::prefix('community_management')->controller(DashboardController::class)->group(function() {
+                Route::get('/', 'community_management')->name('community.index');     
+                Route::get('/createCommunity','createCommunity')->name('community.create');
+                Route::post('/storeCommunity', 'storeCommunity')->name('community.store');
+                Route::get('/{communityId}/editCommunity', 'editCommunity')->name('community.edit');
+                Route::post('/{communityId}/updateCommunity', 'updateCommunity')->name('community.update');
+                Route::delete('/{communityId}/deleteCommunity', 'deleteCommunity')->name('community.delete');
+        });
 
-
-
-
-Route::controller(DashboardController::class)->group(function(){
-        Route::get('/community_management', 'community_management')->name('community.index');
+        Route::prefix('activity_management')->controller(DashboardController::class)->group(function() {
+                Route::get('/', 'activity_management')->name('activity.index');
+                Route::get('/createActivity','createActivity')->name('activity.create');
+                Route::post('/storeActivity', 'storeActivity')->name('activity.store');
+                Route::get('/{activityId}/editActivity', 'editActivity')->name('activity.edit');
+                Route::post('/{activityId}/updateActivity', 'updateActivity')->name('activity.update');
+                Route::delete('/{activityId}/deleteActivity', 'deleteActivity')->name('activity.delete');
+        });
         
-        Route::get('/community_management/createCommunity','createCommunity')->name('community.create');
-        
-        Route::post('/community_management/storeCommunity', 'storeCommunity')->name('community.store');
-        
-        Route::get('/community_management/{communityId}/editCommunity', 'editCommunity')->name('community.edit');
-        
-        Route::post('/community_management/{communityId}/updateCommunity', 'updateCommunity')->name('community.update');
-        
-        Route::delete('/community_management/{communityId}/deleteCommunity', 'deleteCommunity')->name('community.delete');
 });
-
-Route::controller(DashboardController::class)->group(function(){
-        Route::get('activity_management', 'activity_management')->name('activity.index');
-
-        Route::get('/activity_management/createActivity','createActivity')->name('activity.create');
-
-        Route::post('/activity_management/storeActivity', 'storeActivity')->name('activity.store');
-
-        Route::get('/activity_management/{activityId}/editActivity', 'editActivity')->name('activity.edit');
-
-        Route::post('/activity_management/{activityId}/updateActivity', 'updateActivity')->name('activity.update');
-});
-
 
 
 // Landing page route
-Route::get('/', [DinamisController::class, 'home'])->name('beranda');
-Route::get('/about', [DinamisController::class, 'about'])->name('tentang_desa');
-Route::get('/activity', [DinamisController::class, 'activity'])->name('kegiatan');
-Route::get('/activity/detail_activity', [DinamisController::class, 'detail_activity'])->name('detail_kegiatan');
-Route::get('/community', [DinamisController::class, 'community'])->name('lembaga_komunitas');
-Route::get('/product', [DinamisController::class, 'product'])->name('produk_desa');
-// Route::resource('product', ProductController::class);
+Route::controller(DinamisController::class)->group(function() {
+        Route::get('/',  'home')->name('beranda');
+        Route::get('/about', 'about')->name('tentang_desa');
+        Route::get('/activity', 'activity')->name('kegiatan');
+        Route::get('/activity/detail_activity', 'detail_activity')->name('detail_kegiatan');
+        Route::get('/community', 'community')->name('lembaga_komunitas');
+        Route::get('/product', 'product')->name('produk_desa');
+        // Route::resource('product', ProductController::class);
+});
 
 require __DIR__.'/auth.php';

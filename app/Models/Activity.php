@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Community;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Activity extends Model
 {
@@ -17,4 +18,11 @@ class Activity extends Model
         'datetime_start',
         'datetime_end',
     ];
+
+
+    // Relasi ke komunitas (banyak ke satu)
+    public function community()
+    {
+        return $this->belongsTo(Community::class, 'id_community');
+    }
 }

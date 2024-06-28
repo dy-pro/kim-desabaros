@@ -11,22 +11,24 @@
 
                 <div class="card">
                     <div class="card-header border-0">
-                        <h3 class="card-title">Komunitas</h3>
+                        <h3 class="card-title">Daftar Komunitas</h3>
                         <div class="card-tools">
-                        <a href="/community_management/createCommunity">
-                            <button class="btn btn-outline-primary">Tambah
+                            <a href="/community_management/createCommunity">
+                                <button class="btn btn-outline-primary">Tambah
                                 Komunitas
-                            </button>    
-                        </a>
+                                </button>    
+                            </a>
                         </div>
                     </div>
 
-                    <div class="card-body table-responsive p-0">
+                    <div class="card-body table-responsive">
                         @if (!empty($communities))
-                        <table class="table table-striped table-valign-middle">
+                        <table class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
                                     <th>Nama Komunitas</th>
+                                    <th>Alamat</th>
+                                    <th>Keterangan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -41,24 +43,32 @@
                                         </td>
 
                                         <td>
-                                            {{-- <img src="{{ asset('AdminLTE/dist/img/default-150x150.png')}}" alt="Product 1" class="img-circle img-size-32 mr-2"> --}}
-                                            <a href="{{ route('community.edit', ['communityId' => $community->id]) }}" class="text-muted btn">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                            {{-- <a href="#" class="text-muted">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </a> --}}
-                                            {{-- <form action="{{ route('community.delete', ['communityId' => $community->id]) }}" method="POST" style="display:inline;">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="text-muted" style="border: none; background: none; cursor: pointer;">
-                                                    <i class="fas fa-trash-alt"></i>
+                                            {{ $community->address }}
+                                        </td>
+
+                                        <td>
+                                            {{ $community->description }}
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="{{ route('community.edit', ['communityId' => $community->id]) }}" class="text-primary mr-2">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                {{-- <form action="{{ route('community.delete', ['communityId' => $community->id]) }}" method="POST" style="display:inline;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="text-muted" style="border: none; background: none; cursor: pointer;">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </form> --}}
+                                                
+                                                <!-- Button Delete menggunakan SweetAlert -->
+                                                <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $community->id }}" >
+                                                    <i class="fas fa-trash"></i>
                                                 </button>
-                                            </form> --}}
-                                            <!-- Button Delete menggunakan SweetAlert -->
-                                            <button type="button" class="btn btn-danger btn-sm btn-delete" data-id="{{ $community->id }}" >
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
+                                            </div>
+                                            
                                         </td>
                                     </tr>   
                                 @endforeach

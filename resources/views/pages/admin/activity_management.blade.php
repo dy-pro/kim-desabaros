@@ -21,12 +21,13 @@
 
                     <div class="card-body table-responsive">
                         @if (!empty($activities))
-                        <table id="example2" class="table table-bordered table-striped">
+                        <table id="example1" class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
                                     <th>Nama Kegiatan</th>
                                     <th>Gambar Poster</th>
                                     <th>Deskripsi</th>
+                                    <th>Penyelenggara</th>
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
                                     <th>Aksi</th>
@@ -38,19 +39,30 @@
                                     <tr>
                                         <td>{{ $activity->name }}</td>
                                         <td>
-                                            {{-- <img src="{{ asset('AdminLTE/dist/img/default-150x150.png')}}" alt="Product 1" class="img-circle img-size-32 mr-2"> --}}
-                                            <img src="{{ Storage::url($activity->image) }}" alt="Product 1" class="img-circle img-size-32 mr-2">
+                                            <img src="{{ $activity->image ? Storage::url($activity->image) : asset('AdminLTE/dist/img/default-150x150.png') }}" alt="Product 1" class="img-square img-size-64 mr-2">
                                         </td>
-                                        <td>{{ $activity->description }}</td>
-                                        <td>{{ $activity->datetime_start }}</td>
-                                        <td>{{ $activity->datetime_end }}</td>
                                         <td>
-                                            <a href="{{ route('activity.edit', ['activityId' => $activity->id]) }}" class="text-primary mr-2">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                            <button type="button" class="btn btn-danger btn-sm btn-delete" data-id="{{ $activity->id }}" >
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
+                                            {{ $activity->description }}
+                                        </td>
+                                        <td>
+                                            {{ $activity->community ? $activity->community->name : 'Tidak Ada' }}
+                                        </td>
+                                        <td>
+                                            {{ $activity->datetime_start }}
+                                        </td>
+                                        <td>
+                                            {{ $activity->datetime_end }}
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <a href="{{ route('activity.edit', ['activityId' => $activity->id]) }}" class="text-primary mr-2">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                                 <!-- Button Delete menggunakan SweetAlert -->
+                                                <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $activity->id }}" >
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -69,25 +81,6 @@
     </div>
 </div>        
 
-<script>
-    $(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": false, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
-</script>    
-
 <!-- SweetAlert CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
@@ -99,8 +92,8 @@
         // Event listener untuk tombol delete
         document.querySelectorAll('.btn-delete').forEach(button => {
             button.addEventListener('click', function () {
-                // Dapatkan ID komunitas dari atribut data-id
-                const communityId = this.getAttribute('data-id');
+                // Dapatkan ID Aktivitas dari atribut data-id
+                const activityId = this.getAttribute('data-id');
 
                 // Tampilkan SweetAlert konfirmasi
                 Swal.fire({
@@ -116,7 +109,7 @@
                         // Jika pengguna mengkonfirmasi, kirim form delete secara dinamis
                         const form = document.createElement('form');
                         form.method = 'POST';
-                        form.action = `/community_management/${communityId}/deleteCommunity`;
+                        form.action = `/activity_management/${activityId}/deleteActivity`;
 
                         // Tambahkan token CSRF ke form
                         const csrfInput = document.createElement('input');

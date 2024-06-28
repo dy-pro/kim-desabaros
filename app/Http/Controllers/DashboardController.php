@@ -40,14 +40,14 @@ class DashboardController extends Controller
     //Komunitas
     public function community_management(Request $request){
         $communityController = new CommunityController();
-
         return $communityController->index($request);
     }
+
     public function createCommunity(Request $request){;
         $communityController = new CommunityController();
-
         return $communityController->create($request);
     }
+
     public function storeCommunity(Request $request){
         $communityController = new CommunityController();
         return $communityController->store($request);
@@ -64,21 +64,18 @@ class DashboardController extends Controller
     }
 
     public function deleteCommunity($communityId) {
-        $communityController = new CommunityController();
-    
+        $communityController = new CommunityController();   
         return $communityController->destroy($communityId);
     }
 
     //Kegiatan
     public function activity_management(Request $request){
         $activityController = new ActivityController();
-
         return $activityController->index($request);
     }
 
     public function createActivity(Request $request){
         $activityController = new ActivityController();
-
         return $activityController->create($request);
     }
 
@@ -89,12 +86,16 @@ class DashboardController extends Controller
 
     public function editActivity($activityId){
         $activityController = new ActivityController();
-
         return $activityController->edit($activityId);
     }
 
     public function updateActivity(Request $request, $activityId) {
         $activityController = new ActivityController();
         return $activityController->update($request, $activityId);
+    }
+
+    public function deleteActivity($activityId) {
+        $activityController = new ActivityController();   
+        return $activityController->destroy($activityId);
     }
 }
