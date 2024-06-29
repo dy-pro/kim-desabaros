@@ -20,7 +20,6 @@ class ProductController extends Controller
 
 
     public function edit($id){
-       
         $product=Product::find($id);
         
         return view('pages.admin.produk.editProduct', ['product'=>$product]);
