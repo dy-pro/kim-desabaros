@@ -28,8 +28,6 @@ class DinamisController extends Controller
     }
     public function product(){
         $product=Product::query()
-        
-        
         ->leftJoin('users', 'products.id_user', '=', 'users.id')
         ->leftJoin('category', 'products.id_category', '=', 'category.id')
         ->select('products.image as product_image','products.name as product_name', 'products.*', 'users.*', 'category.title as category_title','category.*')

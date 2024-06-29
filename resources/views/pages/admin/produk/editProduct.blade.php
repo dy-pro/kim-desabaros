@@ -37,7 +37,7 @@
                                         placeholder="Keterangan Produk">
                                 </div>
                                 <div class="form-group">
-                                    <label for="category">Kategori</label>
+                                    <label for="id_category">Kategori</label>
                                     <select  name="category" class="custom-select">
                                         <option disabled>Pilih Kategori</option>
                                         <option value="Makanan"{{ $product->category=='Makanan'?'selected':'' }}>Makanan</option>
