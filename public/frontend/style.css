@@ -191,7 +191,7 @@ textarea {
 	font-size: 100%;
 	margin: 0;
 	vertical-align: baseline;
-	*vertical-align: middle;
+	vertical-align: middle;
 }
 
 .no-margin {
@@ -2962,7 +2962,7 @@ transform: scale(1.6);
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
 }
-}
+
 
 /**
 * #5.# BLOG
