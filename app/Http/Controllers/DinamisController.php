@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Product;
+use App\Models\Activity;
+use App\Models\Category;
+use App\Models\Community;
 use Illuminate\Http\Request;
 
 class DinamisController extends Controller
@@ -15,23 +17,31 @@ class DinamisController extends Controller
         return view('pages.user.dinamis.about');
     }
     public function activity(){
-        return view('pages.user.dinamis.activity');
+        $activities = Activity::paginate(9);
+
+        return view('pages.user.dinamis.activity', compact('activities'));
     }
     public function detail_activity(){
+
         return view('pages.user.dinamis.detail_activity');
     }
     public function community(){
-        return view('pages.user.dinamis.community');
+        // Mengambil data pengguna tabel Community
+        $communities= Community::all();
+
+        return view('pages.user.dinamis.community', [
+            'communities' => $communities
+        ]);
     }
     public function product(){
         $product=Product::query()
         
         
         ->leftJoin('users', 'products.id_user', '=', 'users.id')
-        ->leftJoin('category', 'products.id_category', '=', 'category.id')
-        ->select('products.image as product_image','products.name as product_name', 'products.*', 'users.*', 'category.title as category_title','category.*')
+        ->leftJoin('categories', 'products.id_category', '=', 'categories.id')
+        ->select('products.image as product_image','products.name as product_name', 'products.*', 'users.*', 'categories.title as categories_title','categories.*')
         ->get();
-        $category=Category::all();
-        return view('pages.user.dinamis.product', ['products'=>$product, 'categories' => $category]);
+        $categories=Category::all();
+        return view('pages.user.dinamis.product', ['products'=>$product, 'categories' => $categories]);
     }
 }

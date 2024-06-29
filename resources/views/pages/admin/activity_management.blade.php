@@ -58,7 +58,7 @@
                                                 <a href="{{ route('activity.edit', ['activityId' => $activity->id]) }}" class="text-primary mr-2">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                 <!-- Button Delete menggunakan SweetAlert -->
+                                                <!-- Button Delete menggunakan SweetAlert -->
                                                 <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $activity->id }}" >
                                                     <i class="fas fa-trash"></i>
                                                 </button>

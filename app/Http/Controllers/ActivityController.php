@@ -29,7 +29,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-         // Ambil semua komunitas untuk dropdown
+        // Ambil semua komunitas untuk dropdown
         $communities = Community::all();
 
         return view('pages.admin.activity.create', compact('communities'));
@@ -87,7 +87,7 @@ class ActivityController extends Controller
      */
     public function show(string $id)
     {
-         
+        //
     }
 
     /**
