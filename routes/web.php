@@ -31,24 +31,34 @@ Route::get('/login', function(){
 
 Route::middleware(WithLogin::class)->group(function(){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-        Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk.create');
-        Route::delete('/product_management/{id}/delete', [ProductController::class, 'destroy'])->name('produk.delete');
-        Route::get('/product_management/{id}/edit', [ProductController::class, 'edit'])->name('produk.edit');
-        Route::get('/manajemen_produk', [DashboardController::class, 'product_management'])->name('produk.index');
-        Route::post('/product_management', [ProductController::class, 'store'])->name('produk.store');
-        Route::put('/product_management/{id}', [ProductController::class, 'update'])->name('produk.update');
+        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         
         Route::get('/user_management', [DashboardController::class, 'user_management'])->name('pengguna');
         Route::get('/user_management/createUser', [DashboardController::class, 'createUser'])->name('tambah_pengguna');
-        Route::get('/product_management/createProduct', [DashboardController::class, 'createProduct'])->name('tambah_produk');
+
         Route::get('/category_management', [DashboardController::class, 'category_management'])->name('kategori');
         Route::get('/category_management/createCategory', [DashboardController::class, 'createCategory'])->name('tambah_kategori');
-        Route::get('/activity_management', [DashboardController::class, 'activity_management'])->name('kegiatan');
-        Route::get('/activity_management/createActivity', [DashboardController::class, 'createActivity'])->name('tambah_kegiatan');
-        Route::get('/community_management', [DashboardController::class, 'community_management'])->name('kegiatan');
-        Route::get('/community_management/createCommunity', [DashboardController::class, 'createCommunity'])->name('tambah_kegiatan');
-        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-        Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
+
+
+        Route::prefix('product_management')->controller(DashboardController::class)->group(function() {
+                Route::get('/', 'product_management')->name('product.index');
+                Route::get('/createProduct', 'createProduct')->name('product.create');
+                Route::post('/storeProduct', 'storeProduct')->name('product.store');
+                Route::get('/{productId}/editProduct', 'editProduct')->name('product.edit');
+                Route::put('/{productId}/updateProduct', 'updateProduct')->name('product.update');
+                Route::delete('/{productId}/deleteProduct', 'deleteProduct')->name('product.delete');
+
+        });
+        
+        // Route::get('/manajemen_produk', [DashboardController::class, 'product_management'])->name('produk.index');
+        // // Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
+        // Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk.create');
+        // Route::get('/product_management/createProduct', [DashboardController::class, 'createProduct'])->name('tambah_produk');
+        // Route::post('/product_management', [ProductController::class, 'store'])->name('produk.store');
+        // Route::get('/product_management/{id}/edit', [ProductController::class, 'edit'])->name('produk.edit');
+        // Route::put('/product_management/{id}', [ProductController::class, 'update'])->name('produk.update');
+        // Route::delete('/product_management/{id}/delete', [ProductController::class, 'destroy'])->name('produk.delete');
+
 });
 
 Route::middleware('auth')->group(function(){

@@ -24,6 +24,7 @@
                         <table id="example1" class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Nama Kegiatan</th>
                                     <th>Gambar Poster</th>
                                     <th>Deskripsi</th>
@@ -37,6 +38,7 @@
                             <tbody>
                                 @foreach ( $activities as $activity )
                                     <tr>
+                                        <td>{{ $loop->iteration++ }}</td>
                                         <td>{{ $activity->name }}</td>
                                         <td>
                                             <img src="{{ $activity->image ? Storage::url($activity->image) : asset('AdminLTE/dist/img/default-150x150.png') }}" alt="Product 1" class="img-square img-size-64 mr-2">
@@ -58,7 +60,7 @@
                                                 <a href="{{ route('activity.edit', ['activityId' => $activity->id]) }}" class="text-primary mr-2">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                 <!-- Button Delete menggunakan SweetAlert -->
+                                                <!-- Button Delete menggunakan SweetAlert -->
                                                 <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $activity->id }}" >
                                                     <i class="fas fa-trash"></i>
                                                 </button>

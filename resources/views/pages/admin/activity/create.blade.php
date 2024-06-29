@@ -32,12 +32,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="address">Deskripsi</label>
+                                <label for="description">Deskripsi</label>
                                 <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan"></textarea>
                             </div>
 
                             <div class="form-group">
-                                <label>Penyelenggara</label>
+                                <label for="id_community">Penyelenggara</label>
                                 <select class="form-control select2" style="width: 100%;" name="id_community">
                                     <option value="" disabled selected>Pilih penyelenggara</option>
                                     @foreach($communities as $community)
