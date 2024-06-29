@@ -12,7 +12,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Daftar Produk</h3>
                             <div class="card-tools">
-                                <a href="/product_management/createProduct">
+                                <a href="{{ route('product.create') }}">
                                     <button class="btn btn-outline-primary">
                                         Tambah Produk
                                     </button>
@@ -20,39 +20,62 @@
                             </div>
                         </div>
 
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        @if(session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
                         <div class="card-body table-responsive">
                             <table id="example1" class="table table-bordered table-striped dataTable">
                                 <thead>
                                     <tr>
-                                        <th>Nomor Pengguna</th>
+                                        <th>Nomor</th>
+                                        <th>Nama Produk</th>
                                         <th>Gambar Produk</th>
                                         <th>Harga</th>
-                                        <th>Nama Produk</th>
                                         <th>Kategori</th>
                                         <th>Deskripsi</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
-                                        <tbody>
-                                            @foreach ( $products as $product)
-                                            
-                                            <tr>
-                                                <td>{{ $loop->iteration++ }}</td>
-                                                <td>
-                                                    <img src="{{ asset('products/'.$product->image)}}"
-                                                        alt="Product 1" class="img-size-32 mr-2">
-                                                </td>
-                                                <td>{{ $product->price}}</td>
-                                                <td>{{ $product->name}}</td>
-                                                <td>{{ $product->title}}</td>
-                                                {{-- <td>{{ $product->category}}</td> --}}
-                                                <td>{{ $product->description }}</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        
-                                                        <a href="{{route('produk.edit', $product->id)}}" class="text-primary mr-2">
-                                                            <i class="fas fa-edit"></i>
-                                                        </a>
+                                
+                                <tbody>
+                                    @foreach ( $products as $product)                       
+                                        <tr>
+                                            <td>
+                                                {{ $loop->iteration++ }}
+                                            </td>
+                                            <td>
+                                                {{ $product->name }}
+                                            </td>
+                                            <td>
+                                                <img 
+                                                    src="{{ asset('products/'.$product->image)}}"
+                                                    alt="Product 1"
+                                                    class="img-size-64 mr-2"
+                                                >
+                                            </td>
+                                            <td>
+                                                {{ $product->price }}
+                                            </td>
+                                            <td>
+                                                {{ $product->category->title }}
+                                            </td>
+                                            <td>
+                                                {{ $product->description }}
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <a href="{{ route('product.edit', ['productId' => $product->id]) }}" class="text-primary mr-2">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
                                                     
                                                         {{-- <form action="{{route ('produk.delete', $product->id_product)}}" method="POST">
                                                             @csrf
@@ -62,26 +85,26 @@
                                                             </button>
                                                         </form> --}}
 
-                                                        <!-- Button Delete menggunakan SweetAlert -->
-                                                        <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $product->id_product }}" >
-                                                            <i class="fas fa-trash"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- /.card -->
+                                                    <!-- Button Delete menggunakan SweetAlert -->
+                                                    <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $product->id }}" >
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- /.col-md-6 -->
-                        
                     </div>
+                    <!-- /.card -->
                 </div>
                 <!-- /.col-md-6 -->
+                        
             </div>
+        </div>
+        <!-- /.col-md-6 -->
+    </div>
 
     <!-- SweetAlert CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -129,7 +152,7 @@
                             // Jika pengguna mengkonfirmasi, kirim form delete secara dinamis
                             const form = document.createElement('form');
                             form.method = 'POST';
-                            form.action = `/product_management/${productId}/delete`
+                            form.action = `/product_management/${productId}/deleteProduct`
 
                             // Tambahkan token CSRF ke form
                             const csrfInput = document.createElement('input');
