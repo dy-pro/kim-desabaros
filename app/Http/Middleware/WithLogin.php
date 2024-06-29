@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class AuthAdmin
+class WithLogin
 {
     /**
      * Handle an incoming request.
@@ -16,13 +16,26 @@ class AuthAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::user()==null || Auth::user()->role != 'admin'){
+        if(Auth::user()==null){
+            return redirect()->route('beranda');
+        }
+        return $next($request);
+    
+    }
 
+    public function seller(Request $request, Closure $next){
+        if(Auth::user()==null || Auth::user()->role != 'penjual' ){
             return redirect()->route('beranda');
         }
         return $next($request);
     }
 
+    public function admin(Request $request, Closure $next){
+        if(Auth::user()==null || Auth::user()->role != 'admin' ){
+            return redirect()->route('beranda');
+        }
+        return $next($request);
+    }
     public function postlogin(Request $request)
     {
         $credentials = $request->only('nama', 'password');

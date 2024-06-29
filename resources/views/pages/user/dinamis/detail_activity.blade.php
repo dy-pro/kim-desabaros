@@ -27,24 +27,22 @@
                                 <figure><img src="{{ asset('frontend/images/5.png') }}" alt="" class="img-fluid" width="300"></figure>
                             </div>
                         </div>
-                        <p style="text-align: center">Kegiatan kerja bakti sosial ini bertujuan untuk mempererat tali silaturahmi antar warga, meningkatkan kebersihan dan kerapihan lingkungan, serta membantu masyarakat yang membutuhkan. Kegiatan ini juga menjadi sarana edukasi mengenai pentingnya menjaga kebersihan dan kesehatan lingkungan.                        </p>
+                        <p style="text-align: center">Kegiatan kerja bakti sosial ini bertujuan untuk mempererat tali silaturahmi antar warga, meningkatkan kebersihan dan kerapihan lingkungan, serta membantu masyarakat yang membutuhkan. Kegiatan ini juga menjadi sarana edukasi mengenai pentingnya menjaga kebersihan dan kesehatan lingkungan.</p>
+                        
+                        
+                        @foreach ($activities as $activity )
                         <blockquote class="wp-block-quote">
                             <p>Jadwal Kegiatan:<br>
-
-                                18 Juli • 08.00 - 10.00<br>
+                                <p>{{ $activity->datetime_start }}<br></p>
                                 Lokasi: Kec. Arjasari, Kantor Desa<br><br>
                                 
-                                19 Juli • 08.00 - 10.00<br>
-                                Lokasi: Desa Baros, Kantor Desa<br><br>
-                                
-                                20 Juli • 08.00 - 10.00<br>
-                                Lokasi: Desa Baros, Kantor Desa<br><br>
-                                
+                            
+                        @endforeach            
                                 </p>
                         </blockquote>
                         
                         
-                     </div>
+                    </div>
                 </div>
                     <!-- /single-post-content -->		
                 </article>
