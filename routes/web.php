@@ -50,9 +50,9 @@ Route::middleware(WithLogin::class)->group(function(){
 
         });
         
-        Route::get('/manajemen_produk', [DashboardController::class, 'product_management'])->name('produk.index');
-        // Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
-        Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk.create');
+        // Route::get('/manajemen_produk', [DashboardController::class, 'product_management'])->name('produk.index');
+        // // Route::get('/product_management', [DashboardController::class, 'product_management'])->name('produk');
+        // Route::get('/manajemen_produk/tambah_produk', [DashboardController::class, 'tambah_produk'])->name('produk.create');
         // Route::get('/product_management/createProduct', [DashboardController::class, 'createProduct'])->name('tambah_produk');
         // Route::post('/product_management', [ProductController::class, 'store'])->name('produk.store');
         // Route::get('/product_management/{id}/edit', [ProductController::class, 'edit'])->name('produk.edit');
