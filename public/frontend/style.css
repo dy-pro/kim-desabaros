@@ -191,7 +191,7 @@ textarea {
 	font-size: 100%;
 	margin: 0;
 	vertical-align: baseline;
-	*vertical-align: middle;
+	vertical-align: middle;
 }
 
 .no-margin {
@@ -1289,6 +1289,10 @@ display: flex;
 align-items: center;
 }
 
+.logo-2{
+	margin-bottom: 20px;
+}
+
 .logo-1,
 .logo-4,
 .binfo,
@@ -1896,7 +1900,73 @@ margin-bottom: 0;}
 }
 
 
+/* ANIMASI */
+.floating-text {
+	animation: floatAnimation 5s ease-in-out infinite;
+}
 
+@keyframes floatAnimation {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.fade-in {
+	opacity: 0;
+	animation: fadeInAnimation 4s forwards;
+}
+
+@keyframes fadeInAnimation {
+	to {
+		opacity: 1;
+	}
+}
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.slide-in-left{
+	transform: translateX(100%);
+	opacity: 0;
+	animation: slideInAnimation 1s forwards;
+}
+
+.slide-in-right{
+	transform: translateX(-100%);
+	opacity: 0;
+	animation: slideInAnimation 1s forwards;
+}
+
+@keyframes slideInAnimation {
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.col {
+	display: inline-block;
+	vertical-align: top;
+}
 /* END HEADER PAGES */
 
 #wrap-content p,
@@ -2795,7 +2865,7 @@ border-radius: 10px;
 .d-flex {
     margin-top: 20px;
 }
-
+.quantity,
 .quantity-input {
     width: 30%;
     text-align: center;
@@ -2806,6 +2876,9 @@ border-radius: 10px;
     width: 60%;
 }
 
+.whatsappButton{
+	width: 100%;
+}
 .btn-primary {
     background-color: #2B5796;
 
@@ -2962,7 +3035,7 @@ transform: scale(1.6);
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
 }
-}
+
 
 /**
 * #5.# BLOG
@@ -3665,7 +3738,7 @@ aside table caption,
 	content: '';
 position: relative;
 width: 100%;
-background-color: white;
+background-color: #0755AB;
 height: 4px;
 display: block;
 margin-top: 10px;
@@ -3959,7 +4032,8 @@ footer .container {
 
 
 .widget-footer {
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	margin-top: 30px;
 }
 
 .widget-footer{

@@ -11,7 +11,15 @@ use Illuminate\Http\Request;
 class DinamisController extends Controller
 {
     public function home(){
-        return view('pages.user.dinamis.home');
+        $product=Product::query()
+        
+        
+        ->leftJoin('users', 'products.id_user', '=', 'users.id')
+        ->leftJoin('categories', 'products.id_category', '=', 'categories.id')
+        ->select('products.image as product_image','products.name as product_name', 'products.*', 'users.*', 'categories.title as categories_title','categories.*')
+        ->get();
+        $categories=Category::all();
+        return view('pages.user.dinamis.home', ['products'=>$product, 'categories' => $categories]);
     }
     public function about(){
         return view('pages.user.dinamis.about');

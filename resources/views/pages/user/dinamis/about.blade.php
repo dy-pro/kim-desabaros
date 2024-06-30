@@ -8,7 +8,7 @@
                 <div class="row align-items-md-center">
                     <div class="col-lg-12 alignc">
 						<div class="">
-							<img class="img-fluid margin-b30" src="{{ asset('frontend/images/logo_desa.png')}}" alt="" style="max-width: 230px"/>
+							<img class="img-fluid margin-b30" src="{{ asset('frontend/images/logo_desa.png')}}" alt="" style="max-width: 200px"/>
 							<h2 class="display-4 margin-bm30"><b>Selamat datang</b> di website resmi Desa Baros</h2>
 							<p style="color: #2B5796">Desa Baros termasuk wilayah Kecamatan Arjasari Kabupaten Bandung dengan luas wilayah 419,7 Ha. dengan ketinggian dataran rerata 600 – 1100 m di atas permukaan laut.</p>
 							<br>
@@ -132,7 +132,7 @@
 @endsection
 
 @section('script')
-<script>
+{{-- <script>
     function startCounter(maxCount, elementId) {
         let counter = 0;
         const interval = 20; // 0.25 seconds in milliseconds
@@ -149,5 +149,5 @@
 
     startCounter(5,"count-awards"),
     startCounter(75,"awards-count")
-    </script>
+    </script> --}}
 @endsection

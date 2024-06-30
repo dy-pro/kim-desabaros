@@ -3,17 +3,17 @@
         <!-- MOBILE MENU -->
         <ul class="menu-mobile">
             <li class="menu-item"><a href="/">Beranda</a></li>
-            <li class="menu-item"><a href="tentang-desa">Tentang Desa</a></li>
+            <li class="menu-item"><a href="/about">Tentang Desa</a></li>
             <li class="menu-item">
                 <a href="#">Informasi</a>
                 <ul class="sub-menu">
-                    <li class="sub-item"><a href="kegiatan">Kegiatan</a></li>
-                    <li class="sub-item"><a href="Lembaga-komunitas">Lembaga/Komunitas</a>
+                    <li class="sub-item"><a href="/activity">Kegiatan</a></li>
+                    <li class="sub-item"><a href="/community">Lembaga/Komunitas</a>
                     </li> 
                 </ul>
             </li>
             <li class="menu-item">
-                <a href="produk-desa">Produk Desa</a>
+                <a href="/product">Produk Desa</a>
             </li>
             </li>
 
