@@ -45,6 +45,7 @@ class ActivityController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'location' =>'nullable|string|max:255',
             'id_community' => 'nullable|integer|exists:communities,id',
             'eventStartDate' => 'required|date',
             'eventStartTime' => 'required',
@@ -73,6 +74,9 @@ class ActivityController extends Controller
             'id_community' => $request->id_community,
             'name' => $request->name,
             'description' => $request->description,
+            'location'=> $request->location,
+            'contact_name'=> $request->contact_name,
+            'contact_phone'=> $request->contact_phone,
             'datetime_start' => $datetimeStart,
             'datetime_end' => $datetimeEnd,
             'image' => $imagePath, // Menyimpan path Poster
@@ -127,6 +131,9 @@ class ActivityController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'location' =>'nullable|string|max:255',
+            'contact_name'=>'nullable|string',
+            'contact_phone'=>'nullable|string|max:16',
             'id_community' => 'nullable|exists:communities,id',
             'eventStartDate' => 'required|date',
             'eventStartTime' => 'required',
@@ -141,6 +148,9 @@ class ActivityController extends Controller
         // Update data
         $activity->name = $request->name;
         $activity->description = $request->description;
+        $activity->location = $request->location;
+        $activity->contact_name = $request->contact_name;
+        $activity->contact_phone = $request->contact_phone;
         $activity->id_community = $request->id_community;
 
         // Kombinasikan tanggal dan waktu untuk datetime_start dan datetime_end

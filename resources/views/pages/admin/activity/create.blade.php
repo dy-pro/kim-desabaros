@@ -37,6 +37,11 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="location">Lokasi</label>
+                                <textarea name="location"  class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan"></textarea>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="id_community">Penyelenggara</label>
                                 <select class="form-control select2" style="width: 100%;" name="id_community">
                                     <option value="" disabled selected>Pilih penyelenggara</option>
@@ -77,6 +82,19 @@
                                     </div>
                                 </fieldset>
                             </div>
+                            <fieldset class="border p-4 flex-fill">
+                                <legend class="w-auto"><h6>Narahubung</h6></legend>
+                                <div class="form-col">
+                                    <div class="form-group">
+                                        <label for="contact_name">Nama Kontak</label>
+                                        <input type="text" name="contact_name" class="form-control" id="contact_name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact_phone">Nomor Telpon</label>
+                                        <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone" required>
+                                    </div>
+                                </div>
+                            </fieldset>
 
                             <div class="form-group">
                                 <label for="exampleInputFile">Poster Kegiatan (Max 1MB, PNG dan JPG)</label>

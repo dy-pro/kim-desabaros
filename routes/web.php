@@ -31,7 +31,6 @@ Route::get('/login', function(){
 
 Route::middleware(WithLogin::class)->group(function(){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         
         Route::get('/user_management', [DashboardController::class, 'user_management'])->name('pengguna');
         Route::get('/user_management/createUser', [DashboardController::class, 'createUser'])->name('tambah_pengguna');
@@ -75,6 +74,8 @@ Route::middleware('auth')->group(function(){
         Route::prefix('activity_management')->controller(DashboardController::class)->group(function() {
                 Route::get('/', 'activity_management')->name('activity.index');
                 Route::get('/createActivity','createActivity')->name('activity.create');
+                Route::get('/{activityId}/showActivity','showActivity')->name('activity.show');
+                
                 Route::post('/storeActivity', 'storeActivity')->name('activity.store');
                 Route::get('/{activityId}/editActivity', 'editActivity')->name('activity.edit');
                 Route::post('/{activityId}/updateActivity', 'updateActivity')->name('activity.update');
@@ -89,7 +90,7 @@ Route::controller(DinamisController::class)->group(function() {
         Route::get('/',  'home')->name('beranda');
         Route::get('/about', 'about')->name('tentang_desa');
         Route::get('/activity', 'activity')->name('kegiatan');
-        Route::get('/activity/detail_activity', 'detail_activity')->name('detail_kegiatan');
+        Route::get('/activity/{activityId}/detail_activity', 'detail_activity')->name('detail_kegiatan');
         Route::get('/community', 'community')->name('lembaga_komunitas');
         Route::get('/product', 'product')->name('produk_desa');
         // Route::resource('product', ProductController::class);

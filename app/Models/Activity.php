@@ -16,6 +16,8 @@ class Activity extends Model
         'image',
         'description',
         'location',
+        'contact_name',
+        'contact_phone',
         'datetime_start',
         'datetime_end',
     ];
