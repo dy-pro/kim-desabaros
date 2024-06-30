@@ -28,6 +28,7 @@
                                     <th>Nama Kegiatan</th>
                                     <th>Gambar Poster</th>
                                     <th>Deskripsi</th>
+                                    <th>Lokasi</th>
                                     <th>Penyelenggara</th>
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
@@ -46,6 +47,11 @@
                                         <td>
                                             {{ $activity->description }}
                                         </td>
+
+                                        <td>
+                                            {{ $activity->location }}
+                                        </td>
+
                                         <td>
                                             {{ $activity->community ? $activity->community->name : 'Tidak Ada' }}
                                         </td>

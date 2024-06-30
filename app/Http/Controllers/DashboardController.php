@@ -18,7 +18,7 @@ class DashboardController extends Controller
     public function dashboard(){
         // dd(Auth::user()->role);
         if(Auth::user()==null || Auth::user()->role == 'penjual' ){
-            return redirect()->route('produk.index');
+            return redirect()->route('product.index');
         }
         return view('pages.admin.dashboard');
     }
