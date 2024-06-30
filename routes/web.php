@@ -95,6 +95,7 @@ Route::controller(DinamisController::class)->group(function() {
         Route::get('/activity/detail_activity', 'detail_activity')->name('detail_kegiatan');
         Route::get('/community', 'community')->name('lembaga_komunitas');
         Route::get('/product', 'product')->name('produk_desa');
+        Route::get('/product/search', 'search')->name('products.search');
         // Route::resource('product', ProductController::class);
 });
 
