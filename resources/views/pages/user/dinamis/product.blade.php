@@ -79,24 +79,6 @@
     </div>
 </div>
 
-<!-- Add this script at the end of your HTML file -->
-<script>
-    document.getElementById('productSearch').addEventListener('input', function () {
-        const searchQuery = this.value.toLowerCase();
-        const products = document.querySelectorAll('.item-portfolio');
-
-        products.forEach(function (product) {
-            const productName = product.querySelector('.card-title').innerText.toLowerCase();
-            if (productName.includes(searchQuery)) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    });
-</script>
-
-
  <!-- SECTION TESTIMONI -->
  <div id="home-section-3-3" class="section-holder home-section-3-3 margin-b50">
     <div class="row g-0 align-items-center">
@@ -164,6 +146,22 @@
 </div>
 <!-- /SECTION TESTIMONI -->	
 {{-- /KATALOG --}}
-{{-- @push('script')
-@endpush --}}
+
+<!-- Add this script at the end of your HTML file -->
+<script>
+    document.getElementById('productSearch').addEventListener('input', function () {
+        const searchQuery = this.value.toLowerCase();
+        const products = document.querySelectorAll('.item-portfolio');
+
+        products.forEach(function (product) {
+            const productName = product.querySelector('.card-title').innerText.toLowerCase();
+            if (productName.includes(searchQuery)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+</script>
+
 @endsection
