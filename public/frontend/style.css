@@ -874,6 +874,9 @@ height: 20px;
 	outline: none;
 }
 
+.nav-holder-3 {
+    margin-right: auto;
+}
 
 /* Mengatur warna hover sub menu */
 .menu-nav ul li a:hover,
@@ -1287,6 +1290,7 @@ z-index: 100;
 .header-container{
 display: flex;
 align-items: center;
+justify-content: space-between;
 }
 
 .logo-2{
@@ -1306,6 +1310,7 @@ align-items: center;
 .btn-header {
     text-align: right;
 	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .btn-header-2{
@@ -4134,6 +4139,14 @@ footer .container {
 	max-width: 100%;
 }
 
+.product-image {
+    width: auto;
+    height: 300px; /* Set your desired maximum height here */
+    object-fit: cover; /* Ensure the image covers the area */
+    object-position: center; /* Center the image */
+    border-radius: 10px 10px 0 0; /* Apply the same border radius */
+}
+
 .icon-img img{
 	background: none;
 }
@@ -5592,6 +5605,12 @@ body.hidden-scroll {
 	}
 	
 }
+/* @media (min-width: 767px) {
+	.responsive-img {
+        display: none;
+    }
+} */
+
 
 @media (max-width: 767px) {
 	
@@ -5913,7 +5932,7 @@ body.hidden-scroll {
 	
 	.btn-header,
 	.btn-header-2{
-		display: none;
+		margin-right: 10px;
 	}
 	
 	.page-links a {
@@ -5948,7 +5967,9 @@ body.hidden-scroll {
 		text-align: center;
 	
 	}
-
+	.responsive-img {
+        display: none;
+    }
 	
 .read-more,
 .read-more-v2{
