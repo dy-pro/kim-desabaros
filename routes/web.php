@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DinamisController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\CategoryController;
@@ -29,9 +30,12 @@ Route::get('/login', function(){
         return view('auth.login');
 });
 
+Route::get('/register', [RegisteredUserController::class, 'store']);
+
+
 Route::middleware(WithLogin::class)->group(function(){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('ddashboar');
         
         Route::get('/user_management', [DashboardController::class, 'user_management'])->name('pengguna');
         Route::get('/user_management/createUser', [DashboardController::class, 'createUser'])->name('tambah_pengguna');

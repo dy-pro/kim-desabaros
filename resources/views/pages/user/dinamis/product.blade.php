@@ -26,7 +26,7 @@
 <div id="home-section-1-2" class="section-holder home-section-1-2">
     <div class="container">
         <div class="row align-items-center margin-t200">
-            <div class="col-lg-6">
+            <div class="col-lg-6 fade-in-up">
                 <h2 class="display-4 margin-t50">Produk Desa</h2>
             </div>
             <div class="col-lg-6">
@@ -42,36 +42,36 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div id="product-container" class="portfolio-grid-container portfolio-grid-container-v2 margin-b100">
-                    <div class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry d-flex flex-wrap">
-                        @foreach ($products as $product)
-                            <!-- /item-portfolio -->
-                            <div class="item-portfolio item-3cols {{ strtolower($product->category_title) }} flex-item">
-                                @php
-                                    $product->price = number_format($product->price, 0, ',', '.');
-                                @endphp
-                                <div class="w-100">
-                                    <div class="card">
-                                        <div class="card-header p-0">
-                                            <a href="/product">
-                                                <img class="img-fluid w-100 radius10-top" src="{{ asset('products/'.$product->product_image) }}" alt="{{ $product->name }}" />
-                                            </a>
-                                        </div>
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title margin-b10">{{ $product->product_name }}</h5>
-                                            <div class="card-text team-position">Rp {{ $product->price }}</div>
-                                            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
-                                                <input type="tel" class="form-control phone" hidden data-product-id="{{ $product->id }}" value="{{ $product->whatsapp }}" style="padding: .375rem .75rem" />
-                                                <input type="number" class="form-control quantity" data-product-id="{{ $product->id }}" value="1" style="padding: .375rem .75rem" />
-                                                <a class="btn btn-primary whatsappButton" href="#" data-product-id="{{ $product->id }}" target="_blank">Beli</a>
+                <div class="row margin-b80">
+                    <div class="col-lg-12">        
+                        <div class="portfolio-grid-container portfolio-grid-container-v2 margin-b100">
+                            <div class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry">
+                                @foreach ($products as $product )
+                                <!-- /item-portfolio -->
+                                <div class="item-portfolio item-3cols {{strtolower($product->category_title)}}">
+                                    @php
+                                        $product->price = number_format($product->price, 0, ',', '.');
+                                    @endphp
+                                    <div class="w-100">
+                                        <div class="card">
+                                            <div class="card-header p-0">
+                                                <a href="/product">
+                                                    <img class="product-image img-fluid w-100 radius10-top" src="{{ asset('products/'.$product->product_image)}}" alt="{{ $product->name }}" />
+                                                </a>
+                                            </div>
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title margin-b10">{{ $product->product_name }}</h5>
+                                                <div class="card-text team-position">Rp {{ $product->price }}</div>
+                                                <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                                                    <input type="tel" class="form-control phone" hidden data-product-id="{{ $product->id}}" value="{{ $product->whatsapp}}" style="padding: .375rem .75rem"/>
+                                                    <input type="number" class="form-control quantity" data-product-id="{{ $product->id}}" value="1" style="padding: .375rem .75rem"/>
+                                                    <a class="btn btn-primary whatsappButton" href="#" data-product-id="{{ $product->id}}" target="_blank">Beli</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
                     </div>
                 </div>
             </div>
