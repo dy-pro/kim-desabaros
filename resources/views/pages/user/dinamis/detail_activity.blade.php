@@ -12,7 +12,7 @@
                     <!-- /padding-lr200 -->	
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 </div>
 <div id="wrap-content" class="page-content custom-page-template">
@@ -27,17 +27,17 @@
                                 <figure><img src="{{ asset('frontend/images/5.png') }}" alt="" class="img-fluid" width="300"></figure>
                             </div>
                         </div>
-                        <p style="text-align: center">Kegiatan kerja bakti sosial ini bertujuan untuk mempererat tali silaturahmi antar warga, meningkatkan kebersihan dan kerapihan lingkungan, serta membantu masyarakat yang membutuhkan. Kegiatan ini juga menjadi sarana edukasi mengenai pentingnya menjaga kebersihan dan kesehatan lingkungan.</p>
+                        {{-- @foreach ($activities as $activity  --}}
+                        <p style="text-align: center">{{ $activity->description }}</p>
                         
                         
-                        @foreach ($activities as $activity )
                         <blockquote class="wp-block-quote">
                             <p>Jadwal Kegiatan:<br>
                                 <p>{{ $activity->datetime_start }}<br></p>
-                                Lokasi: Kec. Arjasari, Kantor Desa<br><br>
+                                {{ $activity->location }}<br><br>
                                 
                             
-                        @endforeach            
+                        {{-- @endforeach             --}}
                                 </p>
                         </blockquote>
                         
@@ -47,18 +47,27 @@
                     <!-- /single-post-content -->		
                 </article>
             </div>
-           
+        
         </div>
         <!-- /row -->
     </div>
     <!-- /container -->
 </div>
 
+@if ($activity->contact_name && $activity->contact_phone != null)
 <div class="contact-detail">
     <p class="contact-detail-text">
         Untuk informasi lebih lanjut dan partisipasi, hubungi:<br>
-        <b>Cahaya Dewi</b><br>
-        Telepon: (+123-456-7890)
+        <b>{{ $activity->contact_name }}</b><br>
+        {{ $activity->contact_phone }}
     </p>
+</div> 
+@else
+<div>
+    &nbsp;
 </div>
+
+@endif
+
+
 @endsection
