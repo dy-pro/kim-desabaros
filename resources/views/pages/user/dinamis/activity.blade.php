@@ -58,7 +58,7 @@
                                             {{ $activity->datetime_start }}
                                         </div>
                                     </div>
-                                    <a class="read-more-v3" href="/activity/detail_activity">
+                                    <a class="read-more-v3" href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}">
                                         Lihat Selengkapnya
                                     </a>
                                 </div>

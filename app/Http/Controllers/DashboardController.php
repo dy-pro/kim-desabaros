@@ -12,14 +12,20 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CommunityController;
+use App\Models\Community;
 
 class DashboardController extends Controller
 {
     public function dashboard(){
         // dd(Auth::user()->role);
         if(Auth::user()==null || Auth::user()->role == 'penjual' ){
-            return redirect()->route('produk.index');
+            return redirect()->route('product.index');
         }
+        $user = User::where('role' ,'=', 'penjual')->count();
+        $product = Product::count();
+        $category = Category::count();
+        $community = Community::count();
+        $activity = Activity::count();
         return view('pages.admin.dashboard');
     }
 

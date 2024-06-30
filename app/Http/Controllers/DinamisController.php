@@ -30,9 +30,7 @@ class DinamisController extends Controller
         return view('pages.user.dinamis.activity', compact('activities'));
     }
     public function detail_activity($activityId){
-        // $activities= Activity::all();
-        $activity = Activity::where('id', $activityId)->first();
-
+        $activity= Activity::where('id', $activityId)->first();
         return view('pages.user.dinamis.detail_activity', ['activity'=>$activity]);
     }
     public function community(){
@@ -51,5 +49,23 @@ class DinamisController extends Controller
         ->get();
         $categories=Category::all();
         return view('pages.user.dinamis.product', ['products'=>$product, 'categories' => $categories]);
+    }
+
+    public function search(Request $request)
+    {
+        $searchQuery = $request->input('search');
+
+        // Ambil kategori yang ada
+        $categories = Category::all();
+
+        // Ambil produk yang sesuai dengan pencarian
+        $products = Product::query()
+        ->leftJoin('users', 'products.id_user', '=', 'users.id')
+        ->leftJoin('categories', 'products.id_category', '=', 'categories.id')
+        ->where('products.name', 'like', '%' . $searchQuery . '%')
+        ->select('products.image as product_image','products.name as product_name', 'products.*', 'users.*', 'categories.title as categories_title','categories.*')
+        ->get();
+
+        return view('pages.user.dinamis.product', compact('products', 'categories'));
     }
 }

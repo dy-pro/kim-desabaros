@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DinamisController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\CategoryController;
@@ -29,8 +30,10 @@ Route::get('/login', function(){
         return view('auth.login');
 });
 
+Route::get('/register', [RegisteredUserController::class, 'store']);
+
+
 Route::middleware(WithLogin::class)->group(function(){
-        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         
         Route::get('/user_management', [DashboardController::class, 'user_management'])->name('pengguna');
@@ -75,6 +78,8 @@ Route::middleware('auth')->group(function(){
         Route::prefix('activity_management')->controller(DashboardController::class)->group(function() {
                 Route::get('/', 'activity_management')->name('activity.index');
                 Route::get('/createActivity','createActivity')->name('activity.create');
+                Route::get('/{activityId}/showActivity','showActivity')->name('activity.show');
+                
                 Route::post('/storeActivity', 'storeActivity')->name('activity.store');
                 Route::get('/{activityId}/editActivity', 'editActivity')->name('activity.edit');
                 Route::post('/{activityId}/updateActivity', 'updateActivity')->name('activity.update');
@@ -89,9 +94,10 @@ Route::controller(DinamisController::class)->group(function() {
         Route::get('/',  'home')->name('beranda');
         Route::get('/about', 'about')->name('tentang_desa');
         Route::get('/activity', 'activity')->name('kegiatan');
-        Route::get('/activity/detail_activity', 'detail_activity')->name('detail_kegiatan');
+        Route::get('/activity/{activityId}/detail_activity', 'detail_activity')->name('detail_kegiatan');
         Route::get('/community', 'community')->name('lembaga_komunitas');
         Route::get('/product', 'product')->name('produk_desa');
+        Route::get('/product/search', 'search')->name('products.search');
         // Route::resource('product', ProductController::class);
 });
 
