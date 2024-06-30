@@ -24,6 +24,7 @@
                         <table id="example1" class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Nama Kegiatan</th>
                                     <th>Gambar Poster</th>
                                     <th>Deskripsi</th>
@@ -38,6 +39,7 @@
                             <tbody>
                                 @foreach ( $activities as $activity )
                                     <tr>
+                                        <td>{{ $loop->iteration++ }}</td>
                                         <td>{{ $activity->name }}</td>
                                         <td>
                                             <img src="{{ $activity->image ? Storage::url($activity->image) : asset('AdminLTE/dist/img/default-150x150.png') }}" alt="Product 1" class="img-square img-size-64 mr-2">
