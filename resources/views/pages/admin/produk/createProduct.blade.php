@@ -30,8 +30,13 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="price">Harga Produk</label>
-                        <input type="number" name="price" class="form-control" placeholder="Harga">
+                      <label for="price">Harga Produk</label>
+                      <input type="number" name="price" class="form-control" placeholder="Harga">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="description">Keterangan</label>
+                      <input type="text" name="description" class="form-control" placeholder="Keterangan Produk">
                     </div>
                     
                     <div class="form-group">
