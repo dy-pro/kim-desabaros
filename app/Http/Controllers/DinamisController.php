@@ -22,8 +22,8 @@ class DinamisController extends Controller
         return view('pages.user.dinamis.activity', compact('activities'));
     }
     public function detail_activity(){
-
-        return view('pages.user.dinamis.detail_activity');
+        $activities= Activity::all();
+        return view('pages.user.dinamis.detail_activity', ['activities'=>$activities]);
     }
     public function community(){
         // Mengambil data pengguna tabel Community
