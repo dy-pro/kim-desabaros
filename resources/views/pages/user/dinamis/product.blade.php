@@ -40,7 +40,8 @@
         </div>
                 <div class="row">
                     <div class="col-lg-12">        
-                        <div class="portfolio-grid-container portfolio-grid-container-v2 margin-b100">
+                        <input type="text" id="product-search" class="form-control mb-3" placeholder="Cari Produk : ">
+                        <div id="product-container" class="portfolio-grid-container portfolio-grid-container-v2 margin-b100">
                             <div class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry">
                                 @foreach ($products as $product )
                                     <!-- /item-portfolio -->
@@ -156,4 +157,38 @@
 {{-- /KATALOG --}}
 {{-- @push('script')
 @endpush --}}
+
+<script>
+    $(document).ready(function() {
+        var table = $('#example1').DataTable({
+            "language": {
+                "lengthMenu": "_MENU_ Filter",
+                search: 'Cari Produk : '
+            },
+            "initComplete": function(settings, json) {
+                $('#product-container').show();
+            },
+            "bPaginate": false,
+            "bFilter": true,
+            "bInfo": false,
+            "bAutoWidth": false,
+            "aoColumns": [
+                { "bVisible": false }, // Gambar
+                { "bVisible": false }, // Nama Produk
+                { "bVisible": false }, // Kategori
+                { "bVisible": false }, // Harga
+                { "bVisible": false }  // Aksi
+            ],
+            "dom": 'rt'
+        });
+
+        // Custom search functionality
+        $('#product-search').on('keyup', function () {
+            table.search(this.value).draw();
+        });
+
+        // Hide table element as we are using its data only for search
+        $('#example1_wrapper').hide();
+    });
+</script>
 @endsection

@@ -21,13 +21,13 @@
                         </div>
 
                         @if(session('success'))
-                            <div class="alert alert-success">
+                            <div class="alert alert-success" id="success-alert">
                                 {{ session('success') }}
                             </div>
                         @endif
 
                         @if(session('error'))
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger" id="error-alert">
                                 {{ session('error') }}
                             </div>
                         @endif
@@ -119,25 +119,40 @@
     </style>
     
     <script>
-        // DataTable
-        $(document).ready(function() {
+        document.addEventListener('DOMContentLoaded', function () {
+    
+            // DataTable
             $('#example1').DataTable({
                 "language": {
                     "lengthMenu": "_MENU_ Filter",
                     search: 'Cari Produk : '
-
                 }
             });
-        });
-
-        // Sweet Alert
-        document.addEventListener('DOMContentLoaded', function () {
+    
+            // Function to hide the alert after a few seconds
+            function hideAlert(targetId) {
+                var target = document.getElementById(targetId);
+                if (!target) {
+                    console.log(`Element with ID ${targetId} not found`);
+                    return;
+                }
+                console.log(`Hiding element with ID ${targetId}`);
+                target.style.display = 'none';
+                console.log(`Element with ID ${targetId} hidden`);
+            }
+    
+            // Automatically hide success alert after 3,5 seconds
+            setTimeout(() => hideAlert('success-alert'), 3500);
+    
+            // Automatically hide error alert after 3,5 seconds
+            setTimeout(() => hideAlert('error-alert'), 3500);
+    
             // Event listener untuk tombol delete
             document.querySelectorAll('.btn-delete').forEach(button => {
                 button.addEventListener('click', function () {
                     // Dapatkan ID Produk dari atribut data-id
                     const productId = this.getAttribute('data-id');
-
+    
                     // Tampilkan SweetAlert konfirmasi
                     Swal.fire({
                         title: 'Apakah Anda yakin?',
@@ -152,22 +167,22 @@
                             // Jika pengguna mengkonfirmasi, kirim form delete secara dinamis
                             const form = document.createElement('form');
                             form.method = 'POST';
-                            form.action = `/product_management/${productId}/deleteProduct`
-
+                            form.action = `/product_management/${productId}/deleteProduct`;
+    
                             // Tambahkan token CSRF ke form
                             const csrfInput = document.createElement('input');
                             csrfInput.type = 'hidden';
                             csrfInput.name = '_token';
                             csrfInput.value = '{{ csrf_token() }}';
                             form.appendChild(csrfInput);
-
+    
                             // Tambahkan input method DELETE ke form
                             const methodInput = document.createElement('input');
                             methodInput.type = 'hidden';
                             methodInput.name = '_method';
                             methodInput.value = 'DELETE';
                             form.appendChild(methodInput);
-
+    
                             // Tambahkan form ke body dan submit
                             document.body.appendChild(form);
                             form.submit();
@@ -175,23 +190,24 @@
                     });
                 });
             });
-        });
-
-        $(document).ready(function () {
-            //   $("#example1").DataTable({     
-            //     "responsive": true, "lengthChange": false, "autoWidth": false,
-            //     "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            //   }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            //   $('#example2').DataTable({
-            //     "paging": true,
-            //     "lengthChange": false,
-            //     "searching": false,
-            //     "ordering": true,
-            //     "info": true,
-            //     "autoWidth": false,
-            //     "responsive": true,
-            //   });     
+    
+            $(document).ready(function () {
+                //   $("#example1").DataTable({     
+                //     "responsive": true, "lengthChange": false, "autoWidth": false,
+                //     "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                //   }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                //   $('#example2').DataTable({
+                //     "paging": true,
+                //     "lengthChange": false,
+                //     "searching": false,
+                //     "ordering": true,
+                //     "info": true,
+                //     "autoWidth": false,
+                //     "responsive": true,
+                //   });     
+            });
         });
     </script>
+    
 
 @endsection
