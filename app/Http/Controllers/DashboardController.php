@@ -26,7 +26,14 @@ class DashboardController extends Controller
         $category = Category::count();
         $community = Community::count();
         $activity = Activity::count();
-        return view('pages.admin.dashboard');
+
+        return view('pages.admin.dashboard', [
+            'user' => $user,
+            'product' => $product,
+            'category' => $category,
+            'community' => $community,
+            'activity' => $activity,
+        ]);
     }
 
     //User
