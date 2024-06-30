@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DinamisController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\CategoryController;
@@ -28,6 +29,9 @@ Route::resource('category',CategoryController::class);
 Route::get('/login', function(){
         return view('auth.login');
 });
+
+Route::get('/register', [RegisteredUserController::class, 'store']);
+
 
 Route::middleware(WithLogin::class)->group(function(){
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
@@ -93,6 +97,7 @@ Route::controller(DinamisController::class)->group(function() {
         Route::get('/activity/{activityId}/detail_activity', 'detail_activity')->name('detail_kegiatan');
         Route::get('/community', 'community')->name('lembaga_komunitas');
         Route::get('/product', 'product')->name('produk_desa');
+        Route::get('/product/search', 'search')->name('products.search');
         // Route::resource('product', ProductController::class);
 });
 
