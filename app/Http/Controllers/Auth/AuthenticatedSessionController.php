@@ -24,12 +24,30 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-    
-        $request->authenticate();
+        // Validasi bahwa email dan password tidak kosong
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
 
-        $request->session()->regenerate();
+        // Coba autentikasi pengguna
+        if (Auth::attempt($credentials)) {
+            // Jika autentikasi berhasil, arahkan ke halaman beranda
+            $request->session()->regenerate();
+            return redirect()->intended('dashboard');
+        }
 
-        return redirect()->route('dashboard');
+        // Jika autentikasi gagal, cek apakah user ada dan tentukan pesan kesalahan
+        $errors = [];
+        $user = \App\Models\User::where('email', $credentials['email'])->first();
+        if (!$user) {
+            $errors['email'] = 'Email tidak ditemukan';
+        } else {
+            $errors['password'] = 'Kata sandi salah';
+        }
+
+        // Jika data tidak valid atau autentikasi gagal, kembalikan ke halaman login dengan pesan kesalahan
+        return redirect()->back()->withErrors($errors)->withInput($request->except('password'));
     }
 
     /**

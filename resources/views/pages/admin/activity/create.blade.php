@@ -43,12 +43,25 @@
 
                             <div class="form-group">
                                 <label for="id_community">Penyelenggara</label>
-                                <select class="form-control select2" style="width: 100%;" name="id_community">
+                                <select class="form-control select2" style="width: 100%;" name="id_community" id="id_community">
                                     <option value="" disabled selected>Pilih penyelenggara</option>
                                     @foreach($communities as $community)
                                         <option value="{{ $community->id }}">{{ $community->name }}</option>
                                     @endforeach
                                 </select>
+                                <!-- Tombol untuk menambah komunitas baru -->
+                                <div class="form-group my-3">
+                                    <a href="javascript:void(0);" id="addNewCommunityBtn" style="color: #007bff; text-decoration: underline;">+ Tambah Penyelenggara Baru</a>
+                                </div>
+                            </div>
+
+                            <!-- Form Tambah Komunitas Baru -->
+                            <div id="newCommunityForm" style="display: none;">
+                                <h5>Tambah Penyelenggara Baru</h5>
+                                <div class="form-group">
+                                    <label for="new_community_name">Nama Lembaga/Komunitas</label>
+                                    <input type="text" name="new_community_name" class="form-control" id="new_community_name" placeholder="Masukkan nama komunitas baru">
+                                </div>
                             </div>
 
                             <div class="d-flex justify-content-between my-4">
@@ -82,6 +95,7 @@
                                     </div>
                                 </fieldset>
                             </div>
+
                             <fieldset class="border p-4 flex-fill">
                                 <legend class="w-auto"><h6>Narahubung</h6></legend>
                                 <div class="form-col">
@@ -90,7 +104,7 @@
                                         <input type="text" name="contact_name" class="form-control" id="contact_name" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="contact_phone">Nomor Telpon</label>
+                                        <label for="contact_phone">Nomor Telepon</label>
                                         <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone" required>
                                     </div>
                                 </div>
@@ -134,6 +148,23 @@
             var fileName = $(this).val().split('\\').pop(); 
             // Update label custom-file-label dengan nama file yang dipilih
             $(this).next('.custom-file-label').html(fileName);
+        });
+    });
+</script>
+
+<script>
+    //Script untuk menghandle form input data komunitas baru
+    document.addEventListener('DOMContentLoaded', function() {
+        var addNewCommunityBtn = document.getElementById('addNewCommunityBtn');
+        var newCommunityForm = document.getElementById('newCommunityForm');
+
+        // Event listener untuk tombol tambah komunitas baru
+        addNewCommunityBtn.addEventListener('click', function() {
+            if (newCommunityForm.style.display === 'none' || newCommunityForm.style.display === '') {
+                newCommunityForm.style.display = 'block';
+            } else {
+                newCommunityForm.style.display = 'none';
+            }
         });
     });
 </script>

@@ -46,11 +46,21 @@ class CommunityController extends Controller
         // Validasi data yang dikirim
         $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'description' => 'required|string',
             'address' => 'required|string',
-            'visi' => 'nullable|string',
-            'misi' => 'nullable|string',
+            'visi' => 'required|string',
+            'misi' => 'required|string',
             'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' // max 2MB
+        ], [
+            'name.required' => 'Nama komunitas wajib diisi',
+            'description.required' => 'Deskripsi wajib diisi',
+            'address.required' => 'Alamat wajib diisi',
+            'logo.required' => 'Logo komunitas wajib diupload',
+            'logo.image' => 'Logo harus berupa gambar',
+            'logo.mimes' => 'Logo harus memiliki format jpeg, png, jpg, atau gif',
+            'logo.max' => 'Ukuran logo maksimal adalah 2MB',
+            'visi.required' => 'Visi wajib diisi',
+            'misi.required' => 'Misi wajib diisi',
         ]);
 
          // Mengelola file upload
@@ -87,11 +97,20 @@ class CommunityController extends Controller
         // Validasi input
         $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'description' => 'required|string',
             'address' => 'required|string',
-            'visi' => 'nullable|string',
-            'misi' => 'nullable|string',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'visi' => 'required|string',
+            'misi' => 'required|string',
+            'logo' => 'image|mimes:jpeg,png,jpg,gif|max:2048' // max 2MB
+        ], [
+            'name.required' => 'Nama komunitas wajib diisi',
+            'description.required' => 'Deskripsi wajib diisi',
+            'address.required' => 'Alamat wajib diisi',
+            'logo.image' => 'Logo harus berupa gambar',
+            'logo.mimes' => 'Logo harus memiliki format jpeg, png, jpg, atau gif',
+            'logo.max' => 'Ukuran logo maksimal adalah 2MB',
+            'visi.required' => 'Visi wajib diisi',
+            'misi.required' => 'Misi wajib diisi',
         ]);
     
         // Temukan komunitas berdasarkan ID
