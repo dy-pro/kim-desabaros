@@ -32,11 +32,7 @@
     <div class="container">
         <div class="row margin-t100">
             <div class="col-lg-12">
-                <ul class="portfolio-filter">
-                    <li><a class="view-more current" href="#" data-filter="*">Show All</a></li>
-                    <li class="lifestyle"><a class="view-more" href="#" data-filter=".lembaga">Lembaga</a></li>
-                    <li class="portrait"><a class="view-more" href="#" data-filter=".komunitas">Komunitas</a></li>
-                </ul>
+               
                 <div class="portfolio-grid-container">
                     <div class="portfolio-grid portfolio-layout-masonry">
 
@@ -58,11 +54,7 @@
                                     <h2 class="article-title display-6">
                                         {{ $community->name }}
                                     </h2>
-                                    <ul class="portfolio-categ">
-                                        <li>
-                                            <a href="#">Komunitas</a>
-                                        </li>
-                                    </ul>
+                                   
                                 </div>
                             </div>  
                         @endforeach

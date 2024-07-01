@@ -557,7 +557,7 @@ blockquote {
 }
 
 .contact-detail{
-	background-color: rgb(181, 211, 243);
+	background-color: rgb(181, 211, 243, 0.3);
 	 width: 100vw;
 	   padding :20px;
 
@@ -1061,6 +1061,8 @@ height: 20px;
 	list-style: none;
 	margin-left: 0;
 	margin-bottom: 0;
+	gap: 15px; /* Adjust the gap between icons */
+
 }
 
 .menu-contact ul:first-child li i{
@@ -1070,8 +1072,12 @@ height: 20px;
 
 .menu-contact i,
 .footer-contact a{
-	padding-right: 10px;
+	padding-right: 20px;
 	color: rgb(0, 0, 0);
+}
+
+.footer-contact a i {
+    font-size: 24px; /* Adjust the icon size as needed */
 }
 
 .mobile-phone {
@@ -2866,29 +2872,48 @@ border-radius: 10px;
 	text-align: left;
 
 }
-
 .d-flex {
     margin-top: 20px;
 }
-.quantity,
-.quantity-input {
-    width: 30%;
-    text-align: center;
-    margin-right: 10px;
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 40px;
+    color: #16345f;
+	background-color: rgba(199, 228, 255, 0.4);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.quantity {
+    width: 40px;
+    height: 40px;
+	align-self: center;
+	text-align: center;
+}
+
+.whatsappButton {
+    width: 100%;
+    height: auto;
 }
 
 .buy-button {
     width: 60%;
 }
 
-.whatsappButton{
-	width: 100%;
-}
 .btn-primary {
     background-color: #2B5796;
-
     color: white;
 }
+
 
 .btn-primary:hover {
     background-color: #2B5796;
@@ -3282,6 +3307,14 @@ transform: scale(1.6);
 
 
 /*** BLOG GRID ***/
+
+.blog-holder{
+margin-top: 100px;
+
+}
+
+.page-content{
+}
 
 .blog-item-2col-grid,
 .blog-item-3col-grid{
@@ -4132,6 +4165,9 @@ footer .container {
 * 
 */
 
+ul.portfolio-filter{
+	align-items: center;
+}
 .img-fluid,
 .single-post-content img,
 .custom-page-template img {
@@ -4140,8 +4176,8 @@ footer .container {
 }
 
 .product-image {
-    width: auto;
-    height: 300px; /* Set your desired maximum height here */
+    width: 350px;
+    height: 350px; /* Set your desired maximum height here */
     object-fit: cover; /* Ensure the image covers the area */
     object-position: center; /* Center the image */
     border-radius: 10px 10px 0 0; /* Apply the same border radius */
@@ -5215,9 +5251,23 @@ body.hidden-scroll {
 * 
 */
 
+@media (max-width: 576px) {
+   
+	.display-2,
+	.display-3 {
+		font-size: 2rem; /* Ukuran font untuk tablet */
+	}
+
+	
+}
+
 @media (min-width: 768px) {
 	.container {
 		max-width: 100%;
+	}
+	.display-2,
+	.display-3 {
+		font-size: 2rem; /* Ukuran font untuk tablet */
 	}
 
 }
@@ -5540,6 +5590,11 @@ body.hidden-scroll {
 		width: 100%;
 	}
 
+	.display-2,
+	.display-3{
+		font-size: 3rem;
+	}
+
 	.blog-item-1col-list {
 		display: block;
 	}
@@ -5688,10 +5743,9 @@ body.hidden-scroll {
 		word-wrap: break-word;
 	}
 	
-	.swiper-mt,
-	.video-container,
-	.top-single-bkg,
-	.section-holder{
+	.display-2,
+	.display-3{
+		font-size: 3rem;
 	}
 	
 	.meta-nav-holder,
@@ -5929,6 +5983,10 @@ body.hidden-scroll {
 }
 
 @media (max-width: 568px) {
+	.display-2,
+	.display-3 {
+		font-size: 1.7rem; /* Ukuran font untuk smartphone */
+	}
 	
 	.btn-header,
 	.btn-header-2{

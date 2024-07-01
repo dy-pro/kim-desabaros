@@ -80,47 +80,47 @@
 						<!-- /col-lg-12 -->
 					</div>
 					<!-- /row -->
-					<div class="row layout-masonry margin-b50less">
-						<div class="col-md-6 col-lg-4 blog-item-masonry">
-							<article class="blog-item blog-item-2col-grid">
-								<div class="post-image"> <img loading="lazy" src="{{ asset('frontend/images/5.png')}}" class="img-fluid" alt=" " width="750" height="750"> <a href="blog-single-post.html"> </a></div>
-								<div class="post-holder">
-									<h2 class="article-title display-6"><a href="blog-single-post.html">Potret Kegiatan Amal</a></h2>
-									<div class="meta-info">
-										<div class="meta-date-all">11 Januari, 2024</div>
-									</div>
-									<a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
-								</div>
-							</article>
-						</div>
-						<!-- /blog-item-masonry -->
-						<div class="col-md-6 col-lg-4 blog-item-masonry">
-							<article class="blog-item blog-item-2col-grid">
-								<div class="post-image"> <img loading="lazy" src="{{ asset('frontend/images/6.png')}}" class="img-fluid" alt=" " width="750" height="750"> <a href="blog-single-post.html"> </a></div>
-								<div class="post-holder">
-									<h2 class="article-title display-6"><a href="blog-single-post.html">Penerimaan Peserta Didik</a></h2>
-									<div class="meta-info">
-										<div class="meta-date-all">5 Februari, 2024</div>
-									</div>
-									<a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
-								</div>
-							</article>
-						</div>
-						<!-- /blog-item-masonry -->
-						<div class="col-md-6 col-lg-4 blog-item-masonry">
-							<article class="blog-item blog-item-2col-grid">
-								<div class="post-image"> <img loading="lazy" src="{{ asset('frontend/images/7.png')}}" class="img-fluid" alt=" " width="750" height="750"> <a href="blog-single-post.html"> </a></div>
-								<div class="post-holder">
-									<h2 class="article-title display-6"><a href="blog-single-post.html">Jadwal Bakti Sosial</a></h2>
-									<div class="meta-info">
-										<div class="meta-date-all">18 Juli, 2024</div>
-									</div>
-									<a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
-								</div>
-							</article>
-						</div>
-						<!-- /blog-item-masonry -->
-					</div>
+                    @foreach ( $activities->chunk(3) as $chunk  )
+                    <!-- /row -->
+                    <div class="row layout-masonry margin-b50less mb-3">
+                        @foreach ($chunk as $activity)
+                            <div class="col-md-6 col-lg-4 blog-item-masonry">
+                                <article class="blog-item blog-item-2col-grid">
+                                    <div class="post-image">
+                                        <img 
+                                            {{-- src="{{ asset('frontend/images/5.png')}}" --}}
+                                            src="{{ Storage::url($activity->image) }}"
+                                            class="img-fluid"
+                                            alt=" "
+                                            width="750"
+                                            height="750" 
+                                            loading="lazy"
+                                        > 
+                                        <a href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}"> </a>
+                                    </div>
+                                    <div class="post-holder">
+                                        <h2 class="article-title display-6">
+                                            <a href="blog-single-post.html">
+                                                {{ $activity->name }}
+                                            </a>
+                                        </h2>
+                                        <div class="meta-info">
+                                            <div class="meta-date-all">
+                                                {{ $activity->datetime_start }}
+                                            </div>
+                                        </div>
+                                        <a class="read-more-v3" href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}">
+                                            Lihat Selengkapnya
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- /blog-item-masonry -->
+                        @endforeach
+    
+                    </div>
+                    
+                @endforeach    
 					<!-- /row -->
 				</div>
 				<!-- /container -->
@@ -236,6 +236,9 @@
                         @foreach ($products->take(4) as $product )
 
 						<div class="col-md-6 col-lg-3 margin-b50">
+                            @php
+                            $product->price = number_format($product->price, 0, ',', '.');
+                        @endphp
                             <div class="card">
                                 <div class="card-header p-0">
                                     <a href="/product">
@@ -244,11 +247,17 @@
                                 </div>
                                 <div class="card-body text-center">
                                     <h5 class="card-title margin-b10">{{ $product->product_name }}</h5>
-                                    <div class="card-text team-position">Rp.{{ $product->price }}</div>
-                                    <div class="d-flex justify-content-center align-items-center mt-3">
-                                        <input type="tel" class="form-control phone" hidden data-product-id="{{ $product->id}}" value="{{ $product->whatsapp}}" style="padding: .375rem .75rem"/>
-                                                        <input type="number" class="form-control quantity"  data-product-id="{{ $product->id}}" value="1" style="padding: .375rem .75rem"/>
-                                                        <a class="btn btn-primary whatsappButton" href="#" data-product-id="{{ $product->id}}" target="_blank">Beli</a>
+                                    <div class="card-text team-position">Rp. {{ $product->price }}</div>
+                                    <div class="d-flex justify-content-center align-items-center mt-3 gap-3">
+                                        <input type="tel" class="form-control phone" hidden data-product-id="{{ $product->id }}" value="{{ $product->whatsapp }}" style="padding: .375rem .75rem"/>
+                                        
+                                        <div class="quantity-container">
+                                            <button class="quantity-btn minus">-</button>
+                                            <input type="number" class="quantity" data-product-id="{{ $product->id }}" step="1" min="1" max="" value="1" placeholder="" readonly/>
+                                            <button class="quantity-btn plus">+</button>
+                                        </div>
+                                        
+                                        <a class="btn btn-primary whatsappButton buy-button" href="#" data-product-id="{{ $product->id }}" target="_blank">Beli</a>
                                     </div>
                                 </div>
                             </div>
