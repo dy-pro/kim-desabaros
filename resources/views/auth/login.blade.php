@@ -19,8 +19,8 @@
 
 </head>
 
-<body class="hold-transition login-page">
-    <div class="login-box">
+<body class="hold-transition login-page" style="background-image:url('{{ asset('frontend/images/background23.png') }}');">
+    <div class="login-box" >
         <!-- /.login-logo -->
         <div class="card card-outline card-primary w-200">
             <div class="card-header text-center">

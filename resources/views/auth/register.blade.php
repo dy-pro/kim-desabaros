@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="hold-transition register-page">
+<body class="hold-transition register-page" style="background-image:url('{{ asset('frontend/images/background23.png') }}');">
     <div class="register-box">
         <!-- /.register-logo -->
         <div class="card card-outline card-primary w-200">

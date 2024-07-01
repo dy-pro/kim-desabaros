@@ -59,8 +59,7 @@
                                                 <img 
                                                     src="{{ asset('products/'.$product->image)}}"
                                                     alt="Product 1"
-                                                    class="img-size-64 mr-2"
-                                                >
+                                                    class="img-size-64 mr-2"/>
                                             </td>
                                             <td>
                                                 {{ $product->price }}
