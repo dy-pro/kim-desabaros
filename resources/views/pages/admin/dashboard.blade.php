@@ -672,7 +672,7 @@
           </div>
           <!-- /.card -->
         </div> --}}
-        <!-- /.col-md-6 -->
+        <!-- latest product -->
         <div class="col-lg-8">
           {{-- <div class="card">
             <div class="card-header border-0">
@@ -715,7 +715,7 @@
 
           <div class="card">
             <div class="card-header border-0">
-              <h3 class="card-title">Artikel Terbaru</h3>
+              <h3 class="card-title">Produk Terbaru</h3>
               <div class="card-tools">
                 <a href="#" class="btn btn-sm btn-tool">
                   <i class="fas fa-download"></i>
@@ -766,6 +766,27 @@
           </div>
           
         </div>
+
+        <h1> 5 Produk Terbaru</h1>
+        <ul>
+              @foreach ($latest_products as $latest_product )
+              <li>{{ $latest_product->name }} - {{ date('d/m/Y', strtotime($latest_product->created_at)) }}</li>                
+              @endforeach
+        </ul>
+<div> &nbsp; </div>
+<br>
+<br>
+        <h1> 5 Kegiatan Terbaru </h1>
+        <ul>
+              @foreach ($latest_activities as $latest_activity )
+              <li>{{ $latest_activity->name }} - {{ date('d/m/Y', strtotime($latest_activity->created_at)) }}</li>                
+              @endforeach
+        </ul>
+<br>
+<br>
+        
+
+
 
         <div class="col-lg-4">
           {{-- <div class="card">
