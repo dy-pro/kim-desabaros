@@ -23,6 +23,9 @@
                                     <label for="category">Nama Kategori</label>
                                     <input type="text" name="title"  class="form-control" id="name"
                                         value="{{ $category->title }}" placeholder="Nama Kategori">
+                                    @error('title')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 

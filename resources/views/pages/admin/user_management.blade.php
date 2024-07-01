@@ -45,7 +45,8 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>
-                                        <img src="{{ asset('users/'.$user->image)}}" alt="Product 1" class="img-size-32 mr-2">
+                                        <img src="{{ $user->image ? asset('users/'.$user->image) : asset('image/default-user.jpg') }}" alt="User Image" class="img-size-32 mr-2">
+                                        {{-- <img src="{{ asset('users/'.$user->image)}}" alt="Product 1" class="img-size-32 mr-2"> --}}
                                         {{ $user->name }}
                                     </td>
                                     <td>{{ $user->address }}</td>
