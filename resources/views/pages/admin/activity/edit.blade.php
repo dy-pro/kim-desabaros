@@ -49,6 +49,19 @@
                                         <option value="{{ $community->id }}" {{ $activity->id_community == $community->id ? 'selected' : '' }}>{{ $community->name }}</option>
                                     @endforeach
                                 </select>
+                                <!-- Tombol untuk menambah komunitas baru -->
+                                <div class="form-group my-3">
+                                    <a href="javascript:void(0);" id="addNewCommunityBtn" style="color: #007bff; text-decoration: underline;">+ Tambah Penyelenggara Baru</a>
+                                </div>
+                            </div>
+
+                            <!-- Form Tambah Komunitas Baru -->
+                            <div id="newCommunityForm" style="display: none;">
+                                <h5>Tambah Penyelenggara Baru</h5>
+                                <div class="form-group">
+                                    <label for="new_community_name">Nama Lembaga/Komunitas</label>
+                                    <input type="text" name="new_community_name" class="form-control" id="new_community_name" placeholder="Masukkan nama komunitas baru">
+                                </div>
                             </div>
 
                             <div class="d-flex justify-content-between my-4">
@@ -89,11 +102,11 @@
                                 <div class="form-col">
                                     <div class="form-group">
                                         <label for="contact_name">Nama Kontak</label>
-                                        <input type="text" name="contact_name" class="form-control" id="contact_name" required>
+                                        <input type="text" name="contact_name" class="form-control" id="contact_name" value="{{ $activity->contact_name }}" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="contact_phone">Nomor Telpon</label>
-                                        <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone" required>
+                                        <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone" value="{{ $activity->contact_phone }}" required>
                                     </div>
                                 </div>
                             </fieldset>
@@ -141,6 +154,23 @@
             var fileName = $(this).val().split('\\').pop(); 
             // Update label custom-file-label dengan nama file yang dipilih
             $(this).next('.custom-file-label').html(fileName);
+        });
+    });
+</script>
+
+<script>
+    //Script untuk menghandle form input data komunitas baru
+    document.addEventListener('DOMContentLoaded', function() {
+        var addNewCommunityBtn = document.getElementById('addNewCommunityBtn');
+        var newCommunityForm = document.getElementById('newCommunityForm');
+
+        // Event listener untuk tombol tambah komunitas baru
+        addNewCommunityBtn.addEventListener('click', function() {
+            if (newCommunityForm.style.display === 'none' || newCommunityForm.style.display === '') {
+                newCommunityForm.style.display = 'block';
+            } else {
+                newCommunityForm.style.display = 'none';
+            }
         });
     });
 </script>

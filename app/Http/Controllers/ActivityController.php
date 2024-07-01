@@ -51,7 +51,8 @@ class ActivityController extends Controller
             'eventStartTime' => 'required',
             'eventEndDate' => 'required|date',
             'eventEndTime' => 'required',
-            'image' => 'nullable|file|mimes:jpeg,png,jpg,gif|max:1024' // maksimal 1MB
+            'image' => 'nullable|file|mimes:jpeg,png,jpg,gif|max:1024', // maksimal 1MB
+            'new_community_name' => 'nullable|string|max:255'
         ], [
             'name.required' => 'Kamu harus masukkan nama kegiatannya'
         ]);
@@ -68,6 +69,23 @@ class ActivityController extends Controller
 
         // Menggabungkan tanggal dan waktu berakhir
         $datetimeEnd = $request->eventEndDate . ' ' . $request->eventEndTime;
+
+        // Menyimpan komunitas baru jika ada
+        if ($request->filled('new_community_name')) {
+            $community = Community::create([
+                'name' => $request->new_community_name,
+                'id_user' => auth()->id(), // Atur id_user ke pengguna yang sedang login
+                'address' => null, 
+                'logo' => null,    
+                'description' => null,
+                'visi' => null,
+                'misi' => null,
+            ]);
+
+            // Tetapkan id komunitas baru ke request untuk disimpan dalam aktivitas
+            $request->merge(['id_community' => $community->id]);
+        }
+
 
         // Menyimpan data ke database
         $activity = Activity::create([
@@ -144,6 +162,22 @@ class ActivityController extends Controller
 
         // Cari data kegiatan
         $activity = Activity::findOrFail($activityId);
+
+        // Menyimpan komunitas baru jika ada
+        if ($request->filled('new_community_name')) {
+            $community = Community::create([
+                'name' => $request->new_community_name,
+                'id_user' => auth()->id(), // Atur id_user ke pengguna yang sedang login
+                'address' => null, 
+                'logo' => null,    
+                'description' => null,
+                'visi' => null,
+                'misi' => null,
+            ]);
+
+            // Tetapkan id komunitas baru ke request untuk disimpan dalam aktivitas
+            $request->merge(['id_community' => $community->id]);
+        }
 
         // Update data
         $activity->name = $request->name;
