@@ -40,6 +40,9 @@
                             </div>
                         </div>
                     </div>
+                    @error('email')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" name="password" placeholder="Password" id="inputPassword">
                         <div class="input-group-append" onclick="togglePassword()">
@@ -48,6 +51,9 @@
                             </div>
                         </div>
                     </div>
+                    @error('password')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                     <div class="row">
                         <div class="col-8">
                             

@@ -16,6 +16,17 @@
                                     </div>
                                 </div>
 
+                                @if(session('success'))
+                                    <div class="alert alert-success" id="success-alert">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+
+                                @if(session('error'))
+                                    <div class="alert alert-danger" id="error-alert">
+                                        {{ session('error') }}
+                                    </div>
+                                @endif
 
                                 <div class="card-body table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">

@@ -18,7 +18,10 @@
                   <div class="card-body">
                     <div class="form-group">
                       <label for="name"><span class="text-danger">*</span>Nama</label>
-                      <input name="name"  type="text"  class="form-control" id="name" placeholder="Nama Lengkap" required>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Nama Lengkap" required>
+                      @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                     </div>
 
                       <div class="form-group">

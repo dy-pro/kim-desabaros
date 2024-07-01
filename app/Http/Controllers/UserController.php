@@ -19,6 +19,31 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6',
+            'whatsapp' => 'nullable|string|max:15',
+            'address' => 'nullable|string|max:255',
+            'role' => 'required|string|in:admin,user',
+            'image' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
+        ], [
+            'name.required' => 'Nama harus diisi.',
+            'name.max' => 'Nama maksimal 255 karakter.',
+            'email.required' => 'Email harus diisi.',
+            'email.email' => 'Email tidak valid.',
+            'email.unique' => 'Email sudah terdaftar.',
+            'password.required' => 'Password harus diisi.',
+            'password.min' => 'Password minimal 6 karakter.',
+            'whatsapp.max' => 'Nomor WhatsApp maksimal 15 karakter.',
+            'address.max' => 'Alamat maksimal 255 karakter.',
+            'role.required' => 'Peran harus dipilih.',
+            'role.in' => 'Peran tidak valid.',
+            'image.mimes' => 'Foto harus berupa file berformat jpg, jpeg, atau png.',
+            'image.max' => 'Ukuran file foto maksimal 2MB.',
+        ]);
+
         $payload = $request->all();
         
         $user=new User();
@@ -80,7 +105,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('success', 'Data berhasil diupdate.');
     }
 
     public function destroy(Request $request, $id){
@@ -89,7 +114,7 @@ class UserController extends Controller
 
         $user->delete();
 
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('success', 'Data berhasil dihapus.');
 
     }
 }
