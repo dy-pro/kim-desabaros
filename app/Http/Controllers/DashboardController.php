@@ -22,17 +22,27 @@ class DashboardController extends Controller
             return redirect()->route('product.index');
         }
         $user = User::where('role' ,'=', 'penjual')->count();
-        $product = Product::count();
-        $category = Category::count();
-        $community = Community::count();
-        $activity = Activity::count();
+        $product_total = Product::count();
+        $category_total = Category::count();
+        $community_total = Community::count();
+        $activity_total = Activity::count();
+
+
+        $latest_products = Product::latest()->take(5)->get();
+
+        $latest_activities = Activity::latest()->take(5)->get();
+
+        $latest_communities = Community::latest()->take(5)->get();
 
         return view('pages.admin.dashboard', [
             'user' => $user,
-            'product' => $product,
-            'category' => $category,
-            'community' => $community,
-            'activity' => $activity,
+            'product' => $product_total,
+            'category' => $category_total,
+            'community' => $community_total,
+            'activity' => $activity_total,
+            'latest_products'=> $latest_products,
+            'latest_activities'=> $latest_activities,
+            'latest_communities'=> $latest_communities
         ]);
     }
 
