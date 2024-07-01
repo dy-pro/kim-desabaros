@@ -39,26 +39,42 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="name">Nama Komunitas</label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ $community->name }}" placeholder="Masukkan nama komunitas" required>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ $community->name }}" placeholder="Masukkan nama komunitas">
+                    @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label>Deskripsi</label>
                     <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi komunitas">{{ $community->description }}</textarea>
+                    @error('description')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label>Address</label>
                     <textarea name="address" id="address" class="form-control" rows="3" placeholder="Masukkan alamat komunitas">{{ $community->address }}</textarea>
+                    @error('address')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 
                 <div class="form-group">
                     <label>Visi</label>
                     <textarea name="visi" id="visi" class="form-control" rows="3" placeholder="Masukkan visi komunitas">{{ $community->visi }}</textarea>
+                    @error('visi')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </div>
     
                 <div class="form-group">
                     <label>Misi</label>
                     <textarea name="misi" id="misi" class="form-control" rows="3" placeholder="Masukkan misi komunitas">{{ $community->misi }}</textarea>
+                    @error('misi')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </div>
+
                 <div class="form-group">
                     <label for="logo">Logo Komunitas</label>
                     <div class="input-group">
@@ -70,14 +86,17 @@
                         <span class="input-group-text">Unggah</span>
                       </div> --}}
                     </div>
-                    @if($community->logo)
+                    {{-- @if($community->logo)
                         <div class="mt-2">
                             <img src="{{ Storage::url($community->logo) }}" alt="{{ $community->name }}" class="img-thumbnail" style="width: 100px;">
                         </div>
-                    @endif
-                  </div>
+                    @endif --}}
+                    <div class="mt-2">
+                        <img src="{{ $community->image ? asset('logos/' .$community->image ) : asset('image/default-user.jpg') }}" 
+                            alt="logo community" class="img-thumbnail" style="width: 100px;">
+                    </div>
+                </div>
             </div>
-            
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>

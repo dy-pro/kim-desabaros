@@ -14,37 +14,59 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="name">Nama Komunitas</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama komunitas" required>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama komunitas">
+                                    @error('name')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
                                 <div class="form-group">
                                     <label>Deskripsi</label>
                                     <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi komunitas"></textarea>
+                                    @error('description')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
                                 <div class="form-group">
                                     <label>Alamat</label>
                                     <textarea name="address" id="address" class="form-control" rows="3" placeholder="Masukkan alamat komunitas"></textarea>
+                                    @error('address')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 
                                 <div class="form-group">
                                     <label>Visi</label>
                                     <textarea name="visi" id="visi" class="form-control" rows="3" placeholder="Masukkan visi komunitas"></textarea>
+                                    @error('visi')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                     
                                 <div class="form-group">
                                     <label>Misi</label>
                                     <textarea name="misi" id="misi" class="form-control" rows="3" placeholder="Masukkan misi komunitas"></textarea>
+                                    @error('misi')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
+                                
                                 <div class="form-group">
                                     <label for="logo">Logo Komunitas</label>
                                     <div class="input-group">
-                                      <div class="custom-file">
-                                        <input type="file" name="logo" class="custom-file-input" id="logo">
-                                        <label class="custom-file-label" for="logo">Pilih gambar</label>
-                                      </div>
+                                        <div class="custom-file">
+                                            <input type="file" name="logo" class="custom-file-input" id="logo">
+                                            <label class="custom-file-label" for="logo">Pilih gambar</label>
+                                            
+                                        </div>
                                       {{-- <div class="input-group-append">
                                         <span class="input-group-text">Unggah</span>
                                       </div> --}}
                                     </div>
+                                    @error('logo')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                   </div>
                             </div>
                             
