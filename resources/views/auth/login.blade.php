@@ -19,8 +19,8 @@
 
 </head>
 
-<body class="hold-transition login-page">
-    <div class="login-box">
+<body class="hold-transition login-page" style="background-image:url('{{ asset('frontend/images/background23.png') }}');">
+    <div class="login-box" >
         <!-- /.login-logo -->
         <div class="card card-outline card-primary w-200">
             <div class="card-header text-center">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     @error('email')
-                        <span class="text-danger" style="margin-top: -0.5rem; margin-bottom: 1rem; display: block;">{{ $message }}</span>
+                        <span class="text-danger" style="margin-top: -1rem; margin-bottom: 1rem; display: block; font-size:14px; padding-left: 9px;">{{ $message }}</span>
                     @enderror
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" name="password" placeholder="Password" id="inputPassword">
@@ -51,17 +51,28 @@
                         </div>
                     </div>
                     @error('password')
-                        <span class="text-danger" style="margin-top: -0.5rem; margin-bottom: 1rem; display: block;">{{ $message }}</span>
+                        <span class="text-danger" style="margin-top: -1rem; margin-bottom: 1rem; display: block; font-size:14px; padding-left: 9px;">{{ $message }}</span>
                     @enderror
                     <div class="row">
-                        <div class="col-8">
-                            <!-- Empty column for spacing -->
+                        {{-- <div class="col-8  justify-content-center">
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
+                                {{ __('Belum punya akun?') }}
+                            </a>
+                        </div> --}}
+                        <!-- /.col -->
+                        <div class="col-12  justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
                         </div>
                         <!-- /.col -->
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center mt-3">
+                            <label class="mr-2 text-sm font-medium text-gray-600">Belum punya akun?</label>
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                                {{ __('Daftar') }}
+                            </a>
                         </div>
-                        <!-- /.col -->
                     </div>
                 </form>
 
