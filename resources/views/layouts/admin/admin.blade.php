@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.39.0/build/css/tempusdominus-bootstrap-4.min.css" />
   <!-- Select2 -->
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.css')}}">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
@@ -35,18 +36,43 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item"> --}}
         {{-- <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link active"> --}}
           {{-- <button class="btn btn-outline-primary" id="logout-form" action="{{ route('logout') }}" method="POST">Tambah Produk</a> --}}
 
-        <a href="{{ route('logout') }}"
+        {{-- <a href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-outline-primary">Logout</a>
             
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
                 <button class="btn btn-outline-primary" id="logout-form" action="{{ route('logout') }}" method="POST">Logout</button>
 
-            </form>
+            </form> --}}
+            <div class="hidden sm:flex sm:items-center sm:ms-6">
+              <div class="dropdown">
+                  <button class="btn btn-white text-sm font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div>
+                          <img src="{{ Auth::user()->image ? asset('users/' . Auth::user()->image) : asset('image/default-user.png') }}" alt="Profile Image" class="rounded-circle" width="40" height="40">
+                      </div>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                      <li>
+                          <a class="dropdown-item" href="{{ route('profile.edit') }}">
+                              {{ __('Edit Profile') }}
+                          </a>
+                      </li>
+                      <li>
+                          <form method="POST" action="{{ route('logout') }}">
+                              @csrf
+                              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                                  {{ __('Log Out') }}
+                              </a>
+                          </form>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          
            
     </li>
     </ul>
@@ -94,7 +120,8 @@
 <!-- Include Tempus Dominus JS -->
 <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.39.0/build/js/tempusdominus-bootstrap-4.min.js"></script>
 
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 
 <!-- Include your custom scripts -->
 @yield('scripts')
