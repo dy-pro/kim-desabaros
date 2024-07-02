@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/login.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/login.css') }}"> --}}
 
 </head>
 
@@ -32,51 +32,60 @@
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
-
+                
                     <!-- Name -->
                     <div class="input-group mb-3">
-                        <input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Nama Lengkap">
+                        <input id="name" class="form-control" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" placeholder="Nama Lengkap">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
                             </div>
                         </div>
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
                     </div>
-
+                    @error('name')
+                        <span class="text-danger" style="margin-top: -1rem; margin-bottom: 1rem; display: block; font-size:14px; padding-left: 9px;">{{ $message }}</span>
+                    @enderror
+                
                     <!-- Email Address -->
                     <div class="input-group mb-3">
-                        <input id="email" class="form-control" type="email" name="email" :value="old('email')" required autocomplete="email" placeholder="Email">
+                        <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                       
                     </div>
-
+                    @if ($errors->has('email'))
+                    <span class="text-danger" style="margin-top: -1rem; margin-bottom: 1rem; display: block; font-size:14px; padding-left: 9px;">{{ $errors->first('email') }}</span>
+                    @endif
+                
                     <!-- Password -->
                     <div class="input-group mb-3">
                         <input id="password" class="form-control" type="password" name="password" required autocomplete="new-password" placeholder="Password">
                         <div class="input-group-append" onclick="togglePassword()">
                             <div class="input-group-text">
-                                <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                <span class="fas fa-eye field-icon toggle-password"></span>
                             </div>
                         </div>
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                        @if ($errors->has('password'))
+                        <span class="text-danger" style="margin-top: -1rem; margin-bottom: 1rem; display: block; font-size:14px; padding-left: 9px;">{{ $errors->first('password') }}</span>
+                        @endif
                     </div>
-
+                
                     <!-- Confirm Password -->
                     <div class="input-group mb-3">
-                        <input id="password_confirmation" class="form-control" type="password" name="password_confirmation" required autocomplete="password_confirmation" placeholder="Masukan Ulang Password">
-                        <div class="input-group-append">
+                        <input id="password_confirmation" class="form-control" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="Masukan Ulang Password">
+                        <div class="input-group-append" onclick="toggleConfirmPassword()">
                             <div class="input-group-text">
-                                <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                <span class="fas fa-eye field-icon toggle-password"></span>
                             </div>
                         </div>
-                        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                        @if ($errors->has('password_confirmation'))
+                        <span class="text-danger" style="margin-top: -1rem; margin-bottom: 1rem; display: block; font-size:14px; padding-left: 9px;">{{ $errors->first('password_confirmation') }}</span>
+                        @endif
                     </div>
-
+                
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-12">
@@ -92,8 +101,8 @@
                             </a>
                         </div>
                     </div>
-                    
                 </form>
+                
             </div>
             <!-- /.card-body -->
         </div>
@@ -109,17 +118,24 @@
     <script src="{{ asset('AdminLTE/dist/js/adminlte.min.js') }}"></script>
     <script src="{{ asset('frontend/js/init.js') }}"></script>
     <script>
-        function togglePassword(){
-            const inputPassword = document.getElementById('password');
-            const inputPasswordConfirmation = document.getElementById('password_confirmation');
-            if(inputPassword.type === 'password') {
-                inputPassword.type = 'text';
-                inputPasswordConfirmation.type = 'text';
-            } else {
-                inputPassword.type = 'password';
-                inputPasswordConfirmation.type = 'password';
-            }
+        function togglePassword() {
+        var passwordField = document.getElementById('password');
+        var passwordFieldType = passwordField.type;
+        if (passwordFieldType === 'password') {
+            passwordField.type = 'text';
+        } else {
+            passwordField.type = 'password';
         }
+    }
+    function toggleConfirmPassword() {
+        var confirmPasswordField = document.getElementById('password_confirmation');
+        var confirmPasswordFieldType = confirmPasswordField.type;
+        if (confirmPasswordFieldType === 'password') {
+            confirmPasswordField.type = 'text';
+        } else {
+            confirmPasswordField.type = 'password';
+        }
+    }
     </script>
 </body>
 

@@ -7,7 +7,9 @@ use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
+use App\Models\User;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -27,7 +29,7 @@ class AuthenticatedSessionController extends Controller
         // Validasi bahwa email dan password tidak kosong
         $credentials = $request->validate([
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required|string'
         ]);
 
         // Coba autentikasi pengguna
@@ -39,7 +41,7 @@ class AuthenticatedSessionController extends Controller
 
         // Jika autentikasi gagal, cek apakah user ada dan tentukan pesan kesalahan
         $errors = [];
-        $user = \App\Models\User::where('email', $credentials['email'])->first();
+        $user = User::where('email', $credentials['email'])->first();
         if (!$user) {
             $errors['email'] = 'Email tidak ditemukan';
         } else {
@@ -49,6 +51,13 @@ class AuthenticatedSessionController extends Controller
         // Jika data tidak valid atau autentikasi gagal, kembalikan ke halaman login dengan pesan kesalahan
         return redirect()->back()->withErrors($errors)->withInput($request->except('password'));
     }
+
+    /**
+     * Handle a registration request for the application.
+     */
+   
+
+
 
     /**
      * Destroy an authenticated session.

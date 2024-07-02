@@ -46,11 +46,11 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="/category_management" class="nav-link {{ str_contains(Request::url(), 'category_management') ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-copy"></i>
-                    <p>Kategori Produk</p>
-                </a>
-            </li>
+              <a href="/community_management" class="nav-link {{ str_contains(Request::url(), 'community_management') ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>Komunitas</p>
+              </a>
+            </li> 
             <li class="nav-item">
               <a href="/activity_management" class="nav-link {{str_contains(Request::url(), 'activity_management') ? 'active' : '' }}">
                   <i class="nav-icon fas fa-calendar-alt"></i>
@@ -58,11 +58,11 @@
               </a>
           </li>
           <li class="nav-item">
-            <a href="/community_management" class="nav-link {{ str_contains(Request::url(), 'community_management') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-users"></i>
-                <p>Komunitas</p>
+            <a href="/category_management" class="nav-link {{ str_contains(Request::url(), 'category_management') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>Kategori Produk</p>
             </a>
-          </li>
+        </li>
           @endif
             <li class="nav-item">
                 <a href="/product_management" class="nav-link {{ str_contains(Request::url(), 'product_management') ? 'active' : '' }}">

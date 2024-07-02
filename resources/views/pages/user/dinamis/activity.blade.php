@@ -54,7 +54,7 @@
                                 <div class="post-image">
                                     <img 
                                         src="{{ Storage::url($activity->image) }}"
-                                        class="img-fluid"
+                                        class="product-image"
                                         alt="{{ $activity->name }}"
                                         width="750"
                                         height="750"
