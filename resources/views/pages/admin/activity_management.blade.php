@@ -19,6 +19,18 @@
                         </div>
                     </div>
 
+                    @if(session('success'))
+                        <div class="alert alert-success" id="success-alert">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    @if(session('error'))
+                        <div class="alert alert-danger" id="error-alert">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+
                     <div class="card-body table-responsive">
                         @if (!empty($activities))
                         <table id="example1" class="table table-bordered table-striped dataTable">
@@ -156,6 +168,24 @@
 
         }
     });
+
+    // Function to hide the alert after a few seconds
+    function hideAlert(targetId) {
+        var target = document.getElementById(targetId);
+        if (!target) {
+            console.log(`Element with ID ${targetId} not found`);
+            return;
+        }
+        console.log(`Hiding element with ID ${targetId}`);
+        target.style.display = 'none';
+        console.log(`Element with ID ${targetId} hidden`);
+    }
+    
+    // Automatically hide success alert after 3,5 seconds
+    setTimeout(() => hideAlert('success-alert'), 3500);
+    
+    // Automatically hide error alert after 3,5 seconds
+    setTimeout(() => hideAlert('error-alert'), 3500);
 });
 </script>
 @endsection
