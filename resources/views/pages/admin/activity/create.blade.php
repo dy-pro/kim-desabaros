@@ -19,26 +19,35 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    {{ $errors->any() }}
+                    {{-- {{ $errors->any() }}
                     @foreach ( $errors->all() as $error )
                         {{ $error }}
-                    @endforeach
+                    @endforeach --}}
                     <form action="{{ route('activity.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="name">Nama Kegiatan</label>
-                                <input name="name" class="form-control" id="name" placeholder="Masukkan nama kegiatan" required>
+                                <input name="name" class="form-control" id="name" placeholder="Masukkan nama kegiatan">
+                                @error('name')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="description">Deskripsi</label>
                                 <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan"></textarea>
+                                @error('description')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="location">Lokasi</label>
                                 <textarea name="location"  class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan"></textarea>
+                                @error('location')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="form-group">
@@ -71,11 +80,17 @@
                                     <div class="form-col">
                                         <div class="form-group ">
                                             <label for="eventStartDate">Tanggal Mulai</label>
-                                            <input type="date" name="eventStartDate" class="form-control" id="eventStartDate" required>
+                                            <input type="date" name="eventStartDate" class="form-control" id="eventStartDate">
+                                            @error('eventStartDate')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="eventStartTime">Waktu Mulai</label>
-                                            <input type="time" name="eventStartTime" class="form-control" id="eventStartTime" required>
+                                            <input type="time" name="eventStartTime" class="form-control" id="eventStartTime">
+                                            @error('eventStartTime')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </fieldset>
@@ -86,11 +101,17 @@
                                     <div class="form-col">
                                         <div class="form-group">
                                             <label for="eventEndDate">Tanggal Berakhir</label>
-                                            <input type="date" name="eventEndDate" class="form-control" id="eventEndDate" required>
+                                            <input type="date" name="eventEndDate" class="form-control" id="eventEndDate">
+                                            @error('eventEndDate')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="eventEndTime">Waktu Berakhir</label>
-                                            <input type="time"  name="eventEndTime" class="form-control" id="eventEndTime" required>
+                                            <input type="time"  name="eventEndTime" class="form-control" id="eventEndTime">
+                                            @error('eventEndTime')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </fieldset>
@@ -101,11 +122,17 @@
                                 <div class="form-col">
                                     <div class="form-group">
                                         <label for="contact_name">Nama Kontak</label>
-                                        <input type="text" name="contact_name" class="form-control" id="contact_name" required>
+                                        <input type="text" name="contact_name" class="form-control" id="contact_name">
+                                        @error('contact_name')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="contact_phone">Nomor Telepon</label>
-                                        <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone" required>
+                                        <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone">
+                                        @error('contact_phone')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                             </fieldset>
@@ -121,6 +148,9 @@
                                         <span class="input-group-text">Upload</span>
                                     </div> --}}
                                 </div>
+                                @error('image')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                         <!-- /.card-body -->
