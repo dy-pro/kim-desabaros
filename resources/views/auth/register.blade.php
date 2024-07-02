@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="hold-transition register-page">
+<body class="hold-transition register-page" style="background-image:url('{{ asset('frontend/images/background23.png') }}');">
     <div class="register-box">
         <!-- /.register-logo -->
         <div class="card card-outline card-primary w-200">
@@ -28,14 +28,14 @@
                 <img class="img-fluid" src="{{ asset('frontend/images/Logo.png') }}" alt="Desa Baros" width="90" height="70">
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Mendaftar Sebagai Penjual </p>
+                <p class="login-box-msg">Register a new membership</p>
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
                     <!-- Name -->
                     <div class="input-group mb-3">
-                        <input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Name">
+                        <input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Nama Lengkap">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -46,7 +46,7 @@
 
                     <!-- Email Address -->
                     <div class="input-group mb-3">
-                        <input id="email" class="form-control" type="email" name="email" :value="old('email')" required autocomplete="username" placeholder="Email">
+                        <input id="email" class="form-control" type="email" name="email" :value="old('email')" required autocomplete="email" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -68,7 +68,7 @@
 
                     <!-- Confirm Password -->
                     <div class="input-group mb-3">
-                        <input id="password_confirmation" class="form-control" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
+                        <input id="password_confirmation" class="form-control" type="password" name="password_confirmation" required autocomplete="password_confirmation" placeholder="Masukan Ulang Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
@@ -80,15 +80,24 @@
                     <div class="row">
                         <div class="col-8">
                             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                                {{ __('Sudah Punya Akun?') }}
+                                {{ __('Already registered?') }}
                             </a>
                         </div>
                         <!-- /.col -->
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block">Daftar</button>
                         </div>
                         <!-- /.col -->
                     </div>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center mt-3">
+                            <label class="mr-2 text-sm font-medium text-gray-600">Sudah punya akun?</label>
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                                {{ __('Masuk') }}
+                            </a>
+                        </div>
+                    </div>
+                    
                 </form>
             </div>
             <!-- /.card-body -->
