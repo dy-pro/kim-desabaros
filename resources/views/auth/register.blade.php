@@ -28,7 +28,7 @@
                 <img class="img-fluid" src="{{ asset('frontend/images/Logo.png') }}" alt="Desa Baros" width="90" height="70">
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Register a new membership</p>
+                <p class="login-box-msg">Mendaftar Sebagai Penjual</p>
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
