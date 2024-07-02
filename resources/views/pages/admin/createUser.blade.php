@@ -17,7 +17,7 @@
 
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="name"><span class="text-danger">*</span>Nama</label>
+                      <label for="name">Nama<span class="text-danger">*</span></label>
                       <input name="name" type="text" class="form-control" id="name" placeholder="Nama Lengkap">
                       @error('name')
                         <div class="text-danger">{{ $message }}</div>
@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="email">Email</label>
+                      <label for="email">Email<span class="text-danger">*</span></label>
                       <input name="email" type="email" class="form-control" id="name" placeholder="Email">
                       @error('email')
                         <div class="text-danger">{{ $message }}</div>
@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="password">Password</label>
+                      <label for="password">Password<span class="text-danger">*</span></label>
                       <input name="password" type="password"  class="form-control" id="exampleInputPassword1" placeholder="password">
                       @error('password')
                         <div class="text-danger">{{ $message }}</div>
@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="address">Alamat</label>
+                      <label for="address">Alamat<span class="text-danger">*</span></label>
                       <input name="address" type="text"  class="form-control" id="exampleInputPassword1" placeholder="Alamat Lengkap">
                       @error('address')
                         <div class="text-danger">{{ $message }}</div>
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="whatsapp">No Handphone</label>
+                      <label for="whatsapp">No Handphone<span class="text-danger">*</span></label>
                       <input name="whatsapp" type="number" class="form-control" id="exampleInputPassword1" placeholder="Nomor WhatsApp">
                       @error('whatsapp')
                         <div class="text-danger">{{ $message }}</div>
@@ -57,7 +57,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="role">Role</label>
+                      <label for="role">Role<span class="text-danger">*</span></label>
                       <select name="role" class="custom-select">
                         <option disabled selected>Pilih Role</option>
                         <option value="admin">Admin</option>
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="image">Masukan Foto Profil (Max 1MB, PNG dan JPG)</label>
+                      <label for="image">Masukan Foto Profil (Max 1MB, PNG dan JPG)<span class="text-danger">*</span></label>
                       <input type="file" name="image" class="form-control" placeholder="Keterangan Produk">
                       @error('image')
                         <div class="text-danger">{{ $message }}</div>

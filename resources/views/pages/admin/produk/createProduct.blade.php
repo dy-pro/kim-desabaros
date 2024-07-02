@@ -21,7 +21,7 @@
                   
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="name">Nama Produk</label>
+                      <label for="name">Nama Produk<span class="text-danger">*</span></label>
                       <input  type= "text" name="name" class="form-control"  placeholder="Nama Produk" value="{{ old('name') }}">
                       @error('name')
                         <div class="text-danger">{{ $message }}</div>
@@ -29,7 +29,7 @@
                     </div>
                     
                     <div class="form-group">
-                      <label for="stock">Stok</label>
+                      <label for="stock">Stok<span class="text-danger">*</span></label>
                       <input type="number" name="stock" class="form-control" placeholder="Stok Produk" value="{{ old('stock') }}">
                       @error('stock')
                         <div class="text-danger">{{ $message }}</div>
@@ -37,7 +37,7 @@
                     </div>
                     
                     <div class="form-group">
-                      <label for="price">Harga Produk</label>
+                      <label for="price">Harga Produk<span class="text-danger">*</span></label>
                       <input type="number" name="price" class="form-control" placeholder="Harga" value="{{ old('price') }}">
                       @error('price')
                         <div class="text-danger">{{ $message }}</div>
@@ -45,7 +45,7 @@
                     </div>
                     
                     <div class="form-group">
-                      <label for="description">Keterangan</label>
+                      <label for="description">Keterangan<span class="text-danger">*</span></label>
                       <input type="text" name="description" class="form-control" placeholder="Keterangan Produk" value="{{ old('description') }}">
                       @error('description')
                         <div class="text-danger">{{ $message }}</div>
@@ -53,7 +53,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="category">Kategori</label>
+                        <label for="category">Kategori<span class="text-danger">*</span></label>
                         <select name="id_category" class="form-control select2">
                           <option value="" disabled selected>Pilih Kategori</option>
                           @foreach ($categories as $category)
@@ -66,7 +66,7 @@
                       </div>
 
                     <div class="form-group">
-                      <label for="exampleInputFile">Foto Produk (Max 1MB, PNG/JPG)</label>
+                      <label for="exampleInputFile">Foto Produk (Max 1MB, PNG/JPG) <span class="text-danger">*</span></label>
                       <div class="input-group">
                         <div class="custom-file">
                             <input type="file" name="image" class="custom-file-input" id="exampleInputFile">

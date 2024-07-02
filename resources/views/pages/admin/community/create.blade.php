@@ -13,7 +13,7 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="name">Nama Komunitas</label>
+                                    <label for="name">Nama Komunitas<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama komunitas">
                                     @error('name')
                                         <div class="text-danger">{{ $message }}</div>
@@ -21,7 +21,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Deskripsi</label>
+                                    <label>Deskripsi<span class="text-danger">*</span></label>
                                     <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi komunitas"></textarea>
                                     @error('description')
                                         <div class="text-danger">{{ $message }}</div>
@@ -29,7 +29,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Alamat</label>
+                                    <label>Alamat<span class="text-danger">*</span></label>
                                     <textarea name="address" id="address" class="form-control" rows="3" placeholder="Masukkan alamat komunitas"></textarea>
                                     @error('address')
                                         <div class="text-danger">{{ $message }}</div>
@@ -37,7 +37,7 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label>Visi</label>
+                                    <label>Visi<span class="text-danger">*</span></label>
                                     <textarea name="visi" id="visi" class="form-control" rows="3" placeholder="Masukkan visi komunitas"></textarea>
                                     @error('visi')
                                         <div class="text-danger">{{ $message }}</div>
@@ -45,7 +45,7 @@
                                 </div>
                     
                                 <div class="form-group">
-                                    <label>Misi</label>
+                                    <label>Misi<span class="text-danger">*</span></label>
                                     <textarea name="misi" id="misi" class="form-control" rows="3" placeholder="Masukkan misi komunitas"></textarea>
                                     @error('misi')
                                         <div class="text-danger">{{ $message }}</div>
@@ -53,7 +53,7 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="logo">Logo Komunitas</label>
+                                    <label for="logo">Logo Komunitas<span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" name="logo" class="custom-file-input" id="logo">

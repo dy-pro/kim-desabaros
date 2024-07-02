@@ -27,7 +27,7 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name">Nama Kegiatan</label>
+                                <label for="name">Nama Kegiatan<span class="text-danger">*</span></label>
                                 <input name="name" class="form-control" id="name" placeholder="Masukkan nama kegiatan">
                                 @error('name')
                                     <div class="text-danger">{{ $message }}</div>
@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="description">Deskripsi</label>
+                                <label for="description">Deskripsi<span class="text-danger">*</span></label>
                                 <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan"></textarea>
                                 @error('description')
                                     <div class="text-danger">{{ $message }}</div>
@@ -43,7 +43,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="location">Lokasi</label>
+                                <label for="location">Lokasi<span class="text-danger">*</span></label>
                                 <textarea name="location"  class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan"></textarea>
                                 @error('location')
                                     <div class="text-danger">{{ $message }}</div>
@@ -51,7 +51,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="id_community">Penyelenggara</label>
+                                <label for="id_community">Penyelenggara<span class="text-danger">*</span></label>
                                 <select class="form-control select2" style="width: 100%;" name="id_community" id="id_community">
                                     <option value="" disabled selected>Pilih penyelenggara</option>
                                     @foreach($communities as $community)
@@ -79,14 +79,14 @@
                                     <legend class="w-auto"><h6>Tanggal dan Waktu Mulai</h6></legend>
                                     <div class="form-col">
                                         <div class="form-group ">
-                                            <label for="eventStartDate">Tanggal Mulai</label>
+                                            <label for="eventStartDate">Tanggal Mulai<span class="text-danger">*</span></label>
                                             <input type="date" name="eventStartDate" class="form-control" id="eventStartDate">
                                             @error('eventStartDate')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="eventStartTime">Waktu Mulai</label>
+                                            <label for="eventStartTime">Waktu Mulai<span class="text-danger">*</span></label>
                                             <input type="time" name="eventStartTime" class="form-control" id="eventStartTime">
                                             @error('eventStartTime')
                                                 <div class="text-danger">{{ $message }}</div>
@@ -100,14 +100,14 @@
                                     <legend class="w-auto"><h6>Tanggal dan Waktu Berakhir</h6></legend>
                                     <div class="form-col">
                                         <div class="form-group">
-                                            <label for="eventEndDate">Tanggal Berakhir</label>
+                                            <label for="eventEndDate">Tanggal Berakhir<span class="text-danger">*</span></label>
                                             <input type="date" name="eventEndDate" class="form-control" id="eventEndDate">
                                             @error('eventEndDate')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="eventEndTime">Waktu Berakhir</label>
+                                            <label for="eventEndTime">Waktu Berakhir<span class="text-danger">*</span></label>
                                             <input type="time"  name="eventEndTime" class="form-control" id="eventEndTime">
                                             @error('eventEndTime')
                                                 <div class="text-danger">{{ $message }}</div>
@@ -121,14 +121,14 @@
                                 <legend class="w-auto"><h6>Narahubung</h6></legend>
                                 <div class="form-col">
                                     <div class="form-group">
-                                        <label for="contact_name">Nama Kontak</label>
+                                        <label for="contact_name">Nama Kontak<span class="text-danger">*</span></label>
                                         <input type="text" name="contact_name" class="form-control" id="contact_name">
                                         @error('contact_name')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="contact_phone">Nomor Telepon</label>
+                                        <label for="contact_phone">Nomor Telepon<span class="text-danger">*</span></label>
                                         <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone">
                                         @error('contact_phone')
                                             <div class="text-danger">{{ $message }}</div>
@@ -138,7 +138,7 @@
                             </fieldset>
 
                             <div class="form-group">
-                                <label for="exampleInputFile">Poster Kegiatan (Max 1MB, PNG dan JPG)</label>
+                                <label for="exampleInputFile">Poster Kegiatan (Max 1MB, PNG dan JPG)<span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
