@@ -65,8 +65,13 @@
     </div>
     {{-- /section 2 --}}
 
-
-
+    
+    @php
+    use Carbon\Carbon;
+    
+    // Set locale to Indonesian
+    Carbon::setLocale('id');
+    @endphp
     <!-- SECTION KEGIATAN -->
 			<div id="home-section-1-2" class="section-holder home-section-1-2 margin-t50 margin-b50">
 				<div class="container">
@@ -84,13 +89,22 @@
                     <!-- /row -->
                     <div class="row layout-masonry margin-b50less mb-3">
                         @foreach ($chunk as $activity)
+                        @php
+                        // Parse the datetime and format it
+                        $dateTime = Carbon::parse($activity->datetime_start);
+                        $formattedDateTime = $dateTime->isoFormat('dddd, D MMMM YYYY HH:mm'); // Format lengkap dengan nama hari
+                    
+                        // Determine whether the time is in the morning or evening
+                        $hour = $dateTime->hour;
+                        $timeOfDay = ($hour >= 6 && $hour < 18) ? 'Siang' : 'Malam';
+                        @endphp
                             <div class="col-md-6 col-lg-4 blog-item-masonry">
                                 <article class="blog-item blog-item-2col-grid">
                                     <div class="post-image">
                                         <img 
                                             {{-- src="{{ asset('frontend/images/5.png')}}" --}}
                                             src="{{ Storage::url($activity->image) }}"
-                                            class="img-fluid"
+                                            class="product-image"
                                             alt=" "
                                             width="750"
                                             height="750" 
@@ -106,7 +120,7 @@
                                         </h2>
                                         <div class="meta-info">
                                             <div class="meta-date-all">
-                                                {{ $activity->datetime_start }}
+                                                {{ $formattedDateTime }} ( {{ $timeOfDay }} )
                                             </div>
                                         </div>
                                         <a class="read-more-v3" href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}">
@@ -242,7 +256,7 @@
                             <div class="card">
                                 <div class="card-header p-0">
                                     <a href="/product">
-                                        <img class="img-fluid w-100 radius10-top" src="{{ asset('products/'.$product->product_image)}}" alt="{{ $product->name }}" />
+                                        <img class="product-image w-100 radius10-top" src="{{ asset('products/'.$product->product_image)}}" alt="{{ $product->name }}" />
                                     </a>
                                 </div>
                                 <div class="card-body text-center">
