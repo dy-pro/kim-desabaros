@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
@@ -86,6 +87,12 @@ Route::middleware('auth')->group(function(){
                 Route::delete('/{activityId}/deleteActivity', 'deleteActivity')->name('activity.delete');
         });
         
+        // Profile routes
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+        // Rute untuk memperbarui kata sandi
+        Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 });
 
 
