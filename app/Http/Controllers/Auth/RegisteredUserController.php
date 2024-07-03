@@ -46,6 +46,7 @@ class RegisteredUserController extends Controller
             'name' => $credentials['name'],
             'email' => $credentials['email'],
             'password' => Hash::make($credentials['password']),
+            'role' => 'penjual'
         ]);
     
         // Autentikasi user

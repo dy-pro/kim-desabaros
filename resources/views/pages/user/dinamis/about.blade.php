@@ -2,7 +2,7 @@
 
 @section('content')
  <!-- HOME SLIDER -->
- <div class="swiper-mt">
+ <div class="swiper-mt mt-200">
         <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/backgroundabout.png') }}');">
             <div class="container slider-caption">
                 <div class="row align-items-md-center">
@@ -114,9 +114,9 @@
 			<div class="col-lg-12">
 				<div class="padding-lr200 alignc">
 					<div class="el-smalltitle">Kontak</div>
-					<h2 class="display-4 margin-b30">Perlu Informasi Lebih Lanjut?</h2>
+					<h2 class="display-4 margin-b30" style="text-align: center">Perlu Informasi Lebih Lanjut?</h2>
 					<p>Kami siap membantu Anda. Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami.					</p>
-					<a href="#" class="read-more margin-t30">Hubungi</a>
+					<a href="mailto:pemdesbaros01@gmail.com" class="read-more margin-t30">Hubungi</a>
 				</div>
 			</div>
 			<!-- /col-lg-12 -->
