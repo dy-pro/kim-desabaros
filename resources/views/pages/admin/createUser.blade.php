@@ -57,7 +57,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="role">Role</label>
+                      <label for="role">Role<span class="text-danger">*</span></label>
                       <select name="role" class="custom-select">
                         <option disabled selected>Pilih Role</option>
                         <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="image">Masukan Foto Profil (Max 1MB, PNG dan JPG)</label>
+                      <label for="image">Masukan Foto Profil (Max 1MB, PNG dan JPG)<span class="text-danger">*</span></label>
                       <input type="file" name="image" class="form-control" placeholder="Keterangan Produk">
                       @error('image')
                         <div class="text-danger">{{ $message }}</div>

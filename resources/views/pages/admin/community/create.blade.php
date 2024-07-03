@@ -13,7 +13,7 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="name">Nama Komunitas</label>
+                                    <label for="name">Nama Komunitas<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama komunitas" value="{{ old('name') }}">
                                     @error('name')
                                         <div class="text-danger">{{ $message }}</div>
@@ -21,7 +21,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Deskripsi</label>
+                                    <label>Deskripsir<span class="text-danger">*</span></label>
                                     <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi komunitas">{{ old('description') }}</textarea>
                                     @error('description')
                                         <div class="text-danger">{{ $message }}</div>
@@ -53,7 +53,7 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="logo">Logo Komunitas</label>
+                                    <label for="logo">Logo Komunitas<span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" name="logo" class="custom-file-input" id="logo">
