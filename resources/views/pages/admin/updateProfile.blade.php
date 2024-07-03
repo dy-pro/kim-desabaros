@@ -1,7 +1,7 @@
 @extends('layouts.admin.admin')
 
 @section('content')
-<div class="container py-4">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <!-- Profile Information Card -->
@@ -9,11 +9,16 @@
                 <div class="card-header">
                     <h3 class="card-title">{{ __('Profile') }}</h3>
                 </div>
-                
                 @if (session('status') === 'profile-updated')
-                    <div class="alert alert-success ms-3" role="alert">
-                        {{ __('Saved.') }}
-                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Profile Updated',
+                                text: 'Your profile has been updated successfully.'
+                            });
+                        });
+                    </script>
                 @endif
                 <div class="card-body">
                     <section>
@@ -92,6 +97,17 @@
                 <div class="card-header">
                     <h3 class="card-title">{{ __('Update Password') }}</h3>
                 </div>
+                @if (session('status') === 'password-updated')
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Password Updated',
+                                text: 'Your password has been updated successfully.'
+                            });
+                        });
+                    </script>
+                @endif
                 <div class="card-body">
                     <section>
                         <header>
@@ -102,11 +118,6 @@
                                 {{ __('Ensure your account is using a long, random password to stay secure.') }}
                             </p>
                         </header>
-                        @if (session('status') === 'password-updated')
-                            <div class="alert alert-success ms-3" role="alert">
-                                {{ __('Saved.') }}
-                            </div>
-                        @endif
 
                         <form method="post" action="{{ route('password.update') }}" class="mt-3">
                             @csrf
@@ -153,4 +164,6 @@
 <!-- SweetAlert JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<!-- SweetAlert CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 @endsection

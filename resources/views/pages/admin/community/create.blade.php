@@ -14,39 +14,39 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="name">Nama Komunitas<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama komunitas">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama komunitas" value="{{ old('name') }}">
                                     @error('name')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Deskripsi<span class="text-danger">*</span></label>
-                                    <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi komunitas"></textarea>
+                                    <label>Deskripsir<span class="text-danger">*</span></label>
+                                    <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi komunitas">{{ old('description') }}</textarea>
                                     @error('description')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Alamat<span class="text-danger">*</span></label>
-                                    <textarea name="address" id="address" class="form-control" rows="3" placeholder="Masukkan alamat komunitas"></textarea>
+                                    <label>Alamat</label>
+                                    <textarea name="address" id="address" class="form-control" rows="3" placeholder="Masukkan alamat komunitas">{{ old('address') }}</textarea>
                                     @error('address')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label>Visi<span class="text-danger">*</span></label>
-                                    <textarea name="visi" id="visi" class="form-control" rows="3" placeholder="Masukkan visi komunitas"></textarea>
+                                    <label>Visi</label>
+                                    <textarea name="visi" id="visi" class="form-control" rows="3" placeholder="Masukkan visi komunitas">{{ old('visi') }}</textarea>
                                     @error('visi')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                     
                                 <div class="form-group">
-                                    <label>Misi<span class="text-danger">*</span></label>
-                                    <textarea name="misi" id="misi" class="form-control" rows="3" placeholder="Masukkan misi komunitas"></textarea>
+                                    <label>Misi</label>
+                                    <textarea name="misi" id="misi" class="form-control" rows="3" placeholder="Masukkan misi komunitas">{{ old('misi') }}</textarea>
                                     @error('misi')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
@@ -67,7 +67,7 @@
                                     @error('logo')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
-                                  </div>
+                                </div>
                             </div>
                             
                             <div class="card-footer">

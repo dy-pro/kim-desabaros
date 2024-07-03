@@ -17,40 +17,40 @@
 
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="name">Nama<span class="text-danger">*</span></label>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+                      <label for="name"><span class="text-danger">*</span>Nama</label>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Nama Lengkap" value="{{ old('name') }}">
                       @error('name')
                         <div class="text-danger">{{ $message }}</div>
                       @enderror
                     </div>
 
                     <div class="form-group">
-                      <label for="email">Email<span class="text-danger">*</span></label>
-                      <input name="email" type="email" class="form-control" id="name" placeholder="Email">
+                      <label for="email">Email</label>
+                      <input name="email" type="email" class="form-control" id="email" placeholder="Email" value="{{ old('email') }}">
                       @error('email')
                         <div class="text-danger">{{ $message }}</div>
                       @enderror
                     </div>
 
                     <div class="form-group">
-                      <label for="password">Password<span class="text-danger">*</span></label>
-                      <input name="password" type="password"  class="form-control" id="exampleInputPassword1" placeholder="password">
+                      <label for="password">Password</label>
+                      <input name="password" type="password"  class="form-control" id="password" placeholder="password">
                       @error('password')
                         <div class="text-danger">{{ $message }}</div>
                       @enderror
                     </div>
 
                     <div class="form-group">
-                      <label for="address">Alamat<span class="text-danger">*</span></label>
-                      <input name="address" type="text"  class="form-control" id="exampleInputPassword1" placeholder="Alamat Lengkap">
+                      <label for="address">Alamat</label>
+                      <input name="address" type="text"  class="form-control" id="address" placeholder="Alamat Lengkap" value="{{ old('address') }}">
                       @error('address')
                         <div class="text-danger">{{ $message }}</div>
                       @enderror
                     </div>
 
                     <div class="form-group">
-                      <label for="whatsapp">No Handphone<span class="text-danger">*</span></label>
-                      <input name="whatsapp" type="number" class="form-control" id="exampleInputPassword1" placeholder="Nomor WhatsApp">
+                      <label for="whatsapp">No Handphone</label>
+                      <input name="whatsapp" type="number" class="form-control" id="whatsapp" placeholder="Nomor WhatsApp" value="{{ old('whatsapp') }}">
                       @error('whatsapp')
                         <div class="text-danger">{{ $message }}</div>
                       @enderror
@@ -60,8 +60,8 @@
                       <label for="role">Role<span class="text-danger">*</span></label>
                       <select name="role" class="custom-select">
                         <option disabled selected>Pilih Role</option>
-                        <option value="admin">Admin</option>
-                        <option value="penjual">Penjual</option>
+                        <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
+                        <option value="penjual" {{ old('role') == 'penjual' ? 'selected' : '' }}>Penjual</option>
                       </select>
                       @error('role')
                         <div class="text-danger">{{ $message }}</div>

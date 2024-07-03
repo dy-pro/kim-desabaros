@@ -26,7 +26,7 @@ class UserController extends Controller
             'password' => 'required|string|min:6',
             'whatsapp' => 'required|string|max:15',
             'address' => 'nullable|string|max:255',
-            'role' => 'required|string|in:admin,user',
+            'role' => 'required|string|in:admin,penjual',
             'image' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
         ], [
             'name.required' => 'Nama harus diisi.',
@@ -87,7 +87,7 @@ class UserController extends Controller
             'email' => 'required|email',
             'whatsapp' => 'required|string|max:15',
             'address' => 'nullable|string|max:255',
-            'role' => 'required|string|in:admin,user',
+            'role' => 'required|string|in:admin,penjual',
             'image' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
         ], [
             'name.required' => 'Nama harus diisi.',
