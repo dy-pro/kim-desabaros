@@ -2,13 +2,13 @@
 
 @section('content')
  <!-- HOME SLIDER -->
- <div class="swiper-mt">
+ <div class="swiper-mt mt-200">
         <div class="swiper-slide slider-img" style="background-image:url('{{ asset('frontend/images/backgroundabout.png') }}');">
             <div class="container slider-caption">
                 <div class="row align-items-md-center">
                     <div class="col-lg-12 alignc">
 						<div class="">
-							<img class="img-fluid margin-b30" src="{{ asset('frontend/images/logo_desa.png')}}" alt="" style="max-width: 230px"/>
+							<img class="img-fluid margin-b30" src="{{ asset('frontend/images/logo_desa.png')}}" alt="" style="max-width: 200px"/>
 							<h2 class="display-4 margin-bm30"><b>Selamat datang</b> di website resmi Desa Baros</h2>
 							<p style="color: #2B5796">Desa Baros termasuk wilayah Kecamatan Arjasari Kabupaten Bandung dengan luas wilayah 419,7 Ha. dengan ketinggian dataran rerata 600 – 1100 m di atas permukaan laut.</p>
 							<br>
@@ -114,9 +114,9 @@
 			<div class="col-lg-12">
 				<div class="padding-lr200 alignc">
 					<div class="el-smalltitle">Kontak</div>
-					<h2 class="display-4 margin-b30">Perlu Informasi Lebih Lanjut?</h2>
+					<h2 class="display-4 margin-b30" style="text-align: center">Perlu Informasi Lebih Lanjut?</h2>
 					<p>Kami siap membantu Anda. Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami.					</p>
-					<a href="#" class="read-more margin-t30">Hubungi</a>
+					<a href="mailto:pemdesbaros01@gmail.com" class="read-more margin-t30">Hubungi</a>
 				</div>
 			</div>
 			<!-- /col-lg-12 -->
@@ -132,7 +132,7 @@
 @endsection
 
 @section('script')
-<script>
+{{-- <script>
     function startCounter(maxCount, elementId) {
         let counter = 0;
         const interval = 20; // 0.25 seconds in milliseconds
@@ -149,5 +149,5 @@
 
     startCounter(5,"count-awards"),
     startCounter(75,"awards-count")
-    </script>
+    </script> --}}
 @endsection

@@ -18,7 +18,7 @@
                         <a href="/about" class="read-more-v3">Lihat Selengkapnya</a>
                     </div> --}}
                  </div>
-                 <div class="col-2 col-lg-6 responsive-img">
+                 <div class="col-2 col-lg-6 responsive-img floating-text">
                     <img class="radius-right252" src="{{ asset('frontend/images/lembaga.png')}}"  class="" width="500"/>
                </div>
                
@@ -32,108 +32,33 @@
     <div class="container">
         <div class="row margin-t100">
             <div class="col-lg-12">
-                <ul class="portfolio-filter">
-                    <li><a class="view-more current" href="#" data-filter="*">Show All</a></li>
-                    <li class="lifestyle"><a class="view-more" href="#" data-filter=".lembaga">Lembaga</a></li>
-                    <li class="portrait"><a class="view-more" href="#" data-filter=".komunitas">Komunitas</a></li>
-                </ul>
+               
                 <div class="portfolio-grid-container">
                     <div class="portfolio-grid portfolio-layout-masonry">
-                       
-                         <!-- /item-portfolio -->
-                         <div class="item-portfolio item-3cols komunitas">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-1.png' }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">Kelompok Ternak</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Komunitas</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /item-portfolio -->
-                        <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-1.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">Karang Taruna</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Lembaga</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /item-portfolio -->
-                        <div class="item-portfolio item-3cols komunitas">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/kelompok-tani.jpg') }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">>Kelompok Tani</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Komunitas</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /item-portfolio -->
-                        <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-3.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">Dewan Kesejahteraan Masjid (DKM)</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Lembaga</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                                                <!-- /item-portfolio -->
-                        <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-2.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">>Perlindungan Masyarakat (LINMAS)</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Lembaga</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /item-portfolio -->
-                        <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-5.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">Majelis Ulama Indonesia (MUI)</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Lembaga</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /item-portfolio -->
-                        <div class="item-portfolio item-3cols lifestyle lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-3.png' }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">Badan Permusyawaratan Desa (BPD)</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Lembaga</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /item-portfolio -->
-                        <div class="item-portfolio item-3cols lifestyle lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ 'frontend/images/komunitas/komunitas-2.png' }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">Lembaga Pemberdayaan Masyarakat (LPMD)</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Lembaga</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /item-portfolio -->
-                       
-                        <!-- /item-portfolio -->
-                        <div class="item-portfolio item-3cols lembaga">
-                            <div class="post-image item-grid-image"><img loading="lazy" src="{{ asset('frontend/images/komunitas/komunitas-5.png') }}" class="img-fluid" alt=" " width="750" height="750"></div>
-                            <div class="item-text-holder">
-                                <h2 class="article-title display-6">Pemberdayaan Kesejahteraan Keluarga (PKK)</h2>
-                                <ul class="portfolio-categ">
-                                    <li><a href="#">Lembaga</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                       
-                        <!-- /item-portfolio -->
+
+                        @foreach ($communities as $community )
+                            <!-- /item-portfolio -->
+                            <div class="item-portfolio item-3cols komunitas">
+                                <div class="post-image item-grid-image">
+                                    <img 
+                                        {{-- src="{{ 'frontend/images/komunitas/komunitas-1.png' }}"  --}}
+                                        src="{{ Storage::url($community->logo) }}"
+                                        class="product-image" 
+                                        alt=" " 
+                                        width="750" 
+                                        height="750" 
+                                        loading="lazy"
+                                    >
+                                </div>
+                                <div class="item-text-holder">
+                                    <h2 class="article-title display-6">
+                                        {{ $community->name }}
+                                    </h2>
+                                   
+                                </div>
+                            </div>  
+                        @endforeach
+
                     </div>
                     <!-- /portfolio-grid -->
                 </div>

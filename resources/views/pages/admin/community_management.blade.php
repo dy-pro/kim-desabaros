@@ -10,22 +10,36 @@
                 <!-- /.card -->
 
                 <div class="card">
-                    <div class="card-header border-0">
+                    <div class="card-header">
                         <h3 class="card-title">Daftar Komunitas</h3>
                         <div class="card-tools">
                             <a href="/community_management/createCommunity">
-                                <button class="btn btn-outline-primary">Tambah
-                                Komunitas
+                                <button class="btn btn-outline-primary">
+                                    Tambah Komunitas
                                 </button>    
                             </a>
                         </div>
                     </div>
+
+                    @if(session('success'))
+                        <div class="alert alert-success" id="success-alert">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    @if(session('error'))
+                        <div class="alert alert-danger" id="error-alert">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+
 
                     <div class="card-body table-responsive">
                         @if (!empty($communities))
                         <table id="example1" class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Nama Komunitas</th>
                                     <th>Alamat</th>
                                     <th>Keterangan</th>
@@ -36,9 +50,10 @@
                             <tbody>
                                 @foreach ( $communities as $community )
                                     <tr>
+                                        <td>{{ $loop->iteration++ }}</td>
                                         <td>
-                                            <img src="{{ Storage::url($community->logo) }}" alt="Product 1"
-                                            class="img-circle img-size-32 mr-2">
+                                            <img src="{{ $community->logo ? Storage::url($community->logo) : asset('image/default-user.jpg') }}" alt="logo community"
+                                            class="img-size-32 mr-2">
                                             {{ $community->name }}
                                         </td>
 
@@ -101,6 +116,31 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        // DataTable
+        $('#example1').DataTable({
+            "language": {
+                "lengthMenu": "_MENU_ Filter",
+                search: 'Cari Komunitas : '
+            }
+        });
+
+        // Function to hide the alert after a few seconds
+        function hideAlert(targetId) {
+            var target = document.getElementById(targetId);
+            if (!target) {
+                console.log(`Element with ID ${targetId} not found`);
+                return;
+            }
+            target.style.display = 'none';
+            console.log(`Element with ID ${targetId} hidden`);
+        }
+
+        // Automatically hide success alert after 3.5 seconds
+        setTimeout(() => hideAlert('success-alert'), 3500);
+
+        // Automatically hide error alert after 3.5 seconds
+        setTimeout(() => hideAlert('error-alert'), 3500);
+
         // Event listener untuk tombol delete
         document.querySelectorAll('.btn-delete').forEach(button => {
             button.addEventListener('click', function () {
@@ -145,16 +185,6 @@
             });
         });
     });
-
-    $(document).ready(function() {
-    $('#example1').DataTable({
-        "language": {
-            "lengthMenu": "_MENU_ Filter",
-            search: 'Cari Lembaga : '
-
-        }
-    });
-});
 </script>
 
 @endsection

@@ -7,7 +7,9 @@ use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
+use App\Models\User;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -24,13 +26,38 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-    
-        $request->authenticate();
+        // Validasi bahwa email dan password tidak kosong
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string'
+        ]);
 
-        $request->session()->regenerate();
+        // Coba autentikasi pengguna
+        if (Auth::attempt($credentials)) {
+            // Jika autentikasi berhasil, arahkan ke halaman beranda
+            $request->session()->regenerate();
+            return redirect()->intended('dashboard');
+        }
 
-        return redirect()->route('dashboard');
+        // Jika autentikasi gagal, cek apakah user ada dan tentukan pesan kesalahan
+        $errors = [];
+        $user = User::where('email', $credentials['email'])->first();
+        if (!$user) {
+            $errors['email'] = 'Email tidak ditemukan';
+        } else {
+            $errors['password'] = 'Kata sandi salah';
+        }
+
+        // Jika data tidak valid atau autentikasi gagal, kembalikan ke halaman login dengan pesan kesalahan
+        return redirect()->back()->withErrors($errors)->withInput($request->except('password'));
     }
+
+    /**
+     * Handle a registration request for the application.
+     */
+   
+
+
 
     /**
      * Destroy an authenticated session.

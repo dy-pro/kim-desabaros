@@ -32,6 +32,12 @@
 	<link rel="apple-touch-icon-precomposed" href="{{ asset('frontend/images/Logo.png')}}" />
     <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js')}}"></script>
 
+    {{-- dropdown --}}
+        <!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Optional JavaScript; choose one of the two! -->
+
+
 </head>
 
 <body class="home">
@@ -68,27 +74,98 @@
 	<script src="{{ asset('frontend/js/swiper.js')}}"></script>
 	<script src="{{ asset('frontend/js/isotope.js')}}"></script>
 	<script src="{{ asset('frontend/js/simple-lightbox.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
 
-
+    
     {{-- Main JS --}}
 	<script src="{{ asset('frontend/js/init.js')}}"></script>
 	<script>
 		// console.log('test')
 	
-	document.querySelectorAll('.whatsappButton').forEach(function(button) {
-		button.onclick = function(e) {
-			// e.preventDefault();
-			var productId = this.getAttribute('data-product-id');
-			var quantity = document.querySelector(`.quantity[data-product-id='${productId}'`).value;
-			var phone = document.querySelector(`.phone[data-product-id='${productId}'`).value;
-			var message = `Hallo, Saya ingin pesan:${name}\nJumlah: ${quantity}\n\n Terimakasih!`;
-			var phoneNumber = '628979282163'; // Ganti dengan nomor WhatsApp tujuan
-	
-			var whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-			this.href = whatsappURL;
-		};
+		document.querySelectorAll('.whatsappButton').forEach(function(button) {
+    	button.onclick = function(e) {
+        var productId = this.getAttribute('data-product-id');
+        var productCard = this.closest('.card');
+        var quantity = productCard.querySelector(`.quantity[data-product-id='${productId}']`).value;
+        var productName = productCard.querySelector('.card-title').textContent;
+        var phone = productCard.querySelector(`.phone[data-product-id='${productId}']`).value;
+        var message = `Hallo, Saya ingin pesan:\n\nNama Produk     : ${productName}\nJumlah dipesan : ${quantity}\n\nTerimakasih!`;
+
+        var whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        this.href = whatsappURL;
+    };
 	});
+
+
 	
+	document.addEventListener('DOMContentLoaded', function() {
+            var elements = document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right');
+
+            function checkVisibility() {
+                elements.forEach(function(element) {
+                    if (element.getBoundingClientRect().top < window.innerHeight && element.getBoundingClientRect().bottom >= 0) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkVisibility);
+            window.addEventListener('resize', checkVisibility);
+            checkVisibility();
+        });
+
+		document.querySelectorAll('.quantity-container').forEach(container => {
+    const input = container.querySelector('.quantity');
+    const minusBtn = container.querySelector('.minus');
+    const plusBtn = container.querySelector('.plus');
+
+    minusBtn.addEventListener('click', () => {
+        if (input.value > 1) {
+            input.value = parseInt(input.value) - 1;
+        }
+    });
+
+    plusBtn.addEventListener('click', () => {
+        input.value = parseInt(input.value) + 1;
+    });
+});
+
+// search product
+$(document).ready(function() {
+    function fetchProducts(searchQuery, category) {
+        $.ajax({
+            url: '{{ route("products.search") }}',
+            method: 'GET',
+            data: { 
+                search: searchQuery,
+                category: category
+            },
+            success: function(response) {
+                $('#search-results').replaceWith(response.html);
+            },
+            error: function(xhr) {
+                console.log(xhr.responseText);
+            }
+        });
+    }
+
+    $('#search-form').on('submit', function(e) {
+        e.preventDefault();
+        var searchQuery = $('#search-input').val();
+        var category = $('.portfolio-filter .current').data('category');
+        fetchProducts(searchQuery, category);
+    });
+
+    $('.category-filter').on('click', function(e) {
+        e.preventDefault();
+        $('.category-filter').removeClass('current');
+        $(this).addClass('current');
+        var category = $(this).data('category');
+        var searchQuery = $('#search-input').val();
+        fetchProducts(searchQuery, category);
+    });
+});
 	</script>
     @yield('script')
 

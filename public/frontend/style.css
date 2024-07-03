@@ -191,7 +191,7 @@ textarea {
 	font-size: 100%;
 	margin: 0;
 	vertical-align: baseline;
-	*vertical-align: middle;
+	vertical-align: middle;
 }
 
 .no-margin {
@@ -557,7 +557,7 @@ blockquote {
 }
 
 .contact-detail{
-	background-color: rgb(181, 211, 243);
+	background-color: rgb(181, 211, 243, 0.3);
 	 width: 100vw;
 	   padding :20px;
 
@@ -775,6 +775,9 @@ a,
 	padding: 10px 0;
 	display: block;
 }
+.menu-nav li a:hover{
+	text-decoration: none;
+}
 
 /* garis bawah list menu */
 .menu-nav li a:after{
@@ -874,6 +877,9 @@ height: 20px;
 	outline: none;
 }
 
+.nav-holder-3 {
+    margin-right: auto;
+}
 
 /* Mengatur warna hover sub menu */
 .menu-nav ul li a:hover,
@@ -1058,6 +1064,8 @@ height: 20px;
 	list-style: none;
 	margin-left: 0;
 	margin-bottom: 0;
+	gap: 15px; /* Adjust the gap between icons */
+
 }
 
 .menu-contact ul:first-child li i{
@@ -1067,8 +1075,12 @@ height: 20px;
 
 .menu-contact i,
 .footer-contact a{
-	padding-right: 10px;
+	padding-right: 20px;
 	color: rgb(0, 0, 0);
+}
+
+.footer-contact a i {
+    font-size: 24px; /* Adjust the icon size as needed */
 }
 
 .mobile-phone {
@@ -1287,6 +1299,11 @@ z-index: 100;
 .header-container{
 display: flex;
 align-items: center;
+justify-content: space-between;
+}
+
+.logo-2{
+	margin-bottom: 20px;
 }
 
 .logo-1,
@@ -1302,6 +1319,7 @@ align-items: center;
 .btn-header {
     text-align: right;
 	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .btn-header-2{
@@ -1896,7 +1914,73 @@ margin-bottom: 0;}
 }
 
 
+/* ANIMASI */
+.floating-text {
+	animation: floatAnimation 5s ease-in-out infinite;
+}
 
+@keyframes floatAnimation {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.fade-in {
+	opacity: 0;
+	animation: fadeInAnimation 4s forwards;
+}
+
+@keyframes fadeInAnimation {
+	to {
+		opacity: 1;
+	}
+}
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.slide-in-left{
+	transform: translateX(100%);
+	opacity: 0;
+	animation: slideInAnimation 1s forwards;
+}
+
+.slide-in-right{
+	transform: translateX(-100%);
+	opacity: 0;
+	animation: slideInAnimation 1s forwards;
+}
+
+@keyframes slideInAnimation {
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.col {
+	display: inline-block;
+	vertical-align: top;
+}
 /* END HEADER PAGES */
 
 #wrap-content p,
@@ -2791,15 +2875,55 @@ border-radius: 10px;
 	text-align: left;
 
 }
-
 .d-flex {
     margin-top: 20px;
 }
 
-.quantity-input {
-    width: 30%;
-    text-align: center;
-    margin-right: 10px;
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 40px;
+    color: #16345f;
+	background-color: rgba(199, 228, 255, 0.4);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.quantity {
+    width: 40px;
+    height: 40px;
+	align-self: center;
+	text-align: center;
+	justify-content: center;
+}
+.quantity input{
+	max-width: max-content;
+    width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.quantity input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Hapus control number di Firefox */
+       .quantity input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+.whatsappButton {
+    width: 100%;
+    height: auto;
 }
 
 .buy-button {
@@ -2808,9 +2932,9 @@ border-radius: 10px;
 
 .btn-primary {
     background-color: #2B5796;
-
     color: white;
 }
+
 
 .btn-primary:hover {
     background-color: #2B5796;
@@ -2962,7 +3086,7 @@ transform: scale(1.6);
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
 }
-}
+
 
 /**
 * #5.# BLOG
@@ -3204,6 +3328,14 @@ transform: scale(1.6);
 
 
 /*** BLOG GRID ***/
+
+.blog-holder{
+margin-top: 100px;
+
+}
+
+.page-content{
+}
 
 .blog-item-2col-grid,
 .blog-item-3col-grid{
@@ -3665,7 +3797,7 @@ aside table caption,
 	content: '';
 position: relative;
 width: 100%;
-background-color: white;
+background-color: #0755AB;
 height: 4px;
 display: block;
 margin-top: 10px;
@@ -3959,7 +4091,8 @@ footer .container {
 
 
 .widget-footer {
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	margin-top: 30px;
 }
 
 .widget-footer{
@@ -4053,11 +4186,22 @@ footer .container {
 * 
 */
 
+ul.portfolio-filter{
+	align-items: center;
+}
 .img-fluid,
 .single-post-content img,
 .custom-page-template img {
 	height: auto;
 	max-width: 100%;
+}
+
+.product-image {
+    width: 350px;
+    height: 350px; /* Set your desired maximum height here */
+    object-fit: cover; /* Ensure the image covers the area */
+    object-position: center; /* Center the image */
+    border-radius: 10px 10px 0 0; /* Apply the same border radius */
 }
 
 .icon-img img{
@@ -4278,6 +4422,10 @@ font-size: 15px;
 .read-more-v3{
 	position: relative;
 	
+}
+
+.read-more-v3:hover{
+	color: #ffffff;
 }
 
 .read-more-v3:after,
@@ -5128,11 +5276,31 @@ body.hidden-scroll {
 * 
 */
 
+@media (max-width: 576px) {
+   
+	.display-2,
+	.display-3 {
+		font-size: 2rem !important; /* Ukuran font untuk tablet */
+	}
+	.mt-200{
+		margin-top: 200px;
+	}
+	.width-100{
+		width: 100%;
+	}
+	
+}
+
+
 @media (min-width: 768px) {
 	.container {
 		max-width: 100%;
 	}
-
+	.display-2,
+	.display-3 {
+		font-size: 2rem; /* Ukuran font untuk tablet */
+	}
+	
 }
 
 @media (min-width: 992px) {
@@ -5453,6 +5621,11 @@ body.hidden-scroll {
 		width: 100%;
 	}
 
+	.display-2,
+	.display-3{
+		font-size: 3rem;
+	}
+
 	.blog-item-1col-list {
 		display: block;
 	}
@@ -5518,6 +5691,12 @@ body.hidden-scroll {
 	}
 	
 }
+/* @media (min-width: 767px) {
+	.responsive-img {
+        display: none;
+    }
+} */
+
 
 @media (max-width: 767px) {
 	
@@ -5595,10 +5774,9 @@ body.hidden-scroll {
 		word-wrap: break-word;
 	}
 	
-	.swiper-mt,
-	.video-container,
-	.top-single-bkg,
-	.section-holder{
+	.display-2,
+	.display-3{
+		font-size: 3rem;
 	}
 	
 	.meta-nav-holder,
@@ -5836,10 +6014,14 @@ body.hidden-scroll {
 }
 
 @media (max-width: 568px) {
+	.display-2,
+	.display-3 {
+		font-size: 1.7rem; /* Ukuran font untuk smartphone */
+	}
 	
 	.btn-header,
 	.btn-header-2{
-		display: none;
+		margin-right: 10px;
 	}
 	
 	.page-links a {
@@ -5874,7 +6056,9 @@ body.hidden-scroll {
 		text-align: center;
 	
 	}
-
+	.responsive-img {
+        display: none;
+    }
 	
 .read-more,
 .read-more-v2{

@@ -7,16 +7,16 @@
             <div class="container slider-caption">
                 <div class="row align-items-md-center">
                     <div class="col col-lg-6">
-                         <div class="slider-text">
+                         <div class="slider-text slide-in-right">
                           <h1 class="display-3">Desa Baros</h1>
                           <span class="post-subtitle" style="text-align: justify">Selamat datang di website resmi Desa Baros, Kabupaten Bandung.
                             kami menampilkan berbagai kegiatan yang mencerminkan semangat kebersamaan dan gotong royong masyarakat Desa Baros. </span> 
                         </div>
-                        <div class="margin-b30">
+                        <div class="margin-b30 fade-in">
                             <a class="read-more-v3" href="{{ url('about') }}">Lihat Selengkapnya</a>
                         </div>
                     </div>
-                    <div class="col-2 col-lg-6 responsive-img">
+                    <div class="col-2 col-lg-6 responsive-img floating-text">
                          <img src="{{ asset('frontend/images/fotodesa.png')}}"  class="" width="500"/>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 order-mobi2">
-                    <div class="margin-r50">
+                    <div class="margin-r50 fade-in-up">
                         <div class="row">
                             <div class="col-md-6">
                                 <img class="img-fluid radius10 margin-b30" src="{{ asset('frontend/images/background4.jpeg')}}" alt=" " />
@@ -50,7 +50,7 @@
                 <!-- /col-lg-6 -->	
                 <div class="col-lg-6 order-mobi1 margin-t50">
                     {{-- <div class="el-smalltitle"></div> --}}
-                    <h2 class="display-3 margin-t30">Desa Baros</h2>
+                    <h2 class="display-3 margin-t30 slide-in-left">Desa Baros</h2>
                     <p class="post-subtitle" style="text-align: justify">merupakan Desa yang cukup luas sebelum pada Tahun 1983 dimekarkan dengan wilayah Desa Mekarjaya yang pada mulanya merupakan bagian dari Kecamatan Pameungpeuk Kewadanaan Banjaran Kabupaten Bandung. Desa Baros terdiri dari tanah pertanian dan daratan. Luas tanah pertanian 380,7 Ha., luas wilayah desa 419,7 Ha.</p>
                     {{-- <div class="margin-t30">
                         <a href="#" class="read-more-v3">Lihat Selengkapnya</a>
@@ -65,8 +65,13 @@
     </div>
     {{-- /section 2 --}}
 
-
-
+    
+    @php
+    use Carbon\Carbon;
+    
+    // Set locale to Indonesian
+    Carbon::setLocale('id');
+    @endphp
     <!-- SECTION KEGIATAN -->
 			<div id="home-section-1-2" class="section-holder home-section-1-2 margin-t50 margin-b50">
 				<div class="container">
@@ -74,53 +79,62 @@
 						<div class="col-lg-12">
 							<div class="padding-lr200 alignc">
 								<div class="el-smalltitle">Kegiatan Desa</div>
-								<h2 class="display-4 margin-b50">Kegiatan Mendatang</h2>
+								<h2 class="display-4 margin-b50 fade-in-up">Kegiatan Mendatang</h2>
 							</div>
 						</div>
 						<!-- /col-lg-12 -->
 					</div>
 					<!-- /row -->
-					<div class="row layout-masonry margin-b50less">
-						<div class="col-md-6 col-lg-4 blog-item-masonry">
-							<article class="blog-item blog-item-2col-grid">
-								<div class="post-image"> <img loading="lazy" src="{{ asset('frontend/images/5.png')}}" class="img-fluid" alt=" " width="750" height="750"> <a href="blog-single-post.html"> </a></div>
-								<div class="post-holder">
-									<h2 class="article-title display-6"><a href="blog-single-post.html">Potret Kegiatan Amal</a></h2>
-									<div class="meta-info">
-										<div class="meta-date-all">11 Januari, 2024</div>
-									</div>
-									<a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
-								</div>
-							</article>
-						</div>
-						<!-- /blog-item-masonry -->
-						<div class="col-md-6 col-lg-4 blog-item-masonry">
-							<article class="blog-item blog-item-2col-grid">
-								<div class="post-image"> <img loading="lazy" src="{{ asset('frontend/images/6.png')}}" class="img-fluid" alt=" " width="750" height="750"> <a href="blog-single-post.html"> </a></div>
-								<div class="post-holder">
-									<h2 class="article-title display-6"><a href="blog-single-post.html">Penerimaan Peserta Didik</a></h2>
-									<div class="meta-info">
-										<div class="meta-date-all">5 Februari, 2024</div>
-									</div>
-									<a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
-								</div>
-							</article>
-						</div>
-						<!-- /blog-item-masonry -->
-						<div class="col-md-6 col-lg-4 blog-item-masonry">
-							<article class="blog-item blog-item-2col-grid">
-								<div class="post-image"> <img loading="lazy" src="{{ asset('frontend/images/7.png')}}" class="img-fluid" alt=" " width="750" height="750"> <a href="blog-single-post.html"> </a></div>
-								<div class="post-holder">
-									<h2 class="article-title display-6"><a href="blog-single-post.html">Jadwal Bakti Sosial</a></h2>
-									<div class="meta-info">
-										<div class="meta-date-all">18 Juli, 2024</div>
-									</div>
-									<a class="read-more-v3" href="/activity">Lihat Selengkapnya</a>
-								</div>
-							</article>
-						</div>
-						<!-- /blog-item-masonry -->
-					</div>
+                    @foreach ( $activities->chunk(3) as $chunk  )
+                    <!-- /row -->
+                    <div class="row layout-masonry margin-b50less mb-3">
+                        @foreach ($chunk as $activity)
+                        @php
+                        // Parse the datetime and format it
+                        $dateTime = Carbon::parse($activity->datetime_start);
+                        $formattedDateTime = $dateTime->isoFormat('dddd, D MMMM YYYY HH:mm'); // Format lengkap dengan nama hari
+                    
+                        // Determine whether the time is in the morning or evening
+                        $hour = $dateTime->hour;
+                        $timeOfDay = ($hour >= 6 && $hour < 18) ? 'Siang' : 'Malam';
+                        @endphp
+                            <div class="col-md-6 col-lg-4 blog-item-masonry">
+                                <article class="blog-item blog-item-2col-grid">
+                                    <div class="post-image">
+                                        <img 
+                                            {{-- src="{{ asset('frontend/images/5.png')}}" --}}
+                                            src="{{ Storage::url($activity->image) }}"
+                                            class="product-image"
+                                            alt=" "
+                                            width="750"
+                                            height="750" 
+                                            loading="lazy"
+                                        > 
+                                        <a href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}"> </a>
+                                    </div>
+                                    <div class="post-holder">
+                                        <h2 class="article-title display-6">
+                                            <a href="blog-single-post.html">
+                                                {{ $activity->name }}
+                                            </a>
+                                        </h2>
+                                        <div class="meta-info">
+                                            <div class="meta-date-all">
+                                                {{ $formattedDateTime }} ( {{ $timeOfDay }} )
+                                            </div>
+                                        </div>
+                                        <a class="read-more-v3" href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}">
+                                            Lihat Selengkapnya
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- /blog-item-masonry -->
+                        @endforeach
+    
+                    </div>
+                    
+                @endforeach    
 					<!-- /row -->
 				</div>
 				<!-- /container -->
@@ -129,7 +143,7 @@
     {{-- section LIST POTENSI --}}
     <div id="home-section-1-2" class="section-holder home-section-1-2 parallax" style="background-image:url('{{ asset('frontend/images/background10.png') }}');">
         <div class="container">
-            <div class="row">
+            <div class="row fade-in-up">
                 <h2 class="display-4 alignc" style="margin-bottom: 30px">Potensi Desa Baros</h2>
             </div>
             <div class="row">
@@ -225,32 +239,48 @@
 			<div id="home-section-1-2" class="section-holder home-section-1-2"  style="background-image:url('{{ asset('frontend/images/background23.png') }}');">
 				<div class="container">
 					<div class="row align-items-center margin-t200">
-						<div class="col-lg-6">
+						<div class="col-lg-6 fade-in-up">
 							<h2 class="display-4 margin-t50">Produk Desa</h2>
 						</div>
+                                    <!-- /item-portfolio -->
 						<!-- /col-lg-6 -->	
 					</div>
 					<!-- /row -->	
 					<div class="row margin-b80">
+                        @foreach ($products->take(4) as $product )
+
 						<div class="col-md-6 col-lg-3 margin-b50">
+                            @php
+                            $product->price = number_format($product->price, 0, ',', '.');
+                        @endphp
                             <div class="card">
                                 <div class="card-header p-0">
                                     <a href="/product">
-                                        <img class="img-fluid w-100 radius10-top" src="{{ asset('frontend/images/produk/1.png')}}" alt="Ranginang" />
+                                        <img class="product-image w-100 radius10-top" src="{{ asset('products/'.$product->product_image)}}" alt="{{ $product->name }}" />
                                     </a>
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5 class="card-title margin-b10">Ranginang</h5>
-                                    <div class="card-text team-position">Rp. 10.000</div>
-                                    <div class="d-flex justify-content-center align-items-center mt-3">
-                                        <input type="number" min="1" value="1" class="form-control quantity-input" />
-                                        <a href="#" class="btn btn-primary buy-button">Beli Sekarang</a>
+                                    <h5 class="card-title margin-b10">{{ $product->product_name }}</h5>
+                                    <div class="card-text team-position">Rp. {{ $product->price }}</div>
+                                    <div class="d-flex justify-content-center align-items-center mt-3 gap-3">
+                                        <input type="tel" class="form-control phone" hidden data-product-id="{{ $product->id }}" value="{{ $product->whatsapp }}" style="padding: .375rem .75rem"/>
+                                        
+                                        <div class="quantity-container">
+                                            <button class="quantity-btn minus">-</button>
+                                            <input type="number" class="quantity" data-product-id="{{ $product->id }}" step="1" min="1" max="" value="1" placeholder="" readonly/>
+                                            <button class="quantity-btn plus">+</button>
+                                        </div>
+                                        
+                                        <a class="btn btn-primary whatsappButton buy-button" href="#" data-product-id="{{ $product->id }}" target="_blank">Beli</a>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+                        @endforeach
+
 						<!-- /col-lg-3 -->
-						<div class="col-md-6 col-lg-3 margin-b50">
+						{{-- <div class="col-md-6 col-lg-3 margin-b50">
                             <div class="card">
                                 <div class="card-header p-0">
                                     <a href="/product">
@@ -303,7 +333,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 						<!-- /col-lg-3 -->
 					</div>
 					<!-- /row -->	
@@ -311,7 +341,11 @@
 				<!-- /container -->
 			</div>
 			<!-- /SECTION PRODUCT-->	
-
+            <style>
+                .swiper-fade .swiper-slide{
+                    pointer-events: initial;
+                }
+                </style>
        <script>
         window.addEventListener('DOMContentLoaded', function(){
             document.querySelector('.swiper-mt').classList.remove('swiper-fade')

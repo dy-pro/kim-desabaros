@@ -21,22 +21,31 @@
                                     <label for="name">Nama</label>
                                     <input name="name" value="{{ $user->name }}" type="text" class="form-control" id="name"
                                         placeholder="Nama Lengkap">
+                                    @error('name')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input name="email" value="{{ $user->email }}" type="email" class="form-control" id="name"
-                                            placeholder="Email" required>
+                                        <input name="email" value="{{ $user->email }}" type="email" class="form-control" id="email"
+                                            placeholder="Email">
+                                        @error('email')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group">
                                         <label for="password">Password</label>
                                         <input name="password" value="" type="password" class="form-control"
                                             id="exampleInputPassword1" placeholder="password">
+                                        @error('password')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="address">Alamat</label>
-                                        <input name="address" value="{{ $user->address }}" type="text" class="form-control" id="exampleInputPassword1"
+                                        <input name="address" value="{{ $user->address }}" type="text" class="form-control" id="address"
                                             placeholder="Alamat Lengkap">
                                     </div>
                                     <div class="form-group">

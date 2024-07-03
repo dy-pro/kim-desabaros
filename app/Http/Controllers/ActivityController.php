@@ -29,7 +29,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-         // Ambil semua komunitas untuk dropdown
+        // Ambil semua komunitas untuk dropdown
         $communities = Community::all();
 
         return view('pages.admin.activity.create', compact('communities'));
@@ -40,19 +40,53 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-
         // Validasi data
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'location' =>'nullable|string|max:255',
             'id_community' => 'nullable|integer|exists:communities,id',
             'eventStartDate' => 'required|date',
             'eventStartTime' => 'required',
             'eventEndDate' => 'required|date',
             'eventEndTime' => 'required',
-            'image' => 'nullable|file|mimes:jpeg,png,jpg,gif|max:1024' // maksimal 1MB
+            'contact_name' => 'required|string|max:255',
+            'contact_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'image' => 'required|file|mimes:jpeg,png,jpg,gif|max:1024', // maksimal 1MB
+            'new_community_name' => 'nullable|string|max:255'
         ], [
-            'name.required' => 'Kamu harus masukkan nama kegiatannya'
+            'name.required' => 'Nama kegiatan harus diisi.',
+            'name.string' => 'Nama kegiatan harus berupa teks.',
+            'name.max' => 'Nama kegiatan maksimal 255 karakter.',
+            
+            'description.required' => 'Deskripsi harus diisi.',
+            'description.string' => 'Deskripsi harus berupa teks.',
+            'description.max' => 'Deskripsi maksimal 500 karakter.',
+            
+            'location.required' => 'Lokasi harus diisi.',
+            'location.string' => 'Lokasi harus berupa teks.',
+            'location.max' => 'Lokasi maksimal 255 karakter.',
+            
+            'eventStartDate.required' => 'Tanggal mulai acara harus diisi.',
+            'eventStartDate.date' => 'Tanggal mulai acara tidak valid.',
+            
+            'eventStartTime.required' => 'Waktu mulai acara harus diisi.',
+            
+            'eventEndDate.required' => 'Tanggal akhir acara harus diisi.',
+            'eventEndDate.date' => 'Tanggal akhir acara tidak valid.',
+            
+            'eventEndTime.required' => 'Waktu akhir acara harus diisi.',
+
+            'contact_name.required' => 'Nama kontak harus diisi.',
+            'contact_phone.required' => 'Nomor telepon harus diisi.',
+            
+            'image.required' => 'Image harus diupload.',
+            'image.file' => 'File yang diunggah harus berupa file.',
+            'image.mimes' => 'Gambar harus berformat jpeg, png, jpg, atau gif.',
+            'image.max' => 'Ukuran file maksimal 1MB.',
+            
+            'new_community_name.string' => 'Nama komunitas baru harus berupa teks.',
+            'new_community_name.max' => 'Nama komunitas baru maksimal 255 karakter.'
         ]);
     
         // Mengelola file upload
@@ -68,11 +102,31 @@ class ActivityController extends Controller
         // Menggabungkan tanggal dan waktu berakhir
         $datetimeEnd = $request->eventEndDate . ' ' . $request->eventEndTime;
 
+        // Menyimpan komunitas baru jika ada
+        if ($request->filled('new_community_name')) {
+            $community = Community::create([
+                'name' => $request->new_community_name,
+                'id_user' => auth()->id(), // Atur id_user ke pengguna yang sedang login
+                'address' => null, 
+                'logo' => null,    
+                'description' => null,
+                'visi' => null,
+                'misi' => null,
+            ]);
+
+            // Tetapkan id komunitas baru ke request untuk disimpan dalam aktivitas
+            $request->merge(['id_community' => $community->id]);
+        }
+
+
         // Menyimpan data ke database
         $activity = Activity::create([
             'id_community' => $request->id_community,
             'name' => $request->name,
             'description' => $request->description,
+            'location'=> $request->location,
+            'contact_name'=> $request->contact_name,
+            'contact_phone'=> $request->contact_phone,
             'datetime_start' => $datetimeStart,
             'datetime_end' => $datetimeEnd,
             'image' => $imagePath, // Menyimpan path Poster
@@ -123,24 +177,79 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $activityId)
     {
-        // Validasi input
+        // Validasi data
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'id_community' => 'nullable|exists:communities,id',
+            'location' =>'nullable|string|max:255',
+            'id_community' => 'nullable|integer|exists:communities,id',
             'eventStartDate' => 'required|date',
             'eventStartTime' => 'required',
             'eventEndDate' => 'required|date',
             'eventEndTime' => 'required',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:1024',
+            'contact_name' => 'required|string|max:255',
+            'contact_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'image' => 'file|mimes:jpeg,png,jpg,gif|max:1024', // maksimal 1MB
+            'new_community_name' => 'nullable|string|max:255'
+        ], [
+            'name.required' => 'Nama kegiatan harus diisi.',
+            'name.string' => 'Nama kegiatan harus berupa teks.',
+            'name.max' => 'Nama kegiatan maksimal 255 karakter.',
+            
+            'description.required' => 'Deskripsi harus diisi.',
+            'description.string' => 'Deskripsi harus berupa teks.',
+            'description.max' => 'Deskripsi maksimal 500 karakter.',
+            
+            'location.required' => 'Lokasi harus diisi.',
+            'location.string' => 'Lokasi harus berupa teks.',
+            'location.max' => 'Lokasi maksimal 255 karakter.',
+            
+            'eventStartDate.required' => 'Tanggal mulai acara harus diisi.',
+            'eventStartDate.date' => 'Tanggal mulai acara tidak valid.',
+            
+            'eventStartTime.required' => 'Waktu mulai acara harus diisi.',
+            
+            'eventEndDate.required' => 'Tanggal akhir acara harus diisi.',
+            'eventEndDate.date' => 'Tanggal akhir acara tidak valid.',
+            
+            'eventEndTime.required' => 'Waktu akhir acara harus diisi.',
+
+            'contact_name.required' => 'Nama kontak harus diisi.',
+            'contact_phone.required' => 'Nomor telepon harus diisi.',
+            
+            'image.file' => 'File yang diunggah harus berupa file.',
+            'image.mimes' => 'Gambar harus berformat jpeg, png, jpg, atau gif.',
+            'image.max' => 'Ukuran file maksimal 1MB.',
+            
+            'new_community_name.string' => 'Nama komunitas baru harus berupa teks.',
+            'new_community_name.max' => 'Nama komunitas baru maksimal 255 karakter.'
         ]);
 
         // Cari data kegiatan
         $activity = Activity::findOrFail($activityId);
 
+        // Menyimpan komunitas baru jika ada
+        if ($request->filled('new_community_name')) {
+            $community = Community::create([
+                'name' => $request->new_community_name,
+                'id_user' => auth()->id(), // Atur id_user ke pengguna yang sedang login
+                'address' => null, 
+                'logo' => null,    
+                'description' => null,
+                'visi' => null,
+                'misi' => null,
+            ]);
+
+            // Tetapkan id komunitas baru ke request untuk disimpan dalam aktivitas
+            $request->merge(['id_community' => $community->id]);
+        }
+
         // Update data
         $activity->name = $request->name;
         $activity->description = $request->description;
+        $activity->location = $request->location;
+        $activity->contact_name = $request->contact_name;
+        $activity->contact_phone = $request->contact_phone;
         $activity->id_community = $request->id_community;
 
         // Kombinasikan tanggal dan waktu untuk datetime_start dan datetime_end

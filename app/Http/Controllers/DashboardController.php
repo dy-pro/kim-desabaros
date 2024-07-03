@@ -2,49 +2,104 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\User;
 use App\Models\Product;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-
-
-use App\Http\Controllers\CommunityController;
 use App\Models\Activity;
+use App\Models\Category;
+use Illuminate\Http\Request;
+
+
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CommunityController;
+use App\Models\Community;
 
 class DashboardController extends Controller
 {
     public function dashboard(){
         // dd(Auth::user()->role);
         if(Auth::user()==null || Auth::user()->role == 'penjual' ){
-            return redirect()->route('produk.index');
+            return redirect()->route('product.index');
         }
-        return view('pages.admin.dashboard');
+        $user = User::where('role' ,'=', 'penjual')->count();
+        $product_total = Product::count();
+        $category_total = Category::count();
+        $community_total = Community::count();
+        $activity_total = Activity::count();
+
+
+        $latest_products = Product::latest()->take(5)->get();
+
+        $latest_activities = Activity::latest()->take(5)->get();
+
+        $latest_communities = Community::latest()->take(5)->get();
+
+        return view('pages.admin.dashboard', [
+            'user' => $user,
+            'product' => $product_total,
+            'category' => $category_total,
+            'community' => $community_total,
+            'activity' => $activity_total,
+            'latest_products'=> $latest_products,
+            'latest_activities'=> $latest_activities,
+            'latest_communities'=> $latest_communities
+        ]);
     }
-    public function product_management(){
-        $products = Product::query()
-        ->leftJoin('category', 'products.id_category', '=', 'category.id')
-        ->select('products.id as id_product', 'products.*','category.*')
-        ->get();
-        return view('pages.admin.product_management', ['products'=>$products]);
-    }
-    public function createProduct(){
-        $category= Category::all();
-        return view('pages.admin.produk.createProduct', ['categories'=>$category]);
-    }
+
+    //User
     public function user_management(){
         $user = User::all();
         return view('pages.admin.user_management', ['users'=>$user]);
     }
+
     public function createUser(){
         return view('pages.admin.createUser');
     }
+
+    //Kategori Produk
     public function category_management(){
-        $category = Category::all();
-        return view('pages.admin.category_management', ['categories'=>$category]);
+        $categories = Category::all();
+        return view('pages.admin.category_management', ['categories'=> $categories]);
     }
     public function createCategory(){
         return view('pages.admin.createCategory');
+    }
+
+    //Produk
+    public function product_management(Request $request){
+        // $products = Product::query()
+        // ->leftJoin('category', 'products.id_category', '=', 'category.id')
+        // ->select('products.*','category.title')
+        // ->get();
+        // return view('pages.admin.product_management', ['products'=>$products]);
+
+        $productController = new ProductController();
+        return $productController->index($request);
+
+    }
+    public function createProduct(Request $request){
+        $productController = new ProductController();
+        return $productController->create($request);
+    }
+
+    public function storeProduct(Request $request){
+        $productController = new ProductController();
+        return $productController->store($request);
+    }
+
+    public function editProduct($productId){
+        $productController = new ProductController();
+        return $productController->edit($productId);
+    }
+
+    public function updateProduct(Request $request, $productId){
+        $productController = new ProductController();
+        return $productController->update($request, $productId);
+    }
+
+    public function deleteProduct($productId){
+        $productController = new ProductController();
+        return $productController->destroy($productId);
     }
 
     //Komunitas

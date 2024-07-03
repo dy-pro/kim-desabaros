@@ -7,8 +7,7 @@
     <title>Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/fontawesome-free/css/all.min.css')}}">
     <link rel="icon" href="{{url('frontend/images/Logo.png')}}" />
@@ -20,8 +19,8 @@
 
 </head>
 
-<body class="hold-transition login-page">
-    <div class="login-box">
+<body class="hold-transition login-page" style="background-image:url('{{ asset('frontend/images/background23.png') }}');">
+    <div class="login-box" >
         <!-- /.login-logo -->
         <div class="card card-outline card-primary w-200">
             <div class="card-header text-center">
@@ -33,13 +32,16 @@
                 <form action="{{ route('login') }}" method="post">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control w-input" name="email" placeholder="Email" width="100">
+                        <input type="email" class="form-control w-input" name="email" placeholder="Email" value="{{ old('email') }}">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
                     </div>
+                    @error('email')
+                        <span class="text-danger" style="margin-top: -1rem; margin-bottom: 1rem; display: block; font-size:14px; padding-left: 9px;">{{ $message }}</span>
+                    @enderror
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" name="password" placeholder="Password" id="inputPassword">
                         <div class="input-group-append" onclick="togglePassword()">
@@ -48,28 +50,42 @@
                             </div>
                         </div>
                     </div>
+                    @error('password')
+                        <span class="text-danger" style="margin-top: -1rem; margin-bottom: 1rem; display: block; font-size:14px; padding-left: 9px;">{{ $message }}</span>
+                    @enderror
                     <div class="row">
-                        <div class="col-8">
-                            
+                        {{-- <div class="col-8  justify-content-center">
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
+                                {{ __('Belum punya akun?') }}
+                            </a>
+                        </div> --}}
+                        <!-- /.col -->
+                        <div class="col-12  justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
                         </div>
                         <!-- /.col -->
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center mt-3">
+                            <label class="mr-2 text-sm font-medium text-gray-600">Belum punya akun?</label>
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                                {{ __('Daftar') }}
+                            </a>
                         </div>
-                        <!-- /.col -->
                     </div>
                 </form>
 
                 <div class="social-auth-links text-center mt-2 mb-3">
-                
+                    <!-- Social auth links (if any) -->
                 </div>
                 <!-- /.social-auth-links -->
 
                 <p class="mb-1">
-                    <a href="#"></a>
+                    <!-- Additional links (if any) -->
                 </p>
                 <p class="mb-0">
-                    <a href="#" class="text-center"></a>
+                    <!-- Additional links (if any) -->
                 </p>
             </div>
             <!-- /.card-body -->
@@ -87,16 +103,14 @@
     <script src="{{ asset('frontend/js/init.js')}}"></script>
     <script>
         function togglePassword(){
-            // console.log('test')
             const inputPassword= document.getElementById('inputPassword')
             if(inputPassword.type == 'password') {
                 inputPassword.type = 'text'
-            }
-            else{
+            } else {
                 inputPassword.type = 'password'
             }
         }
-        </script>
+    </script>
 </body>
 
 </html>

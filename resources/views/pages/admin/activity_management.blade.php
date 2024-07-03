@@ -19,14 +19,28 @@
                         </div>
                     </div>
 
+                    @if(session('success'))
+                        <div class="alert alert-success" id="success-alert">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    @if(session('error'))
+                        <div class="alert alert-danger" id="error-alert">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+
                     <div class="card-body table-responsive">
                         @if (!empty($activities))
                         <table id="example1" class="table table-bordered table-striped dataTable">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Nama Kegiatan</th>
                                     <th>Gambar Poster</th>
                                     <th>Deskripsi</th>
+                                    <th>Lokasi</th>
                                     <th>Penyelenggara</th>
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
@@ -37,6 +51,7 @@
                             <tbody>
                                 @foreach ( $activities as $activity )
                                     <tr>
+                                        <td>{{ $loop->iteration++ }}</td>
                                         <td>{{ $activity->name }}</td>
                                         <td>
                                             <img src="{{ $activity->image ? Storage::url($activity->image) : asset('AdminLTE/dist/img/default-150x150.png') }}" alt="Product 1" class="img-square img-size-64 mr-2">
@@ -44,6 +59,11 @@
                                         <td>
                                             {{ $activity->description }}
                                         </td>
+
+                                        <td>
+                                            {{ $activity->location }}
+                                        </td>
+
                                         <td>
                                             {{ $activity->community ? $activity->community->name : 'Tidak Ada' }}
                                         </td>
@@ -58,7 +78,7 @@
                                                 <a href="{{ route('activity.edit', ['activityId' => $activity->id]) }}" class="text-primary mr-2">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                 <!-- Button Delete menggunakan SweetAlert -->
+                                                <!-- Button Delete menggunakan SweetAlert -->
                                                 <button type="button" class="btn text-danger btn-delete border-0" data-id="{{ $activity->id }}" >
                                                     <i class="fas fa-trash"></i>
                                                 </button>
@@ -148,6 +168,24 @@
 
         }
     });
+
+    // Function to hide the alert after a few seconds
+    function hideAlert(targetId) {
+        var target = document.getElementById(targetId);
+        if (!target) {
+            console.log(`Element with ID ${targetId} not found`);
+            return;
+        }
+        console.log(`Hiding element with ID ${targetId}`);
+        target.style.display = 'none';
+        console.log(`Element with ID ${targetId} hidden`);
+    }
+    
+    // Automatically hide success alert after 3,5 seconds
+    setTimeout(() => hideAlert('success-alert'), 3500);
+    
+    // Automatically hide error alert after 3,5 seconds
+    setTimeout(() => hideAlert('error-alert'), 3500);
 });
 </script>
 @endsection

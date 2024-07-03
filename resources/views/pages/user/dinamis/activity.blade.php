@@ -17,6 +17,13 @@
     </div>
 </div>
     <!-- SECTION KEGIATAN -->
+    @php
+    use Carbon\Carbon;
+    
+    // Set locale to Indonesian
+    Carbon::setLocale('id');
+    @endphp
+    
     <div id="home-section-1-2" class="section-holder home-section-1-2 margin-t50 margin-b50">
         <div class="container">
             <div class="row">
@@ -28,30 +35,60 @@
                 </div>
                 <!-- /col-lg-12 -->
             </div>
-            <!-- /row -->
-            
-            
-            <div class="row layout-masonry margin-b50less">
-                @foreach ($activities as $activity )
-                <div class="col-md-6 col-lg-4 blog-item-masonry">
-                    <article class="blog-item blog-item-2col-grid">
-                        <div class="post-image"> <img loading="lazy" src="{{ asset('/storage/'.$activity->image)}}" class="img-fluid" alt=" " width="750" height="750"> <a href="blog-single-post.html"> </a></div>
-                        <div class="post-holder">
-                            <h2 class="article-title display-6"><a href="blog-single-post.html">{{ $activity->description }}</a></h2>
-                            <div class="meta-info">
-                                <div class="meta-date-all">{{ $activity->eventStartDate }}</div>
-                            </div>
-                            <a class="read-more-v3" href="/activity/detail_activity">Lihat Selengkapny</a>
+    
+            @foreach ($activities->chunk(3) as $chunk)
+                <div class="row layout-masonry margin-b50less mb-3">
+                    @foreach ($chunk as $activity)
+                        @php
+                        // Parse the datetime and format it
+                        $dateTime = Carbon::parse($activity->datetime_start);
+                        $formattedDateTime = $dateTime->isoFormat('dddd, D MMMM YYYY HH:mm'); // Format lengkap dengan nama hari
+    
+                        // Determine whether the time is in the morning or evening
+                        $hour = $dateTime->hour;
+                        $timeOfDay = ($hour >= 6 && $hour < 18) ? 'Siang' : 'Malam';
+                        @endphp
+    
+                        <div class="col-md-6 col-lg-4 blog-item-masonry">
+                            <article class="blog-item blog-item-2col-grid">
+                                <div class="post-image">
+                                    <img 
+                                        src="{{ Storage::url($activity->image) }}"
+                                        class="product-image"
+                                        alt="{{ $activity->name }}"
+                                        width="750"
+                                        height="750"
+                                        loading="lazy"
+                                    > 
+                                    <a href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}"> </a>
+                                </div>
+                                <div class="post-holder">
+                                    <h2 class="article-title display-6">
+                                        <a href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}">
+                                            {{ $activity->name }}
+                                        </a>
+                                    </h2>
+                                    <div class="meta-info">
+                                        <div class="meta-date-all">
+                                            {{ $formattedDateTime }} ( {{ $timeOfDay }} )
+                                        </div>
+                                    </div>
+                                    <a class="read-more-v3" href="{{ route('detail_kegiatan', ['activityId'=>$activity->id]) }}">
+                                        Lihat Selengkapnya
+                                    </a>
+                                </div>
+                            </article>
                         </div>
-                    </article>
+                        <!-- /blog-item-masonry -->
+                    @endforeach
                 </div>
-                @endforeach
-                
-                <!-- /blog-item-masonry -->
-                
-            </div>
+                <!-- /row -->
+            @endforeach
+    
         </div>
         <!-- /container -->
     </div>
+    
+    
     <!-- /SECTION KEGIATAN -->
 @endsection

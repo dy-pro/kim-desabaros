@@ -22,7 +22,10 @@
                                 <div class="form-group">
                                     <label for="category">Nama Kategori</label>
                                     <input type="text" name="title"  class="form-control" id="name"
-                                        placeholder="Nama Kategori">
+                                        value="{{ $category->title }}" placeholder="Nama Kategori">
+                                    @error('title')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
 

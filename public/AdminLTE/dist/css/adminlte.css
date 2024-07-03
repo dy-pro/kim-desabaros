@@ -4858,6 +4858,7 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  align-content: left;
 }
 
 .card-title {
@@ -6841,7 +6842,7 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-  background-color: #28a745 !important;
+  background-color: #FBEEAC !important;
 }
 
 a.bg-success:hover, a.bg-success:focus,
@@ -6861,13 +6862,17 @@ button.bg-info:focus {
 }
 
 .bg-warning {
-  background-color: #ffc107 !important;
+  background-color: #75C2F6 !important;
 }
 
 a.bg-warning:hover, a.bg-warning:focus,
 button.bg-warning:hover,
 button.bg-warning:focus {
   background-color: #d39e00 !important;
+}
+
+.bg-blue{
+  background-color: #BBDEFB !important;
 }
 
 .bg-danger {
@@ -10224,6 +10229,7 @@ a.text-warning:hover, a.text-warning:focus {
 
 .text-danger {
   color: #dc3545 !important;
+
 }
 
 a.text-danger:hover, a.text-danger:focus {
@@ -33369,7 +33375,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 
 .small-box .icon > i.fa, .small-box .icon > i.fas, .small-box .icon > i.far, .small-box .icon > i.fab, .small-box .icon > i.fal, .small-box .icon > i.fad, .small-box .icon > i.ion {
-  font-size: 70px;
+  font-size: 55px;
   top: 20px;
 }
 
@@ -44509,14 +44515,16 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   border-radius: 50%;
 }
 
-.img-size-64,
 .img-size-50,
 .img-size-32 {
   height: auto;
 }
 
 .img-size-64 {
-  width: 64px;
+  width: 60px;
+  height: 60px;
+  align-content: left;
+  object-position: left; 
 }
 
 .img-size-50 {
@@ -45849,13 +45857,14 @@ blockquote.quote-gray-dark h6 {
   color: #fff;
 }
 
+/* UBAH WARNA BACKGROUND BG-SUCCESS ASLI */
 .bg-success {
-  background-color: #28a745 !important;
+  background-color: #FBEEAC !important;
 }
 
 .bg-success,
 .bg-success > a {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .bg-success.btn:hover {
@@ -45869,8 +45878,13 @@ blockquote.quote-gray-dark h6 {
   color: #fff;
 }
 
+/* WARNA BACKGROUND DASHBOARD BG-INFO */
 .bg-info {
-  background-color: #17a2b8 !important;
+  background-color: #1D5D9B !important;
+}
+
+.bg-blue{
+  background-color: #BBDEFB  !important;
 }
 
 .bg-info,
@@ -45889,8 +45903,9 @@ blockquote.quote-gray-dark h6 {
   color: #fff;
 }
 
+/* UBAH WARNA BACKGROUND  */
 .bg-warning {
-  background-color: #ffc107 !important;
+  background-color: #75C2F6 !important;
 }
 
 .bg-warning,
@@ -45909,13 +45924,14 @@ blockquote.quote-gray-dark h6 {
   color: #1f2d3d;
 }
 
+/* UBAH WARNA BACKGROUND BG-DANGER */
 .bg-danger {
-  background-color: #dc3545 !important;
+  background-color: #F4D160 !important;
 }
 
 .bg-danger,
 .bg-danger > a {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .bg-danger.btn:hover {
