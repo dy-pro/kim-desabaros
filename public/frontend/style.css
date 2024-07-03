@@ -775,6 +775,9 @@ a,
 	padding: 10px 0;
 	display: block;
 }
+.menu-nav li a:hover{
+	text-decoration: none;
+}
 
 /* garis bawah list menu */
 .menu-nav li a:after{
@@ -2898,7 +2901,25 @@ border-radius: 10px;
     height: 40px;
 	align-self: center;
 	text-align: center;
+	justify-content: center;
 }
+.quantity input{
+	max-width: max-content;
+    width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.quantity input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Hapus control number di Firefox */
+       .quantity input[type=number] {
+            -moz-appearance: textfield;
+        }
 
 .whatsappButton {
     width: 100%;
@@ -4403,6 +4424,10 @@ font-size: 15px;
 	
 }
 
+.read-more-v3:hover{
+	color: #ffffff;
+}
+
 .read-more-v3:after,
 .read-more-v3:after,
 .el-btn .elementor-button .elementor-button-text:after{
@@ -5255,11 +5280,17 @@ body.hidden-scroll {
    
 	.display-2,
 	.display-3 {
-		font-size: 2rem; /* Ukuran font untuk tablet */
+		font-size: 2rem !important; /* Ukuran font untuk tablet */
 	}
-
+	.mt-200{
+		margin-top: 200px;
+	}
+	.width-100{
+		width: 100%;
+	}
 	
 }
+
 
 @media (min-width: 768px) {
 	.container {
@@ -5269,7 +5300,7 @@ body.hidden-scroll {
 	.display-3 {
 		font-size: 2rem; /* Ukuran font untuk tablet */
 	}
-
+	
 }
 
 @media (min-width: 992px) {

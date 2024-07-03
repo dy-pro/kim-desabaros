@@ -17,7 +17,7 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,' . $this->user()->id],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'role' => ['nullable', 'string', 'max:255'],
             'address' => ['nullable', 'string', 'max:255'],
             'whatsapp' => ['nullable', 'string', 'max:15'],
@@ -34,7 +34,6 @@ class ProfileUpdateRequest extends FormRequest
             'email.string' => 'Email harus berupa teks.',
             'email.email' => 'Email harus berupa alamat email yang valid.',
             'email.max' => 'Email tidak boleh lebih dari 255 karakter.',
-            'email.unique' => 'Email sudah terdaftar.',
             'address.required' => 'Alamat wajib diisi.',
             'address.string' => 'Alamat harus berupa teks.',
             'address.max' => 'Alamat tidak boleh lebih dari 255 karakter.',

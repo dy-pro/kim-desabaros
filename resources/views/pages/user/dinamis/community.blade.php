@@ -18,7 +18,7 @@
                         <a href="/about" class="read-more-v3">Lihat Selengkapnya</a>
                     </div> --}}
                  </div>
-                 <div class="col-2 col-lg-6 responsive-img">
+                 <div class="col-2 col-lg-6 responsive-img floating-text">
                     <img class="radius-right252" src="{{ asset('frontend/images/lembaga.png')}}"  class="" width="500"/>
                </div>
                
@@ -43,7 +43,7 @@
                                     <img 
                                         {{-- src="{{ 'frontend/images/komunitas/komunitas-1.png' }}"  --}}
                                         src="{{ Storage::url($community->logo) }}"
-                                        class="img-fluid" 
+                                        class="product-image" 
                                         alt=" " 
                                         width="750" 
                                         height="750" 

@@ -52,7 +52,7 @@
               <div class="dropdown">
                   <button class="btn btn-white text-sm font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                       <div>
-                          <img src="{{ Auth::user()->image ? asset('users/' . Auth::user()->image) : asset('image/default-user.png') }}" alt="Profile Image" class="rounded-circle" width="40" height="40">
+                          <img src="{{ Auth::user()->image ? asset('users/' . Auth::user()->image) : asset('image/default-user.jpg') }}" alt="Profile Image" class="rounded-circle" width="40" height="40">
                       </div>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">

@@ -1,13 +1,12 @@
 <div class="row margin-b80" id="search-results">
-    <div class="col-lg-12">
-        <div class="portfolio-grid-container portfolio-grid-container-v2 margin-b100">
+    @foreach ($products as $product)
+    <div class="col-md-6 col-lg-3 margin-b50">
+        <div class="portfolio-grid-container portfolio-grid-container-v2">
             <div id="product-container" class="portfolio-grid portfolio-grid-v2 portfolio-layout-masonry d-flex flex-wrap">
-                @foreach ($products as $product)
-                <div class="item-portfolio item-3cols {{ strtolower($product->category_title) }} flex-item">
+                <div class="width-100 {{ strtolower($product->category_title) }} flex-item">
                     @php
                         $product->price = number_format($product->price, 0, ',', '.');
                     @endphp
-                    <div class="w-100">
                         <div class="card">
                             <div class="card-header p-0">
                                 <a href="/product">
@@ -31,10 +30,9 @@
                             </div>                                    
                             
                         </div>
-                    </div>
                 </div>
-                @endforeach
             </div>
         </div>
     </div>
+    @endforeach
 </div>

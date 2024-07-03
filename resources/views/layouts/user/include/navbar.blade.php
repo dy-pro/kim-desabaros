@@ -31,6 +31,9 @@
                         <li class="menu-item">
                             <a href="/community">Lembaga/Komunitas</a>
                         </li>
+                        <li class="menu-item">
+                            <a href="https://baros.desa.id/">Portal Desa</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="menu-item">
@@ -94,6 +97,9 @@
                         <li class="menu-item menu-item-has-children {{ Route::currentRouteName() == 'lembaga_komunitas' ? 'current-menu-item' : '' }}">
                             <a href="{{ route('lembaga_komunitas') }}">Lembaga/Kelompok</a>
                         </li>
+                        <li class="menu-item menu-item-has-children {{ Route::currentRouteName() == 'lembaga_komunitas' ? 'current-menu-item' : '' }}">
+                            <a href="https://baros.desa.id/">Portal Desa</a>
+                        </li>                        
                     </ul>
                 </li>
                 <li class="menu-item menu-item-has-children {{ Route::currentRouteName() == 'produk_desa' ? 'current-menu-item' : '' }}">
@@ -101,12 +107,12 @@
                 </li>
             </ul>
         </nav>
+        <div class="btn-header btn-header-1"> <a href="/login" class="read-more-v3">login</a></div>
 
-        @if (Auth::check())
+        {{-- @if (Auth::check())
             
         
-        <div class="btn-header btn-header-1"> <a href="/dashboard" class="read-more-v3">Halaman Admin</a></div>
-        @endif
+        @endif --}}
 
         <div class="nav-button-holder">
             <button type="button" class="nav-button">

@@ -142,7 +142,7 @@ $(document).ready(function() {
                 category: category
             },
             success: function(response) {
-                $('#search-results').html(response.html);
+                $('#search-results').replaceWith(response.html);
             },
             error: function(xhr) {
                 console.log(xhr.responseText);

@@ -341,7 +341,11 @@
 				<!-- /container -->
 			</div>
 			<!-- /SECTION PRODUCT-->	
-
+            <style>
+                .swiper-fade .swiper-slide{
+                    pointer-events: initial;
+                }
+                </style>
        <script>
         window.addEventListener('DOMContentLoaded', function(){
             document.querySelector('.swiper-mt').classList.remove('swiper-fade')
