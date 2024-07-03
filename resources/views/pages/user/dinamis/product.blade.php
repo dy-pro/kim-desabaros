@@ -73,10 +73,9 @@
                                             
                                             <div class="quantity-container">
                                                 <button class="quantity-btn minus">-</button>
-                                                <div class="quantity">
-                                                    <input type="number"  data-product-id="{{ $product->id }}" step="1" min="1" max="" value="1" placeholder="" readonly/>
-
-                                                </div>
+                                                {{-- <div class="quantity"> --}}
+                                                    <input type="number" class="quantity" data-product-id="{{ $product->id }}" step="1" min="1" max="" value="1" placeholder="" readonly/>
+                                                {{-- </div> --}}
                                                 <button class="quantity-btn plus">+</button>
                                             </div>
                                             
