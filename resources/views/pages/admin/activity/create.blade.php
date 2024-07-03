@@ -28,7 +28,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="name">Nama Kegiatan</label>
-                                <input name="name" class="form-control" id="name" placeholder="Masukkan nama kegiatan">
+                                <input name="name" class="form-control" id="name" placeholder="Masukkan nama kegiatan" value="{{ old('name') }}">
                                 @error('name')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -36,7 +36,7 @@
 
                             <div class="form-group">
                                 <label for="description">Deskripsi</label>
-                                <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan"></textarea>
+                                <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan">{{ old('description') }}</textarea>
                                 @error('description')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -44,18 +44,18 @@
 
                             <div class="form-group">
                                 <label for="location">Lokasi</label>
-                                <textarea name="location"  class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan"></textarea>
+                                <textarea name="location"  class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan">{{ old('location') }}</textarea>
                                 @error('location')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
 
                             <div class="form-group">
-                                <label for="id_community">Penyelenggara</label>
+                                <label for="id_community">Penyelenggara<span class="text-danger">*</span></label>
                                 <select class="form-control select2" style="width: 100%;" name="id_community" id="id_community">
                                     <option value="" disabled selected>Pilih penyelenggara</option>
                                     @foreach($communities as $community)
-                                        <option value="{{ $community->id }}">{{ $community->name }}</option>
+                                        <option value="{{ $community->id }}" {{ old('id_community') == $community->id ? 'selected' : '' }}>{{ $community->name }}</option>
                                     @endforeach
                                 </select>
                                 <!-- Tombol untuk menambah komunitas baru -->
@@ -69,7 +69,7 @@
                                 <h5>Tambah Penyelenggara Baru</h5>
                                 <div class="form-group">
                                     <label for="new_community_name">Nama Lembaga/Komunitas</label>
-                                    <input type="text" name="new_community_name" class="form-control" id="new_community_name" placeholder="Masukkan nama komunitas baru">
+                                    <input type="text" name="new_community_name" class="form-control" id="new_community_name" placeholder="Masukkan nama komunitas baru" value="{{ old('new_community_name') }}">
                                 </div>
                             </div>
 
@@ -80,14 +80,14 @@
                                     <div class="form-col">
                                         <div class="form-group ">
                                             <label for="eventStartDate">Tanggal Mulai</label>
-                                            <input type="date" name="eventStartDate" class="form-control" id="eventStartDate">
+                                            <input type="date" name="eventStartDate" class="form-control" id="eventStartDate" value="{{ old('eventStartDate') }}">
                                             @error('eventStartDate')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="eventStartTime">Waktu Mulai</label>
-                                            <input type="time" name="eventStartTime" class="form-control" id="eventStartTime">
+                                            <input type="time" name="eventStartTime" class="form-control" id="eventStartTime" value="{{ old('eventStartTime') }}">
                                             @error('eventStartTime')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
@@ -100,15 +100,15 @@
                                     <legend class="w-auto"><h6>Tanggal dan Waktu Berakhir</h6></legend>
                                     <div class="form-col">
                                         <div class="form-group">
-                                            <label for="eventEndDate">Tanggal Berakhir</label>
-                                            <input type="date" name="eventEndDate" class="form-control" id="eventEndDate">
+                                            <label for="eventEndDate">Tanggal Berakhirr<span class="text-danger">*</span></label>
+                                            <input type="date" name="eventEndDate" class="form-control" id="eventEndDate" value="{{ old('eventEndDate') }}">
                                             @error('eventEndDate')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="eventEndTime">Waktu Berakhir</label>
-                                            <input type="time"  name="eventEndTime" class="form-control" id="eventEndTime">
+                                            <label for="eventEndTime">Waktu Berakhirr<span class="text-danger">*</span></label>
+                                            <input type="time"  name="eventEndTime" class="form-control" id="eventEndTime" value="{{ old('eventEndTime') }}">
                                             @error('eventEndTime')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
@@ -121,15 +121,15 @@
                                 <legend class="w-auto"><h6>Narahubung</h6></legend>
                                 <div class="form-col">
                                     <div class="form-group">
-                                        <label for="contact_name">Nama Kontak</label>
-                                        <input type="text" name="contact_name" class="form-control" id="contact_name">
+                                        <label for="contact_name">Nama Kontakr<span class="text-danger">*</span></label>
+                                        <input type="text" name="contact_name" class="form-control" id="contact_name" value="{{ old('contact_name') }}">
                                         @error('contact_name')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="contact_phone">Nomor Telepon</label>
-                                        <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone">
+                                        <label for="contact_phone">Nomor Telepon<span class="text-danger">*</span></label>
+                                        <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone" value="{{ old('contact_phone') }}">
                                         @error('contact_phone')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
@@ -138,7 +138,7 @@
                             </fieldset>
 
                             <div class="form-group">
-                                <label for="exampleInputFile">Poster Kegiatan (Max 1MB, PNG dan JPG)</label>
+                                <label for="exampleInputFile">Poster Kegiatan (Max 1MB, PNG dan JPG)<span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" name="image" class="custom-file-input" id="exampleInputFile">

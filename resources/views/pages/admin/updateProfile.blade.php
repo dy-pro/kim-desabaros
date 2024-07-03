@@ -9,18 +9,11 @@
                 <div class="card-header">
                     <h3 class="card-title"><strong>{{ __('Edit Profile') }}</strong></h3>
                 </div>
-                
                 @if (session('status') === 'profile-updated')
-                <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Profil Diperbarui',
-                            text: 'Profil Anda telah berhasil diperbarui.'
-                        });
-                    });
-                </script>
-            @endif
+                    <div class="alert alert-success ms-3" role="alert">
+                        {{ __('Saved.') }}
+                    </div>
+                @endif
                 <div class="card-body">
                     <section>
                         <header>
@@ -98,17 +91,6 @@
                 <div class="card-header">
                     <h1 class="card-title"><strong>{{ __('Perbarui Password') }}</strong></h1>
                 </div>
-                @if (session('status') === 'password-updated')
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Password Diperbarui',
-                                text: 'Password Anda telah berhasil diperbarui.'
-                            });
-                        });
-                    </script>
-                @endif
                 <div class="card-body">
                     <section>
                         <header>
@@ -119,6 +101,12 @@
                                 {{ __('Pastikan akun Anda menggunakan password yang panjang dan acak agar tetap aman.') }}
                             </p>
                         </header>
+                        @if (session('status') === 'password-updated')
+                            <div class="alert alert-success ms-3" role="alert">
+                                {{ __('Saved.') }}
+                            </div>
+                        @endif
+
                         <form method="post" action="{{ route('password.update') }}" class="mt-3">
                             @csrf
                             @method('put')
@@ -164,4 +152,6 @@
 <!-- SweetAlert JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<!-- SweetAlert CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 @endsection

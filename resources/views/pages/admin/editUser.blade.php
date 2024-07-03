@@ -28,8 +28,8 @@
 
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input name="email" value="{{ $user->email }}" type="email" class="form-control" id="name"
-                                            placeholder="Email" required>
+                                        <input name="email" value="{{ $user->email }}" type="email" class="form-control" id="email"
+                                            placeholder="Email">
                                         @error('email')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="address">Alamat</label>
-                                        <input name="address" value="{{ $user->address }}" type="text" class="form-control" id="exampleInputPassword1"
+                                        <input name="address" value="{{ $user->address }}" type="text" class="form-control" id="address"
                                             placeholder="Alamat Lengkap">
                                     </div>
                                     <div class="form-group">

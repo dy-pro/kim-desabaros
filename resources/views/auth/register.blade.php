@@ -28,7 +28,7 @@
                 <img class="img-fluid" src="{{ asset('frontend/images/Logo.png') }}" alt="Desa Baros" width="90" height="70">
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Masukan Data</p>
+                <p class="login-box-msg">Mendaftar Sebagai Penjual</p>
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
@@ -87,6 +87,11 @@
                     </div>
                 
                     <div class="row">
+                        <div class="col-8">
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                                {{ __('Already registered?') }}
+                            </a>
+                        </div>
                         <!-- /.col -->
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary btn-block">Daftar</button>
