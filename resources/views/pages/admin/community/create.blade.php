@@ -13,7 +13,10 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="name">Nama Komunitas<span class="text-danger">*</span></label>
+                                    <label for="name">
+                                        Nama Komunitas
+                                        <span class="text-danger">*</span>
+                                    </label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama komunitas" value="{{ old('name') }}">
                                     @error('name')
                                         <div class="text-danger">{{ $message }}</div>
@@ -21,7 +24,10 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Deskripsir<span class="text-danger">*</span></label>
+                                    <label>
+                                        Deskripsi
+                                        <span class="text-danger">*</span>
+                                    </label>
                                     <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi komunitas">{{ old('description') }}</textarea>
                                     @error('description')
                                         <div class="text-danger">{{ $message }}</div>
@@ -53,20 +59,23 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="logo">Logo Komunitas<span class="text-danger">*</span></label>
+                                    <label for="logo">Logo Komunitas
+                                        <span class="text-danger">*</span>
+                                    </label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" name="logo" class="custom-file-input" id="logo">
+                                            <input type="file" name="logo" class="custom-file-input" id="logo" onchange="previewImage(event)">
                                             <label class="custom-file-label" for="logo">Pilih gambar</label>
-                                            
                                         </div>
-                                      {{-- <div class="input-group-append">
-                                        <span class="input-group-text">Unggah</span>
-                                      </div> --}}
                                     </div>
                                     @error('logo')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    {{-- <label>Pratinjau Gambar:</label> --}}
+                                    <img id="image-preview" src="" alt="Pratinjau Gambar" style="max-width: 200px; display: none;">
                                 </div>
                             </div>
                             
@@ -80,18 +89,26 @@
         </div>
     </section>
 
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    //Code untuk mengubah label field logo yang akan diunggah
+    // Mengubah label field logo yang akan diunggah
     $(document).ready(function () {
-        // Ketika input file berubah (file dipilih)
         $('input[type="file"]').on('change', function() {
-            // Ambil file yang dipilih
             var fileName = $(this).val().split('\\').pop(); 
-            // Update label custom-file-label dengan nama file yang dipilih
             $(this).next('.custom-file-label').html(fileName);
         });
     });
+
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const output = document.getElementById('image-preview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        };
+        if (event.target.files[0]) {
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    }
 </script>
 @endsection

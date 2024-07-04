@@ -46,10 +46,10 @@ class ActivityController extends Controller
             'description' => 'nullable|string',
             'location' =>'nullable|string|max:255',
             'id_community' => 'nullable|integer|exists:communities,id',
-            'eventStartDate' => 'required|date',
-            'eventStartTime' => 'required',
-            'eventEndDate' => 'required|date',
-            'eventEndTime' => 'required',
+            'eventStartDate' => 'nullable|date',
+            'eventStartTime' => 'nullable',
+            'eventEndDate' => 'nullable|date',
+            'eventEndTime' => 'nullable',
             'contact_name' => 'required|string|max:255',
             'contact_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'image' => 'required|file|mimes:jpeg,png,jpg,gif|max:1024', // maksimal 1MB
@@ -59,23 +59,14 @@ class ActivityController extends Controller
             'name.string' => 'Nama kegiatan harus berupa teks.',
             'name.max' => 'Nama kegiatan maksimal 255 karakter.',
             
-            'description.required' => 'Deskripsi harus diisi.',
             'description.string' => 'Deskripsi harus berupa teks.',
             'description.max' => 'Deskripsi maksimal 500 karakter.',
             
-            'location.required' => 'Lokasi harus diisi.',
             'location.string' => 'Lokasi harus berupa teks.',
             'location.max' => 'Lokasi maksimal 255 karakter.',
             
-            'eventStartDate.required' => 'Tanggal mulai acara harus diisi.',
-            'eventStartDate.date' => 'Tanggal mulai acara tidak valid.',
-            
-            'eventStartTime.required' => 'Waktu mulai acara harus diisi.',
-            
-            'eventEndDate.required' => 'Tanggal akhir acara harus diisi.',
+            'eventStartDate.date' => 'Tanggal mulai acara tidak valid.',                        
             'eventEndDate.date' => 'Tanggal akhir acara tidak valid.',
-            
-            'eventEndTime.required' => 'Waktu akhir acara harus diisi.',
 
             'contact_name.required' => 'Nama kontak harus diisi.',
             'contact_phone.required' => 'Nomor telepon harus diisi.',

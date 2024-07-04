@@ -17,7 +17,10 @@
 
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="name"><span class="text-danger">*</span>Nama</label>
+                      <label for="name">
+                        Nama
+                        <span class="text-danger">*</span>
+                      </label>
                       <input name="name" type="text" class="form-control" id="name" placeholder="Nama Lengkap" value="{{ old('name') }}">
                       @error('name')
                         <div class="text-danger">{{ $message }}</div>
@@ -25,7 +28,10 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="email">Email</label>
+                      <label for="email">
+                        Email
+                        <span class="text-danger">*</span>
+                      </label>
                       <input name="email" type="email" class="form-control" id="email" placeholder="Email" value="{{ old('email') }}">
                       @error('email')
                         <div class="text-danger">{{ $message }}</div>
@@ -33,7 +39,10 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="password">Password</label>
+                      <label for="password">
+                        Password
+                        <span class="text-danger">*</span>
+                      </label>
                       <input name="password" type="password"  class="form-control" id="password" placeholder="password">
                       @error('password')
                         <div class="text-danger">{{ $message }}</div>
@@ -49,7 +58,10 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="whatsapp">No Handphone</label>
+                      <label for="whatsapp">
+                        No Handphone
+                        <span class="text-danger">*</span>
+                      </label>
                       <input name="whatsapp" type="number" class="form-control" id="whatsapp" placeholder="Nomor WhatsApp" value="{{ old('whatsapp') }}">
                       @error('whatsapp')
                         <div class="text-danger">{{ $message }}</div>
@@ -57,7 +69,9 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="role">Role<span class="text-danger">*</span></label>
+                      <label for="role">
+                        Role
+                        <span class="text-danger">*</span></label>
                       <select name="role" class="custom-select">
                         <option disabled selected>Pilih Role</option>
                         <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
@@ -69,22 +83,20 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="image">Masukan Foto Profil (Max 1MB, PNG dan JPG)<span class="text-danger">*</span></label>
-                      <input type="file" name="image" class="form-control" placeholder="Keterangan Produk">
+                      <label for="image">Masukan Foto Profil (Max 1MB, PNG dan JPG)</label>
+                      <input type="file" id="image" name="image" class="form-control" placeholder="Keterangan Produk" onchange="previewImage(event)">
                       @error('image')
                         <div class="text-danger">{{ $message }}</div>
                       @enderror
                     </div>
+
+                    <div class="form-group">
+                      {{-- <label>Pratinjau Gambar:</label> --}}
+                      <img id="image-preview" src="" alt="Pratinjau Gambar" style="max-width: 200px; display: none;">
+                    </div>
                         
                   </div>
                     
-                    {{-- <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div> --}}
-                  </div>
-                  <!-- /.card-body -->
-            
                   <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Simpan</button>
                   </div>
@@ -94,5 +106,17 @@
       </div>
     </div>
 </section>
-
+<script>
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const output = document.getElementById('image-preview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        };
+        if (event.target.files[0]) {
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    }
+</script>
 @endsection
