@@ -29,7 +29,7 @@
                             @csrf
                         </form>
 
-                        <form method="post" action="{{ route('profile.update') }}" class="mt-3">
+                        <form method="post" action="{{ route('profile.update') }}" enctype="multipart/form-data" class="mt-3">
                             @csrf
                             @method('patch')
 
@@ -78,6 +78,28 @@
                                 @enderror
                             </div>
 
+                            <div class="mb-3">
+                                <label for="image" class="form-label">{{ __('Foto Profil') }}</label>
+                                <input id="image" name="image" type="file" class="form-control" onchange="previewImage(event)">
+
+                                @php
+                                    $profileImage = $user->image ? asset('users/'.$user->image) : asset('image/default-user.jpg');
+                                @endphp
+                                <div class="mt-2">
+                                    <p>Gambar Profil Saat Ini:</p>
+                                    <img src="{{ $profileImage }}" alt="Current Profile Image" style="max-width: 200px;">
+                                </div>
+
+                                <div class="mt-2">
+                                    <p>Pratinjau Gambar:</p>
+                                    <img id="image-preview" src="" alt="Pratinjau Gambar" style="max-width: 200px; display: none;">
+                                </div>
+                                
+                                @error('image')
+                                    <div class="text-danger mt-2">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                             <div class="d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary">{{ __('Simpan') }}</button>
                             </div>
@@ -91,6 +113,11 @@
                 <div class="card-header">
                     <h1 class="card-title"><strong>{{ __('Perbarui Password') }}</strong></h1>
                 </div>
+                @if (session('status') === 'password-updated')
+                    <div class="alert alert-success ms-3" role="alert">
+                        {{ __('Saved.') }}
+                    </div>
+                @endif
                 <div class="card-body">
                     <section>
                         <header>
@@ -101,11 +128,6 @@
                                 {{ __('Pastikan akun Anda menggunakan password yang panjang dan acak agar tetap aman.') }}
                             </p>
                         </header>
-                        @if (session('status') === 'password-updated')
-                            <div class="alert alert-success ms-3" role="alert">
-                                {{ __('Saved.') }}
-                            </div>
-                        @endif
 
                         <form method="post" action="{{ route('password.update') }}" class="mt-3">
                             @csrf
@@ -152,6 +174,21 @@
 <!-- SweetAlert JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- SweetAlert CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<!-- Preview Image Script -->
+<script>
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const output = document.getElementById('image-preview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the preview image if a file is selected
+        document.getElementById('image').addEventListener('change', previewImage);
+    });
+</script>
 @endsection

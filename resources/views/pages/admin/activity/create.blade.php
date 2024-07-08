@@ -27,7 +27,10 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name">Nama Kegiatan</label>
+                                <label for="name">
+                                    Nama Kegiatan
+                                    <span class="text-danger">*</span>
+                                </label>
                                 <input name="name" class="form-control" id="name" placeholder="Masukkan nama kegiatan" value="{{ old('name') }}">
                                 @error('name')
                                     <div class="text-danger">{{ $message }}</div>
@@ -36,7 +39,7 @@
 
                             <div class="form-group">
                                 <label for="description">Deskripsi</label>
-                                <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan">{{ old('description') }}</textarea>
+                                <textarea name="description" id="description" class="form-control" rows="3" placeholder="Masukkan deskripsi kegiatan">{{ old('description') }}</textarea>
                                 @error('description')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -44,14 +47,17 @@
 
                             <div class="form-group">
                                 <label for="location">Lokasi</label>
-                                <textarea name="location"  class="form-control" rows="3" placeholder="Masukkan deksripsi kegiatan">{{ old('location') }}</textarea>
+                                <textarea name="location" class="form-control" rows="3" placeholder="Masukkan lokasi kegiatan">{{ old('location') }}</textarea>
                                 @error('location')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
 
                             <div class="form-group">
-                                <label for="id_community">Penyelenggara<span class="text-danger">*</span></label>
+                                <label for="id_community">
+                                    Penyelenggara
+                                    <span class="text-danger">*</span>
+                                </label>
                                 <select class="form-control select2" style="width: 100%;" name="id_community" id="id_community">
                                     <option value="" disabled selected>Pilih penyelenggara</option>
                                     @foreach($communities as $community)
@@ -100,14 +106,14 @@
                                     <legend class="w-auto"><h6>Tanggal dan Waktu Berakhir</h6></legend>
                                     <div class="form-col">
                                         <div class="form-group">
-                                            <label for="eventEndDate">Tanggal Berakhirr<span class="text-danger">*</span></label>
+                                            <label for="eventEndDate">Tanggal Berakhir<span class="text-danger">*</span></label>
                                             <input type="date" name="eventEndDate" class="form-control" id="eventEndDate" value="{{ old('eventEndDate') }}">
                                             @error('eventEndDate')
                                                 <div class="text-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="eventEndTime">Waktu Berakhirr<span class="text-danger">*</span></label>
+                                            <label for="eventEndTime">Waktu Berakhir<span class="text-danger">*</span></label>
                                             <input type="time"  name="eventEndTime" class="form-control" id="eventEndTime" value="{{ old('eventEndTime') }}">
                                             @error('eventEndTime')
                                                 <div class="text-danger">{{ $message }}</div>
@@ -118,17 +124,22 @@
                             </div>
 
                             <fieldset class="border p-4 flex-fill">
-                                <legend class="w-auto"><h6>Narahubung</h6></legend>
+                                <legend class="w-auto">
+                                    <h6>Narahubung</h6>
+                                </legend>
                                 <div class="form-col">
                                     <div class="form-group">
-                                        <label for="contact_name">Nama Kontakr<span class="text-danger">*</span></label>
+                                        <label for="contact_name">Nama Kontak<span class="text-danger">*</span></label>
                                         <input type="text" name="contact_name" class="form-control" id="contact_name" value="{{ old('contact_name') }}">
                                         @error('contact_name')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="contact_phone">Nomor Telepon<span class="text-danger">*</span></label>
+                                        <label for="contact_phone">
+                                            Nomor Telepon
+                                            <span class="text-danger">*</span>
+                                        </label>
                                         <input type="tel" pattern="[0-9]*"  name="contact_phone" class="form-control" id="contact_phone" value="{{ old('contact_phone') }}">
                                         @error('contact_phone')
                                             <div class="text-danger">{{ $message }}</div>
@@ -141,7 +152,7 @@
                                 <label for="exampleInputFile">Poster Kegiatan (Max 1MB, PNG dan JPG)<span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
+                                        <input type="file" name="image" class="custom-file-input" id="exampleInputFile" onchange="previewImage(event)">
                                         <label class="custom-file-label" for="exampleInputFile">Pilih Gambar</label>
                                     </div>
                                     {{-- <div class="input-group-append">
@@ -151,6 +162,11 @@
                                 @error('image')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
+                            </div>
+
+                            <div class="form-group">
+                                {{-- <label>Pratinjau Poster:</label> --}}
+                                <img id="image-preview" src="" alt="Pratinjau Gambar" style="max-width: 200px; display: none;">
                             </div>
                         </div>
                         <!-- /.card-body -->
@@ -180,6 +196,18 @@
             $(this).next('.custom-file-label').html(fileName);
         });
     });
+
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const output = document.getElementById('image-preview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        };
+        if (event.target.files[0]) {
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    }
 </script>
 
 <script>

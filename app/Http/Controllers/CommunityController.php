@@ -47,20 +47,17 @@ class CommunityController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'address' => 'required|string',
-            'visi' => 'required|string',
-            'misi' => 'required|string',
+            'address' => 'nullable|string',
+            'visi' => 'nullable|string',
+            'misi' => 'nullable|string',
             'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' // max 2MB
         ], [
             'name.required' => 'Nama komunitas wajib diisi',
             'description.required' => 'Deskripsi wajib diisi',
-            'address.required' => 'Alamat wajib diisi',
             'logo.required' => 'Logo komunitas wajib diupload',
             'logo.image' => 'Logo harus berupa gambar',
             'logo.mimes' => 'Logo harus memiliki format jpeg, png, jpg, atau gif',
             'logo.max' => 'Ukuran logo maksimal adalah 2MB',
-            'visi.required' => 'Visi wajib diisi',
-            'misi.required' => 'Misi wajib diisi',
         ]);
 
          // Mengelola file upload
@@ -98,19 +95,16 @@ class CommunityController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'address' => 'required|string',
-            'visi' => 'required|string',
-            'misi' => 'required|string',
+            'address' => 'nullable|string',
+            'visi' => 'nullable|string',
+            'misi' => 'nullable|string',
             'logo' => 'image|mimes:jpeg,png,jpg,gif|max:2048' // max 2MB
         ], [
             'name.required' => 'Nama komunitas wajib diisi',
             'description.required' => 'Deskripsi wajib diisi',
-            'address.required' => 'Alamat wajib diisi',
             'logo.image' => 'Logo harus berupa gambar',
             'logo.mimes' => 'Logo harus memiliki format jpeg, png, jpg, atau gif',
             'logo.max' => 'Ukuran logo maksimal adalah 2MB',
-            'visi.required' => 'Visi wajib diisi',
-            'misi.required' => 'Misi wajib diisi',
         ]);
     
         // Temukan komunitas berdasarkan ID
