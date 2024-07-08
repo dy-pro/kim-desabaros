@@ -45,7 +45,7 @@
                     </div>
                     
                     <div class="form-group">
-                      <label for="description">Keterangan<span class="text-danger">*</span></label>
+                      <label for="description">Keterangan</label>
                       <input type="text" name="description" class="form-control" placeholder="Keterangan Produk" value="{{ old('description') }}">
                       @error('description')
                         <div class="text-danger">{{ $message }}</div>
@@ -69,13 +69,18 @@
                       <label for="exampleInputFile">Foto Produk (Max 1MB, PNG/JPG) <span class="text-danger">*</span></label>
                       <div class="input-group">
                         <div class="custom-file">
-                            <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
+                            <input type="file" name="image" class="custom-file-input" id="exampleInputFile" onchange="previewImage(event)">
                             <label class="custom-file-label" for="exampleInputFile">Pilih Gambar</label>
                         </div>
                       </div>
                       @error('image')
                         <div class="text-danger">{{ $message }}</div>
                       @enderror
+                    </div>
+
+                    <div class="form-group">
+                      {{-- <label>Pratinjau Gambar:</label> --}}
+                      <img id="image-preview" src="" alt="Pratinjau Gambar" style="max-width: 200px; display: none;">
                     </div>
                     
                   </div>
@@ -107,6 +112,18 @@
             $(this).next('.custom-file-label').html(fileName);
         });
     });
+
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const output = document.getElementById('image-preview');
+            output.src = reader.result;
+            output.style.display = 'block';
+        };
+        if (event.target.files[0]) {
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    }
 </script>
 
 @endsection
